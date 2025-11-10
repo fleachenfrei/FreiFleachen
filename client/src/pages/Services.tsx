@@ -14,6 +14,12 @@ import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.
 import atticImage from '@assets/generated_images/Attic_clearance_Vienna_cd35a753.png';
 import officeImage from '@assets/generated_images/Office_clearance_service_21e87799.png';
 import messieImage from '@assets/generated_images/Hoarding_clearance_support_81793b23.png';
+import bulkyWasteImage from '@assets/generated_images/Bulky_waste_disposal_Vienna_e9c6cea4.png';
+import movingImage from '@assets/generated_images/Moving_service_Vienna_8eeb3795.png';
+import garageImage from '@assets/generated_images/Garage_clearance_service_435382d9.png';
+import officeDissolutionImage from '@assets/generated_images/Office_dissolution_service_d98c3ee9.png';
+import probateImage from '@assets/generated_images/Probate_estate_clearance_1eadd49e.png';
+import containerImage from '@assets/generated_images/Container_rental_service_f4846763.png';
 
 const serviceImages: Record<string, string> = {
   'wohnungsentrümpelungen': apartmentImage,
@@ -22,6 +28,12 @@ const serviceImages: Record<string, string> = {
   'dachbodenentrümpelung': atticImage,
   'geschäftsentrümpelung': officeImage,
   'messie-entrümpelung': messieImage,
+  'sperrmüllentsorgung': bulkyWasteImage,
+  'umzugsservice': movingImage,
+  'garageentrümpelung': garageImage,
+  'büroauflösung': officeDissolutionImage,
+  'verlassenschaftsentrümpelung': probateImage,
+  'container-service': containerImage,
 };
 
 export default function Services() {

@@ -416,6 +416,408 @@ export const services: Record<string, ServiceInfo> = {
     ],
     relatedServices: ['wohnungsentrümpelungen', 'haushaltsauflösung', 'kellerentrümpelung'],
   },
+
+  'sperrmüllentsorgung': {
+    name: 'Sperrmüllentsorgung',
+    slug: 'sperrmüllentsorgung',
+    shortDescription: 'Schnelle und unkomplizierte Sperrmüllabholung in Wien - wir entsorgen Möbel, Elektrogeräte und mehr fachgerecht.',
+    description: 'Sie haben alte Möbel, Matratzen oder Elektrogeräte zu entsorgen? Unsere Sperrmüllentsorgung ist die schnelle und bequeme Lösung. Wir holen Ihren Sperrmüll direkt bei Ihnen ab und entsorgen ihn fachgerecht - ohne dass Sie selbst zum Mistplatz fahren müssen.',
+    metaDescription: 'Sperrmüllentsorgung Wien ✓ Schnelle Abholung ✓ Möbel, Matratzen, Elektrogeräte ✓ Fachgerecht entsorgt ✓ Alle Bezirke ☎ +43 660 200 5610',
+    benefits: [
+      'Abholung direkt bei Ihnen zu Hause',
+      'Kein mühsamer Transport zum Mistplatz',
+      'Fachgerechte Entsorgung und Recycling',
+      'Entsorgung auch von Elektrogeräten (E-Waste)',
+      'Flexible Terminvereinbarung - auch kurzfristig',
+      'Transparente Preise nach Volumen',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Anfrage & Kostenschätzung',
+        description: 'Beschreiben Sie uns Ihren Sperrmüll (Art und Menge). Wir erstellen eine erste Kostenschätzung.',
+      },
+      {
+        step: 2,
+        title: 'Terminvereinbarung',
+        description: 'Wir vereinbaren einen Wunschtermin für die Abholung - oft schon am nächsten Tag möglich.',
+      },
+      {
+        step: 3,
+        title: 'Abholung',
+        description: 'Unser Team holt den Sperrmüll bei Ihnen ab - Sie müssen nichts vorbereiten oder tragen.',
+      },
+      {
+        step: 4,
+        title: 'Fachgerechte Entsorgung',
+        description: 'Wir entsorgen alles umweltgerecht über zertifizierte Entsorgungsbetriebe und Recyclinghöfe.',
+      },
+    ],
+    pricing: {
+      info: 'Die Kosten für Sperrmüllentsorgung berechnen wir nach Volumen und Art der Gegenstände. Elektrogeräte haben oft Sonderkonditionen.',
+      factors: [
+        'Volumen des Sperrmülls (Kubikmeter)',
+        'Art der Gegenstände (Möbel, Elektro, Matratzen)',
+        'Stockwerk und Zugänglichkeit',
+        'Anzahl der benötigten Mitarbeiter',
+        'Entsorgungsgebühren für Sondermüll',
+      ],
+    },
+    faq: [
+      {
+        question: 'Was kostet die Sperrmüllentsorgung?',
+        answer: 'Eine Couch oder ein Schrank kosten ab 80-120€ Entsorgung. Eine Matratze ab 40-60€. Komplette Wohnungseinrichtungen nach Volumen ab 300€. Elektrogeräte sind oft günstiger, da sie recycelt werden können. Fixpreis nach Beschreibung oder Foto.',
+      },
+      {
+        question: 'Welchen Sperrmüll nehmen Sie mit?',
+        answer: 'Wir entsorgen Möbel (Sofas, Schränke, Tische), Matratzen, Teppiche, Elektrogeräte (Kühlschränke, Waschmaschinen, TV), Fahrräder, Kinderwagen und vieles mehr. Nicht erlaubt sind Gefahrstoffe, Asbest und bestimmte Chemikalien.',
+      },
+      {
+        question: 'Wie schnell können Sie abholen?',
+        answer: 'Bei dringenden Fällen oft schon am selben oder nächsten Tag. In der Regel vereinbaren wir einen Termin innerhalb von 2-5 Werktagen. Express-Service gegen Aufpreis möglich.',
+      },
+      {
+        question: 'Muss ich den Sperrmüll vor die Tür stellen?',
+        answer: 'Nein, das ist nicht nötig! Wir holen den Sperrmüll direkt aus Ihrer Wohnung, Keller oder Garage ab - auch aus höheren Stockwerken ohne Lift. Sie müssen nichts vorbereiten.',
+      },
+    ],
+    relatedServices: ['wohnungsentrümpelungen', 'möbelentsorgung', 'kellerentrümpelung'],
+  },
+
+  'umzugsservice': {
+    name: 'Umzugsservice',
+    slug: 'umzugsservice',
+    shortDescription: 'Professioneller Umzug in Wien und Umgebung - von der Planung bis zum letzten Karton, stressfrei und zuverlässig.',
+    description: 'Ein Umzug muss nicht stressig sein. Unser Umzugsservice übernimmt alle Aufgaben rund um Ihren Wohnungs- oder Büroumzug in Wien. Von der Planung über das Packen bis zum Aufbau in der neuen Wohnung - wir kümmern uns um alles.',
+    metaDescription: 'Umzugsservice Wien ✓ Privatumzüge & Firmenumzüge ✓ Packmaterial inklusive ✓ Möbelmontage ✓ Versichert ✓ Alle Bezirke ☎ +43 660 200 5610',
+    benefits: [
+      'Komplettservice von Planung bis Möbelmontage',
+      'Erfahrene Umzugshelfer und moderne Fahrzeuge',
+      'Packmaterial (Kartons, Folie, Decken) inklusive',
+      'Möbelabbau und -aufbau auf Wunsch',
+      'Versicherungsschutz für Ihre Möbel',
+      'Umzüge in ganz Wien und Umgebung',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Umzugsplanung',
+        description: 'Wir besichtigen Ihre alte und neue Wohnung und planen den Umzug im Detail. Sie erhalten ein Festpreisangebot.',
+      },
+      {
+        step: 2,
+        title: 'Packen & Vorbereitung',
+        description: 'Auf Wunsch packen wir Ihre Gegenstände professionell ein. Möbel werden abgebaut und transportfertig gemacht.',
+      },
+      {
+        step: 3,
+        title: 'Umzugstag',
+        description: 'Unser Team transportiert alles sicher in Ihre neue Wohnung. Wir tragen vorsichtig über Treppen und schützen Türrahmen.',
+      },
+      {
+        step: 4,
+        title: 'Aufbau & Einrichtung',
+        description: 'Möbel werden am gewünschten Platz aufgebaut. Kartons werden ausgepackt, wenn Sie das wünschen.',
+      },
+    ],
+    pricing: {
+      info: 'Umzugskosten hängen von Distanz, Wohnungsgröße und Umfang der Dienstleistungen ab. Wir erstellen transparente Festpreisangebote.',
+      factors: [
+        'Wohnungsgröße und Menge der Möbel',
+        'Distanz zwischen alter und neuer Wohnung',
+        'Stockwerk und Vorhandensein von Lift',
+        'Zusatzleistungen (Packen, Möbelmontage)',
+        'Umzugstermin (Wochenende teurer als werktags)',
+      ],
+    },
+    faq: [
+      {
+        question: 'Was kostet ein Umzug in Wien?',
+        answer: 'Eine 2-Zimmer-Wohnung innerhalb Wiens kostet ab 600-900€. Eine 4-Zimmer-Wohnung ab 1.200-1.800€. Mit Packen und Möbelmontage kalkulieren wir 30-40% Aufschlag. Festpreis nach Besichtigung.',
+      },
+      {
+        question: 'Sind meine Möbel versichert?',
+        answer: 'Ja, wir haben eine Transportversicherung die Schäden an Ihren Möbeln während des Umzugs abdeckt. Die Versicherungssumme ist im Angebot ausgewiesen.',
+      },
+      {
+        question: 'Können Sie auch am Wochenende umziehen?',
+        answer: 'Ja, wir ziehen auch samstags und sonntags um. Wochenendtermine sind beliebter und daher etwas teurer. Wir empfehlen Buchung 2-3 Wochen im Voraus.',
+      },
+      {
+        question: 'Stelle Sie auch Packmaterial zur Verfügung?',
+        answer: 'Ja, Umzugskartons, Packpapier, Luftpolsterfolie und Möbeldecken sind bei uns inklusive. Sie müssen nichts besorgen. Übrige Kartons nehmen wir nach dem Umzug wieder mit.',
+      },
+    ],
+    relatedServices: ['wohnungsentrümpelungen', 'sperrmüllentsorgung', 'geschäftsentrümpelung'],
+  },
+
+  'garageentrümpelung': {
+    name: 'Garageentrümpelung',
+    slug: 'garageentrümpelung',
+    shortDescription: 'Garagen professionell entrümpeln - von vollgestellten Einzelgaragen bis zu Tiefgaragen in Mehrparteienhäusern.',
+    description: 'Ihre Garage ist über Jahre zum Abstellraum geworden? Wir entrümpeln Garagen, Carports und Stellplätze professionell. Egal ob Einzelgarage, Doppelgarage oder Tiefgaragenstellplatz - wir schaffen wieder Platz für Ihr Auto.',
+    metaDescription: 'Garageentrümpelung Wien ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ✓ Altölentsorgung ✓ Schnell & günstig ☎ +43 660 200 5610',
+    benefits: [
+      'Entrümpelung von Einzel-, Doppel- und Tiefgaragen',
+      'Entsorgung von Altöl, Reifen und Autoteilen',
+      'Auch vollgestellte Werkstattgaragen kein Problem',
+      'Fachgerechte Entsorgung von Gefahrstoffen',
+      'Schnelle Abwicklung meist in 2-4 Stunden',
+      'Endreinigung der Garage auf Wunsch',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Garagebesichtigung',
+        description: 'Wir besichtigen Ihre Garage und prüfen Art und Menge der zu entsorgenden Gegenstände.',
+      },
+      {
+        step: 2,
+        title: 'Angebot & Terminplanung',
+        description: 'Sie erhalten ein Festpreisangebot. Wir vereinbaren einen passenden Termin für die Entrümpelung.',
+      },
+      {
+        step: 3,
+        title: 'Komplette Räumung',
+        description: 'Wir räumen Ihre Garage vollständig - von Autoreifen über Werkzeug bis zu alten Farbeimern.',
+      },
+      {
+        step: 4,
+        title: 'Entsorgung & Reinigung',
+        description: 'Alles wird fachgerecht entsorgt. Auf Wunsch reinigen wir die Garage besenrein oder mit Hochdruckreiniger.',
+      },
+    ],
+    pricing: {
+      info: 'Garageentrümpelungen sind meist günstiger als gedacht. Die Kosten richten sich nach Volumen und Entsorgungsaufwand.',
+      factors: [
+        'Volumen der zu entsorgenden Gegenstände',
+        'Art der Gegenstände (normale vs. Gefahrstoffe)',
+        'Zugänglichkeit der Garage (ebenerdig vs. Tiefgarage)',
+        'Entsorgung von Sondermüll (Öl, Farben, Batterien)',
+        'Zusatzleistungen wie Garagen-Reinigung',
+      ],
+    },
+    faq: [
+      {
+        question: 'Was kostet eine Garageentrümpelung?',
+        answer: 'Eine normal gefüllte Einzelgarage (15-20m³) kostet 400-700€. Vollgestellte Doppelgaragen liegen bei 700-1.200€. Werkstattgaragen mit Altöl und Chemikalien können 1.000-1.800€ kosten. Festpreis nach Besichtigung.',
+      },
+      {
+        question: 'Können Sie auch Altöl und Reifen entsorgen?',
+        answer: 'Ja, wir entsorgen Altöl, alte Autoreifen, Batterien und andere KFZ-spezifische Abfälle fachgerecht über zertifizierte Entsorgungsbetriebe. Die Entsorgungsgebühren sind im Angebot transparent ausgewiesen.',
+      },
+      {
+        question: 'Arbeiten Sie auch in Tiefgaragen?',
+        answer: 'Ja, Tiefgaragen sind für uns Routine. Wir haben kompakte Transportwagen für niedrige Durchfahrtshöhen und arbeiten rücksichtsvoll, um keine Schäden an Wänden oder parkenden Autos zu verursachen.',
+      },
+      {
+        question: 'Wie lange dauert eine Garageentrümpelung?',
+        answer: 'Eine durchschnittliche Einzelgarage ist in 2-3 Stunden entrümpelt. Vollgestellte Werkstattgaragen benötigen 4-6 Stunden. Express-Service am selben Tag oft möglich.',
+      },
+    ],
+    relatedServices: ['kellerentrümpelung', 'sperrmüllentsorgung', 'wohnungsentrümpelungen'],
+  },
+
+  'büroauflösung': {
+    name: 'Büroauflösung',
+    slug: 'büroauflösung',
+    shortDescription: 'Professionelle Büroauflösung in Wien - diskret und effizient auch außerhalb der Geschäftszeiten.',
+    description: 'Sie schließen Ihr Büro, verkleinern sich oder ziehen um? Unsere Büroauflösung übernimmt alles: von Schreibtischen und Serverschränken bis zu Aktenvernichtung. Diskret, schnell und zu fairen Konditionen.',
+    metaDescription: 'Büroauflösung Wien ✓ Auch nachts & am Wochenende ✓ DSGVO-Aktenvernichtung ✓ IT-Entsorgung ✓ Diskret ✓ Alle Bezirke ☎ +43 660 200 5610',
+    benefits: [
+      'Flexible Arbeitszeiten auch nachts und am Wochenende',
+      'Sichere DSGVO-konforme Aktenvernichtung',
+      'IT-Entsorgung mit Datenlöschung',
+      'Verwertung brauchbarer Büromöbel möglich',
+      'Diskrete Abwicklung ohne Firmen-Logo',
+      'Besenreine Übergabe der Büroräume',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Bürobesichtigung',
+        description: 'Wir besichtigen Ihre Büroräume und erfassen alle zu entsorgenden Gegenstände und IT-Geräte.',
+      },
+      {
+        step: 2,
+        title: 'Detailplanung',
+        description: 'Wir planen die Auflösung im Detail - Zeitpunkt, Aktenvernichtung, IT-Löschung, Verwertung.',
+      },
+      {
+        step: 3,
+        title: 'Auflösung',
+        description: 'Wir lösen Ihr Büro zum vereinbarten Zeitpunkt auf - auch nachts oder am Wochenende möglich.',
+      },
+      {
+        step: 4,
+        title: 'Entsorgung & Dokumentation',
+        description: 'Alles wird fachgerecht entsorgt. Sie erhalten Vernichtungsnachweise für Akten und Festplatten.',
+      },
+    ],
+    pricing: {
+      info: 'Büroauflösungen kalkulieren wir nach Raumgröße und Inventar. IT-Entsorgung und Aktenvernichtung werden separat ausgewiesen.',
+      factors: [
+        'Bürogröße in Quadratmetern',
+        'Anzahl der Arbeitsplätze und Möbel',
+        'Menge zu vernichtender Akten',
+        'IT-Geräte und Datenlöschung',
+        'Gewünschte Arbeitszeiten (Nacht/Wochenende)',
+      ],
+    },
+    faq: [
+      {
+        question: 'Was kostet eine Büroauflösung?',
+        answer: 'Ein kleines Büro (50m², 3-5 Arbeitsplätze) kostet ab 1.200-2.000€. Größere Büros (150m², 15-20 Arbeitsplätze) liegen bei 4.000-7.000€. DSGVO-Aktenvernichtung ab 200€ extra. Festpreis nach Besichtigung.',
+      },
+      {
+        question: 'Können Sie Festplatten sicher löschen?',
+        answer: 'Ja, wir arbeiten mit zertifizierten IT-Entsorgern zusammen, die Festplatten nach BSI-Standard löschen oder physisch vernichten. Sie erhalten Löschprotokolle für Ihre Buchhaltung und Compliance.',
+      },
+      {
+        question: 'Arbeiten Sie auch nachts oder am Wochenende?',
+        answer: 'Ja, für Büroauflösungen sind wir sehr flexibel. Freitag Nacht bis Montag Morgen ist eine beliebte Option, damit Ihr Geschäftsbetrieb nicht gestört wird. Nacht-/Wochenendarbeiten ohne Aufpreis.',
+      },
+      {
+        question: 'Was passiert mit brauchbaren Büromöbeln?',
+        answer: 'Hochwertige Büromöbel können wir über Gebrauchtmöbelhändler verwerten. Der Erlös wird auf Ihre Rechnung angerechnet. Alternativ spenden wir an soziale Einrichtungen auf Ihren Wunsch.',
+      },
+    ],
+    relatedServices: ['geschäftsentrümpelung', 'wohnungsentrümpelungen', 'sperrmüllentsorgung'],
+  },
+
+  'verlassenschaftsentrümpelung': {
+    name: 'Verlassenschaftsentrümpelung',
+    slug: 'verlassenschaftsentrümpelung',
+    shortDescription: 'Einfühlsame Entrümpelung nach Todesfall - diskret, respektvoll und mit Erfahrung in Verlassenschaftsabwicklung.',
+    description: 'Nach einem Todesfall müssen Angehörige oft die Wohnung oder das Haus des Verstorbenen auflösen. Wir unterstützen Sie in dieser schwierigen Zeit mit unserer Verlassenschaftsentrümpelung - einfühlsam, diskret und professionell.',
+    metaDescription: 'Verlassenschaftsentrümpelung Wien ✓ Nach Todesfall ✓ Einfühlsam & diskret ✓ Wertgegenstände-Sichtung ✓ Erfahren ☎ +43 660 200 5610',
+    benefits: [
+      'Einfühlsamer Umgang in Trauersituationen',
+      'Erfahrung mit Verlassenschaftsabwicklung',
+      'Sorgfältige Sichtung nach Wertgegenständen',
+      'Zusammenarbeit mit Notaren und Gerichten',
+      'Diskrete und respektvolle Arbeitsweise',
+      'Dokumentation für Verlassenschaftsverfahren',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Einfühlsames Erstgespräch',
+        description: 'Wir besprechen Ihre Situation und klären rechtliche Fragen. Termine werden sensibel vereinbart.',
+      },
+      {
+        step: 2,
+        title: 'Sichtung & Sortierung',
+        description: 'Gemeinsam oder eigenständig sichten wir die Wohnung nach Wertgegenständen, Dokumenten und Erinnerungen.',
+      },
+      {
+        step: 3,
+        title: 'Entrümpelung',
+        description: 'Nach Ihrer Freigabe entrümpeln wir die Wohnung respektvoll und dokumentieren alles für das Gericht.',
+      },
+      {
+        step: 4,
+        title: 'Übergabe',
+        description: 'Die Wohnung wird besenrein übergeben. Sie erhalten alle gefundenen Wertgegenstände und Unterlagen.',
+      },
+    ],
+    pricing: {
+      info: 'Verlassenschaftsentrümpelungen kalkulieren wir besonders fair. Wertgegenstände können die Kosten reduzieren.',
+      factors: [
+        'Wohnungsgröße und Objektmenge',
+        'Zeitaufwand für Sichtung und Sortierung',
+        'Vorhandensein verwertbarer Gegenstände',
+        'Koordination mit Notar/Gericht',
+        'Besondere Wünsche der Erben',
+      ],
+    },
+    faq: [
+      {
+        question: 'Wie läuft eine Verlassenschaftsentrümpelung ab?',
+        answer: 'Wir besprechen zunächst alle Details mit Ihnen oder dem Notar. Dann sichten wir die Wohnung nach Wertgegenständen und wichtigen Dokumenten. Nach Ihrer Freigabe entrümpeln wir die Wohnung und übergeben sie besenrein.',
+      },
+      {
+        question: 'Was passiert mit gefundenen Wertgegenständen?',
+        answer: 'Alle Wertgegenstände, Schmuck, Bargeld und wichtigen Dokumente werden sorgfältig gesammelt und Ihnen übergeben. Wir erstellen eine Dokumentation für das Verlassenschaftsverfahren.',
+      },
+      {
+        question: 'Können Sie direkt mit unserem Notar zusammenarbeiten?',
+        answer: 'Ja, wir haben Erfahrung mit Notaren und Verlassenschaftsgerichten. Auf Wunsch koordinieren wir direkt mit Ihrem Notar und stellen alle erforderlichen Unterlagen bereit.',
+      },
+      {
+        question: 'Wie schnell können Sie die Wohnung räumen?',
+        answer: 'Wir verstehen, dass oft Zeitdruck besteht (Mietende, Verkauf). Nach der Sichtung können wir meist innerhalb von 3-5 Tagen entrümpeln. Express-Service bei Bedarf möglich.',
+      },
+    ],
+    relatedServices: ['haushaltsauflösung', 'wohnungsentrümpelungen', 'dachbodenentrümpelung'],
+  },
+
+  'container-service': {
+    name: 'Container-Service',
+    slug: 'container-service',
+    shortDescription: 'Container-Vermietung in Wien - verschiedene Größen für Bau, Renovierung und Entrümpelung.',
+    description: 'Sie renovieren oder bauen und brauchen einen Container für Bauschutt, Holz oder Mischabfall? Wir liefern Container in verschiedenen Größen direkt zu Ihnen und holen sie nach Absprache wieder ab.',
+    metaDescription: 'Container mieten Wien ✓ 3m³ bis 10m³ ✓ Bauschutt, Holz, Mischabfall ✓ Schnelle Lieferung ✓ Günstige Preise ☎ +43 660 200 5610',
+    benefits: [
+      'Container in verschiedenen Größen (3m³ - 10m³)',
+      'Schnelle Lieferung meist innerhalb 24-48h',
+      'Flexible Mietdauer - tage- oder wochenweise',
+      'Fachgerechte Entsorgung inklusive',
+      'Auch für Bauschutt, Holz, Grünschnitt geeignet',
+      'Kostenlose Beratung zur richtigen Containergröße',
+    ],
+    process: [
+      {
+        step: 1,
+        title: 'Beratung & Bestellung',
+        description: 'Wir beraten Sie zur passenden Containergröße und erstellen ein Angebot. Bestellung per Telefon oder E-Mail.',
+      },
+      {
+        step: 2,
+        title: 'Lieferung',
+        description: 'Wir liefern den Container zum Wunschtermin an die gewünschte Stelle (Straße, Grundstück, Baustelle).',
+      },
+      {
+        step: 3,
+        title: 'Befüllung',
+        description: 'Sie befüllen den Container in Ihrem Tempo. Wir beraten bei Fragen zur richtigen Befüllung.',
+      },
+      {
+        step: 4,
+        title: 'Abholung & Entsorgung',
+        description: 'Nach Ihrer Meldung holen wir den Container ab und entsorgen den Inhalt fachgerecht.',
+      },
+    ],
+    pricing: {
+      info: 'Container-Preise richten sich nach Größe, Mietdauer und Abfallart. Wir erstellen transparente All-inclusive-Angebote.',
+      factors: [
+        'Containergröße (3m³, 5m³, 7m³, 10m³)',
+        'Mietdauer (Tage oder Wochen)',
+        'Art des Abfalls (Bauschutt, Holz, Mischabfall)',
+        'Lieferentfernung',
+        'Stellplatz-Genehmigung (bei Straßenaufstellung)',
+      ],
+    },
+    faq: [
+      {
+        question: 'Was kostet ein Container?',
+        answer: 'Ein 3m³ Container für Bauschutt kostet ab 180€ (inkl. Lieferung, Abholung, Entsorgung, 7 Tage Miete). Ein 7m³ Container ab 350€. Mischabfall ist teurer als sortenreiner Bauschutt. Festpreis im Angebot.',
+      },
+      {
+        question: 'Welche Containergröße brauche ich?',
+        answer: 'Für kleine Renovierungen (Bad, Küche) reicht meist 3-5m³. Bei Wohnungsentrümpelungen empfehlen wir 5-7m³. Für Hausabbruch oder große Baustellen 7-10m³. Wir beraten Sie gerne telefonisch.',
+      },
+      {
+        question: 'Brauche ich eine Genehmigung für Straßenaufstellung?',
+        answer: 'Bei Aufstellung auf öffentlichem Grund (Straße, Gehsteig) benötigen Sie eine Bewilligung der MA46. Wir helfen Ihnen bei der Beantragung oder stellen den Container auf Privatgrund.',
+      },
+      {
+        question: 'Was darf in den Container?',
+        answer: 'In Bauschutt-Container: Ziegel, Beton, Fliesen, Keramik. In Holz-Container: Holzabfälle, Möbel, Paletten. In Mischabfall: alle gemischten Abfälle. Nicht erlaubt: Asbest, Gefahrstoffe, Elektrogeräte.',
+      },
+    ],
+    relatedServices: ['sperrmüllentsorgung', 'garageentrümpelung', 'kellerentrümpelung'],
+  },
 };
 
 export const getAllServices = (): ServiceInfo[] => {
