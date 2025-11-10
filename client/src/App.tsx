@@ -9,6 +9,7 @@ import Districts from "@/pages/Districts";
 import DistrictPage from "@/pages/DistrictPage";
 import Services from "@/pages/Services";
 import ServicePage from "@/pages/ServicePage";
+import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/bezirke/:slug" component={DistrictPage} />
       <Route path="/leistungen" component={Services} />
       <Route path="/leistungen/:slug" component={ServicePage} />
+      <Route path="/kontakt" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );
