@@ -7,22 +7,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { MapPin, ArrowRight } from 'lucide-react';
 import { getAllDistricts } from '@/data/districts';
 import { Button } from '@/components/ui/button';
+import { updateMetaTags } from '@/lib/seo';
 
 export default function Districts() {
   const districts = getAllDistricts();
 
   useEffect(() => {
-    document.title = 'Entrümpelung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = 'Professionelle Entrümpelung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43 660 200 5610';
-    if (metaDescription) {
-      metaDescription.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
+    updateMetaTags({
+      title: 'Entrümpelung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien',
+      description: 'Professionelle Entrümpelung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43 660 200 5610',
+      url: '/bezirke',
+      type: 'website',
+    });
   }, []);
 
   return (
