@@ -2,12 +2,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import heroImage from '@assets/generated_images/Cleaning_team_hero_image_83538c0b.png';
+import ZigzagDivider from './ZigzagDivider';
 
 export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative bg-gradient-to-br from-primary to-primary/90 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-primary to-primary/90 text-white overflow-visible">
       <div className="absolute inset-0 bg-black/20"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -80,6 +81,10 @@ export default function Hero() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0">
+        <ZigzagDivider color="white" position="bottom" />
       </div>
     </section>
   );

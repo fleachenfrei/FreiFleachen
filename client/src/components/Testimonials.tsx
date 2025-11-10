@@ -4,6 +4,7 @@ import { Star } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import jonasImage from '@assets/generated_images/Customer_testimonial_Jonas_4fad6f53.png';
 import marcelImage from '@assets/generated_images/Customer_testimonial_Marcel_4b3a0d9e.png';
+import ZigzagDivider from './ZigzagDivider';
 
 export default function Testimonials() {
   const { t } = useLanguage();
@@ -30,7 +31,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-card">
+    <section className="relative py-16 md:py-24 bg-card">
+      <div className="absolute top-0 left-0 right-0">
+        <ZigzagDivider color="hsl(var(--card))" position="top" />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="text-testimonials-title">
