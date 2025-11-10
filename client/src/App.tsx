@@ -7,6 +7,8 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Home from "@/pages/Home";
 import Districts from "@/pages/Districts";
 import DistrictPage from "@/pages/DistrictPage";
+import Services from "@/pages/Services";
+import ServicePage from "@/pages/ServicePage";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -15,6 +17,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/bezirke" component={Districts} />
       <Route path="/bezirke/:slug" component={DistrictPage} />
+      <Route path="/leistungen" component={Services} />
+      <Route path="/leistungen/:slug" component={ServicePage} />
       <Route component={NotFound} />
     </Switch>
   );
