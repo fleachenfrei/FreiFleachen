@@ -18,15 +18,15 @@ export const services: Record<string, ServiceInfo> = {
   'wohnungsentrümpelungen': {
     name: 'Wohnungsentrümpelung',
     slug: 'wohnungsentrümpelungen',
-    shortDescription: 'Professionelle Entrümpelung Ihrer Wohnung in ganz Wien - schnell, zuverlässig und zu fairen Preisen.',
-    description: 'Unsere Wohnungsentrümpelung ist der ideale Service für Sie, wenn Sie Ihre Wohnung komplett räumen müssen. Ob bei Umzug, Verkauf, Vermietung oder Erbe - wir entrümpeln Ihre Wohnung professionell, schnell und diskret. Von der 1-Zimmer-Wohnung bis zur großen Altbauwohnung in allen 23 Wiener Bezirken.',
-    metaDescription: 'Wohnungsentrümpelung Wien ✓ Alle Bezirke ✓ Auch ohne Lift ✓ Besenreine Übergabe ✓ Festpreisgarantie ✓ Same-Day möglich ☎ +43 660 200 5610',
+    shortDescription: 'Professionelle Entrümpelung Ihrer Wohnung in Wien und Umgebung - schnell, zuverlässig und zu fairen Preisen.',
+    description: 'Unsere Wohnungsentrümpelung ist der ideale Service für Sie, wenn Sie Ihre Wohnung komplett räumen müssen. Ob bei Umzug, Verkauf, Vermietung oder Erbe - wir entrümpeln Ihre Wohnung professionell, schnell und diskret. Von der 1-Zimmer-Wohnung bis zur großen Altbauwohnung in ganz Österreich.',
+    metaDescription: 'Wohnungsentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Auch ohne Lift ✓ Besenreine Übergabe ✓ Festpreisgarantie ☎ +43 660 200 5610',
     benefits: [
       'Komplette Entrümpelung vom Keller bis zum Dachboden',
       'Auch Altbauwohnungen ohne Lift bis 5. Stock',
       'Besenreine Übergabe garantiert',
       'Fachgerechte Entsorgung und Recycling',
-      'Diskrete Abwicklung in allen Wiener Bezirken',
+      'Diskrete Abwicklung in Wien und ganz Österreich',
       'Fixpreis nach kostenloser Besichtigung',
     ],
     process: [
@@ -52,7 +52,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Die Kosten für eine Wohnungsentrümpelung in Wien hängen von mehreren Faktoren ab. Nach einer kostenlosen Besichtigung erhalten Sie von uns einen transparenten Festpreis.',
+      info: 'Die Kosten für eine Wohnungsentrümpelung hängen von mehreren Faktoren ab. Nach einer kostenlosen Besichtigung erhalten Sie von uns einen transparenten Festpreis.',
       factors: [
         'Wohnungsgröße (m² und Anzahl der Zimmer)',
         'Menge und Art der zu entsorgenden Gegenstände',
@@ -63,7 +63,7 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Was kostet eine Wohnungsentrümpelung in Wien?',
+        question: 'Was kostet eine Wohnungsentrümpelung?',
         answer: 'Eine 50m² Wohnung kostet durchschnittlich 800-1.200€, eine 80m² Wohnung 1.200-1.800€. Der genaue Preis hängt von der Objektmenge und dem Stockwerk ab. Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis ohne versteckte Kosten.',
       },
       {
@@ -72,7 +72,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Können Sie auch ohne Lift bis in den 5. Stock?',
-        answer: 'Ja, selbstverständlich! Viele Wiener Altbauten haben keinen Lift - das ist für uns Routine. Unsere Teams sind trainiert im Tragen schwerer Gegenstände über enge Wendeltreppen. Bei Bedarf nutzen wir Möbel-Tragegurte und Außenaufzüge.',
+        answer: 'Ja, selbstverständlich! Viele Altbauten haben keinen Lift - das ist für uns Routine. Unsere Teams sind trainiert im Tragen schwerer Gegenstände über enge Wendeltreppen. Bei Bedarf nutzen wir Möbel-Tragegurte und Außenaufzüge.',
       },
       {
         question: 'Was passiert mit meinen Möbeln und Gegenständen?',
@@ -87,7 +87,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'haushaltsauflösung',
     shortDescription: 'Komplette Haushaltsauflösung nach Todesfall, Umzug ins Pflegeheim oder bei Verkauf - einfühlsam und professionell.',
     description: 'Eine Haushaltsauflösung ist oft eine emotionale Angelegenheit. Ob nach einem Todesfall, beim Umzug ins Pflegeheim oder bei Verkauf - wir übernehmen die komplette Auflösung Ihres Haushalts mit Respekt und Einfühlungsvermögen. Wir kümmern uns um alles: von der Wertgegenständesortierung bis zur besenreinen Übergabe.',
-    metaDescription: 'Haushaltsauflösung Wien ✓ Einfühlsam nach Todesfall ✓ Wertgegenstände-Sortierung ✓ Komplettservice ✓ Alle Bezirke ☎ +43 660 200 5610',
+    metaDescription: 'Haushaltsauflösung Wien und Umgebung ✓ Ganz Österreich ✓ Einfühlsam nach Todesfall ✓ Wertgegenstände-Sortierung ☎ +43 660 200 5610',
     benefits: [
       'Einfühlsamer Umgang in schwierigen Situationen',
       'Sortierung von Wertgegenständen und Erinnerungsstücken',
@@ -152,9 +152,9 @@ export const services: Record<string, ServiceInfo> = {
   'kellerentrümpelung': {
     name: 'Kellerentrümpelung',
     slug: 'kellerentrümpelung',
-    shortDescription: 'Professionelle Kellerentrümpelung in Wien - von vollgestellten Kellerabteilen bis zu großen Kellern in Mehrparteienhäusern.',
-    description: 'Ihr Keller ist über Jahre vollgestellt und Sie brauchen wieder Platz? Wir entrümpeln Kellerabteile, Kellerräume und komplette Keller in Wiener Altbauten und Neubauten. Auch feuchte oder schwer zugängliche Keller sind kein Problem für uns.',
-    metaDescription: 'Kellerentrümpelung Wien ✓ Kellerabteile ✓ Feuchte Keller ✓ Altbau-Keller ✓ Auch große Mengen ✓ Alle Bezirke ☎ +43 660 200 5610',
+    shortDescription: 'Professionelle Kellerentrümpelung in Wien und Umgebung - von vollgestellten Kellerabteilen bis zu großen Kellern in Mehrparteienhäusern.',
+    description: 'Ihr Keller ist über Jahre vollgestellt und Sie brauchen wieder Platz? Wir entrümpeln Kellerabteile, Kellerräume und komplette Keller in Altbauten und Neubauten in ganz Österreich. Auch feuchte oder schwer zugängliche Keller sind kein Problem für uns.',
+    metaDescription: 'Kellerentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Feuchte Keller ✓ Altbau-Keller ✓ Auch große Mengen ☎ +43 660 200 5610',
     benefits: [
       'Entrümpelung auch von feuchten und vollgestellten Kellern',
       'Erfahrung mit engen Kellerzugängen in Altbauten',
@@ -210,7 +210,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Arbeiten Sie auch in sehr engen Kellern?',
-        answer: 'Ja, Wiener Altbau-Keller mit engen Treppen und Gängen kennen wir bestens. Wir nutzen spezielle Tragegurte und arbeiten in kleineren Teams, um auch verwinkelte Keller zu entrümpeln.',
+        answer: 'Ja, Altbau-Keller mit engen Treppen und Gängen kennen wir bestens. Wir nutzen spezielle Tragegurte und arbeiten in kleineren Teams, um auch verwinkelte Keller zu entrümpeln.',
       },
     ],
     relatedServices: ['dachbodenentrümpelung', 'wohnungsentrümpelungen', 'garageentrümpelung'],
@@ -219,9 +219,9 @@ export const services: Record<string, ServiceInfo> = {
   'dachbodenentrümpelung': {
     name: 'Dachbodenentrümpelung',
     slug: 'dachbodenentrümpelung',
-    shortDescription: 'Dachböden und Speicher professionell entrümpeln in ganz Wien - auch bei steilen Stiegen und niedrigen Durchgängen.',
-    description: 'Über Jahrzehnte sammelt sich auf Dachböden vieles an. Wir entrümpeln Ihren Dachboden professionell - von einzelnen Dachkammern bis zu kompletten Dachgeschossen in Wiener Zinshäusern. Auch schwer zugängliche Speicher sind für uns kein Problem.',
-    metaDescription: 'Dachbodenentrümpelung Wien ✓ Steile Treppen ✓ Niedrige Durchgänge ✓ Altbau-Speicher ✓ Sperrmüll-Entsorgung ☎ +43 660 200 5610',
+    shortDescription: 'Dachböden und Speicher professionell entrümpeln in Wien und Umgebung - auch bei steilen Stiegen und niedrigen Durchgängen.',
+    description: 'Über Jahrzehnte sammelt sich auf Dachböden vieles an. Wir entrümpeln Ihren Dachboden professionell - von einzelnen Dachkammern bis zu kompletten Dachgeschossen in ganz Österreich. Auch schwer zugängliche Speicher sind für uns kein Problem.',
+    metaDescription: 'Dachbodenentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Steile Treppen ✓ Altbau-Speicher ✓ Sperrmüll-Entsorgung ☎ +43 660 200 5610',
     benefits: [
       'Erfahrung mit steilen Dachbodentreppen und niedrigen Durchgängen',
       'Entrümpelung auch bei extremen Dachschrägen',
@@ -269,7 +269,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Können Sie auch sehr steile Dachbodentreppen bewältigen?',
-        answer: 'Ja, steile Wiener Altbau-Treppen zum Dachboden sind uns bestens vertraut. Wir nutzen Tragegurte und arbeiten vorsichtig, um weder Treppe noch Treppenhaus zu beschädigen. Für sehr große Möbel prüfen wir Fensterlösungen.',
+        answer: 'Ja, steile Altbau-Treppen zum Dachboden sind uns bestens vertraut. Wir nutzen Tragegurte und arbeiten vorsichtig, um weder Treppe noch Treppenhaus zu beschädigen. Für sehr große Möbel prüfen wir Fensterlösungen.',
       },
       {
         question: 'Was passiert mit alten Möbeln vom Dachboden?',
@@ -286,9 +286,9 @@ export const services: Record<string, ServiceInfo> = {
   'geschäftsentrümpelung': {
     name: 'Geschäftsentrümpelung',
     slug: 'geschäftsentrümpelung',
-    shortDescription: 'Professionelle Entrümpelung von Geschäftsräumen, Büros und Gewerbeflächen in Wien - diskret und außerhalb der Öffnungszeiten.',
-    description: 'Sie schließen Ihr Geschäft, ziehen um oder renovieren? Wir entrümpeln Ihre Geschäftsräume professionell und diskret - von kleinen Boutiquen bis zu großen Gewerbeflächen. Arbeitszeiten flexibel außerhalb Ihrer Öffnungszeiten.',
-    metaDescription: 'Geschäftsentrümpelung Wien ✓ Außerhalb Öffnungszeiten ✓ Büros & Gewerbe ✓ Diskret ✓ Schnell ✓ Alle Bezirke ☎ +43 660 200 5610',
+    shortDescription: 'Professionelle Entrümpelung von Geschäftsräumen, Büros und Gewerbeflächen in Wien und Umgebung - diskret und außerhalb der Öffnungszeiten.',
+    description: 'Sie schließen Ihr Geschäft, ziehen um oder renovieren? Wir entrümpeln Ihre Geschäftsräume professionell und diskret in ganz Österreich - von kleinen Boutiquen bis zu großen Gewerbeflächen. Arbeitszeiten flexibel außerhalb Ihrer Öffnungszeiten.',
+    metaDescription: 'Geschäftsentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Außerhalb Öffnungszeiten ✓ Büros & Gewerbe ✓ Diskret ☎ +43 660 200 5610',
     benefits: [
       'Flexible Arbeitszeiten außerhalb der Öffnungszeiten',
       'Diskrete Abwicklung ohne Firmenkennzeichnung',
@@ -353,9 +353,9 @@ export const services: Record<string, ServiceInfo> = {
   'messie-entrümpelung': {
     name: 'Messie-Entrümpelung',
     slug: 'messie-entrümpelung',
-    shortDescription: 'Einfühlsame Messie-Entrümpelung in Wien - diskret, respektvoll und ohne Vorurteile.',
+    shortDescription: 'Einfühlsame Messie-Entrümpelung in Wien und Umgebung - diskret, respektvoll und ohne Vorurteile.',
     description: 'Messie-Wohnungen erfordern besondere Sensibilität und Erfahrung. Wir entrümpeln Messie-Haushalte mit Respekt, Diskretion und ohne Vorurteile. Unsere geschulten Teams arbeiten einfühlsam und helfen Ihnen, wieder Ordnung zu schaffen.',
-    metaDescription: 'Messie-Entrümpelung Wien ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Professionelle Teams ✓ Vertraulich ✓ Alle Bezirke ☎ +43 660 200 5610',
+    metaDescription: 'Messie-Entrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Vertraulich ☎ +43 660 200 5610',
     benefits: [
       'Geschulte Teams mit Messie-Erfahrung und Einfühlungsvermögen',
       'Absolute Diskretion und Verschwiegenheit garantiert',
@@ -420,9 +420,9 @@ export const services: Record<string, ServiceInfo> = {
   'sperrmüllentsorgung': {
     name: 'Sperrmüllentsorgung',
     slug: 'sperrmüllentsorgung',
-    shortDescription: 'Schnelle und unkomplizierte Sperrmüllabholung in Wien - wir entsorgen Möbel, Elektrogeräte und mehr fachgerecht.',
+    shortDescription: 'Schnelle und unkomplizierte Sperrmüllabholung in Wien und Umgebung - wir entsorgen Möbel, Elektrogeräte und mehr fachgerecht.',
     description: 'Sie haben alte Möbel, Matratzen oder Elektrogeräte zu entsorgen? Unsere Sperrmüllentsorgung ist die schnelle und bequeme Lösung. Wir holen Ihren Sperrmüll direkt bei Ihnen ab und entsorgen ihn fachgerecht - ohne dass Sie selbst zum Mistplatz fahren müssen.',
-    metaDescription: 'Sperrmüllentsorgung Wien ✓ Schnelle Abholung ✓ Möbel, Matratzen, Elektrogeräte ✓ Fachgerecht entsorgt ✓ Alle Bezirke ☎ +43 660 200 5610',
+    metaDescription: 'Sperrmüllentsorgung Wien und Umgebung ✓ Ganz Österreich ✓ Schnelle Abholung ✓ Möbel, Matratzen, Elektrogeräte ☎ +43 660 200 5610',
     benefits: [
       'Abholung direkt bei Ihnen zu Hause',
       'Kein mühsamer Transport zum Mistplatz',
@@ -488,15 +488,15 @@ export const services: Record<string, ServiceInfo> = {
     name: 'Umzugsservice',
     slug: 'umzugsservice',
     shortDescription: 'Professioneller Umzug in Wien und Umgebung - von der Planung bis zum letzten Karton, stressfrei und zuverlässig.',
-    description: 'Ein Umzug muss nicht stressig sein. Unser Umzugsservice übernimmt alle Aufgaben rund um Ihren Wohnungs- oder Büroumzug in Wien. Von der Planung über das Packen bis zum Aufbau in der neuen Wohnung - wir kümmern uns um alles.',
-    metaDescription: 'Umzugsservice Wien ✓ Privatumzüge & Firmenumzüge ✓ Packmaterial inklusive ✓ Möbelmontage ✓ Versichert ✓ Alle Bezirke ☎ +43 660 200 5610',
+    description: 'Ein Umzug muss nicht stressig sein. Unser Umzugsservice übernimmt alle Aufgaben rund um Ihren Wohnungs- oder Büroumzug in ganz Österreich. Von der Planung über das Packen bis zum Aufbau in der neuen Wohnung - wir kümmern uns um alles.',
+    metaDescription: 'Umzugsservice Wien und Umgebung ✓ Ganz Österreich ✓ Privatumzüge & Firmenumzüge ✓ Packmaterial ✓ Möbelmontage ☎ +43 660 200 5610',
     benefits: [
       'Komplettservice von Planung bis Möbelmontage',
       'Erfahrene Umzugshelfer und moderne Fahrzeuge',
       'Packmaterial (Kartons, Folie, Decken) inklusive',
       'Möbelabbau und -aufbau auf Wunsch',
       'Versicherungsschutz für Ihre Möbel',
-      'Umzüge in ganz Wien und Umgebung',
+      'Umzüge in ganz Österreich',
     ],
     process: [
       {
@@ -532,8 +532,8 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Was kostet ein Umzug in Wien?',
-        answer: 'Eine 2-Zimmer-Wohnung innerhalb Wiens kostet ab 600-900€. Eine 4-Zimmer-Wohnung ab 1.200-1.800€. Mit Packen und Möbelmontage kalkulieren wir 30-40% Aufschlag. Festpreis nach Besichtigung.',
+        question: 'Was kostet ein Umzug?',
+        answer: 'Eine 2-Zimmer-Wohnung kostet ab 600-900€. Eine 4-Zimmer-Wohnung ab 1.200-1.800€. Mit Packen und Möbelmontage kalkulieren wir 30-40% Aufschlag. Distanz beeinflusst den Preis. Festpreis nach Besichtigung.',
       },
       {
         question: 'Sind meine Möbel versichert?',
@@ -554,9 +554,9 @@ export const services: Record<string, ServiceInfo> = {
   'garageentrümpelung': {
     name: 'Garageentrümpelung',
     slug: 'garageentrümpelung',
-    shortDescription: 'Garagen professionell entrümpeln - von vollgestellten Einzelgaragen bis zu Tiefgaragen in Mehrparteienhäusern.',
-    description: 'Ihre Garage ist über Jahre zum Abstellraum geworden? Wir entrümpeln Garagen, Carports und Stellplätze professionell. Egal ob Einzelgarage, Doppelgarage oder Tiefgaragenstellplatz - wir schaffen wieder Platz für Ihr Auto.',
-    metaDescription: 'Garageentrümpelung Wien ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ✓ Altölentsorgung ✓ Schnell & günstig ☎ +43 660 200 5610',
+    shortDescription: 'Garagen professionell entrümpeln in Wien und Umgebung - von vollgestellten Einzelgaragen bis zu Tiefgaragen in Mehrparteienhäusern.',
+    description: 'Ihre Garage ist über Jahre zum Abstellraum geworden? Wir entrümpeln Garagen, Carports und Stellplätze professionell in ganz Österreich. Egal ob Einzelgarage, Doppelgarage oder Tiefgaragenstellplatz - wir schaffen wieder Platz für Ihr Auto.',
+    metaDescription: 'Garageentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ☎ +43 660 200 5610',
     benefits: [
       'Entrümpelung von Einzel-, Doppel- und Tiefgaragen',
       'Entsorgung von Altöl, Reifen und Autoteilen',
@@ -621,9 +621,9 @@ export const services: Record<string, ServiceInfo> = {
   'büroauflösung': {
     name: 'Büroauflösung',
     slug: 'büroauflösung',
-    shortDescription: 'Professionelle Büroauflösung in Wien - diskret und effizient auch außerhalb der Geschäftszeiten.',
-    description: 'Sie schließen Ihr Büro, verkleinern sich oder ziehen um? Unsere Büroauflösung übernimmt alles: von Schreibtischen und Serverschränken bis zu Aktenvernichtung. Diskret, schnell und zu fairen Konditionen.',
-    metaDescription: 'Büroauflösung Wien ✓ Auch nachts & am Wochenende ✓ DSGVO-Aktenvernichtung ✓ IT-Entsorgung ✓ Diskret ✓ Alle Bezirke ☎ +43 660 200 5610',
+    shortDescription: 'Professionelle Büroauflösung in Wien und Umgebung - diskret und effizient auch außerhalb der Geschäftszeiten.',
+    description: 'Sie schließen Ihr Büro, verkleinern sich oder ziehen um? Unsere Büroauflösung übernimmt alles in ganz Österreich: von Schreibtischen und Serverschränken bis zu Aktenvernichtung. Diskret, schnell und zu fairen Konditionen.',
+    metaDescription: 'Büroauflösung Wien und Umgebung ✓ Ganz Österreich ✓ DSGVO-Aktenvernichtung ✓ IT-Entsorgung ✓ Diskret ☎ +43 660 200 5610',
     benefits: [
       'Flexible Arbeitszeiten auch nachts und am Wochenende',
       'Sichere DSGVO-konforme Aktenvernichtung',
@@ -688,9 +688,9 @@ export const services: Record<string, ServiceInfo> = {
   'verlassenschaftsentrümpelung': {
     name: 'Verlassenschaftsentrümpelung',
     slug: 'verlassenschaftsentrümpelung',
-    shortDescription: 'Einfühlsame Entrümpelung nach Todesfall - diskret, respektvoll und mit Erfahrung in Verlassenschaftsabwicklung.',
-    description: 'Nach einem Todesfall müssen Angehörige oft die Wohnung oder das Haus des Verstorbenen auflösen. Wir unterstützen Sie in dieser schwierigen Zeit mit unserer Verlassenschaftsentrümpelung - einfühlsam, diskret und professionell.',
-    metaDescription: 'Verlassenschaftsentrümpelung Wien ✓ Nach Todesfall ✓ Einfühlsam & diskret ✓ Wertgegenstände-Sichtung ✓ Erfahren ☎ +43 660 200 5610',
+    shortDescription: 'Einfühlsame Entrümpelung nach Todesfall in Wien und Umgebung - diskret, respektvoll und mit Erfahrung in Verlassenschaftsabwicklung.',
+    description: 'Nach einem Todesfall müssen Angehörige oft die Wohnung oder das Haus des Verstorbenen auflösen. Wir unterstützen Sie in ganz Österreich in dieser schwierigen Zeit mit unserer Verlassenschaftsentrümpelung - einfühlsam, diskret und professionell.',
+    metaDescription: 'Verlassenschaftsentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Nach Todesfall ✓ Einfühlsam & diskret ☎ +43 660 200 5610',
     benefits: [
       'Einfühlsamer Umgang in Trauersituationen',
       'Erfahrung mit Verlassenschaftsabwicklung',
@@ -755,9 +755,9 @@ export const services: Record<string, ServiceInfo> = {
   'container-service': {
     name: 'Container-Service',
     slug: 'container-service',
-    shortDescription: 'Container-Vermietung in Wien - verschiedene Größen für Bau, Renovierung und Entrümpelung.',
-    description: 'Sie renovieren oder bauen und brauchen einen Container für Bauschutt, Holz oder Mischabfall? Wir liefern Container in verschiedenen Größen direkt zu Ihnen und holen sie nach Absprache wieder ab.',
-    metaDescription: 'Container mieten Wien ✓ 3m³ bis 10m³ ✓ Bauschutt, Holz, Mischabfall ✓ Schnelle Lieferung ✓ Günstige Preise ☎ +43 660 200 5610',
+    shortDescription: 'Container-Vermietung in Wien und Umgebung - verschiedene Größen für Bau, Renovierung und Entrümpelung.',
+    description: 'Sie renovieren oder bauen und brauchen einen Container für Bauschutt, Holz oder Mischabfall? Wir liefern Container in verschiedenen Größen in ganz Österreich direkt zu Ihnen und holen sie nach Absprache wieder ab.',
+    metaDescription: 'Container mieten Wien und Umgebung ✓ Ganz Österreich ✓ 3m³ bis 10m³ ✓ Bauschutt, Holz, Mischabfall ☎ +43 660 200 5610',
     benefits: [
       'Container in verschiedenen Größen (3m³ - 10m³)',
       'Schnelle Lieferung meist innerhalb 24-48h',
