@@ -1,0 +1,87 @@
+import { Link } from 'wouter';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+export default function Footer() {
+  const { t } = useLanguage();
+
+  const districts = [
+    '1010 Wien Innere Stadt',
+    '1020 Wien Leopoldstadt',
+    '1030 Wien Landstraße',
+    '1100 Wien Favoriten',
+    '1110 Wien Simmering',
+    '1120 Wien Meidling',
+  ];
+
+  return (
+    <footer className="bg-primary text-primary-foreground">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Flächen Frei</h3>
+            <p className="text-sm text-primary-foreground/80 mb-4">
+              Ihr zuverlässiger Partner für Entrümpelung, Räumung und Transport in Wien und Umgebung.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4" data-testid="text-footer-services">
+              {t.footer.services}
+            </h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/80">
+              <li><Link href="/leistungen#wohnung" className="hover:text-primary-foreground">Wohnungsentrümpelung</Link></li>
+              <li><Link href="/leistungen#haus" className="hover:text-primary-foreground">Hausräumung</Link></li>
+              <li><Link href="/leistungen#verlassenschaft" className="hover:text-primary-foreground">Verlassenschaft</Link></li>
+              <li><Link href="/leistungen#transport" className="hover:text-primary-foreground">Transport</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4" data-testid="text-footer-districts">
+              {t.footer.districts}
+            </h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/80">
+              {districts.slice(0, 4).map((district, i) => (
+                <li key={i}>
+                  <Link href={`/bezirke/${district.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-primary-foreground">
+                    {district}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4" data-testid="text-footer-contact">
+              {t.footer.contact}
+            </h4>
+            <ul className="space-y-3 text-sm text-primary-foreground/80">
+              <li className="flex items-start gap-2">
+                <Phone className="w-4 h-4 mt-0.5 shrink-0" />
+                <a href="tel:+436602005610" className="hover:text-primary-foreground">+43 660 200 5610</a>
+              </li>
+              <li className="flex items-start gap-2">
+                <Mail className="w-4 h-4 mt-0.5 shrink-0" />
+                <a href="mailto:office@flaechenfrei.at" className="hover:text-primary-foreground">office@flaechenfrei.at</a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+                <span>Wien, Österreich</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
+          <p data-testid="text-footer-copyright">{t.footer.copyright}</p>
+          <div className="flex gap-6">
+            <Link href="/datenschutz" className="hover:text-primary-foreground">{t.footer.privacy}</Link>
+            <Link href="/impressum" className="hover:text-primary-foreground">{t.footer.imprint}</Link>
+            <Link href="/agb" className="hover:text-primary-foreground">{t.footer.terms}</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
