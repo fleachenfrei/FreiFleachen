@@ -89,7 +89,7 @@ export default function Districts() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground mb-4">
-                        {district.description.substring(0, 120)}...
+                        {district.shortSummary}
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {district.landmarks.slice(0, 3).map((landmark, i) => (
@@ -98,8 +98,7 @@ export default function Districts() {
                           </div>
                         ))}
                       </div>
-                    </CardContent>
-                  </Card>
+                    </CardContent>                  </Card>
                 </Link>
               ))}
             </div>

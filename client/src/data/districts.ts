@@ -4,6 +4,7 @@ export interface DistrictInfo {
   slug: string;
   description: string;
   metaDescription: string;
+  shortSummary: string;
   landmarks: string[];
   neighborhoods: string[];
   characteristics: string[];
@@ -20,6 +21,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1010-wien-innere-stadt',
     description: 'Die Innere Stadt ist das historische und kulturelle Herz Wiens. Als UNESCO-Weltkulturerbe beherbergt der 1. Bezirk weltberühmte Sehenswürdigkeiten wie den Stephansdom, die Hofburg und die Staatsoper.',
     metaDescription: 'Professionelle Entrümpelung im 1. Bezirk Wien Innere Stadt ✓ Schnell ✓ Diskret ✓ Faire Preise. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Professionelle Entrümpelung im historischen 1. Bezirk. Diskrete Arbeit in UNESCO-Weltkulturerbe mit Erfahrung in denkmalgeschützten Gebäuden.',
     landmarks: ['Stephansdom', 'Hofburg', 'Staatsoper', 'Graben', 'Ringstraße', 'Burgtheater'],
     neighborhoods: ['Stubenviertel', 'Freihausviertel', 'Schottenviertel', 'Franziskanerviertel'],
     characteristics: [
@@ -66,6 +68,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1020-wien-leopoldstadt',
     description: 'Die Leopoldstadt ist der zweitgrößte Bezirk Wiens und bekannt für den Prater und das moderne Stadtviertel rund um den Praterstern. Der Bezirk verbindet historischen Charme mit modernem Stadtleben.',
     metaDescription: 'Entrümpelung 1020 Wien Leopoldstadt ✓ Prater ✓ Praterstern ✓ Augarten. Professionell & günstig. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Entrümpelung im 2. Bezirk von Prater bis Nordbahnviertel. Schnelle Erreichbarkeit vom Praterstern und Erfahrung mit Gewerbeobjekten.',
     landmarks: ['Prater', 'Riesenrad', 'Augarten', 'Praterstern', 'Messe Wien', 'Ernst-Happel-Stadion'],
     neighborhoods: ['Prater', 'Stuwerviertel', 'Nordbahnviertel', 'Volkertviertel', 'Mazzesinsel'],
     characteristics: [
@@ -112,6 +115,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1030-wien-landstrasse',
     description: 'Der 3. Bezirk Landstraße ist geprägt von prächtigen Botschaftsgebäuden, dem barocken Schloss Belvedere und modernen Bürokomplexen. Ein gehobener Wohnbezirk mit ausgezeichneter Infrastruktur.',
     metaDescription: 'Entrümpelung 1030 Wien Landstraße ✓ Belvedere ✓ Botschaftsviertel ✓ Schnell & professionell. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Diskrete Entrümpelung im gehobenen 3. Bezirk. Botschaftsviertel, Belvedere-Gegend mit Erfahrung in hochwertigen Immobilien.',
     landmarks: ['Schloss Belvedere', 'Wien Mitte', 'Stadtpark', 'Hundertwasserhaus', 'Botanischer Garten'],
     neighborhoods: ['Botschaftsviertel', 'Erdberg', 'Rennweg', 'Landstraßer Hauptstraße', 'Weißgerber'],
     characteristics: [
@@ -158,6 +162,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1040-wien-wieden',
     description: 'Wieden ist ein lebendiger, zentrumsnaher Bezirk mit vielen Altbauten, der Karlskirche und dem beliebten Naschmarkt. Eine perfekte Mischung aus Wohnen, Arbeiten und Kultur.',
     metaDescription: 'Entrümpelung 1040 Wien Wieden ✓ Naschmarkt ✓ Karlsplatz ✓ Margaretenstraße. Professionell & fair. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Professionelle Entrümpelung im 4. Bezirk nahe Naschmarkt und Karlskirche. Erfahrung mit Altbau-Stiegenhäusern ohne Lift.',
     landmarks: ['Karlskirche', 'Naschmarkt', 'Karlsplatz', 'Resselpark', 'Wiedner Hauptstraße'],
     neighborhoods: ['Freihausviertel', 'Paulanerviertel', 'Schaumburggasse', 'Favoritenstraße'],
     characteristics: [
@@ -204,6 +209,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1050-wien-margareten',
     description: 'Margareten ist ein bunter, lebendiger Bezirk mit multikulturellen Einflüssen, vielen Lokalen und dem beliebten Margaretenplatz. Traditionelle Altbauten prägen das Stadtbild.',
     metaDescription: 'Entrümpelung 1050 Wien Margareten ✓ Reinprechtsdorfer Straße ✓ Margaretenplatz. Schnell & günstig. Jetzt anrufen ☎ +43 660 200 5610',
+    shortSummary: 'Faire Entrümpelung im 5. Bezirk mit Verständnis für besondere Situationen. Diskrete Messie-Entrümpelungen und soziale Preisgestaltung.',
     landmarks: ['Margaretenplatz', 'Rüdigerhof', 'Matzleinsdorfer Platz'],
     neighborhoods: ['Hundsturm', 'Arbeiterviertel', 'Reinprechtsdorf', 'Laurenzberg'],
     characteristics: [
@@ -250,6 +256,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1060-wien-mariahilf',
     description: 'Mariahilf ist ein urbaner Szenebezirk mit der Mariahilfer Straße als Shopping-Meile, vielen Cafés, Bars und einer lebendigen Kulturszene. Ein beliebter Wohnbezirk mit Altbaucharme.',
     metaDescription: 'Entrümpelung 1060 Wien Mariahilf ✓ Mariahilfer Straße ✓ Naschmarkt ✓ Professionell & schnell. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Schnelle Entrümpelung im urbanen 6. Bezirk. Mariahilfer Straße und Umgebung mit flexiblen Arbeitszeiten für Geschäftskunden.',
     landmarks: ['Mariahilfer Straße', 'Haus des Meeres', 'Theater an der Wien', 'Naschmarkt'],
     neighborhoods: ['Gumpendorf', 'Windmühle', 'Laimgrube', 'Magdalenengrund'],
     characteristics: [
@@ -296,6 +303,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1070-wien-neubau',
     description: 'Neubau ist der kreative und hippe Bezirk Wiens mit vielen Designläden, Galerien, Cafés und dem MuseumsQuartier. Ein lebendiger Bezirk mit hoher Lebensqualität.',
     metaDescription: 'Entrümpelung 1070 Wien Neubau ✓ MuseumsQuartier ✓ Spittelberg ✓ Schnell & professionell. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Professionelle Entrümpelung im kreativen 7. Bezirk. MuseumsQuartier, Spittelberg mit sorgfältigem Umgang mit Kunstobjekten.',
     landmarks: ['MuseumsQuartier', 'Spittelberg', 'Volkstheater', 'Neubaugasse'],
     neighborhoods: ['Spittelberg', 'Schottenfeld', 'Neubaugasse', 'Westbahnhof'],
     characteristics: [
@@ -342,6 +350,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1080-wien-josefstadt',
     description: 'Die Josefstadt ist der kleinste und feinste Bezirk Wiens mit historischen Bürgerhäusern, dem berühmten Josefstädter Theater und einer gehobenen Wohnlage in Zentrumsnähe.',
     metaDescription: 'Entrümpelung 1080 Wien Josefstadt ✓ Josefstädter Straße ✓ Rathaus ✓ Diskret & professionell. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Diskrete Entrümpelung im kleinsten Bezirk Wiens. Historische Bürgerhäuser mit Erfahrung in gehobenen Wohnlagen.',
     landmarks: ['Theater in der Josefstadt', 'Rathaus', 'Piaristenkirche'],
     neighborhoods: ['Josefstadt', 'Breitenfeld', 'Albertplatz', 'Strozzigasse'],
     characteristics: [
@@ -388,6 +397,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1090-wien-alsergrund',
     description: 'Der Alsergrund ist ein traditionsreicher Bezirk mit der Universität Wien, dem AKH und vielen medizinischen Einrichtungen. Ein lebendiger Studentenbezirk mit historischem Flair.',
     metaDescription: 'Entrümpelung 1090 Wien Alsergrund ✓ Universität Wien ✓ AKH ✓ Schnell & günstig. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Günstige Entrümpelung im Universitätsviertel. Studenten-freundliche Preise und Erfahrung mit medizinischen Einrichtungen.',
     landmarks: ['Universität Wien', 'Allgemeines Krankenhaus', 'Sigmund Freud Museum', 'Votivkirche'],
     neighborhoods: ['Rossau', 'Lichtental', 'Althangrund', 'Servitenviertel'],
     characteristics: [
@@ -434,6 +444,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1100-wien-favoriten',
     description: 'Favoriten ist der bevölkerungsreichste Bezirk Wiens mit dem Hauptbahnhof, vielfältigen Wohngebieten und dem Erholungsgebiet Laaer Berg. Ein dynamischer Bezirk im Wandel.',
     metaDescription: 'Entrümpelung 1100 Wien Favoriten ✓ Hauptbahnhof ✓ Laaer Berg ✓ Professionell & günstig. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Entrümpelung im bevölkerungsreichsten Bezirk. Hauptbahnhof, Sonnwendviertel mit großer Fahrzeugflotte für große Objekte.',
     landmarks: ['Wien Hauptbahnhof', 'Laaer Berg', 'Favoriten-Straße', 'Therme Wien'],
     neighborhoods: ['Sonnwendviertel', 'Laaer Berg', 'Oberlaa', 'Unterlaa', 'Inzersdorf'],
     characteristics: [
@@ -480,6 +491,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1110-wien-simmering',
     description: 'Simmering ist ein großflächiger Bezirk im Südosten Wiens mit Industrie, Wohngebieten und viel Grünraum. Der Bezirk verbindet Arbeiten und Wohnen in aufstrebenden Vierteln.',
     metaDescription: 'Entrümpelung 1110 Wien Simmering ✓ Simmeringer Hauptstraße ✓ Schnell & zuverlässig. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Gewerbeobjekt-Entrümpelung im 11. Bezirk. Lagerhallen, Industrie mit Erfahrung und großer Entsorgungskapazität.',
     landmarks: ['Simmeringer Hauptstraße', 'Zentralfriedhof', 'Gasometer', 'Haidepark'],
     neighborhoods: ['Simmering', 'Kaiserebersdorf', 'Albern', 'Schwechat'],
     characteristics: [
@@ -526,6 +538,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1120-wien-meidling',
     description: 'Meidling ist ein traditioneller Arbeiterbezirk mit dem Einkaufszentrum Huma Eleven, der Schönbrunner Straße und vielfältigen Wohngegenden. Ein lebendiger Bezirk mit guter Infrastruktur.',
     metaDescription: 'Entrümpelung 1120 Wien Meidling ✓ Schönbrunner Straße ✓ Hetzendorf ✓ Professionell & fair. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Faire Entrümpelung im traditionellen 12. Bezirk. Zentrale Verkehrslage mit schneller Anfahrt und lokalem Engagement.',
     landmarks: ['Huma Eleven', 'Schönbrunn', 'Gaudenzdorf', 'Meidlinger Markt'],
     neighborhoods: ['Hetzendorf', 'Altmannsdorf', 'Gaudenzdorf', 'Hetzendorf'],
     characteristics: [
@@ -572,6 +585,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1130-wien-hietzing',
     description: 'Hietzing ist einer der vornehmsten Bezirke Wiens mit Schloss Schönbrunn, dem Lainzer Tiergarten und noblen Villenvierteln. Eine grüne Oase mit höchster Lebensqualität.',
     metaDescription: 'Entrümpelung 1130 Wien Hietzing ✓ Schönbrunn ✓ Lainz ✓ Diskret & professionell. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Exklusive Entrümpelung im nobelsten Bezirk. Villen, Herrschaftshäuser mit höchster Diskretion und Sorgfalt.',
     landmarks: ['Schloss Schönbrunn', 'Lainzer Tiergarten', 'Schönbrunner Schlosspark', 'Gloriette'],
     neighborhoods: ['Hietzing', 'Unter St. Veit', 'Ober St. Veit', 'Lainz', 'Speising'],
     characteristics: [
@@ -618,6 +632,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1140-wien-penzing',
     description: 'Penzing ist ein weitläufiger Bezirk im Westen Wiens mit dem Wienerwald, Schloss Schönbrunn und vielfältigen Wohngebieten. Viel Grün und hohe Lebensqualität prägen den Bezirk.',
     metaDescription: 'Entrümpelung 1140 Wien Penzing ✓ Hütteldorf ✓ Baumgarten ✓ Professionell & schnell. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Entrümpelung im grünen 14. Bezirk. Hütteldorf bis Wienerwald mit Erfahrung in Gärten und Außenbereichen.',
     landmarks: ['Technisches Museum', 'Schloss Schönbrunn', 'Wienerwald', 'Dehnepark'],
     neighborhoods: ['Hütteldorf', 'Baumgarten', 'Breitensee', 'Hadikgasse', 'Hadersdorf'],
     characteristics: [
@@ -664,6 +679,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1150-wien-rudolfsheim-fuenfhaus',
     description: 'Rudolfsheim-Fünfhaus ist ein lebendiger, multikultureller Bezirk mit der Mariahilfer Straße, dem Westbahnhof und traditionellen Wohnvierteln. Ein Bezirk im Aufbruch.',
     metaDescription: 'Entrümpelung 1150 Wien Rudolfsheim-Fünfhaus ✓ Westbahnhof ✓ Mariahilfer Straße ✓ Günstig & schnell ☎ +43 660 200 5610',
+    shortSummary: 'Soziale Entrümpelung im multikulturellen 15. Bezirk. Westbahnhof-Nähe mit mehrsprachigen Teams und fairen Preisen.',
     landmarks: ['Westbahnhof', 'Mariahilfer Straße', 'Stadthalle'],
     neighborhoods: ['Rudolfsheim', 'Fünfhaus', 'Rustendorf', 'Sechshaus'],
     characteristics: [
@@ -710,6 +726,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1160-wien-ottakring',
     description: 'Ottakring ist ein traditioneller Bezirk mit dem Brunnenmarkt, dem Wienerwald und gemütlichen Wohnvierteln. Multikulturell, lebendig und mit viel Charakter.',
     metaDescription: 'Entrümpelung 1160 Wien Ottakring ✓ Brunnenmarkt ✓ Wilhelminenspital ✓ Professionell & fair. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Faire Entrümpelung im 16. Bezirk rund um den Brunnenmarkt. Lokale Kenntnis und verständnisvolle Teams.',
     landmarks: ['Brunnenmarkt', 'Wilhelminenspital', 'Ottakringer Brauerei', 'Gallitzinberg'],
     neighborhoods: ['Ottakring', 'Neulerchenfeld', 'Sandleiten'],
     characteristics: [
@@ -756,6 +773,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1170-wien-hernals',
     description: 'Hernals ist ein grüner Bezirk am Fuße des Wienerwalds mit dem Hernalser Gürtel, Dornbach und ruhigen Wohngebieten. Hohe Lebensqualität und Naturnähe zeichnen den Bezirk aus.',
     metaDescription: 'Entrümpelung 1170 Wien Hernals ✓ Dornbach ✓ Hernalser Gürtel ✓ Schnell & professionell. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Grüne Entrümpelung im 17. Bezirk am Wienerwald. Hanglagen, Dornbach mit Erfahrung in Gärten und Außenbereichen.',
     landmarks: ['Alszeile', 'Dornbacher Park', 'Kongresspark Neuwaldegg'],
     neighborhoods: ['Hernals', 'Dornbach', 'Neuwaldegg'],
     characteristics: [
@@ -802,6 +820,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1180-wien-waehring',
     description: 'Währing ist ein vornehmer, grüner Bezirk mit Villen, dem Türkenschanzpark und der Währinger Straße. Eine gehobene Wohnlage mit exzellenter Infrastruktur.',
     metaDescription: 'Entrümpelung 1180 Wien Währing ✓ Türkenschanzpark ✓ Währinger Straße ✓ Diskret & professionell. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Diskrete Villen-Entrümpelung im gehobenen 18. Bezirk. Türkenschanzpark-Gebiet mit höchster Professionalität.',
     landmarks: ['Türkenschanzpark', 'Schubertpark', 'Währinger Straße', 'Gersthofer Straße'],
     neighborhoods: ['Währing', 'Gersthof', 'Pötzleinsdorf', 'Weinhaus'],
     characteristics: [
@@ -848,6 +867,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1190-wien-doebling',
     description: 'Döbling ist der vornehmste Bezirk Wiens mit Grinzing, dem Kahlenberg und noblen Villenvierteln. Weinberge, Heurige und höchste Lebensqualität prägen den Bezirk.',
     metaDescription: 'Entrümpelung 1190 Wien Döbling ✓ Grinzing ✓ Heiligenstadt ✓ Diskret & professionell. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Exklusive Herrschaftshaus-Entrümpelung im vornehmsten Bezirk. Grinzing, Kahlenberg mit absoluter Diskretion.',
     landmarks: ['Grinzing', 'Kahlenberg', 'Heiligenstadt', 'Beethoven-Wohnhaus', 'Hohe Warte'],
     neighborhoods: ['Grinzing', 'Heiligenstadt', 'Nußdorf', 'Sievering', 'Oberdöbling'],
     characteristics: [
@@ -894,6 +914,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1200-wien-brigittenau',
     description: 'Die Brigittenau ist eine Donauinsel zwischen Donaukanal und Donau mit dem Millennium Tower, Handelskai und vielfältigen Wohngebieten. Ein Bezirk im Wandel.',
     metaDescription: 'Entrümpelung 1200 Wien Brigittenau ✓ Millennium Tower ✓ Handelskai ✓ Professionell & günstig. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Professionelle Entrümpelung im 20. Bezirk zwischen Donau und Kanal. Millennium City, Handelskai mit flexiblen Terminen.',
     landmarks: ['Millennium Tower', 'Augarten', 'Donaukanal', 'Handelskai'],
     neighborhoods: ['Brigittenau', 'Zwischenbrücken'],
     characteristics: [
@@ -940,6 +961,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1210-wien-floridsdorf',
     description: 'Floridsdorf ist der zweitgrößte Bezirk Wiens nördlich der Donau mit der Alten Donau, Stammersdorf und vielfältigen Wohn- und Erholungsgebieten. Ländlicher Charme trifft auf urbanes Leben.',
     metaDescription: 'Entrümpelung 1210 Wien Floridsdorf ✓ Alte Donau ✓ Stammersdorf ✓ Schnell & zuverlässig. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Hausräumung im zweitgrößten Bezirk nördlich der Donau. Stammersdorf, Alte Donau mit Erfahrung in Einfamilienhäusern.',
     landmarks: ['Alte Donau', 'Bisamberg', 'Stammersdorf', 'Donauinsel'],
     neighborhoods: ['Floridsdorf', 'Stammersdorf', 'Strebersdorf', 'Jedlesee', 'Schwarze Lackenau'],
     characteristics: [
@@ -986,6 +1008,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1220-wien-donaustadt',
     description: 'Die Donaustadt ist der flächenmäßig größte Bezirk Wiens mit der Donau City, Kaisermühlen und der Seestadt Aspern. Ein moderner, wachsender Bezirk mit Zukunft.',
     metaDescription: 'Entrümpelung 1220 Wien Donaustadt ✓ Donau City ✓ Seestadt ✓ Kagran ✓ Professionell & schnell. Kostenlose Beratung ☎ +43 660 200 5610',
+    shortSummary: 'Moderne Entrümpelung im größten Bezirk. Donau City, Seestadt Aspern mit Erfahrung in Neubauten und großer Kapazität.',
     landmarks: ['Donau City', 'UNO City', 'Seestadt Aspern', 'Donauturm', 'Alte Donau'],
     neighborhoods: ['Kaisermühlen', 'Kagran', 'Stadlau', 'Aspern', 'Essling', 'Hirschstetten'],
     characteristics: [
@@ -1032,6 +1055,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     slug: '1230-wien-liesing',
     description: 'Liesing ist der südlichste Bezirk Wiens mit dem Liesing-Fluss, Wohn- und Industriegebieten und viel Grünraum. Ein Bezirk der Kontraste zwischen Natur und Urbanität.',
     metaDescription: 'Entrümpelung 1230 Wien Liesing ✓ Atzgersdorf ✓ Erlaa ✓ Mauer ✓ Professionell & fair. Kostenlose Besichtigung ☎ +43 660 200 5610',
+    shortSummary: 'Entrümpelung im südlichsten Bezirk. Rodaun, Kalksburg bis Erlaa mit Erfahrung in Einfamilienhäusern und Industrie.',
     landmarks: ['Perchtoldsdorfer Heide', 'Maurer Wald', 'Liesing-Fluss', 'Himmelhof'],
     neighborhoods: ['Liesing', 'Atzgersdorf', 'Erlaa', 'Mauer', 'Rodaun', 'Kalksburg'],
     characteristics: [

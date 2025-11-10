@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin, CheckCircle, Star, Landmark, MapPinned } from 'lucide-react';
 import { getDistrictBySlug } from '@/data/districts';
+import { updateMetaTags, addJsonLd } from '@/lib/seo';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
 
 export default function DistrictPage() {
@@ -16,16 +17,65 @@ export default function DistrictPage() {
 
   useEffect(() => {
     if (district) {
-      document.title = `Entrümpelung ${district.postalCode} Wien ${district.name} - Flächen Frei | Professionell & Schnell`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', district.metaDescription);
-      } else {
-        const meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = district.metaDescription;
-        document.head.appendChild(meta);
-      }
+      const title = `Entrümpelung ${district.postalCode} Wien ${district.name} - Flächen Frei | Professionell & Schnell`;
+      const url = `/bezirke/${district.slug}`;
+
+      updateMetaTags({
+        title,
+        description: district.metaDescription,
+        url,
+        type: 'website',
+      });
+
+      const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        name: `Flächen Frei - Entrümpelung ${district.name}`,
+        image: viennaImage,
+        '@id': url,
+        url: `${window.location.origin}${url}`,
+        telephone: '+436602005610',
+        email: 'office@flaechenfrei.at',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: district.name,
+          addressLocality: 'Wien',
+          postalCode: district.postalCode,
+          addressCountry: 'AT',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: 48.2082,
+          longitude: 16.3738,
+        },
+        areaServed: {
+          '@type': 'City',
+          name: `Wien ${district.name}`,
+          '@id': `https://www.wikidata.org/wiki/Q1741`,
+        },
+        priceRange: '€€',
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '00:00',
+          closes: '23:59',
+        },
+        description: district.description,
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Entrümpelungsdienstleistungen',
+          itemListElement: district.popularServices.map((service) => ({
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: service,
+              serviceType: 'Entrümpelung',
+            },
+          })),
+        },
+      };
+
+      addJsonLd(jsonLd);
     }
   }, [district]);
 
