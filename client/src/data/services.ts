@@ -85,8 +85,8 @@ export const services: Record<string, ServiceInfo> = {
   'haushaltsauflösung': {
     name: 'Haushaltsauflösung',
     slug: 'haushaltsauflösung',
-    shortDescription: 'Komplette Haushaltsauflösung nach Todesfall, Umzug ins Pflegeheim oder bei Verkauf - einfühlsam und professionell.',
-    description: 'Eine Haushaltsauflösung ist oft eine emotionale Angelegenheit. Ob nach einem Todesfall, beim Umzug ins Pflegeheim oder bei Verkauf - wir übernehmen die komplette Auflösung Ihres Haushalts mit Respekt und Einfühlungsvermögen. Wir kümmern uns um alles: von der Wertgegenständesortierung bis zur besenreinen Übergabe.',
+    shortDescription: 'Komplette Haushaltsauflösung in Wien und Umgebung nach Todesfall, Umzug ins Pflegeheim oder bei Verkauf - einfühlsam und professionell.',
+    description: 'Eine Haushaltsauflösung ist oft eine emotionale Angelegenheit. Ob nach einem Todesfall, beim Umzug ins Pflegeheim oder bei Verkauf - wir übernehmen die komplette Auflösung Ihres Haushalts in ganz Österreich mit Respekt und Einfühlungsvermögen. Wir kümmern uns um alles: von der Wertgegenständesortierung bis zur besenreinen Übergabe.',
     metaDescription: 'Haushaltsauflösung Wien und Umgebung ✓ Ganz Österreich ✓ Einfühlsam nach Todesfall ✓ Wertgegenstände-Sortierung ☎ +43 660 200 5610',
     benefits: [
       'Einfühlsamer Umgang in schwierigen Situationen',
@@ -354,7 +354,7 @@ export const services: Record<string, ServiceInfo> = {
     name: 'Messie-Entrümpelung',
     slug: 'messie-entrümpelung',
     shortDescription: 'Einfühlsame Messie-Entrümpelung in Wien und Umgebung - diskret, respektvoll und ohne Vorurteile.',
-    description: 'Messie-Wohnungen erfordern besondere Sensibilität und Erfahrung. Wir entrümpeln Messie-Haushalte mit Respekt, Diskretion und ohne Vorurteile. Unsere geschulten Teams arbeiten einfühlsam und helfen Ihnen, wieder Ordnung zu schaffen.',
+    description: 'Messie-Wohnungen erfordern besondere Sensibilität und Erfahrung. Wir entrümpeln Messie-Haushalte in ganz Österreich mit Respekt, Diskretion und ohne Vorurteile. Unsere geschulten Teams arbeiten einfühlsam und helfen Ihnen, wieder Ordnung zu schaffen.',
     metaDescription: 'Messie-Entrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Vertraulich ☎ +43 660 200 5610',
     benefits: [
       'Geschulte Teams mit Messie-Erfahrung und Einfühlungsvermögen',
