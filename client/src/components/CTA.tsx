@@ -1,16 +1,12 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import ZigzagDivider from './ZigzagDivider';
 
 export default function CTA() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative py-16 md:py-24 bg-gradient-to-r from-primary to-primary/90 text-white">
-      <div className="absolute top-0 left-0 right-0">
-        <ZigzagDivider color="hsl(var(--primary))" position="top" />
-      </div>
+    <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/90 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4" data-testid="text-cta-title">
           {t.cta.title}

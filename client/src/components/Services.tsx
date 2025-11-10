@@ -6,7 +6,6 @@ import apartmentImage from '@assets/generated_images/Apartment_cleaning_before-a
 import basementImage from '@assets/generated_images/Basement_clearing_service_45b66ae1.png';
 import houseImage from '@assets/generated_images/House_clearance_service_e0229004.png';
 import warehouseImage from '@assets/generated_images/Warehouse_clearing_service_06fa396e.png';
-import ZigzagDivider from './ZigzagDivider';
 
 export default function Services() {
   const { t } = useLanguage();
