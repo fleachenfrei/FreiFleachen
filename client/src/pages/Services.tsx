@@ -52,16 +52,16 @@ export default function Services() {
                 Entrümpelungsdienste für alle Anforderungen in ganz Wien.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+436602005610">
-                  <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-services">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-services">
+                  <a href="tel:+436602005610">
                     Jetzt anrufen: +43 660 200 5610
-                  </Button>
-                </a>
-                <a href="mailto:office@flaechenfrei.at">
-                  <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
+                  <a href="mailto:office@flaechenfrei.at">
                     E-Mail Anfrage
-                  </Button>
-                </a>
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -124,16 +124,16 @@ export default function Services() {
               und unverbindlich zu allen Fragen rund um Entrümpelung und Räumung in Wien.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+436602005610">
-                <Button size="lg">
+              <Button asChild size="lg">
+                <a href="tel:+436602005610">
                   Kostenlose Beratung: +43 660 200 5610
-                </Button>
-              </a>
-              <a href="mailto:office@flaechenfrei.at">
-                <Button size="lg" variant="outline">
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <a href="mailto:office@flaechenfrei.at">
                   E-Mail senden
-                </Button>
-              </a>
+                </a>
+              </Button>
             </div>
           </div>
         </section>

@@ -107,18 +107,18 @@ export default function ServicePage() {
                 {service.shortDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+436602005610">
-                  <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-service">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-service">
+                  <a href="tel:+436602005610">
                     <Phone className="mr-2 w-5 h-5" />
                     +43 660 200 5610
-                  </Button>
-                </a>
-                <a href="mailto:office@flaechenfrei.at">
-                  <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
+                  <a href="mailto:office@flaechenfrei.at">
                     <Mail className="mr-2 w-5 h-5" />
                     E-Mail Anfrage
-                  </Button>
-                </a>
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -243,18 +243,18 @@ export default function ServicePage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <a href="tel:+436602005610" className="block">
-                        <Button size="lg" className="w-full bg-secondary hover:bg-secondary text-secondary-foreground">
+                      <Button asChild size="lg" className="w-full bg-secondary hover:bg-secondary text-secondary-foreground">
+                        <a href="tel:+436602005610">
                           <Phone className="mr-2 w-5 h-5" />
                           Jetzt anrufen
-                        </Button>
-                      </a>
-                      <a href="mailto:office@flaechenfrei.at" className="block">
-                        <Button size="lg" variant="outline" className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20">
+                        </a>
+                      </Button>
+                      <Button asChild size="lg" variant="outline" className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20">
+                        <a href="mailto:office@flaechenfrei.at">
                           <Mail className="mr-2 w-5 h-5" />
                           E-Mail senden
-                        </Button>
-                      </a>
+                        </a>
+                      </Button>
                       <div className="pt-4 border-t border-primary-foreground/20">
                         <p className="text-sm text-primary-foreground/80">
                           Telefonisch erreichbar:<br />
