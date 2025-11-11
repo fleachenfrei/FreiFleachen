@@ -109,6 +109,38 @@ Preferred communication style: Simple, everyday language.
 - Favicon and other static files served from public directory
 - Font loading via Google Fonts CDN
 
+### SEO Implementation
+
+**Structured Data (JSON-LD)**
+- Multi-schema management using data attributes to prevent conflicts
+- Each page/component manages its own schema independently
+- Schema groups used per page:
+  - Homepage: `data-schema-group="home-page-schemas"` (LocalBusiness + Organization)
+  - Service pages: `data-schema-group="service-{slug}-schemas"` (Service + FAQ)
+  - Bundesland pages: `data-schema-group="bundesland-{slug}-schemas"` (Service + FAQ)
+  - District pages: `data-schema-group="district-{slug}-schemas"` (LocalBusiness + FAQ)
+  - Breadcrumbs: Independent `id="breadcrumb-schema"` (BreadcrumbList)
+
+**Schema Factories** (`client/src/lib/seo.ts`)
+- `getLocalBusinessSchema()` - Business info with all 9 Austrian states coverage, ratings, hours
+- `getOrganizationSchema()` - Company organization data
+- `getFAQSchema()` - FAQ structured data from question/answer arrays
+- `getBreadcrumbSchema()` - BreadcrumbList for navigation
+- `addMultipleJsonLd()` - Manages multiple schemas with data-schema-group attributes
+- `addJsonLd()` - Single schema with optional ID
+- `updateMetaTags()` - Meta tags including keywords, OG tags, Twitter cards, canonical
+
+**SEO Components**
+- **Breadcrumbs** - Navigation with BreadcrumbList schema on all service/district/state pages
+- **TrustStats** - Statistics section (5000+ customers, 4.9/5 rating, 26+ years, 100% satisfaction)
+- **TrustBadges** - USP highlights (insured, 24/7, free consultation, fair prices)
+
+**Important Notes**
+- To avoid schema ID collisions, always use the appropriate data-schema-group for your page type
+- Breadcrumb schema is managed separately by the Breadcrumbs component
+- All schemas use @id for entity references where applicable
+- LocalBusiness schema includes aggregate ratings and service areas for SEO boost
+
 ## External Dependencies
 
 ### Core Framework Dependencies
