@@ -17,6 +17,7 @@ export default function Header() {
     { label: t.nav.home, path: '/' },
     { label: t.nav.services, path: '/leistungen' },
     { label: t.nav.districts, path: '/bezirke' },
+    { label: t.nav.states, path: '/bundeslaender' },
     { label: t.nav.contact, path: '/kontakt' },
   ];
 
