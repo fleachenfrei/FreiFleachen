@@ -8,7 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin, CheckCircle, Star, Landmark, MapPinned } from 'lucide-react';
 import { getDistrictBySlug } from '@/data/districts';
-import { updateMetaTags, addJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
 
 export default function DistrictPage() {
@@ -75,7 +76,13 @@ export default function DistrictPage() {
         },
       };
 
-      addJsonLd(jsonLd);
+      const schemas: Record<string, unknown>[] = [jsonLd];
+      
+      if (district.faq && district.faq.length > 0) {
+        schemas.push(getFAQSchema(district.faq));
+      }
+      
+      addMultipleJsonLd(schemas, `district-${district.slug}-schemas`);
     }
   }, [district]);
 
@@ -88,6 +95,14 @@ export default function DistrictPage() {
       <Header />
       
       <main>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs 
+            items={[
+              { name: 'Bezirke', url: '/#districts' },
+              { name: `${district.postalCode} ${district.name}`, url: `/bezirke/${district.slug}` }
+            ]} 
+          />
+        </div>
         <section className="relative bg-primary text-primary-foreground py-16 md:py-24">
           <div className="absolute inset-0 opacity-20">
             <img src={viennaImage} alt="Wien" className="w-full h-full object-cover" />

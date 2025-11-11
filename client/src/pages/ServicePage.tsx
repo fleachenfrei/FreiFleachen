@@ -8,7 +8,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, CheckCircle, ArrowRight, Euro } from 'lucide-react';
 import { getServiceBySlug } from '@/data/services';
-import { updateMetaTags, addJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import apartmentImage from '@assets/generated_images/Apartment_clearance_Vienna_fd741ce0.png';
 import estateImage from '@assets/generated_images/Estate_clearance_service_46b9585f.png';
 import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.png';
@@ -84,7 +85,13 @@ export default function ServicePage() {
         },
       };
 
-      addJsonLd(jsonLd);
+      const schemas: Record<string, unknown>[] = [jsonLd];
+      
+      if (service.faq && service.faq.length > 0) {
+        schemas.push(getFAQSchema(service.faq));
+      }
+      
+      addMultipleJsonLd(schemas, `service-${service.slug}-schemas`);
     }
   }, [service]);
 
@@ -99,6 +106,14 @@ export default function ServicePage() {
       <Header />
       
       <main>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs 
+            items={[
+              { name: 'Leistungen', url: '/#services' },
+              { name: service.name, url: `/leistungen/${service.slug}` }
+            ]} 
+          />
+        </div>
         <section className="relative bg-primary text-primary-foreground py-20 md:py-28 overflow-hidden">
           <div 
             className="absolute inset-0 opacity-20"

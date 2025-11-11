@@ -10,6 +10,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 
 export default function BundeslandPage() {
@@ -72,6 +73,15 @@ export default function BundeslandPage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs 
+            items={[
+              { name: language === 'de' ? 'Bundesländer' : 'States', url: '/#states' },
+              { name: stateName, url: `/bundeslaender/${state.slug}` }
+            ]} 
+          />
+        </div>
+        
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-primary/5 to-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
