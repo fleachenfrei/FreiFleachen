@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import TrustBadges from '@/components/TrustBadges';
 import HowItWorks from '@/components/HowItWorks';
 import Services from '@/components/Services';
 import Process from '@/components/Process';
@@ -48,7 +47,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TrustBadges />
         <HowItWorks />
         <Services />
         <Process />
