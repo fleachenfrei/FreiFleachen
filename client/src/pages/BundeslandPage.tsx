@@ -9,7 +9,7 @@ import { states } from '@/data/states';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
-import { updateMetaTags, addJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
 import NotFound from './not-found';
 
 export default function BundeslandPage() {
@@ -33,22 +33,27 @@ export default function BundeslandPage() {
       url: `/bundeslaender/${state.slug}`,
     });
 
-    addJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      'serviceType': language === 'de' ? 'Entrümpelung und Räumung' : 'Clearing and Removal',
-      'provider': {
-        '@type': 'LocalBusiness',
-        'name': 'Flächen Frei',
-        'telephone': '+43 664 99124972',
-        'email': 'office@flaechenfrei.at',
-        'areaServed': {
-          '@type': 'State',
-          'name': language === 'de' ? state.name : state.nameEn,
+    const faqData = language === 'de' ? state.faqs : state.faqsEn;
+    
+    addMultipleJsonLd([
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        'serviceType': language === 'de' ? 'Entrümpelung und Räumung' : 'Clearing and Removal',
+        'provider': {
+          '@type': 'LocalBusiness',
+          'name': 'Flächen Frei',
+          'telephone': '+43 664 99124972',
+          'email': 'office@flaechenfrei.at',
+          'areaServed': {
+            '@type': 'State',
+            'name': language === 'de' ? state.name : state.nameEn,
+          },
         },
+        'description': description,
       },
-      'description': description,
-    });
+      getFAQSchema(faqData),
+    ], `bundesland-${state.slug}-schemas`);
   }, [state, language]);
 
   if (!state) {
