@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Home, Building2, Heart, Warehouse, Truck, Archive } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'wouter';
 import apartmentImage from '@assets/generated_images/Apartment_cleaning_before-after_cf8e77b7.png';
 import basementImage from '@assets/generated_images/Basement_clearing_service_45b66ae1.png';
 import houseImage from '@assets/generated_images/House_clearance_service_e0229004.png';
@@ -16,36 +17,42 @@ export default function Services() {
       title: t.services.apartment.title,
       description: t.services.apartment.description,
       image: apartmentImage,
+      slug: 'wohnungsentrümpelungen',
     },
     {
       icon: Building2,
       title: t.services.house.title,
       description: t.services.house.description,
       image: houseImage,
+      slug: 'haushaltsauflösung',
     },
     {
       icon: Heart,
       title: t.services.estate.title,
       description: t.services.estate.description,
       image: apartmentImage,
+      slug: 'verlassenschaftsentrümpelung',
     },
     {
       icon: Warehouse,
       title: t.services.warehouse.title,
       description: t.services.warehouse.description,
       image: warehouseImage,
+      slug: 'geschäftsentrümpelung',
     },
     {
       icon: Truck,
       title: t.services.transport.title,
       description: t.services.transport.description,
       image: houseImage,
+      slug: 'umzugsservice',
     },
     {
       icon: Archive,
       title: t.services.basement.title,
       description: t.services.basement.description,
       image: basementImage,
+      slug: 'kellerentrümpelung',
     },
   ];
 
@@ -86,11 +93,11 @@ export default function Services() {
                   <CardDescription className="text-base mb-4" data-testid={`text-service-description-${index}`}>
                     {service.description}
                   </CardDescription>
-                  <a href="#kontakt">
+                  <Link href={`/leistungen/${service.slug}`}>
                     <Button variant="outline" size="sm" className="w-full" data-testid={`button-service-${index}`}>
                       Jetzt anfragen
                     </Button>
-                  </a>
+                  </Link>
                 </CardContent>
               </Card>
             );

@@ -24,7 +24,7 @@ export const translations = {
       fastService: 'KURZFRISTIGE TERMINE',
     },
     services: {
-      title: 'Unsere Dienstleistungen in Wien',
+      title: 'Unsere Dienstleistungen in Wien und Umgebung',
       subtitle: 'Wir verwandeln Chaos in Komfort, Unordnung in Ordnung und machen Platz für Ihre neuen Geschichten!',
       apartment: {
         title: 'Wohnungsentrümpelung',
@@ -169,7 +169,7 @@ export const translations = {
       fastService: 'SHORT-NOTICE APPOINTMENTS',
     },
     services: {
-      title: 'Our Services in Vienna',
+      title: 'Our Services in Vienna and Surroundings',
       subtitle: 'We transform chaos into comfort, disorder into order, and create space for your new stories!',
       apartment: {
         title: 'Apartment Clearing',
