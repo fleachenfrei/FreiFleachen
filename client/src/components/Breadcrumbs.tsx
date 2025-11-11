@@ -39,11 +39,9 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
     <nav aria-label="Breadcrumb" className="py-4">
       <ol className="flex items-center gap-2 text-sm text-muted-foreground" data-testid="breadcrumbs">
         <li className="flex items-center gap-2">
-          <Link href="/">
-            <a className="hover:text-foreground transition-colors flex items-center gap-1" data-testid="breadcrumb-home">
-              <Home className="w-4 h-4" />
-              <span className="sr-only">Home</span>
-            </a>
+          <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1" data-testid="breadcrumb-home">
+            <Home className="w-4 h-4" />
+            <span className="sr-only">Home</span>
           </Link>
           <ChevronRight className="w-4 h-4" />
         </li>
@@ -51,10 +49,8 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
           <li key={item.url} className="flex items-center gap-2">
             {index < items.length - 1 ? (
               <>
-                <Link href={item.url}>
-                  <a className="hover:text-foreground transition-colors" data-testid={`breadcrumb-${index}`}>
-                    {item.name}
-                  </a>
+                <Link href={item.url} className="hover:text-foreground transition-colors" data-testid={`breadcrumb-${index}`}>
+                  {item.name}
                 </Link>
                 <ChevronRight className="w-4 h-4" />
               </>
