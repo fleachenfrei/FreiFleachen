@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { useParams, Link } from 'wouter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MapPin, Phone, Mail, CheckCircle } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { MapPin, Phone, Mail, CheckCircle, Building2, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { states } from '@/data/states';
 import Header from '@/components/Header';
@@ -57,6 +58,10 @@ export default function BundeslandPage() {
   const stateName = language === 'de' ? state.name : state.nameEn;
   const features = language === 'de' ? state.features : state.featuresEn;
   const description = language === 'de' ? state.description : state.descriptionEn;
+  const detailedIntro = language === 'de' ? state.detailedIntro : state.detailedIntroEn;
+  const cities = language === 'de' ? state.cities : state.citiesEn;
+  const whyChooseUs = language === 'de' ? state.whyChooseUs : state.whyChooseUsEn;
+  const faqs = language === 'de' ? state.faqs : state.faqsEn;
 
   return (
     <div className="min-h-screen bg-background">
@@ -95,13 +100,46 @@ export default function BundeslandPage() {
           </div>
         </section>
 
+        {/* Detailed Introduction */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl font-bold text-foreground mb-6" data-testid="text-intro-title">
+                {language === 'de' ? `Entrümpelung in ${stateName} - Ihr zuverlässiger Partner` : `Clearing in ${stateName} - Your Reliable Partner`}
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-intro-content">
+                {detailedIntro}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Coverage Areas */}
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-coverage-title">
+              {language === 'de' ? 'Unser Einsatzgebiet' : 'Our Service Area'}
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {cities.map((city, index) => (
+                <Card key={index} className="hover-elevate" data-testid={`card-city-${index}`}>
+                  <CardHeader className="flex flex-row items-center gap-3 space-y-0 pb-3">
+                    <Building2 className="w-5 h-5 text-primary" />
+                    <CardTitle className="text-base">{city}</CardTitle>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-features-title">
               {language === 'de' ? `Unsere Leistungen in ${stateName}` : `Our Services in ${stateName}`}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {features.map((feature, index) => (
                 <Card key={index} className="hover-elevate" data-testid={`card-feature-${index}`}>
                   <CardHeader className="flex flex-row items-center gap-4 space-y-0 pb-2">
@@ -116,12 +154,43 @@ export default function BundeslandPage() {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Why Choose Us */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground mb-8">
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center" data-testid="text-why-title">
+              {language === 'de' ? `Warum Flächen Frei in ${stateName}?` : `Why Flächen Frei in ${stateName}?`}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 text-center max-w-3xl mx-auto">
+              {language === 'de' 
+                ? `Diese Vorteile sprechen für uns als Ihren Entrümpelungspartner in ${stateName}:`
+                : `These advantages make us your clearing partner in ${stateName}:`}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {whyChooseUs.map((reason, index) => (
+                <Card key={index} className="hover-elevate" data-testid={`card-reason-${index}`}>
+                  <CardHeader className="flex flex-row items-start gap-4 space-y-0">
+                    <div className="w-8 h-8 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    </div>
+                    <CardDescription className="text-base text-foreground">{reason}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
               {language === 'de' ? 'Unsere Dienstleistungen' : 'Our Services'}
             </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              {language === 'de' 
+                ? 'Von der Wohnungsauflösung bis zur Gewerberäumung - wir bieten Ihnen den kompletten Service.'
+                : 'From apartment dissolution to commercial clearing - we offer you the complete service.'}
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="hover-elevate">
                 <CardHeader>
@@ -176,22 +245,154 @@ export default function BundeslandPage() {
                   </Link>
                 </CardContent>
               </Card>
+
+              <Card className="hover-elevate">
+                <CardHeader>
+                  <CardTitle>{language === 'de' ? 'Kellerentrümpelung' : 'Basement Clearing'}</CardTitle>
+                  <CardDescription>
+                    {language === 'de'
+                      ? 'Schnelle und gründliche Kellerentrümpelung'
+                      : 'Fast and thorough basement clearing'}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href="/leistungen/kellerentruempelung">
+                    <Button variant="outline" className="w-full">
+                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-elevate">
+                <CardHeader>
+                  <CardTitle>{language === 'de' ? 'Dachbodenräumung' : 'Attic Clearing'}</CardTitle>
+                  <CardDescription>
+                    {language === 'de'
+                      ? 'Professionelle Dachbodenräumung'
+                      : 'Professional attic clearing'}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href="/leistungen/dachbodenraeumung">
+                    <Button variant="outline" className="w-full">
+                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="hover-elevate">
+                <CardHeader>
+                  <CardTitle>{language === 'de' ? 'Verlassenschaft' : 'Estate Clearing'}</CardTitle>
+                  <CardDescription>
+                    {language === 'de'
+                      ? 'Sensible Entrümpelung von Verlassenschaften'
+                      : 'Sensitive clearing of estates'}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <Link href="/leistungen/verlassenschaft-entruempelung">
+                    <Button variant="outline" className="w-full">
+                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-muted/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-4 text-center" data-testid="text-faq-title">
+              {language === 'de' ? 'Häufig gestellte Fragen' : 'Frequently Asked Questions'}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 text-center">
+              {language === 'de' 
+                ? `Antworten auf die häufigsten Fragen zur Entrümpelung in ${stateName}`
+                : `Answers to the most common questions about clearing in ${stateName}`}
+            </p>
+            <Accordion type="single" collapsible className="w-full" data-testid="accordion-faq">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} data-testid={`faq-item-${index}`}>
+                  <AccordionTrigger className="text-left">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+              {language === 'de' ? 'So funktioniert es' : 'How It Works'}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <Card className="text-center">
+                <CardHeader>
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Phone className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle>{language === 'de' ? '1. Kostenlose Besichtigung' : '1. Free Consultation'}</CardTitle>
+                  <CardDescription className="text-base">
+                    {language === 'de'
+                      ? 'Kontaktieren Sie uns telefonisch oder per E-Mail. Wir vereinbaren einen kostenlosen Besichtigungstermin.'
+                      : 'Contact us by phone or email. We arrange a free consultation appointment.'}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <CheckCircle className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle>{language === 'de' ? '2. Professionelle Durchführung' : '2. Professional Execution'}</CardTitle>
+                  <CardDescription className="text-base">
+                    {language === 'de'
+                      ? 'Unser erfahrenes Team übernimmt die komplette Räumung schnell, effizient und diskret.'
+                      : 'Our experienced team handles the complete clearing quickly, efficiently, and discreetly.'}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+
+              <Card className="text-center">
+                <CardHeader>
+                  <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                    <Clock className="w-8 h-8 text-primary" />
+                  </div>
+                  <CardTitle>{language === 'de' ? '3. Besenreine Übergabe' : '3. Broom-Clean Handover'}</CardTitle>
+                  <CardDescription className="text-base">
+                    {language === 'de'
+                      ? 'Wir übergeben Ihnen die Räumlichkeiten in besenreinem Zustand - inklusive fachgerechter Entsorgung.'
+                      : 'We hand over the premises in broom-clean condition - including professional disposal.'}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
             </div>
           </div>
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-gradient-to-br from-primary/5 to-secondary/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Card className="bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
+            <Card className="bg-background/80 backdrop-blur border-primary/20">
               <CardHeader className="text-center">
-                <CardTitle className="text-3xl mb-4">
+                <CardTitle className="text-3xl md:text-4xl mb-4">
                   {language === 'de' ? `Entrümpelung in ${stateName} gewünscht?` : `Need Clearing in ${stateName}?`}
                 </CardTitle>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base md:text-lg">
                   {language === 'de'
-                    ? 'Kontaktieren Sie uns jetzt für eine kostenlose Besichtigung und ein unverbindliches Angebot.'
-                    : 'Contact us now for a free consultation and a non-binding quote.'}
+                    ? 'Kontaktieren Sie uns jetzt für eine kostenlose Besichtigung und ein unverbindliches Angebot. Wir beraten Sie gerne!'
+                    : 'Contact us now for a free consultation and a non-binding quote. We are happy to advise you!'}
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -203,6 +404,7 @@ export default function BundeslandPage() {
                 </a>
                 <Link href="/kontakt">
                   <Button variant="outline" size="lg" data-testid="button-contact-cta">
+                    <Mail className="w-5 h-5 mr-2" />
                     {language === 'de' ? 'Anfrage senden' : 'Send Inquiry'}
                   </Button>
                 </Link>
