@@ -17,6 +17,7 @@ import Contact from "@/pages/Contact";
 import Datenschutz from "@/pages/Datenschutz";
 import Impressum from "@/pages/Impressum";
 import AGB from "@/pages/AGB";
+import FAQ from "@/pages/FAQ";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -36,6 +37,7 @@ function Router() {
         <Route path="/datenschutz" component={Datenschutz} />
         <Route path="/impressum" component={Impressum} />
         <Route path="/agb" component={AGB} />
+        <Route path="/faq" component={FAQ} />
         
         <Route path="/en" component={Home} />
         <Route path="/en/districts" component={Districts} />
@@ -49,6 +51,7 @@ function Router() {
         <Route path="/en/privacy-policy" component={Datenschutz} />
         <Route path="/en/imprint" component={Impressum} />
         <Route path="/en/terms" component={AGB} />
+        <Route path="/en/faq" component={FAQ} />
         
         <Route component={NotFound} />
       </Switch>

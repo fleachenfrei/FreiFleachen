@@ -13,6 +13,10 @@ export const routeMapping: Record<string, RouteConfig> = {
   districts: { de: '/bezirke', en: '/en/districts' },
   bundeslaender: { de: '/bundeslaender', en: '/en/federal-states' },
   contact: { de: '/kontakt', en: '/en/contact' },
+  datenschutz: { de: '/datenschutz', en: '/en/privacy-policy' },
+  impressum: { de: '/impressum', en: '/en/imprint' },
+  agb: { de: '/agb', en: '/en/terms' },
+  faq: { de: '/faq', en: '/en/faq' },
 };
 
 const serviceSlugMap: Record<string, string> = {
@@ -55,6 +59,13 @@ export function getLocalizedPath(basePath: string, language: Language): string {
     '/federal-states': routeMapping.bundeslaender,
     '/kontakt': routeMapping.contact,
     '/contact': routeMapping.contact,
+    '/datenschutz': routeMapping.datenschutz,
+    '/privacy-policy': routeMapping.datenschutz,
+    '/impressum': routeMapping.impressum,
+    '/imprint': routeMapping.impressum,
+    '/agb': routeMapping.agb,
+    '/terms': routeMapping.agb,
+    '/faq': routeMapping.faq,
   };
 
   for (const [path, config] of Object.entries(pathMappings)) {

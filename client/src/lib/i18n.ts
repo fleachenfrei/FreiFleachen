@@ -120,6 +120,7 @@ export const translations = {
       privacy: 'Datenschutz',
       imprint: 'Impressum',
       terms: 'AGB',
+      faq: 'FAQ',
     },
     cta: {
       title: 'Bereit für mehr Platz?',
@@ -484,6 +485,7 @@ export const translations = {
       privacy: 'Privacy Policy',
       imprint: 'Imprint',
       terms: 'Terms & Conditions',
+      faq: 'FAQ',
     },
     cta: {
       title: 'Ready for More Space?',

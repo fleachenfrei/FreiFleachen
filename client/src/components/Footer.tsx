@@ -13,6 +13,7 @@ export default function Footer() {
   const privacyPath = language === 'de' ? '/datenschutz' : '/en/privacy-policy';
   const imprintPath = language === 'de' ? '/impressum' : '/en/imprint';
   const termsPath = language === 'de' ? '/agb' : '/en/terms';
+  const faqPath = language === 'de' ? '/faq' : '/en/faq';
 
   const allDistricts = getAllDistricts();
   const displayDistricts = allDistricts.slice(0, 8);
@@ -94,7 +95,8 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
           <p data-testid="text-footer-copyright">{t.footer.copyright}</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-4 md:gap-6 justify-center">
+            <Link href={faqPath} className="hover:text-primary-foreground" data-testid="link-footer-faq">{t.footer.faq}</Link>
             <Link href={privacyPath} className="hover:text-primary-foreground" data-testid="link-footer-privacy">{t.footer.privacy}</Link>
             <Link href={imprintPath} className="hover:text-primary-foreground" data-testid="link-footer-imprint">{t.footer.imprint}</Link>
             <Link href={termsPath} className="hover:text-primary-foreground" data-testid="link-footer-terms">{t.footer.terms}</Link>
