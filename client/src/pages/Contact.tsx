@@ -95,30 +95,41 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      // In a real application, this would send to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      toast({
-        title: language === 'de' ? 'Anfrage gesendet!' : 'Request sent!',
-        description: t.contact.form.success,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
-      });
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: language === 'de' ? 'Anfrage gesendet!' : 'Request sent!',
+          description: t.contact.form.success,
+        });
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: '',
+        });
+      } else {
+        throw new Error(data.message || 'Unknown error');
+      }
     } catch (error) {
       toast({
-        title: 'Error',
+        title: language === 'de' ? 'Fehler' : 'Error',
         description: t.contact.form.error,
         variant: 'destructive',
       });
+      console.error('Contact form error:', error);
     } finally {
       setIsSubmitting(false);
     }
