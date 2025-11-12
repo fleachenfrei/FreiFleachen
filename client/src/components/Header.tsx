@@ -53,12 +53,12 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 md:h-32">
+        <div className="flex items-center justify-between h-32">
           <Link href={language === 'de' ? '/' : '/en'} className="flex items-center gap-2" data-testid="link-logo">
             <img 
               src="/logo.png" 
               alt="Flächen Frei Logo" 
-              className="h-20 md:h-28 w-auto"
+              className="h-28 w-auto"
             />
           </Link>
 
