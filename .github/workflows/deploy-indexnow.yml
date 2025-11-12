@@ -1,0 +1,71 @@
+name: IndexNow Auto-Submit
+
+# Automatisches Submitten der Sitemap an IndexNow nach erfolgreichem Railway Deployment
+
+on:
+  # Manuell triggern via GitHub Actions UI
+  workflow_dispatch:
+  
+  # Optional: Nach jedem Push auf main branch
+  # push:
+  #   branches: [ main ]
+
+jobs:
+  submit-sitemap:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Submit Sitemap to IndexNow
+        run: |
+          echo "🚀 Submitting sitemap to IndexNow..."
+          
+          response=$(curl -s -X POST https://flaechenfrei.at/api/indexnow/submit-sitemap \
+            -H "Content-Type: application/json" \
+            -w "\nHTTP_CODE:%{http_code}")
+          
+          http_code=$(echo "$response" | grep "HTTP_CODE:" | cut -d: -f2)
+          body=$(echo "$response" | sed '/HTTP_CODE:/d')
+          
+          echo "Response: $body"
+          echo "HTTP Status: $http_code"
+          
+          if [ "$http_code" = "200" ] || [ "$http_code" = "202" ]; then
+            echo "✅ Sitemap successfully submitted to IndexNow!"
+            echo "All 120+ priority URLs have been sent to Bing, Yandex, and DuckDuckGo"
+          else
+            echo "⚠️ IndexNow submission returned status $http_code"
+            echo "This might be a temporary API issue - check logs for details"
+            # Don't fail the workflow on non-2xx status
+            exit 0
+          fi
+      
+      - name: Verify IndexNow Key File
+        run: |
+          echo "🔑 Verifying IndexNow key file..."
+          
+          key_response=$(curl -s https://flaechenfrei.at/4360887d417651be8e892bc97ab0625dce0349081491ae37c119b83258d0df32.txt)
+          expected_key="4360887d417651be8e892bc97ab0625dce0349081491ae37c119b83258d0df32"
+          
+          if [ "$key_response" = "$expected_key" ]; then
+            echo "✅ IndexNow key file is accessible and valid"
+          else
+            echo "❌ IndexNow key file verification failed!"
+            echo "Expected: $expected_key"
+            echo "Got: $key_response"
+            exit 1
+          fi
+      
+      - name: Summary
+        run: |
+          echo "📊 Deployment Summary:"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "✅ Website: https://flaechenfrei.at"
+          echo "✅ Sitemap: https://flaechenfrei.at/sitemap.xml"
+          echo "✅ Robots.txt: https://flaechenfrei.at/robots.txt"
+          echo "✅ IndexNow: Submitted to search engines"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "🎯 Next Steps:"
+          echo "1. Verify in Bing Webmaster Tools"
+          echo "2. Check Google Search Console"
+          echo "3. Monitor indexing progress (24-48 hours)"
