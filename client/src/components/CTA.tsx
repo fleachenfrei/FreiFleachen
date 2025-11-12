@@ -19,14 +19,14 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="tel:+436602005610">
+          <a href="tel:+4366039575587">
             <Button
               size="lg"
               className="bg-secondary text-secondary-foreground hover:bg-secondary w-full sm:w-auto"
               data-testid="button-cta-phone"
             >
               <Phone className="mr-2 w-5 h-5" />
-              +43 660 200 5610
+              +43660 39 57 587
             </Button>
           </a>
           <a href="mailto:office@flaechenfrei.at">
@@ -40,7 +40,7 @@ export default function CTA() {
               E-Mail senden
             </Button>
           </a>
-          <a href="https://wa.me/436602005610" target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/4366039575587" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               variant="outline"

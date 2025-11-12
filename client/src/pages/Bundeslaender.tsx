@@ -108,7 +108,7 @@ export default function Bundeslaender() {
                 : 'Contact us now for a free consultation and a non-binding quote.'}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+4366499124972">
+              <a href="tel:+4366039575587">
                 <Button size="lg" data-testid="button-call-cta">
                   {language === 'de' ? 'Jetzt anrufen' : 'Call Now'}
                 </Button>

@@ -42,7 +42,7 @@ export default function Services() {
   useEffect(() => {
     updateMetaTags({
       title: 'Unsere Leistungen - Räumung & Räumung in Wien | Flächen Frei',
-      description: 'Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43 660 200 5610',
+      description: 'Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43660 39 57 587',
       url: '/leistungen',
       type: 'website',
     });
@@ -65,8 +65,8 @@ export default function Services() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-services">
-                  <a href="tel:+436602005610">
-                    Jetzt anrufen: +43 660 200 5610
+                  <a href="tel:+4366039575587">
+                    Jetzt anrufen: +43660 39 57 587
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
@@ -137,8 +137,8 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">
-                <a href="tel:+436602005610">
-                  Kostenlose Beratung: +43 660 200 5610
+                <a href="tel:+4366039575587">
+                  Kostenlose Beratung: +43660 39 57 587
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">

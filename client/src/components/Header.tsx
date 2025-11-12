@@ -57,7 +57,7 @@ export default function Header() {
               <Globe className="w-5 h-5" />
             </Button>
             <span className="text-sm font-medium">{language.toUpperCase()}</span>
-            <a href="tel:+436602005610">
+            <a href="tel:+4366039575587">
               <Button variant="outline" size="sm" data-testid="button-call-desktop">
                 <Phone className="w-4 h-4 mr-2" />
                 {t.nav.callNow}
@@ -108,7 +108,7 @@ export default function Header() {
                 <Globe className="w-4 h-4 mr-2" />
                 {language.toUpperCase()}
               </Button>
-              <a href="tel:+436602005610">
+              <a href="tel:+4366039575587">
                 <Button variant="default" size="sm" data-testid="button-call-mobile">
                   <Phone className="w-4 h-4 mr-2" />
                   {t.nav.callNow}

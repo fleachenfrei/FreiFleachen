@@ -15,7 +15,7 @@ export default function Districts() {
   useEffect(() => {
     updateMetaTags({
       title: 'Räumung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien',
-      description: 'Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43 660 200 5610',
+      description: 'Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43660 39 57 587',
       url: '/bezirke',
       type: 'website',
     });
@@ -37,9 +37,9 @@ export default function Districts() {
                 Wählen Sie Ihren Bezirk für detaillierte Informationen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+436602005610">
+                <a href="tel:+4366039575587">
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground">
-                    +43 660 200 5610
+                    +43660 39 57 587
                   </Button>
                 </a>
                 <a href="mailto:office@flaechenfrei.at">

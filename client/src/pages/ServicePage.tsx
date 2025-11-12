@@ -63,7 +63,7 @@ export default function ServicePage() {
         provider: {
           '@type': 'LocalBusiness',
           name: 'Flächen Frei',
-          telephone: '+436602005610',
+          telephone: '+4366039575587',
           email: 'office@flaechenfrei.at',
           address: {
             '@type': 'PostalAddress',
@@ -135,9 +135,9 @@ export default function ServicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-service">
-                  <a href="tel:+436602005610">
+                  <a href="tel:+4366039575587">
                     <Phone className="mr-2 w-5 h-5" />
-                    +43 660 200 5610
+                    +43660 39 57 587
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
@@ -271,7 +271,7 @@ export default function ServicePage() {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <Button asChild size="lg" className="w-full bg-secondary hover:bg-secondary text-secondary-foreground">
-                        <a href="tel:+436602005610">
+                        <a href="tel:+4366039575587">
                           <Phone className="mr-2 w-5 h-5" />
                           Jetzt anrufen
                         </a>

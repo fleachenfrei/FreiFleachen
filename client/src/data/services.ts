@@ -20,7 +20,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'wohnungsräumungen',
     shortDescription: 'Professionelle Räumung Ihrer Wohnung in Wien und Umgebung - schnell, zuverlässig und zu fairen Preisen.',
     description: 'Unsere Wohnungsräumung ist der ideale Service für Sie, wenn Sie Ihre Wohnung komplett räumen müssen. Ob bei Umzug, Verkauf, Vermietung oder Erbe - wir räumen Ihre Wohnung professionell, schnell und diskret. Von der 1-Zimmer-Wohnung bis zur großen Altbauwohnung in ganz Österreich.',
-    metaDescription: 'Wohnungsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Auch ohne Lift ✓ Besenreine Übergabe ✓ Festpreisgarantie ☎ +43 660 200 5610',
+    metaDescription: 'Wohnungsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Auch ohne Lift ✓ Besenreine Übergabe ✓ Festpreisgarantie ☎ +43660 39 57 587',
     benefits: [
       'Komplette Räumung vom Keller bis zum Dachboden',
       'Auch Altbauwohnungen ohne Lift bis 5. Stock',
@@ -87,7 +87,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'haushaltsauflösung',
     shortDescription: 'Komplette Haushaltsauflösung in Wien und Umgebung nach Todesfall, Umzug ins Pflegeheim oder bei Verkauf - einfühlsam und professionell.',
     description: 'Eine Haushaltsauflösung ist oft eine emotionale Angelegenheit. Ob nach einem Todesfall, beim Umzug ins Pflegeheim oder bei Verkauf - wir übernehmen die komplette Auflösung Ihres Haushalts in ganz Österreich mit Respekt und Einfühlungsvermögen. Wir kümmern uns um alles: von der Wertgegenständesortierung bis zur besenreinen Übergabe.',
-    metaDescription: 'Haushaltsauflösung Wien und Umgebung ✓ Ganz Österreich ✓ Einfühlsam nach Todesfall ✓ Wertgegenstände-Sortierung ☎ +43 660 200 5610',
+    metaDescription: 'Haushaltsauflösung Wien und Umgebung ✓ Ganz Österreich ✓ Einfühlsam nach Todesfall ✓ Wertgegenstände-Sortierung ☎ +43660 39 57 587',
     benefits: [
       'Einfühlsamer Umgang in schwierigen Situationen',
       'Sortierung von Wertgegenständen und Erinnerungsstücken',
@@ -154,7 +154,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'kellerräumung',
     shortDescription: 'Professionelle Kellerräumung in Wien und Umgebung - von vollgestellten Kellerabteilen bis zu großen Kellern in Mehrparteienhäusern.',
     description: 'Ihr Keller ist über Jahre vollgestellt und Sie brauchen wieder Platz? Wir räumen Kellerabteile, Kellerräume und komplette Keller in Altbauten und Neubauten in ganz Österreich. Auch feuchte oder schwer zugängliche Keller sind kein Problem für uns.',
-    metaDescription: 'Kellerräumung Wien und Umgebung ✓ Ganz Österreich ✓ Feuchte Keller ✓ Altbau-Keller ✓ Auch große Mengen ☎ +43 660 200 5610',
+    metaDescription: 'Kellerräumung Wien und Umgebung ✓ Ganz Österreich ✓ Feuchte Keller ✓ Altbau-Keller ✓ Auch große Mengen ☎ +43660 39 57 587',
     benefits: [
       'Räumung auch von feuchten und vollgestellten Kellern',
       'Erfahrung mit engen Kellerzugängen in Altbauten',
@@ -221,7 +221,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'dachbodenräumung',
     shortDescription: 'Dachböden und Speicher professionell räumen in Wien und Umgebung - auch bei steilen Stiegen und niedrigen Durchgängen.',
     description: 'Über Jahrzehnte sammelt sich auf Dachböden vieles an. Wir räumen Ihren Dachboden professionell - von einzelnen Dachkammern bis zu kompletten Dachgeschossen in ganz Österreich. Auch schwer zugängliche Speicher sind für uns kein Problem.',
-    metaDescription: 'Dachbodenräumung Wien und Umgebung ✓ Ganz Österreich ✓ Steile Treppen ✓ Altbau-Speicher ✓ Sperrmüll-Entsorgung ☎ +43 660 200 5610',
+    metaDescription: 'Dachbodenräumung Wien und Umgebung ✓ Ganz Österreich ✓ Steile Treppen ✓ Altbau-Speicher ✓ Sperrmüll-Entsorgung ☎ +43660 39 57 587',
     benefits: [
       'Erfahrung mit steilen Dachbodentreppen und niedrigen Durchgängen',
       'Räumung auch bei extremen Dachschrägen',
@@ -288,7 +288,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'geschäftsräumung',
     shortDescription: 'Professionelle Räumung von Geschäftsräumen, Büros und Gewerbeflächen in Wien und Umgebung - diskret und außerhalb der Öffnungszeiten.',
     description: 'Sie schließen Ihr Geschäft, ziehen um oder renovieren? Wir räumen Ihre Geschäftsräume professionell und diskret in ganz Österreich - von kleinen Boutiquen bis zu großen Gewerbeflächen. Arbeitszeiten flexibel außerhalb Ihrer Öffnungszeiten.',
-    metaDescription: 'Geschäftsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Außerhalb Öffnungszeiten ✓ Büros & Gewerbe ✓ Diskret ☎ +43 660 200 5610',
+    metaDescription: 'Geschäftsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Außerhalb Öffnungszeiten ✓ Büros & Gewerbe ✓ Diskret ☎ +43660 39 57 587',
     benefits: [
       'Flexible Arbeitszeiten außerhalb der Öffnungszeiten',
       'Diskrete Abwicklung ohne Firmenkennzeichnung',
@@ -355,7 +355,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'messie-räumung',
     shortDescription: 'Einfühlsame Messie-Räumung in Wien und Umgebung - diskret, respektvoll und ohne Vorurteile.',
     description: 'Messie-Wohnungen erfordern besondere Sensibilität und Erfahrung. Wir räumen Messie-Haushalte in ganz Österreich mit Respekt, Diskretion und ohne Vorurteile. Unsere geschulten Teams arbeiten einfühlsam und helfen Ihnen, wieder Ordnung zu schaffen.',
-    metaDescription: 'Messie-Räumung Wien und Umgebung ✓ Ganz Österreich ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Vertraulich ☎ +43 660 200 5610',
+    metaDescription: 'Messie-Räumung Wien und Umgebung ✓ Ganz Österreich ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Vertraulich ☎ +43660 39 57 587',
     benefits: [
       'Geschulte Teams mit Messie-Erfahrung und Einfühlungsvermögen',
       'Absolute Diskretion und Verschwiegenheit garantiert',
@@ -422,7 +422,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'sperrmüllentsorgung',
     shortDescription: 'Schnelle und unkomplizierte Sperrmüllabholung in Wien und Umgebung - wir entsorgen Möbel, Elektrogeräte und mehr fachgerecht.',
     description: 'Sie haben alte Möbel, Matratzen oder Elektrogeräte zu entsorgen? Unsere Sperrmüllentsorgung ist die schnelle und bequeme Lösung. Wir holen Ihren Sperrmüll direkt bei Ihnen ab und entsorgen ihn fachgerecht - ohne dass Sie selbst zum Mistplatz fahren müssen.',
-    metaDescription: 'Sperrmüllentsorgung Wien und Umgebung ✓ Ganz Österreich ✓ Schnelle Abholung ✓ Möbel, Matratzen, Elektrogeräte ☎ +43 660 200 5610',
+    metaDescription: 'Sperrmüllentsorgung Wien und Umgebung ✓ Ganz Österreich ✓ Schnelle Abholung ✓ Möbel, Matratzen, Elektrogeräte ☎ +43660 39 57 587',
     benefits: [
       'Abholung direkt bei Ihnen zu Hause',
       'Kein mühsamer Transport zum Mistplatz',
@@ -489,7 +489,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'umzugsservice',
     shortDescription: 'Professioneller Umzug in Wien und Umgebung - von der Planung bis zum letzten Karton, stressfrei und zuverlässig.',
     description: 'Ein Umzug muss nicht stressig sein. Unser Umzugsservice übernimmt alle Aufgaben rund um Ihren Wohnungs- oder Büroumzug in ganz Österreich. Von der Planung über das Packen bis zum Aufbau in der neuen Wohnung - wir kümmern uns um alles.',
-    metaDescription: 'Umzugsservice Wien und Umgebung ✓ Ganz Österreich ✓ Privatumzüge & Firmenumzüge ✓ Packmaterial ✓ Möbelmontage ☎ +43 660 200 5610',
+    metaDescription: 'Umzugsservice Wien und Umgebung ✓ Ganz Österreich ✓ Privatumzüge & Firmenumzüge ✓ Packmaterial ✓ Möbelmontage ☎ +43660 39 57 587',
     benefits: [
       'Komplettservice von Planung bis Möbelmontage',
       'Erfahrene Umzugshelfer und moderne Fahrzeuge',
@@ -556,7 +556,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'garageräumung',
     shortDescription: 'Garagen professionell räumen in Wien und Umgebung - von vollgestellten Einzelgaragen bis zu Tiefgaragen in Mehrparteienhäusern.',
     description: 'Ihre Garage ist über Jahre zum Abstellraum geworden? Wir räumen Garagen, Carports und Stellplätze professionell in ganz Österreich. Egal ob Einzelgarage, Doppelgarage oder Tiefgaragenstellplatz - wir schaffen wieder Platz für Ihr Auto.',
-    metaDescription: 'Garageräumung Wien und Umgebung ✓ Ganz Österreich ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ☎ +43 660 200 5610',
+    metaDescription: 'Garageräumung Wien und Umgebung ✓ Ganz Österreich ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ☎ +43660 39 57 587',
     benefits: [
       'Räumung von Einzel-, Doppel- und Tiefgaragen',
       'Entsorgung von Altöl, Reifen und Autoteilen',
@@ -623,7 +623,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'büroauflösung',
     shortDescription: 'Professionelle Büroauflösung in Wien und Umgebung - diskret und effizient auch außerhalb der Geschäftszeiten.',
     description: 'Sie schließen Ihr Büro, verkleinern sich oder ziehen um? Unsere Büroauflösung übernimmt alles in ganz Österreich: von Schreibtischen und Serverschränken bis zu Aktenvernichtung. Diskret, schnell und zu fairen Konditionen.',
-    metaDescription: 'Büroauflösung Wien und Umgebung ✓ Ganz Österreich ✓ DSGVO-Aktenvernichtung ✓ IT-Entsorgung ✓ Diskret ☎ +43 660 200 5610',
+    metaDescription: 'Büroauflösung Wien und Umgebung ✓ Ganz Österreich ✓ DSGVO-Aktenvernichtung ✓ IT-Entsorgung ✓ Diskret ☎ +43660 39 57 587',
     benefits: [
       'Flexible Arbeitszeiten auch nachts und am Wochenende',
       'Sichere DSGVO-konforme Aktenvernichtung',
@@ -690,7 +690,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'verlassenschaftsräumung',
     shortDescription: 'Einfühlsame Räumung nach Todesfall in Wien und Umgebung - diskret, respektvoll und mit Erfahrung in Verlassenschaftsabwicklung.',
     description: 'Nach einem Todesfall müssen Angehörige oft die Wohnung oder das Haus des Verstorbenen auflösen. Wir unterstützen Sie in ganz Österreich in dieser schwierigen Zeit mit unserer Verlassenschaftsräumung - einfühlsam, diskret und professionell.',
-    metaDescription: 'Verlassenschaftsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Nach Todesfall ✓ Einfühlsam & diskret ☎ +43 660 200 5610',
+    metaDescription: 'Verlassenschaftsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Nach Todesfall ✓ Einfühlsam & diskret ☎ +43660 39 57 587',
     benefits: [
       'Einfühlsamer Umgang in Trauersituationen',
       'Erfahrung mit Verlassenschaftsabwicklung',
@@ -757,7 +757,7 @@ export const services: Record<string, ServiceInfo> = {
     slug: 'container-service',
     shortDescription: 'Container-Vermietung in Wien und Umgebung - verschiedene Größen für Bau, Renovierung und Räumung.',
     description: 'Sie renovieren oder bauen und brauchen einen Container für Bauschutt, Holz oder Mischabfall? Wir liefern Container in verschiedenen Größen in ganz Österreich direkt zu Ihnen und holen sie nach Absprache wieder ab.',
-    metaDescription: 'Container mieten Wien und Umgebung ✓ Ganz Österreich ✓ 3m³ bis 10m³ ✓ Bauschutt, Holz, Mischabfall ☎ +43 660 200 5610',
+    metaDescription: 'Container mieten Wien und Umgebung ✓ Ganz Österreich ✓ 3m³ bis 10m³ ✓ Bauschutt, Holz, Mischabfall ☎ +43660 39 57 587',
     benefits: [
       'Container in verschiedenen Größen (3m³ - 10m³)',
       'Schnelle Lieferung meist innerhalb 24-48h',

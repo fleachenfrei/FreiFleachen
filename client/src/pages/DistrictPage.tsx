@@ -35,7 +35,7 @@ export default function DistrictPage() {
         image: viennaImage,
         '@id': url,
         url: `${window.location.origin}${url}`,
-        telephone: '+436602005610',
+        telephone: '+4366039575587',
         email: 'office@flaechenfrei.at',
         address: {
           '@type': 'PostalAddress',
@@ -120,7 +120,7 @@ export default function DistrictPage() {
                 {district.description}
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="tel:+436602005610">
+                <a href="tel:+4366039575587">
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground">
                     <Phone className="mr-2 w-5 h-5" />
                     Jetzt anrufen
@@ -297,10 +297,10 @@ export default function DistrictPage() {
                       Dabei erstellen wir einen transparenten Kostenvoranschlag ohne versteckte Gebühren.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <a href="tel:+436602005610">
+                      <a href="tel:+4366039575587">
                         <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground w-full sm:w-auto">
                           <Phone className="mr-2 w-5 h-5" />
-                          +43 660 200 5610
+                          +43660 39 57 587
                         </Button>
                       </a>
                       <a href="mailto:office@flaechenfrei.at">
@@ -327,8 +327,8 @@ export default function DistrictPage() {
                       <Phone className="w-5 h-5 text-primary shrink-0" />
                       <div>
                         <div className="text-sm text-muted-foreground">Telefon</div>
-                        <a href="tel:+436602005610" className="font-medium hover:text-primary">
-                          +43 660 200 5610
+                        <a href="tel:+4366039575587" className="font-medium hover:text-primary">
+                          +43660 39 57 587
                         </a>
                       </div>
                     </div>
@@ -349,7 +349,7 @@ export default function DistrictPage() {
                       </div>
                     </div>
                     <div className="pt-4 border-t space-y-2">
-                      <a href="tel:+436602005610" className="block">
+                      <a href="tel:+4366039575587" className="block">
                         <Button className="w-full bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-district-call">
                           <Phone className="mr-2 w-4 h-4" />
                           Jetzt anrufen

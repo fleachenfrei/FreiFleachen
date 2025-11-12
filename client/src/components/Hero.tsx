@@ -33,7 +33,7 @@ export default function Hero() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
-              <a href="tel:+436602005610">
+              <a href="tel:+4366039575587">
                 <Button
                   size="lg"
                   variant="outline"

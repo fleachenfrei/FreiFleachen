@@ -45,7 +45,7 @@ export default function BundeslandPage() {
         'provider': {
           '@type': 'LocalBusiness',
           'name': 'Flächen Frei',
-          'telephone': '+43 664 99124972',
+          'telephone': '+4366039575587',
           'email': 'office@flaechenfrei.at',
           'areaServed': {
             '@type': 'State',
@@ -100,7 +100,7 @@ export default function BundeslandPage() {
                 {description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+4366499124972">
+                <a href="tel:+4366039575587">
                   <Button size="lg" data-testid="button-call">
                     <Phone className="w-5 h-5 mr-2" />
                     {language === 'de' ? 'Jetzt anrufen' : 'Call Now'}
@@ -457,10 +457,10 @@ export default function BundeslandPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+4366499124972">
+                <a href="tel:+4366039575587">
                   <Button size="lg" data-testid="button-call-cta">
                     <Phone className="w-5 h-5 mr-2" />
-                    +43 664 99124972
+                    +43660 39 57 587
                   </Button>
                 </a>
                 <Link href="/kontakt">
