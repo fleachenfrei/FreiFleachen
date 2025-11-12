@@ -18,11 +18,11 @@ export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
 export const contactFormSchema = z.object({
-  name: z.string().min(2, "validation.nameMin"),
-  email: z.string().email("validation.emailInvalid"),
+  name: z.string().min(2),
+  email: z.string().email(),
   phone: z.string().optional(),
   service: z.string().optional(),
-  message: z.string().min(10, "validation.messageMin"),
+  message: z.string().min(10),
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;

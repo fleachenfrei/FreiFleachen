@@ -3,14 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { sendContactEmail, type ContactFormData } from "./email";
 import { z } from "zod";
-
-const contactFormSchema = z.object({
-  name: z.string().min(1, "Name ist erforderlich"),
-  email: z.string().email("Ungültige E-Mail-Adresse"),
-  phone: z.string().optional(),
-  service: z.string().optional(),
-  message: z.string().min(10, "Nachricht muss mindestens 10 Zeichen lang sein"),
-});
+import { contactFormSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form endpoint
