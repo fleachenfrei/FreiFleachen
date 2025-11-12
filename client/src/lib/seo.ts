@@ -116,17 +116,17 @@ export function addMultipleJsonLd(dataArray: Record<string, unknown>[], schemaId
 export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'MovingCompany',
     '@id': 'https://flaechenfrei.at/#business',
     'name': 'Flächen Frei',
     'alternateName': 'Flächen Frei Räumung',
-    'description': language === 'de' 
-      ? 'Professionelle Räumung und Transportdienste in Wien und ganz Österreich. Schnell, zuverlässig und zu fairen Preisen.'
-      : 'Professional clearing and transport services in Vienna and throughout Austria. Fast, reliable, and at fair prices.',
+    'description': language === 'de'
+      ? 'Professionelle Räumung und Transportdienste in Wien und ganz Österreich. Über 26 Jahre Erfahrung. Schnell, zuverlässig und zu fairen Preisen.'
+      : 'Professional clearing and transport services in Vienna and throughout Austria. Over 26 years of experience. Fast, reliable, and at fair prices.',
     'url': 'https://flaechenfrei.at',
-    'telephone': '+43660 39 57 587',
+    'telephone': '+43 660 39 57 587',
     'email': 'info@flaechenfrei.at',
-    'priceRange': '€€',
+    'priceRange': language === 'de' ? 'Faire Preise auf Anfrage' : 'Fair prices on request',
     'image': 'https://flaechenfrei.at/og-image.jpg',
     'logo': {
       '@type': 'ImageObject',
@@ -145,10 +145,17 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
       'latitude': 48.2082,
       'longitude': 16.3738,
     },
+    'openingHoursSpecification': {
+      '@type': 'OpeningHoursSpecification',
+      'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      'opens': '00:00',
+      'closes': '23:59',
+    },
     'areaServed': [
       {
         '@type': 'City',
         'name': 'Wien',
+        'description': 'Alle 23 Wiener Bezirke',
       },
       {
         '@type': 'State',
@@ -164,6 +171,14 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
       },
       {
         '@type': 'State',
+        'name': 'Steiermark',
+      },
+      {
+        '@type': 'State',
+        'name': 'Kärnten',
+      },
+      {
+        '@type': 'State',
         'name': 'Salzburg',
       },
       {
@@ -173,34 +188,6 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
       {
         '@type': 'State',
         'name': 'Vorarlberg',
-      },
-      {
-        '@type': 'State',
-        'name': 'Kärnten',
-      },
-      {
-        '@type': 'State',
-        'name': 'Steiermark',
-      },
-    ],
-    'openingHoursSpecification': [
-      {
-        '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': [
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-        ],
-        'opens': '09:00',
-        'closes': '18:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        'dayOfWeek': 'Saturday',
-        'opens': '09:00',
-        'closes': '12:00',
       },
     ],
     'sameAs': [
@@ -223,6 +210,9 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'itemOffered': {
             '@type': 'Service',
             'name': language === 'de' ? 'Wohnungsräumung' : 'Apartment Clearing',
+            'description': language === 'de' 
+              ? 'Professionelle Räumung von Wohnungen in Wien und ganz Österreich'
+              : 'Professional clearing of apartments in Vienna and throughout Austria',
           },
         },
         {
@@ -230,6 +220,9 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'itemOffered': {
             '@type': 'Service',
             'name': language === 'de' ? 'Haushaltsauflösung' : 'Household Dissolution',
+            'description': language === 'de'
+              ? 'Komplette Auflösung von Haushalten mit Transport und Entsorgung'
+              : 'Complete dissolution of households with transport and disposal',
           },
         },
         {
@@ -237,6 +230,9 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'itemOffered': {
             '@type': 'Service',
             'name': language === 'de' ? 'Kellerräumung' : 'Basement Clearing',
+            'description': language === 'de'
+              ? 'Entrümpelung von Kellern, Dachböden und Lagerräumen'
+              : 'Clearing of basements, attics and storage rooms',
           },
         },
         {
@@ -244,6 +240,29 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'itemOffered': {
             '@type': 'Service',
             'name': language === 'de' ? 'Geschäftsräumung' : 'Commercial Clearing',
+            'description': language === 'de'
+              ? 'Räumung von Büros, Geschäftslokalen und Gewerbeflächen'
+              : 'Clearing of offices, commercial premises and business spaces',
+          },
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': language === 'de' ? 'Messieräumung' : 'Hoarding Cleanup',
+            'description': language === 'de'
+              ? 'Diskrete und professionelle Messie-Entrümpelung'
+              : 'Discreet and professional hoarding cleanup',
+          },
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': language === 'de' ? 'Nachlassräumung' : 'Estate Clearing',
+            'description': language === 'de'
+              ? 'Sensible Räumung von Nachlässen und Erbschaften'
+              : 'Sensitive clearing of estates and inheritances',
           },
         },
       ],
