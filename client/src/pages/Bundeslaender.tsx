@@ -15,11 +15,11 @@ export default function Bundeslaender() {
 
   useEffect(() => {
     const title = language === 'de' 
-      ? 'Entrümpelung in allen Bundesländern Österreichs | Flächen Frei'
+      ? 'Räumung in allen Bundesländern Österreichs | Flächen Frei'
       : 'Clearing Services in All Austrian Federal States | Flächen Frei';
     
     const description = language === 'de'
-      ? 'Professionelle Entrümpelung und Räumung in allen 9 Bundesländern Österreichs. Von Wien bis Vorarlberg - zuverlässiger Service in ganz Österreich.'
+      ? 'Professionelle Räumung und Räumung in allen 9 Bundesländern Österreichs. Von Wien bis Vorarlberg - zuverlässiger Service in ganz Österreich.'
       : 'Professional clearing and removal services in all 9 Austrian federal states. From Vienna to Vorarlberg - reliable service throughout Austria.';
 
     updateMetaTags({
@@ -38,11 +38,11 @@ export default function Bundeslaender() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-bundeslaender-title">
-                {language === 'de' ? 'Entrümpelung in ganz Österreich' : 'Clearing Services Throughout Austria'}
+                {language === 'de' ? 'Räumung in ganz Österreich' : 'Clearing Services Throughout Austria'}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-bundeslaender-subtitle">
                 {language === 'de' 
-                  ? 'Professionelle Entrümpelung und Räumung in allen 9 Bundesländern. Schnell, zuverlässig und zu fairen Preisen.'
+                  ? 'Professionelle Räumung und Räumung in allen 9 Bundesländern. Schnell, zuverlässig und zu fairen Preisen.'
                   : 'Professional clearing and removal in all 9 federal states. Fast, reliable and at fair prices.'}
               </p>
             </div>

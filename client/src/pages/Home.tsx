@@ -18,15 +18,15 @@ export default function Home() {
 
   useEffect(() => {
     const title = language === 'de'
-      ? 'Entrümpelung Wien & Österreich | Flächen Frei - Schnell & Professionell ☎ +43 664 99124972'
+      ? 'Räumung Wien & Österreich | Flächen Frei - Schnell & Professionell ☎ +43 664 99124972'
       : 'Clearing Services Vienna & Austria | Flächen Frei - Fast & Professional ☎ +43 664 99124972';
 
     const description = language === 'de'
-      ? 'Professionelle Entrümpelung in Wien und ganz Österreich ✓ 26+ Jahre Erfahrung ✓ Faire Festpreise ✓ Kostenlose Besichtigung ✓ Schnelle Termine ✓ Besenreine Übergabe. Jetzt anrufen!'
+      ? 'Professionelle Räumung in Wien und ganz Österreich ✓ 26+ Jahre Erfahrung ✓ Faire Festpreise ✓ Kostenlose Besichtigung ✓ Schnelle Termine ✓ Besenreine Übergabe. Jetzt anrufen!'
       : 'Professional clearing services in Vienna and throughout Austria ✓ 26+ years experience ✓ Fair fixed prices ✓ Free consultation ✓ Fast appointments ✓ Broom-clean handover. Call now!';
 
     const keywords = language === 'de'
-      ? 'Entrümpelung Wien, Wohnungsentrümpelung, Haushaltsauflösung, Kellerentrümpelung, Entrümpelung Österreich, Räumung Wien, Messie-Entrümpelung, Verlassenschaftsentrümpelung, Geschäftsentrümpelung, Entrümpelungsfirma Wien'
+      ? 'Räumung Wien, Wohnungsräumung, Haushaltsauflösung, Kellerräumung, Räumung Österreich, Räumung Wien, Messie-Räumung, Verlassenschaftsräumung, Geschäftsräumung, Räumungsfirma Wien'
       : 'Clearing Vienna, apartment clearing, household dissolution, basement clearing, clearing Austria, removal Vienna, hoarder clearing, estate clearing, commercial clearing, clearing company Vienna';
 
     updateMetaTags({

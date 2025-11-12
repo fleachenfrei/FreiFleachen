@@ -23,7 +23,7 @@ export default function BundeslandPage() {
     if (!state) return;
 
     const title = language === 'de'
-      ? `Entrümpelung ${state.name} | Professionelle Räumung | Flächen Frei`
+      ? `Räumung ${state.name} | Professionelle Räumung | Flächen Frei`
       : `Clearing Services ${state.nameEn} | Professional Removal | Flächen Frei`;
 
     const description = language === 'de' ? state.metaDescription : state.metaDescriptionEn;
@@ -40,7 +40,7 @@ export default function BundeslandPage() {
       {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        'serviceType': language === 'de' ? 'Entrümpelung und Räumung' : 'Clearing and Removal',
+        'serviceType': language === 'de' ? 'Räumung und Räumung' : 'Clearing and Removal',
         'provider': {
           '@type': 'LocalBusiness',
           'name': 'Flächen Frei',
@@ -91,7 +91,7 @@ export default function BundeslandPage() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground" data-testid="text-state-title">
-                  {language === 'de' ? `Entrümpelung ${stateName}` : `Clearing Services ${stateName}`}
+                  {language === 'de' ? `Räumung ${stateName}` : `Clearing Services ${stateName}`}
                 </h1>
               </div>
               <p className="text-lg md:text-xl text-muted-foreground mb-8" data-testid="text-state-description">
@@ -120,7 +120,7 @@ export default function BundeslandPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               <h2 className="text-3xl font-bold text-foreground mb-6" data-testid="text-intro-title">
-                {language === 'de' ? `Entrümpelung in ${stateName} - Ihr zuverlässiger Partner` : `Clearing in ${stateName} - Your Reliable Partner`}
+                {language === 'de' ? `Räumung in ${stateName} - Ihr zuverlässiger Partner` : `Clearing in ${stateName} - Your Reliable Partner`}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-intro-content">
                 {detailedIntro}
@@ -177,7 +177,7 @@ export default function BundeslandPage() {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center max-w-3xl mx-auto">
               {language === 'de' 
-                ? `Diese Vorteile sprechen für uns als Ihren Entrümpelungspartner in ${stateName}:`
+                ? `Diese Vorteile sprechen für uns als Ihren Räumungspartner in ${stateName}:`
                 : `These advantages make us your clearing partner in ${stateName}:`}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -209,15 +209,15 @@ export default function BundeslandPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Wohnungsentrümpelung' : 'Apartment Clearing'}</CardTitle>
+                  <CardTitle>{language === 'de' ? 'Wohnungsräumung' : 'Apartment Clearing'}</CardTitle>
                   <CardDescription>
                     {language === 'de' 
-                      ? 'Schnelle und diskrete Entrümpelung Ihrer Wohnung'
+                      ? 'Schnelle und diskrete Räumung Ihrer Wohnung'
                       : 'Fast and discreet clearing of your apartment'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/wohnungsentrümpelungen">
+                  <Link href="/leistungen/wohnungsräumungen">
                     <Button variant="outline" className="w-full">
                       {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
                     </Button>
@@ -245,7 +245,7 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Geschäftsentrümpelung' : 'Commercial Properties'}</CardTitle>
+                  <CardTitle>{language === 'de' ? 'Geschäftsräumung' : 'Commercial Properties'}</CardTitle>
                   <CardDescription>
                     {language === 'de'
                       ? 'Professionelle Räumung von Geschäftsräumen'
@@ -253,7 +253,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/geschäftsentrümpelung">
+                  <Link href="/leistungen/geschäftsräumung">
                     <Button variant="outline" className="w-full">
                       {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
                     </Button>
@@ -263,15 +263,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Kellerentrümpelung' : 'Basement Clearing'}</CardTitle>
+                  <CardTitle>{language === 'de' ? 'Kellerräumung' : 'Basement Clearing'}</CardTitle>
                   <CardDescription>
                     {language === 'de'
-                      ? 'Schnelle und gründliche Kellerentrümpelung'
+                      ? 'Schnelle und gründliche Kellerräumung'
                       : 'Fast and thorough basement clearing'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/kellerentrümpelung">
+                  <Link href="/leistungen/kellerräumung">
                     <Button variant="outline" className="w-full">
                       {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
                     </Button>
@@ -281,15 +281,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Dachbodenentrümpelung' : 'Attic Clearing'}</CardTitle>
+                  <CardTitle>{language === 'de' ? 'Dachbodenräumung' : 'Attic Clearing'}</CardTitle>
                   <CardDescription>
                     {language === 'de'
-                      ? 'Professionelle Dachbodenentrümpelung'
+                      ? 'Professionelle Dachbodenräumung'
                       : 'Professional attic clearing'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/dachbodenentrümpelung">
+                  <Link href="/leistungen/dachbodenräumung">
                     <Button variant="outline" className="w-full">
                       {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
                     </Button>
@@ -299,15 +299,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Verlassenschaftsentrümpelung' : 'Estate Clearing'}</CardTitle>
+                  <CardTitle>{language === 'de' ? 'Verlassenschaftsräumung' : 'Estate Clearing'}</CardTitle>
                   <CardDescription>
                     {language === 'de'
-                      ? 'Sensible Entrümpelung von Verlassenschaften'
+                      ? 'Sensible Räumung von Verlassenschaften'
                       : 'Sensitive clearing of estates'}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/verlassenschaftsentrümpelung">
+                  <Link href="/leistungen/verlassenschaftsräumung">
                     <Button variant="outline" className="w-full">
                       {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
                     </Button>
@@ -326,7 +326,7 @@ export default function BundeslandPage() {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
               {language === 'de' 
-                ? `Antworten auf die häufigsten Fragen zur Entrümpelung in ${stateName}`
+                ? `Antworten auf die häufigsten Fragen zur Räumung in ${stateName}`
                 : `Answers to the most common questions about clearing in ${stateName}`}
             </p>
             <Accordion type="single" collapsible className="w-full" data-testid="accordion-faq">
@@ -402,7 +402,7 @@ export default function BundeslandPage() {
             <Card className="bg-background/80 backdrop-blur border-primary/20">
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl md:text-4xl mb-4">
-                  {language === 'de' ? `Entrümpelung in ${stateName} gewünscht?` : `Need Clearing in ${stateName}?`}
+                  {language === 'de' ? `Räumung in ${stateName} gewünscht?` : `Need Clearing in ${stateName}?`}
                 </CardTitle>
                 <CardDescription className="text-base md:text-lg">
                   {language === 'de'

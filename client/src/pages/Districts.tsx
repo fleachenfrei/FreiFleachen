@@ -14,8 +14,8 @@ export default function Districts() {
 
   useEffect(() => {
     updateMetaTags({
-      title: 'Entrümpelung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien',
-      description: 'Professionelle Entrümpelung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43 660 200 5610',
+      title: 'Räumung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien',
+      description: 'Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43 660 200 5610',
       url: '/bezirke',
       type: 'website',
     });
@@ -30,10 +30,10 @@ export default function Districts() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-districts-title">
-                Entrümpelung in allen Wiener Bezirken
+                Räumung in allen Wiener Bezirken
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Professionelle Entrümpelungs- und Räumungsdienste in allen 23 Bezirken Wiens. 
+                Professionelle Räumungs- und Räumungsdienste in allen 23 Bezirken Wiens. 
                 Wählen Sie Ihren Bezirk für detaillierte Informationen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -106,7 +106,7 @@ export default function Districts() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-4">Warum Flächen Frei in Wien?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Mit über 26 Jahren Erfahrung sind wir Ihr verlässlicher Partner für Entrümpelungen in ganz Wien. 
+                Mit über 26 Jahren Erfahrung sind wir Ihr verlässlicher Partner für Räumungen in ganz Wien. 
                 Egal in welchem Bezirk Sie uns brauchen - wir sind schnell vor Ort.
               </p>
               <div className="grid md:grid-cols-3 gap-6 text-left">
@@ -118,7 +118,7 @@ export default function Districts() {
                 <div>
                   <div className="text-4xl font-bold text-primary mb-2">26+</div>
                   <div className="font-medium">Jahre Erfahrung</div>
-                  <div className="text-sm text-muted-foreground">Professionelle Entrümpelung</div>
+                  <div className="text-sm text-muted-foreground">Professionelle Räumung</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-primary mb-2">24/7</div>

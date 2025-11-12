@@ -15,14 +15,14 @@ export interface ServiceInfo {
 }
 
 export const services: Record<string, ServiceInfo> = {
-  'wohnungsentrümpelungen': {
-    name: 'Wohnungsentrümpelung',
-    slug: 'wohnungsentrümpelungen',
-    shortDescription: 'Professionelle Entrümpelung Ihrer Wohnung in Wien und Umgebung - schnell, zuverlässig und zu fairen Preisen.',
-    description: 'Unsere Wohnungsentrümpelung ist der ideale Service für Sie, wenn Sie Ihre Wohnung komplett räumen müssen. Ob bei Umzug, Verkauf, Vermietung oder Erbe - wir entrümpeln Ihre Wohnung professionell, schnell und diskret. Von der 1-Zimmer-Wohnung bis zur großen Altbauwohnung in ganz Österreich.',
-    metaDescription: 'Wohnungsentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Auch ohne Lift ✓ Besenreine Übergabe ✓ Festpreisgarantie ☎ +43 660 200 5610',
+  'wohnungsräumungen': {
+    name: 'Wohnungsräumung',
+    slug: 'wohnungsräumungen',
+    shortDescription: 'Professionelle Räumung Ihrer Wohnung in Wien und Umgebung - schnell, zuverlässig und zu fairen Preisen.',
+    description: 'Unsere Wohnungsräumung ist der ideale Service für Sie, wenn Sie Ihre Wohnung komplett räumen müssen. Ob bei Umzug, Verkauf, Vermietung oder Erbe - wir räumen Ihre Wohnung professionell, schnell und diskret. Von der 1-Zimmer-Wohnung bis zur großen Altbauwohnung in ganz Österreich.',
+    metaDescription: 'Wohnungsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Auch ohne Lift ✓ Besenreine Übergabe ✓ Festpreisgarantie ☎ +43 660 200 5610',
     benefits: [
-      'Komplette Entrümpelung vom Keller bis zum Dachboden',
+      'Komplette Räumung vom Keller bis zum Dachboden',
       'Auch Altbauwohnungen ohne Lift bis 5. Stock',
       'Besenreine Übergabe garantiert',
       'Fachgerechte Entsorgung und Recycling',
@@ -42,7 +42,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         step: 3,
-        title: 'Professionelle Entrümpelung',
+        title: 'Professionelle Räumung',
         description: 'Unser Team räumt Ihre Wohnung komplett - vom Mobiliar über Elektrogeräte bis zu Kleinteilen.',
       },
       {
@@ -52,7 +52,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Die Kosten für eine Wohnungsentrümpelung hängen von mehreren Faktoren ab. Nach einer kostenlosen Besichtigung erhalten Sie von uns einen transparenten Festpreis.',
+      info: 'Die Kosten für eine Wohnungsräumung hängen von mehreren Faktoren ab. Nach einer kostenlosen Besichtigung erhalten Sie von uns einen transparenten Festpreis.',
       factors: [
         'Wohnungsgröße (m² und Anzahl der Zimmer)',
         'Menge und Art der zu entsorgenden Gegenstände',
@@ -63,12 +63,12 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Was kostet eine Wohnungsentrümpelung?',
+        question: 'Was kostet eine Wohnungsräumung?',
         answer: 'Eine 50m² Wohnung kostet durchschnittlich 800-1.200€, eine 80m² Wohnung 1.200-1.800€. Der genaue Preis hängt von der Objektmenge und dem Stockwerk ab. Nach kostenloser Besichtigung erhalten Sie einen verbindlichen Festpreis ohne versteckte Kosten.',
       },
       {
-        question: 'Wie lange dauert eine Wohnungsentrümpelung?',
-        answer: 'Eine 60m² Wohnung entrümpeln wir in der Regel in 4-6 Stunden. Größere Wohnungen oder stark vollgestellte Objekte benötigen 6-10 Stunden. Bei Messie-Wohnungen planen wir 1-2 Tage ein.',
+        question: 'Wie lange dauert eine Wohnungsräumung?',
+        answer: 'Eine 60m² Wohnung räumen wir in der Regel in 4-6 Stunden. Größere Wohnungen oder stark vollgestellte Objekte benötigen 6-10 Stunden. Bei Messie-Wohnungen planen wir 1-2 Tage ein.',
       },
       {
         question: 'Können Sie auch ohne Lift bis in den 5. Stock?',
@@ -79,7 +79,7 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Brauchbare Möbel und Gegenstände führen wir sozialen Einrichtungen zu. Defekte Möbel werden fachgerecht recycelt. Sondermüll entsorgen wir über zertifizierte Fachbetriebe. Sie erhalten auf Wunsch Entsorgungsnachweise.',
       },
     ],
-    relatedServices: ['haushaltsauflösung', 'kellerentrümpelung', 'verlassenschaftsentrümpelung'],
+    relatedServices: ['haushaltsauflösung', 'kellerräumung', 'verlassenschaftsräumung'],
   },
 
   'haushaltsauflösung': {
@@ -135,7 +135,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Was passiert mit wertvollen Gegenständen?',
-        answer: 'Wertgegenstände sortieren wir sorgfältig aus und übergeben sie Ihnen oder Ihren Angehörigen. Auf Wunsch vermitteln wir Kontakte zu Auktionshäusern oder Antiquitätenhändlern. Auch eine Anrechnung auf die Entrümpelungskosten ist möglich.',
+        answer: 'Wertgegenstände sortieren wir sorgfältig aus und übergeben sie Ihnen oder Ihren Angehörigen. Auf Wunsch vermitteln wir Kontakte zu Auktionshäusern oder Antiquitätenhändlern. Auch eine Anrechnung auf die Räumungskosten ist möglich.',
       },
       {
         question: 'Können Sie auch Dokumente vernichten?',
@@ -146,17 +146,17 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Ja, gerade bei Haushaltsauflösungen bieten wir flexible Termine auch am Samstag an, damit Angehörige dabei sein können. Sonntags arbeiten wir bei besonders dringenden Fällen.',
       },
     ],
-    relatedServices: ['wohnungsentrümpelungen', 'verlassenschaftsentrümpelung', 'dachbodenentrümpelung'],
+    relatedServices: ['wohnungsräumungen', 'verlassenschaftsräumung', 'dachbodenräumung'],
   },
 
-  'kellerentrümpelung': {
-    name: 'Kellerentrümpelung',
-    slug: 'kellerentrümpelung',
-    shortDescription: 'Professionelle Kellerentrümpelung in Wien und Umgebung - von vollgestellten Kellerabteilen bis zu großen Kellern in Mehrparteienhäusern.',
-    description: 'Ihr Keller ist über Jahre vollgestellt und Sie brauchen wieder Platz? Wir entrümpeln Kellerabteile, Kellerräume und komplette Keller in Altbauten und Neubauten in ganz Österreich. Auch feuchte oder schwer zugängliche Keller sind kein Problem für uns.',
-    metaDescription: 'Kellerentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Feuchte Keller ✓ Altbau-Keller ✓ Auch große Mengen ☎ +43 660 200 5610',
+  'kellerräumung': {
+    name: 'Kellerräumung',
+    slug: 'kellerräumung',
+    shortDescription: 'Professionelle Kellerräumung in Wien und Umgebung - von vollgestellten Kellerabteilen bis zu großen Kellern in Mehrparteienhäusern.',
+    description: 'Ihr Keller ist über Jahre vollgestellt und Sie brauchen wieder Platz? Wir räumen Kellerabteile, Kellerräume und komplette Keller in Altbauten und Neubauten in ganz Österreich. Auch feuchte oder schwer zugängliche Keller sind kein Problem für uns.',
+    metaDescription: 'Kellerräumung Wien und Umgebung ✓ Ganz Österreich ✓ Feuchte Keller ✓ Altbau-Keller ✓ Auch große Mengen ☎ +43 660 200 5610',
     benefits: [
-      'Entrümpelung auch von feuchten und vollgestellten Kellern',
+      'Räumung auch von feuchten und vollgestellten Kellern',
       'Erfahrung mit engen Kellerzugängen in Altbauten',
       'Entsorgung auch von Sondermüll (Farben, Chemikalien)',
       'Kellerreinigung auf Wunsch inklusive',
@@ -176,7 +176,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         step: 3,
-        title: 'Komplette Entrümpelung',
+        title: 'Komplette Räumung',
         description: 'Wir räumen Ihren Keller komplett - von alten Möbeln über Gerümpel bis zu Sondermüll.',
       },
       {
@@ -186,7 +186,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Kellerentrümpelungen sind oft günstiger als gedacht. Die Kosten richten sich nach Kubikmetern und Aufwand.',
+      info: 'Kellerräumungen sind oft günstiger als gedacht. Die Kosten richten sich nach Kubikmetern und Aufwand.',
       factors: [
         'Volumen der zu entsorgenden Gegenstände',
         'Art der Gegenstände (normaler Müll vs. Sondermüll)',
@@ -197,11 +197,11 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Was kostet eine Kellerentrümpelung?',
+        question: 'Was kostet eine Kellerräumung?',
         answer: 'Ein kleines Kellerabteil (5-10m³) kostet ab 300-500€. Ein vollgestellter Altbau-Keller (20-30m³) liegt bei 800-1.500€. Bei Sondermüll (Farben, Lacke) kommen Entsorgungsgebühren hinzu. Fixpreis nach Besichtigung.',
       },
       {
-        question: 'Können Sie auch feuchte Keller entrümpeln?',
+        question: 'Können Sie auch feuchte Keller räumen?',
         answer: 'Ja, feuchte Keller sind für uns kein Problem. Wir tragen Schutzkleidung und entsorgen auch schimmelige oder feuchte Gegenstände fachgerecht. Bei starkem Schimmelbefall empfehlen wir vorab eine Sanierung.',
       },
       {
@@ -210,21 +210,21 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Arbeiten Sie auch in sehr engen Kellern?',
-        answer: 'Ja, Altbau-Keller mit engen Treppen und Gängen kennen wir bestens. Wir nutzen spezielle Tragegurte und arbeiten in kleineren Teams, um auch verwinkelte Keller zu entrümpeln.',
+        answer: 'Ja, Altbau-Keller mit engen Treppen und Gängen kennen wir bestens. Wir nutzen spezielle Tragegurte und arbeiten in kleineren Teams, um auch verwinkelte Keller zu räumen.',
       },
     ],
-    relatedServices: ['dachbodenentrümpelung', 'wohnungsentrümpelungen', 'garageentrümpelung'],
+    relatedServices: ['dachbodenräumung', 'wohnungsräumungen', 'garageräumung'],
   },
 
-  'dachbodenentrümpelung': {
-    name: 'Dachbodenentrümpelung',
-    slug: 'dachbodenentrümpelung',
-    shortDescription: 'Dachböden und Speicher professionell entrümpeln in Wien und Umgebung - auch bei steilen Stiegen und niedrigen Durchgängen.',
-    description: 'Über Jahrzehnte sammelt sich auf Dachböden vieles an. Wir entrümpeln Ihren Dachboden professionell - von einzelnen Dachkammern bis zu kompletten Dachgeschossen in ganz Österreich. Auch schwer zugängliche Speicher sind für uns kein Problem.',
-    metaDescription: 'Dachbodenentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Steile Treppen ✓ Altbau-Speicher ✓ Sperrmüll-Entsorgung ☎ +43 660 200 5610',
+  'dachbodenräumung': {
+    name: 'Dachbodenräumung',
+    slug: 'dachbodenräumung',
+    shortDescription: 'Dachböden und Speicher professionell räumen in Wien und Umgebung - auch bei steilen Stiegen und niedrigen Durchgängen.',
+    description: 'Über Jahrzehnte sammelt sich auf Dachböden vieles an. Wir räumen Ihren Dachboden professionell - von einzelnen Dachkammern bis zu kompletten Dachgeschossen in ganz Österreich. Auch schwer zugängliche Speicher sind für uns kein Problem.',
+    metaDescription: 'Dachbodenräumung Wien und Umgebung ✓ Ganz Österreich ✓ Steile Treppen ✓ Altbau-Speicher ✓ Sperrmüll-Entsorgung ☎ +43 660 200 5610',
     benefits: [
       'Erfahrung mit steilen Dachbodentreppen und niedrigen Durchgängen',
-      'Entrümpelung auch bei extremen Dachschrägen',
+      'Räumung auch bei extremen Dachschrägen',
       'Vorsichtiger Umgang mit historischen Dachkonstruktionen',
       'Entsorgung von altem Sperrmüll und Gerümpel',
       'Schnelle Abwicklung ohne Lärm für Nachbarn',
@@ -239,7 +239,7 @@ export const services: Record<string, ServiceInfo> = {
       {
         step: 2,
         title: 'Sicherheitsplanung',
-        description: 'Wir planen die sichere Entrümpelung unter Berücksichtigung steiler Treppen und niedriger Decken.',
+        description: 'Wir planen die sichere Räumung unter Berücksichtigung steiler Treppen und niedriger Decken.',
       },
       {
         step: 3,
@@ -253,7 +253,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Die Kosten für eine Dachbodenentrümpelung hängen von Zugänglichkeit und Menge ab. Steile Treppen erhöhen den Aufwand leicht.',
+      info: 'Die Kosten für eine Dachbodenräumung hängen von Zugänglichkeit und Menge ab. Steile Treppen erhöhen den Aufwand leicht.',
       factors: [
         'Volumen und Art der zu entsorgenden Gegenstände',
         'Zugänglichkeit (Treppen, Durchgangshöhen)',
@@ -264,7 +264,7 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Was kostet eine Dachbodenentrümpelung?',
+        question: 'Was kostet eine Dachbodenräumung?',
         answer: 'Ein kleiner Dachboden (10-15m³) kostet ab 400-700€. Größere Speicher in Altbauten (25-40m³) liegen bei 1.000-2.000€. Bei sehr steilen oder engen Treppen kalkulieren wir einen Aufschlag von 15-20%. Festpreis nach Besichtigung.',
       },
       {
@@ -276,19 +276,19 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Antike oder wertvolle Möbelstücke können wir auf Wunsch begutachten lassen. Brauchbare Möbel spenden wir an soziale Einrichtungen. Defekte Stücke werden fachgerecht recycelt - Holz getrennt von Metall und Textilien.',
       },
       {
-        question: 'Wie lange dauert eine Dachbodenentrümpelung?',
+        question: 'Wie lange dauert eine Dachbodenräumung?',
         answer: 'Ein durchschnittlicher Altbau-Dachboden (20m³) ist in 4-6 Stunden entrümpelt. Bei besonders vollgestellten oder schwer zugänglichen Speichern planen wir 6-10 Stunden ein. Express-Service innerhalb 24h möglich.',
       },
     ],
-    relatedServices: ['kellerentrümpelung', 'wohnungsentrümpelungen', 'sperrmüllentsorgung'],
+    relatedServices: ['kellerräumung', 'wohnungsräumungen', 'sperrmüllentsorgung'],
   },
 
-  'geschäftsentrümpelung': {
-    name: 'Geschäftsentrümpelung',
-    slug: 'geschäftsentrümpelung',
-    shortDescription: 'Professionelle Entrümpelung von Geschäftsräumen, Büros und Gewerbeflächen in Wien und Umgebung - diskret und außerhalb der Öffnungszeiten.',
-    description: 'Sie schließen Ihr Geschäft, ziehen um oder renovieren? Wir entrümpeln Ihre Geschäftsräume professionell und diskret in ganz Österreich - von kleinen Boutiquen bis zu großen Gewerbeflächen. Arbeitszeiten flexibel außerhalb Ihrer Öffnungszeiten.',
-    metaDescription: 'Geschäftsentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Außerhalb Öffnungszeiten ✓ Büros & Gewerbe ✓ Diskret ☎ +43 660 200 5610',
+  'geschäftsräumung': {
+    name: 'Geschäftsräumung',
+    slug: 'geschäftsräumung',
+    shortDescription: 'Professionelle Räumung von Geschäftsräumen, Büros und Gewerbeflächen in Wien und Umgebung - diskret und außerhalb der Öffnungszeiten.',
+    description: 'Sie schließen Ihr Geschäft, ziehen um oder renovieren? Wir räumen Ihre Geschäftsräume professionell und diskret in ganz Österreich - von kleinen Boutiquen bis zu großen Gewerbeflächen. Arbeitszeiten flexibel außerhalb Ihrer Öffnungszeiten.',
+    metaDescription: 'Geschäftsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Außerhalb Öffnungszeiten ✓ Büros & Gewerbe ✓ Diskret ☎ +43 660 200 5610',
     benefits: [
       'Flexible Arbeitszeiten außerhalb der Öffnungszeiten',
       'Diskrete Abwicklung ohne Firmenkennzeichnung',
@@ -311,7 +311,7 @@ export const services: Record<string, ServiceInfo> = {
       {
         step: 3,
         title: 'Professionelle Räumung',
-        description: 'Wir entrümpeln außerhalb Ihrer Öffnungszeiten - abends, nachts oder am Wochenende nach Wunsch.',
+        description: 'Wir räumen außerhalb Ihrer Öffnungszeiten - abends, nachts oder am Wochenende nach Wunsch.',
       },
       {
         step: 4,
@@ -320,7 +320,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Die Kosten für Geschäftsentrümpelungen richten sich nach Fläche, Inventar und Zeitaufwand. Flexible Arbeitszeiten sind im Preis inkludiert.',
+      info: 'Die Kosten für Geschäftsräumungen richten sich nach Fläche, Inventar und Zeitaufwand. Flexible Arbeitszeiten sind im Preis inkludiert.',
       factors: [
         'Größe der Gewerbefläche in m²',
         'Art und Menge des Inventars (Regale, Theken, etc.)',
@@ -332,10 +332,10 @@ export const services: Record<string, ServiceInfo> = {
     faq: [
       {
         question: 'Können Sie auch nachts oder am Wochenende arbeiten?',
-        answer: 'Ja, für Geschäftsentrümpelungen arbeiten wir flexibel außerhalb Ihrer Öffnungszeiten. Samstag/Sonntag oder nachts von 22-6 Uhr ist möglich. Besonders in der Mariahilfer Straße oder am Graben sind Nacht-Einsätze üblich.',
+        answer: 'Ja, für Geschäftsräumungen arbeiten wir flexibel außerhalb Ihrer Öffnungszeiten. Samstag/Sonntag oder nachts von 22-6 Uhr ist möglich. Besonders in der Mariahilfer Straße oder am Graben sind Nacht-Einsätze üblich.',
       },
       {
-        question: 'Was kostet die Entrümpelung eines kleinen Geschäfts?',
+        question: 'Was kostet die Räumung eines kleinen Geschäfts?',
         answer: 'Ein kleines Ladenlokal (30-50m²) kostet ab 800-1.500€. Größere Gewerbeflächen (100-200m²) liegen bei 2.500-5.000€. Arbeiten außerhalb der Geschäftszeiten sind im Preis inkludiert. Festpreis nach Besichtigung.',
       },
       {
@@ -344,24 +344,24 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Arbeiten Sie diskret ohne Firmenlogo?',
-        answer: 'Absolut. Für Geschäftsentrümpelungen nutzen wir auf Wunsch neutrale Fahrzeuge ohne Logo. Unsere Mitarbeiter tragen zivile Kleidung. Gerade in gehobenen Lagen (Innere Stadt, Botschaftsviertel) ist Diskretion Standard.',
+        answer: 'Absolut. Für Geschäftsräumungen nutzen wir auf Wunsch neutrale Fahrzeuge ohne Logo. Unsere Mitarbeiter tragen zivile Kleidung. Gerade in gehobenen Lagen (Innere Stadt, Botschaftsviertel) ist Diskretion Standard.',
       },
     ],
-    relatedServices: ['büroauflösung', 'wohnungsentrümpelungen', 'sperrmüllentsorgung'],
+    relatedServices: ['büroauflösung', 'wohnungsräumungen', 'sperrmüllentsorgung'],
   },
 
-  'messie-entrümpelung': {
-    name: 'Messie-Entrümpelung',
-    slug: 'messie-entrümpelung',
-    shortDescription: 'Einfühlsame Messie-Entrümpelung in Wien und Umgebung - diskret, respektvoll und ohne Vorurteile.',
-    description: 'Messie-Wohnungen erfordern besondere Sensibilität und Erfahrung. Wir entrümpeln Messie-Haushalte in ganz Österreich mit Respekt, Diskretion und ohne Vorurteile. Unsere geschulten Teams arbeiten einfühlsam und helfen Ihnen, wieder Ordnung zu schaffen.',
-    metaDescription: 'Messie-Entrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Vertraulich ☎ +43 660 200 5610',
+  'messie-räumung': {
+    name: 'Messie-Räumung',
+    slug: 'messie-räumung',
+    shortDescription: 'Einfühlsame Messie-Räumung in Wien und Umgebung - diskret, respektvoll und ohne Vorurteile.',
+    description: 'Messie-Wohnungen erfordern besondere Sensibilität und Erfahrung. Wir räumen Messie-Haushalte in ganz Österreich mit Respekt, Diskretion und ohne Vorurteile. Unsere geschulten Teams arbeiten einfühlsam und helfen Ihnen, wieder Ordnung zu schaffen.',
+    metaDescription: 'Messie-Räumung Wien und Umgebung ✓ Ganz Österreich ✓ Diskret & einfühlsam ✓ Ohne Vorurteile ✓ Vertraulich ☎ +43 660 200 5610',
     benefits: [
       'Geschulte Teams mit Messie-Erfahrung und Einfühlungsvermögen',
       'Absolute Diskretion und Verschwiegenheit garantiert',
       'Respektvoller Umgang ohne Bewertung',
       'Sortierung wichtiger Dokumente und Erinnerungen',
-      'Schrittweise Entrümpelung nach Ihrem Tempo möglich',
+      'Schrittweise Räumung nach Ihrem Tempo möglich',
       'Vermittlung von Nachsorge-Kontakten auf Wunsch',
     ],
     process: [
@@ -373,11 +373,11 @@ export const services: Record<string, ServiceInfo> = {
       {
         step: 2,
         title: 'Gemeinsame Planung',
-        description: 'Wir planen die Entrümpelung nach Ihren Wünschen - ob komplett oder schrittweise in Etappen.',
+        description: 'Wir planen die Räumung nach Ihren Wünschen - ob komplett oder schrittweise in Etappen.',
       },
       {
         step: 3,
-        title: 'Einfühlsame Entrümpelung',
+        title: 'Einfühlsame Räumung',
         description: 'Unser Team arbeitet respektvoll und sortiert auf Wunsch wichtige Gegenstände und Dokumente aus.',
       },
       {
@@ -387,34 +387,34 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Messie-Entrümpelungen sind oft aufwendiger als normale Entrümpelungen. Wir kalkulieren fair und transparent nach Aufwand.',
+      info: 'Messie-Räumungen sind oft aufwendiger als normale Räumungen. Wir kalkulieren fair und transparent nach Aufwand.',
       factors: [
         'Grad der Vermüllung (leicht bis schwer)',
         'Wohnungsgröße und Anzahl der Zimmer',
         'Sortierungsaufwand für wichtige Dokumente',
         'Hygienezustand und Reinigungsaufwand',
-        'Gewünschte Schrittweise vs. Komplett-Entrümpelung',
+        'Gewünschte Schrittweise vs. Komplett-Räumung',
       ],
     },
     faq: [
       {
-        question: 'Wie diskret arbeiten Sie bei Messie-Entrümpelungen?',
+        question: 'Wie diskret arbeiten Sie bei Messie-Räumungen?',
         answer: 'Absolute Diskretion ist bei uns selbstverständlich. Wir nutzen neutrale Fahrzeuge, tragen zivile Kleidung und informieren keine Nachbarn. Unsere Mitarbeiter sind geschult und behandeln Ihre Situation vertraulich ohne Vorurteile.',
       },
       {
-        question: 'Was kostet eine Messie-Entrümpelung?',
+        question: 'Was kostet eine Messie-Räumung?',
         answer: 'Eine leichte Messie-Wohnung (60m²) kostet ab 1.500-2.500€. Mittelschwere Fälle liegen bei 2.500-4.500€, schwere Fälle bei 4.500-8.000€. Die Kosten hängen vom Vermüllungsgrad und Sortieraufwand ab. Ratenzahlung möglich.',
       },
       {
-        question: 'Können Sie auch schrittweise entrümpeln?',
-        answer: 'Ja, wenn gewünscht entrümpeln wir in Etappen - z.B. erst ein Zimmer, dann das nächste. Das gibt Ihnen Zeit, sich an die Veränderung zu gewöhnen. Viele Klienten bevorzugen diesen sanfteren Weg.',
+        question: 'Können Sie auch schrittweise räumen?',
+        answer: 'Ja, wenn gewünscht räumen wir in Etappen - z.B. erst ein Zimmer, dann das nächste. Das gibt Ihnen Zeit, sich an die Veränderung zu gewöhnen. Viele Klienten bevorzugen diesen sanfteren Weg.',
       },
       {
         question: 'Helfen Sie auch bei der Nachsorge?',
         answer: 'Wir können Ihnen Kontakte zu Therapeuten, Selbsthilfegruppen und Ordnungsberatern vermitteln. Einige unserer Kunden buchen auch regelmäßige Unterstützung, um Rückfälle zu vermeiden.',
       },
     ],
-    relatedServices: ['wohnungsentrümpelungen', 'haushaltsauflösung', 'kellerentrümpelung'],
+    relatedServices: ['wohnungsräumungen', 'haushaltsauflösung', 'kellerräumung'],
   },
 
   'sperrmüllentsorgung': {
@@ -481,7 +481,7 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Nein, das ist nicht nötig! Wir holen den Sperrmüll direkt aus Ihrer Wohnung, Keller oder Garage ab - auch aus höheren Stockwerken ohne Lift. Sie müssen nichts vorbereiten.',
       },
     ],
-    relatedServices: ['wohnungsentrümpelungen', 'möbelentsorgung', 'kellerentrümpelung'],
+    relatedServices: ['wohnungsräumungen', 'möbelentsorgung', 'kellerräumung'],
   },
 
   'umzugsservice': {
@@ -548,17 +548,17 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Ja, Umzugskartons, Packpapier, Luftpolsterfolie und Möbeldecken sind bei uns inklusive. Sie müssen nichts besorgen. Übrige Kartons nehmen wir nach dem Umzug wieder mit.',
       },
     ],
-    relatedServices: ['wohnungsentrümpelungen', 'sperrmüllentsorgung', 'geschäftsentrümpelung'],
+    relatedServices: ['wohnungsräumungen', 'sperrmüllentsorgung', 'geschäftsräumung'],
   },
 
-  'garageentrümpelung': {
-    name: 'Garageentrümpelung',
-    slug: 'garageentrümpelung',
-    shortDescription: 'Garagen professionell entrümpeln in Wien und Umgebung - von vollgestellten Einzelgaragen bis zu Tiefgaragen in Mehrparteienhäusern.',
-    description: 'Ihre Garage ist über Jahre zum Abstellraum geworden? Wir entrümpeln Garagen, Carports und Stellplätze professionell in ganz Österreich. Egal ob Einzelgarage, Doppelgarage oder Tiefgaragenstellplatz - wir schaffen wieder Platz für Ihr Auto.',
-    metaDescription: 'Garageentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ☎ +43 660 200 5610',
+  'garageräumung': {
+    name: 'Garageräumung',
+    slug: 'garageräumung',
+    shortDescription: 'Garagen professionell räumen in Wien und Umgebung - von vollgestellten Einzelgaragen bis zu Tiefgaragen in Mehrparteienhäusern.',
+    description: 'Ihre Garage ist über Jahre zum Abstellraum geworden? Wir räumen Garagen, Carports und Stellplätze professionell in ganz Österreich. Egal ob Einzelgarage, Doppelgarage oder Tiefgaragenstellplatz - wir schaffen wieder Platz für Ihr Auto.',
+    metaDescription: 'Garageräumung Wien und Umgebung ✓ Ganz Österreich ✓ Einzelgaragen & Tiefgaragen ✓ Werkstattauflösung ☎ +43 660 200 5610',
     benefits: [
-      'Entrümpelung von Einzel-, Doppel- und Tiefgaragen',
+      'Räumung von Einzel-, Doppel- und Tiefgaragen',
       'Entsorgung von Altöl, Reifen und Autoteilen',
       'Auch vollgestellte Werkstattgaragen kein Problem',
       'Fachgerechte Entsorgung von Gefahrstoffen',
@@ -574,7 +574,7 @@ export const services: Record<string, ServiceInfo> = {
       {
         step: 2,
         title: 'Angebot & Terminplanung',
-        description: 'Sie erhalten ein Festpreisangebot. Wir vereinbaren einen passenden Termin für die Entrümpelung.',
+        description: 'Sie erhalten ein Festpreisangebot. Wir vereinbaren einen passenden Termin für die Räumung.',
       },
       {
         step: 3,
@@ -588,7 +588,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Garageentrümpelungen sind meist günstiger als gedacht. Die Kosten richten sich nach Volumen und Entsorgungsaufwand.',
+      info: 'Garageräumungen sind meist günstiger als gedacht. Die Kosten richten sich nach Volumen und Entsorgungsaufwand.',
       factors: [
         'Volumen der zu entsorgenden Gegenstände',
         'Art der Gegenstände (normale vs. Gefahrstoffe)',
@@ -599,7 +599,7 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Was kostet eine Garageentrümpelung?',
+        question: 'Was kostet eine Garageräumung?',
         answer: 'Eine normal gefüllte Einzelgarage (15-20m³) kostet 400-700€. Vollgestellte Doppelgaragen liegen bei 700-1.200€. Werkstattgaragen mit Altöl und Chemikalien können 1.000-1.800€ kosten. Festpreis nach Besichtigung.',
       },
       {
@@ -611,11 +611,11 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Ja, Tiefgaragen sind für uns Routine. Wir haben kompakte Transportwagen für niedrige Durchfahrtshöhen und arbeiten rücksichtsvoll, um keine Schäden an Wänden oder parkenden Autos zu verursachen.',
       },
       {
-        question: 'Wie lange dauert eine Garageentrümpelung?',
+        question: 'Wie lange dauert eine Garageräumung?',
         answer: 'Eine durchschnittliche Einzelgarage ist in 2-3 Stunden entrümpelt. Vollgestellte Werkstattgaragen benötigen 4-6 Stunden. Express-Service am selben Tag oft möglich.',
       },
     ],
-    relatedServices: ['kellerentrümpelung', 'sperrmüllentsorgung', 'wohnungsentrümpelungen'],
+    relatedServices: ['kellerräumung', 'sperrmüllentsorgung', 'wohnungsräumungen'],
   },
 
   'büroauflösung': {
@@ -682,15 +682,15 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'Hochwertige Büromöbel können wir über Gebrauchtmöbelhändler verwerten. Der Erlös wird auf Ihre Rechnung angerechnet. Alternativ spenden wir an soziale Einrichtungen auf Ihren Wunsch.',
       },
     ],
-    relatedServices: ['geschäftsentrümpelung', 'wohnungsentrümpelungen', 'sperrmüllentsorgung'],
+    relatedServices: ['geschäftsräumung', 'wohnungsräumungen', 'sperrmüllentsorgung'],
   },
 
-  'verlassenschaftsentrümpelung': {
-    name: 'Verlassenschaftsentrümpelung',
-    slug: 'verlassenschaftsentrümpelung',
-    shortDescription: 'Einfühlsame Entrümpelung nach Todesfall in Wien und Umgebung - diskret, respektvoll und mit Erfahrung in Verlassenschaftsabwicklung.',
-    description: 'Nach einem Todesfall müssen Angehörige oft die Wohnung oder das Haus des Verstorbenen auflösen. Wir unterstützen Sie in ganz Österreich in dieser schwierigen Zeit mit unserer Verlassenschaftsentrümpelung - einfühlsam, diskret und professionell.',
-    metaDescription: 'Verlassenschaftsentrümpelung Wien und Umgebung ✓ Ganz Österreich ✓ Nach Todesfall ✓ Einfühlsam & diskret ☎ +43 660 200 5610',
+  'verlassenschaftsräumung': {
+    name: 'Verlassenschaftsräumung',
+    slug: 'verlassenschaftsräumung',
+    shortDescription: 'Einfühlsame Räumung nach Todesfall in Wien und Umgebung - diskret, respektvoll und mit Erfahrung in Verlassenschaftsabwicklung.',
+    description: 'Nach einem Todesfall müssen Angehörige oft die Wohnung oder das Haus des Verstorbenen auflösen. Wir unterstützen Sie in ganz Österreich in dieser schwierigen Zeit mit unserer Verlassenschaftsräumung - einfühlsam, diskret und professionell.',
+    metaDescription: 'Verlassenschaftsräumung Wien und Umgebung ✓ Ganz Österreich ✓ Nach Todesfall ✓ Einfühlsam & diskret ☎ +43 660 200 5610',
     benefits: [
       'Einfühlsamer Umgang in Trauersituationen',
       'Erfahrung mit Verlassenschaftsabwicklung',
@@ -712,8 +712,8 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         step: 3,
-        title: 'Entrümpelung',
-        description: 'Nach Ihrer Freigabe entrümpeln wir die Wohnung respektvoll und dokumentieren alles für das Gericht.',
+        title: 'Räumung',
+        description: 'Nach Ihrer Freigabe räumen wir die Wohnung respektvoll und dokumentieren alles für das Gericht.',
       },
       {
         step: 4,
@@ -722,7 +722,7 @@ export const services: Record<string, ServiceInfo> = {
       },
     ],
     pricing: {
-      info: 'Verlassenschaftsentrümpelungen kalkulieren wir besonders fair. Wertgegenstände können die Kosten reduzieren.',
+      info: 'Verlassenschaftsräumungen kalkulieren wir besonders fair. Wertgegenstände können die Kosten reduzieren.',
       factors: [
         'Wohnungsgröße und Objektmenge',
         'Zeitaufwand für Sichtung und Sortierung',
@@ -733,8 +733,8 @@ export const services: Record<string, ServiceInfo> = {
     },
     faq: [
       {
-        question: 'Wie läuft eine Verlassenschaftsentrümpelung ab?',
-        answer: 'Wir besprechen zunächst alle Details mit Ihnen oder dem Notar. Dann sichten wir die Wohnung nach Wertgegenständen und wichtigen Dokumenten. Nach Ihrer Freigabe entrümpeln wir die Wohnung und übergeben sie besenrein.',
+        question: 'Wie läuft eine Verlassenschaftsräumung ab?',
+        answer: 'Wir besprechen zunächst alle Details mit Ihnen oder dem Notar. Dann sichten wir die Wohnung nach Wertgegenständen und wichtigen Dokumenten. Nach Ihrer Freigabe räumen wir die Wohnung und übergeben sie besenrein.',
       },
       {
         question: 'Was passiert mit gefundenen Wertgegenständen?',
@@ -746,16 +746,16 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Wie schnell können Sie die Wohnung räumen?',
-        answer: 'Wir verstehen, dass oft Zeitdruck besteht (Mietende, Verkauf). Nach der Sichtung können wir meist innerhalb von 3-5 Tagen entrümpeln. Express-Service bei Bedarf möglich.',
+        answer: 'Wir verstehen, dass oft Zeitdruck besteht (Mietende, Verkauf). Nach der Sichtung können wir meist innerhalb von 3-5 Tagen räumen. Express-Service bei Bedarf möglich.',
       },
     ],
-    relatedServices: ['haushaltsauflösung', 'wohnungsentrümpelungen', 'dachbodenentrümpelung'],
+    relatedServices: ['haushaltsauflösung', 'wohnungsräumungen', 'dachbodenräumung'],
   },
 
   'container-service': {
     name: 'Container-Service',
     slug: 'container-service',
-    shortDescription: 'Container-Vermietung in Wien und Umgebung - verschiedene Größen für Bau, Renovierung und Entrümpelung.',
+    shortDescription: 'Container-Vermietung in Wien und Umgebung - verschiedene Größen für Bau, Renovierung und Räumung.',
     description: 'Sie renovieren oder bauen und brauchen einen Container für Bauschutt, Holz oder Mischabfall? Wir liefern Container in verschiedenen Größen in ganz Österreich direkt zu Ihnen und holen sie nach Absprache wieder ab.',
     metaDescription: 'Container mieten Wien und Umgebung ✓ Ganz Österreich ✓ 3m³ bis 10m³ ✓ Bauschutt, Holz, Mischabfall ☎ +43 660 200 5610',
     benefits: [
@@ -805,7 +805,7 @@ export const services: Record<string, ServiceInfo> = {
       },
       {
         question: 'Welche Containergröße brauche ich?',
-        answer: 'Für kleine Renovierungen (Bad, Küche) reicht meist 3-5m³. Bei Wohnungsentrümpelungen empfehlen wir 5-7m³. Für Hausabbruch oder große Baustellen 7-10m³. Wir beraten Sie gerne telefonisch.',
+        answer: 'Für kleine Renovierungen (Bad, Küche) reicht meist 3-5m³. Bei Wohnungsräumungen empfehlen wir 5-7m³. Für Hausabbruch oder große Baustellen 7-10m³. Wir beraten Sie gerne telefonisch.',
       },
       {
         question: 'Brauche ich eine Genehmigung für Straßenaufstellung?',
@@ -816,7 +816,7 @@ export const services: Record<string, ServiceInfo> = {
         answer: 'In Bauschutt-Container: Ziegel, Beton, Fliesen, Keramik. In Holz-Container: Holzabfälle, Möbel, Paletten. In Mischabfall: alle gemischten Abfälle. Nicht erlaubt: Asbest, Gefahrstoffe, Elektrogeräte.',
       },
     ],
-    relatedServices: ['sperrmüllentsorgung', 'garageentrümpelung', 'kellerentrümpelung'],
+    relatedServices: ['sperrmüllentsorgung', 'garageräumung', 'kellerräumung'],
   },
 };
 

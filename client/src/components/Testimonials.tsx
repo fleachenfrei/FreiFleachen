@@ -24,7 +24,7 @@ export default function Testimonials() {
     {
       name: 'Sarah K.',
       rating: 5,
-      text: 'Schnelle und unkomplizierte Abwicklung! Die Kellerentrümpelung wurde professionell durchgeführt und das Ergebnis war perfekt. Faire Preise und freundlicher Service. Sehr zu empfehlen!',
+      text: 'Schnelle und unkomplizierte Abwicklung! Die Kellerräumung wurde professionell durchgeführt und das Ergebnis war perfekt. Faire Preise und freundlicher Service. Sehr zu empfehlen!',
       image: jonasImage,
     },
   ];

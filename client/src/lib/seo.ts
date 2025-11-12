@@ -91,10 +91,10 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
     '@type': 'LocalBusiness',
     '@id': 'https://flaechenfrei.at/#business',
     'name': 'Flächen Frei',
-    'alternateName': 'Flächen Frei Entrümpelung',
+    'alternateName': 'Flächen Frei Räumung',
     'description': language === 'de' 
-      ? 'Professionelle Entrümpelung und Räumungsdienste in Wien und ganz Österreich. Schnell, zuverlässig und zu fairen Preisen.'
-      : 'Professional clearing and removal services in Vienna and throughout Austria. Fast, reliable, and at fair prices.',
+      ? 'Professionelle Räumung und Transportdienste in Wien und ganz Österreich. Schnell, zuverlässig und zu fairen Preisen.'
+      : 'Professional clearing and transport services in Vienna and throughout Austria. Fast, reliable, and at fair prices.',
     'url': 'https://flaechenfrei.at',
     'telephone': '+43660 39 57 587',
     'email': 'office@flaechenfrei.at',
@@ -188,13 +188,13 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
     },
     'hasOfferCatalog': {
       '@type': 'OfferCatalog',
-      'name': language === 'de' ? 'Entrümpelungsdienste' : 'Clearing Services',
+      'name': language === 'de' ? 'Räumungsdienste' : 'Clearing Services',
       'itemListElement': [
         {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': language === 'de' ? 'Wohnungsentrümpelung' : 'Apartment Clearing',
+            'name': language === 'de' ? 'Wohnungsräumung' : 'Apartment Clearing',
           },
         },
         {
@@ -208,14 +208,14 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': language === 'de' ? 'Kellerentrümpelung' : 'Basement Clearing',
+            'name': language === 'de' ? 'Kellerräumung' : 'Basement Clearing',
           },
         },
         {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': language === 'de' ? 'Geschäftsentrümpelung' : 'Commercial Clearing',
+            'name': language === 'de' ? 'Geschäftsräumung' : 'Commercial Clearing',
           },
         },
       ],

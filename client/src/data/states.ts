@@ -29,17 +29,17 @@ export const states: State[] = [
     slug: 'wien',
     name: 'Wien',
     nameEn: 'Vienna',
-    description: 'Professionelle Entrümpelung und Räumung in Wien. Als lokales Unternehmen kennen wir alle 23 Bezirke und bieten schnelle, zuverlässige Dienstleistungen in der gesamten Bundeshauptstadt.',
+    description: 'Professionelle Räumung und Räumung in Wien. Als lokales Unternehmen kennen wir alle 23 Bezirke und bieten schnelle, zuverlässige Dienstleistungen in der gesamten Bundeshauptstadt.',
     descriptionEn: 'Professional clearing and removal services in Vienna. As a local company, we know all 23 districts and offer fast, reliable services throughout the federal capital.',
-    detailedIntro: 'Wien, die Bundeshauptstadt Österreichs, stellt besondere Anforderungen an Entrümpelungs- und Räumungsdienste. Mit über 1,9 Millionen Einwohnern und einer Vielzahl von Altbauwohnungen, modernen Gebäuden und historischen Immobilien benötigen Sie einen Partner, der sowohl Erfahrung als auch lokales Know-how mitbringt. Flächen Frei ist seit vielen Jahren in allen 23 Wiener Bezirken tätig und kennt die spezifischen Herausforderungen der Bundeshauptstadt. Ob enge Stiegenhäuser in Gründerzeithäusern, Parkplatzmangel in dicht bebauten Innenbezirken oder zeitkritische Räumungen - unser erfahrenes Team meistert jede Situation professionell und effizient.',
+    detailedIntro: 'Wien, die Bundeshauptstadt Österreichs, stellt besondere Anforderungen an Räumungs- und Räumungsdienste. Mit über 1,9 Millionen Einwohnern und einer Vielzahl von Altbauwohnungen, modernen Gebäuden und historischen Immobilien benötigen Sie einen Partner, der sowohl Erfahrung als auch lokales Know-how mitbringt. Flächen Frei ist seit vielen Jahren in allen 23 Wiener Bezirken tätig und kennt die spezifischen Herausforderungen der Bundeshauptstadt. Ob enge Stiegenhäuser in Gründerzeithäusern, Parkplatzmangel in dicht bebauten Innenbezirken oder zeitkritische Räumungen - unser erfahrenes Team meistert jede Situation professionell und effizient.',
     detailedIntroEn: 'Vienna, Austria\'s federal capital, presents unique challenges for clearing and removal services. With over 1.9 million inhabitants and numerous historic buildings, modern structures, and period properties, you need a partner with both experience and local expertise. Flächen Frei has been operating in all 23 Vienna districts for many years and understands the specific challenges of the capital. Whether narrow stairwells in historic buildings, parking shortages in densely built inner districts, or time-critical clearances - our experienced team handles every situation professionally and efficiently.',
-    metaDescription: 'Entrümpelung Wien - Schnelle & professionelle Räumung in allen 23 Bezirken. Kostenlose Besichtigung ✓ Faire Preise ✓ Entsorgung inklusive.',
+    metaDescription: 'Räumung Wien - Schnelle & professionelle Räumung in allen 23 Bezirken. Kostenlose Besichtigung ✓ Faire Preise ✓ Entsorgung inklusive.',
     metaDescriptionEn: 'Clearing Services Vienna - Fast & professional removal in all 23 districts. Free consultation ✓ Fair prices ✓ Disposal included.',
     features: [
       'Alle 23 Wiener Bezirke',
       'Same-Day Service verfügbar',
       'Lokales Team mit Wiener Expertise',
-      'Entrümpelung, Transport & Entsorgung',
+      'Räumung, Transport & Entsorgung',
       'Erfahrung mit Altbauwohnungen',
       'Flexible Parklösungen',
     ],
@@ -103,11 +103,11 @@ export const states: State[] = [
         answer: 'Wir kennen die Parkplatzsituation in jedem Bezirk und organisieren im Vorfeld die notwendigen Halteverbotszonen oder nutzen alternative Lösungen.'
       },
       {
-        question: 'Können Sie auch Altbauwohnungen entrümpeln?',
+        question: 'Können Sie auch Altbauwohnungen räumen?',
         answer: 'Absolut! Wir haben umfangreiche Erfahrung mit Altbauwohnungen, engen Stiegenhäusern und denkmalgeschützten Gebäuden in Wien.'
       },
       {
-        question: 'Was kostet eine Entrümpelung in Wien?',
+        question: 'Was kostet eine Räumung in Wien?',
         answer: 'Die Kosten hängen von Umfang, Bezirk und Aufwand ab. Wir bieten eine kostenlose Besichtigung und erstellen Ihnen ein transparentes, faires Angebot.'
       },
     ],
@@ -138,11 +138,11 @@ export const states: State[] = [
     slug: 'niederoesterreich',
     name: 'Niederösterreich',
     nameEn: 'Lower Austria',
-    description: 'Zuverlässige Entrümpelung und Räumung in ganz Niederösterreich. Von St. Pölten bis ins Waldviertel - wir sind in der gesamten Region für Sie da.',
+    description: 'Zuverlässige Räumung und Räumung in ganz Niederösterreich. Von St. Pölten bis ins Waldviertel - wir sind in der gesamten Region für Sie da.',
     descriptionEn: 'Reliable clearing and removal services throughout Lower Austria. From St. Pölten to the Waldviertel - we are there for you across the entire region.',
-    detailedIntro: 'Niederösterreich ist das flächenmäßig größte Bundesland Österreichs und umfasst sowohl dicht besiedelte Gebiete rund um Wien als auch ländliche Regionen im Waldviertel, Weinviertel, Mostviertel und Industrieviertel. Diese Vielfalt erfordert flexible Lösungen und umfassende Erfahrung. Flächen Frei bietet professionelle Entrümpelungs- und Räumungsdienste im gesamten Bundesland an - von der Landeshauptstadt St. Pölten über Wiener Neustadt und Baden bis in die entlegensten Gemeinden. Unser Team ist bestens mit den regionalen Gegebenheiten vertraut und passt sich an die jeweiligen Anforderungen an, sei es eine Wohnungsauflösung in der Stadt oder eine Hofräumung am Land.',
+    detailedIntro: 'Niederösterreich ist das flächenmäßig größte Bundesland Österreichs und umfasst sowohl dicht besiedelte Gebiete rund um Wien als auch ländliche Regionen im Waldviertel, Weinviertel, Mostviertel und Industrieviertel. Diese Vielfalt erfordert flexible Lösungen und umfassende Erfahrung. Flächen Frei bietet professionelle Räumungs- und Räumungsdienste im gesamten Bundesland an - von der Landeshauptstadt St. Pölten über Wiener Neustadt und Baden bis in die entlegensten Gemeinden. Unser Team ist bestens mit den regionalen Gegebenheiten vertraut und passt sich an die jeweiligen Anforderungen an, sei es eine Wohnungsauflösung in der Stadt oder eine Hofräumung am Land.',
     detailedIntroEn: 'Lower Austria is Austria\'s largest federal state by area and includes both densely populated areas around Vienna and rural regions in the Waldviertel, Weinviertel, Mostviertel, and Industrieviertel. This diversity requires flexible solutions and comprehensive experience. Flächen Frei offers professional clearing and removal services throughout the state - from the capital St. Pölten via Wiener Neustadt and Baden to the most remote municipalities. Our team is well familiar with regional conditions and adapts to respective requirements, whether an apartment dissolution in the city or a farm clearing in the countryside.',
-    metaDescription: 'Entrümpelung Niederösterreich - Professionelle Räumung in ganz NÖ. St. Pölten, Wiener Neustadt, Waldviertel ✓ Kostenlose Besichtigung.',
+    metaDescription: 'Räumung Niederösterreich - Professionelle Räumung in ganz NÖ. St. Pölten, Wiener Neustadt, Waldviertel ✓ Kostenlose Besichtigung.',
     metaDescriptionEn: 'Clearing Lower Austria - Professional removal throughout NÖ. St. Pölten, Wiener Neustadt, Waldviertel ✓ Free consultation.',
     features: [
       'Gesamtes Niederösterreich abgedeckt',
@@ -257,11 +257,11 @@ export const states: State[] = [
     slug: 'oberoesterreich',
     name: 'Oberösterreich',
     nameEn: 'Upper Austria',
-    description: 'Professionelle Entrümpelung und Räumung in Oberösterreich. Linz, Wels, Steyr und Umgebung - schneller Service in der gesamten Region.',
+    description: 'Professionelle Räumung und Räumung in Oberösterreich. Linz, Wels, Steyr und Umgebung - schneller Service in der gesamten Region.',
     descriptionEn: 'Professional clearing and removal in Upper Austria. Linz, Wels, Steyr and surroundings - fast service throughout the region.',
-    detailedIntro: 'Oberösterreich ist das wirtschaftliche Herzstück Österreichs mit einer Mischung aus Industriestandorten, historischen Städten und ländlichen Regionen. Von der Landeshauptstadt Linz über die Industriestadt Steyr bis zu den malerischen Gemeinden im Salzkammergut - Flächen Frei bietet professionelle Entrümpelungsdienste in ganz Oberösterreich an. Unser erfahrenes Team kennt die spezifischen Anforderungen der Region, sei es die Räumung von Produktionshallen in Industriegebieten, die Entrümpelung von Einfamilienhäusern in Wels oder die behutsame Auflösung von Wohnungen in historischen Gebäuden in Steyr. Wir arbeiten eng mit lokalen Entsorgungsbetrieben zusammen und sorgen für eine umweltgerechte Verwertung aller Materialien.',
+    detailedIntro: 'Oberösterreich ist das wirtschaftliche Herzstück Österreichs mit einer Mischung aus Industriestandorten, historischen Städten und ländlichen Regionen. Von der Landeshauptstadt Linz über die Industriestadt Steyr bis zu den malerischen Gemeinden im Salzkammergut - Flächen Frei bietet professionelle Räumungsdienste in ganz Oberösterreich an. Unser erfahrenes Team kennt die spezifischen Anforderungen der Region, sei es die Räumung von Produktionshallen in Industriegebieten, die Räumung von Einfamilienhäusern in Wels oder die behutsame Auflösung von Wohnungen in historischen Gebäuden in Steyr. Wir arbeiten eng mit lokalen Entsorgungsbetrieben zusammen und sorgen für eine umweltgerechte Verwertung aller Materialien.',
     detailedIntroEn: 'Upper Austria is Austria\'s economic heartland with a mix of industrial sites, historic cities, and rural regions. From the capital Linz via the industrial city Steyr to picturesque municipalities in the Salzkammergut - Flächen Frei offers professional clearing services throughout Upper Austria. Our experienced team knows the region\'s specific requirements, whether clearing production halls in industrial areas, clearing single-family homes in Wels, or carefully dissolving apartments in historic buildings in Steyr. We work closely with local disposal companies and ensure environmentally sound recycling of all materials.',
-    metaDescription: 'Entrümpelung Oberösterreich - Räumung in Linz, Wels, Steyr ✓ Kostenlose Besichtigung ✓ Faire Preise ✓ Professionelles Team.',
+    metaDescription: 'Räumung Oberösterreich - Räumung in Linz, Wels, Steyr ✓ Kostenlose Besichtigung ✓ Faire Preise ✓ Professionelles Team.',
     metaDescriptionEn: 'Clearing Upper Austria - Removal in Linz, Wels, Steyr ✓ Free consultation ✓ Fair prices ✓ Professional team.',
     features: [
       'Linz, Wels, Steyr und Umland',
@@ -376,11 +376,11 @@ export const states: State[] = [
     slug: 'salzburg',
     name: 'Salzburg',
     nameEn: 'Salzburg',
-    description: 'Entrümpelung und Räumung in Salzburg Stadt und Land. Professioneller Service in der gesamten Region mit erfahrenem Team.',
+    description: 'Räumung und Räumung in Salzburg Stadt und Land. Professioneller Service in der gesamten Region mit erfahrenem Team.',
     descriptionEn: 'Clearing and removal in Salzburg city and state. Professional service throughout the region with experienced team.',
-    detailedIntro: 'Das Bundesland Salzburg vereint UNESCO-Weltkulturerbe, alpine Schönheit und moderne Infrastruktur. Von der barocken Altstadt Salzburgs über die Skigebiete im Pongau bis zu den Gemeinden im Pinzgau und Lungau - Flächen Frei bietet professionelle Entrümpelungsdienste in der gesamten Region an. Besonders in der historischen Altstadt von Salzburg sind Fingerspitzengefühl und Erfahrung gefragt: Enge Gassen, denkmalgeschützte Gebäude und strenge Auflagen erfordern ein erfahrenes Team. Unser Team kennt die lokalen Gegebenheiten und arbeitet respektvoll mit den historischen Gebäuden. Auch in den touristischen Regionen wie dem Salzkammergut oder den Skiorten bieten wir flexible Lösungen für Ferienwohnungen und Tourismusbetriebe.',
+    detailedIntro: 'Das Bundesland Salzburg vereint UNESCO-Weltkulturerbe, alpine Schönheit und moderne Infrastruktur. Von der barocken Altstadt Salzburgs über die Skigebiete im Pongau bis zu den Gemeinden im Pinzgau und Lungau - Flächen Frei bietet professionelle Räumungsdienste in der gesamten Region an. Besonders in der historischen Altstadt von Salzburg sind Fingerspitzengefühl und Erfahrung gefragt: Enge Gassen, denkmalgeschützte Gebäude und strenge Auflagen erfordern ein erfahrenes Team. Unser Team kennt die lokalen Gegebenheiten und arbeitet respektvoll mit den historischen Gebäuden. Auch in den touristischen Regionen wie dem Salzkammergut oder den Skiorten bieten wir flexible Lösungen für Ferienwohnungen und Tourismusbetriebe.',
     detailedIntroEn: 'The state of Salzburg combines UNESCO World Heritage, alpine beauty, and modern infrastructure. From Salzburg\'s baroque old town via ski resorts in Pongau to municipalities in Pinzgau and Lungau - Flächen Frei offers professional clearing services throughout the region. Especially in Salzburg\'s historic old town, sensitivity and experience are required: Narrow lanes, listed buildings, and strict regulations demand an experienced team. Our team knows the local conditions and works respectfully with historic buildings. In tourist regions like the Salzkammergut or ski resorts, we also offer flexible solutions for holiday apartments and tourism businesses.',
-    metaDescription: 'Entrümpelung Salzburg - Stadt & Land ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Schneller Service.',
+    metaDescription: 'Räumung Salzburg - Stadt & Land ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Schneller Service.',
     metaDescriptionEn: 'Clearing Salzburg - City & State ✓ Professional removal ✓ Free consultation ✓ Fast service.',
     features: [
       'Salzburg Stadt und Umgebung',
@@ -445,7 +445,7 @@ export const states: State[] = [
     faqs: [
       {
         question: 'Können Sie in der Salzburger Altstadt arbeiten?',
-        answer: 'Ja, wir haben umfangreiche Erfahrung mit Entrümpelungen in der historischen Altstadt und kennen alle lokalen Vorschriften und Auflagen.'
+        answer: 'Ja, wir haben umfangreiche Erfahrung mit Räumungen in der historischen Altstadt und kennen alle lokalen Vorschriften und Auflagen.'
       },
       {
         question: 'Wie gehen Sie mit denkmalgeschützten Gebäuden um?',
@@ -460,7 +460,7 @@ export const states: State[] = [
         answer: 'Ja, wir decken ganz Salzburg ab - von der Stadt bis in die entlegensten Täler im Pongau, Pinzgau und Lungau.'
       },
       {
-        question: 'Was kostet eine Entrümpelung in Salzburg?',
+        question: 'Was kostet eine Räumung in Salzburg?',
         answer: 'Die Kosten variieren je nach Objekt und Aufwand. Wir bieten eine kostenlose Besichtigung und erstellen ein transparentes Angebot.'
       },
     ],
@@ -491,11 +491,11 @@ export const states: State[] = [
     slug: 'tirol',
     name: 'Tirol',
     nameEn: 'Tyrol',
-    description: 'Professionelle Entrümpelung in Tirol. Innsbruck und Umgebung - auch in schwer zugänglichen Bergregionen sind wir für Sie da.',
+    description: 'Professionelle Räumung in Tirol. Innsbruck und Umgebung - auch in schwer zugänglichen Bergregionen sind wir für Sie da.',
     descriptionEn: 'Professional clearing in Tyrol. Innsbruck and surroundings - we serve you even in hard-to-reach mountain regions.',
-    detailedIntro: 'Tirol ist geprägt von alpiner Landschaft, Tourismus und historischen Städten. Die besonderen geografischen Gegebenheiten mit engen Tälern, Bergregionen und extremen Höhenlagen stellen besondere Anforderungen an Entrümpelungsdienste. Flächen Frei ist in ganz Tirol tätig - von der Landeshauptstadt Innsbruck über die Tourismusregionen wie Kitzbühel, Sölden oder St. Anton bis in die entlegensten Bergdörfer. Unser Team verfügt über Spezialausrüstung für schwer zugängliche Objekte, kennt die alpinen Herausforderungen und arbeitet ganzjährig - auch bei Schnee und Eis. Ob Wohnungsauflösung in Innsbruck, Hotelräumung in einem Skiort oder Almhüttenräumung in den Bergen - wir meistern jede Herausforderung professionell.',
+    detailedIntro: 'Tirol ist geprägt von alpiner Landschaft, Tourismus und historischen Städten. Die besonderen geografischen Gegebenheiten mit engen Tälern, Bergregionen und extremen Höhenlagen stellen besondere Anforderungen an Räumungsdienste. Flächen Frei ist in ganz Tirol tätig - von der Landeshauptstadt Innsbruck über die Tourismusregionen wie Kitzbühel, Sölden oder St. Anton bis in die entlegensten Bergdörfer. Unser Team verfügt über Spezialausrüstung für schwer zugängliche Objekte, kennt die alpinen Herausforderungen und arbeitet ganzjährig - auch bei Schnee und Eis. Ob Wohnungsauflösung in Innsbruck, Hotelräumung in einem Skiort oder Almhüttenräumung in den Bergen - wir meistern jede Herausforderung professionell.',
     detailedIntroEn: 'Tyrol is characterized by alpine landscapes, tourism, and historic cities. The special geographical conditions with narrow valleys, mountain regions, and extreme altitudes pose particular challenges for clearing services. Flächen Frei operates throughout Tyrol - from the capital Innsbruck via tourism regions like Kitzbühel, Sölden, or St. Anton to the most remote mountain villages. Our team has special equipment for hard-to-reach properties, knows the alpine challenges, and works year-round - even in snow and ice. Whether apartment dissolution in Innsbruck, hotel clearing in a ski resort, or alpine hut clearing in the mountains - we master every challenge professionally.',
-    metaDescription: 'Entrümpelung Tirol - Innsbruck & Umgebung ✓ Bergregionen ✓ Professionelles Team ✓ Kostenlose Besichtigung.',
+    metaDescription: 'Räumung Tirol - Innsbruck & Umgebung ✓ Bergregionen ✓ Professionelles Team ✓ Kostenlose Besichtigung.',
     metaDescriptionEn: 'Clearing Tyrol - Innsbruck & surroundings ✓ Mountain regions ✓ Professional team ✓ Free consultation.',
     features: [
       'Innsbruck und Tiroler Gemeinden',
@@ -608,11 +608,11 @@ export const states: State[] = [
     slug: 'vorarlberg',
     name: 'Vorarlberg',
     nameEn: 'Vorarlberg',
-    description: 'Zuverlässige Entrümpelung in Vorarlberg. Bregenz, Dornbirn, Feldkirch - professioneller Service im Ländle.',
+    description: 'Zuverlässige Räumung in Vorarlberg. Bregenz, Dornbirn, Feldkirch - professioneller Service im Ländle.',
     descriptionEn: 'Reliable clearing in Vorarlberg. Bregenz, Dornbirn, Feldkirch - professional service in the Ländle.',
-    detailedIntro: 'Vorarlberg, das westlichste Bundesland Österreichs, ist geprägt von der Bodenseeregion, dem Rheintal und den Bergregionen des Bregenzerwaldes und Montafons. Die hohe Lebensqualität und die wirtschaftliche Dynamik machen das "Ländle" zu einer attraktiven Region. Flächen Frei bietet professionelle Entrümpelungs- und Räumungsdienste in ganz Vorarlberg an - von der Landeshauptstadt Bregenz am Bodensee über die Industriestadt Dornbirn bis zu den malerischen Gemeinden im Bregenzerwald. Unser Team kennt die regionalen Besonderheiten, arbeitet schnell und zuverlässig und passt sich flexibel an Ihre Bedürfnisse an. Ob Wohnungsauflösung in Feldkirch, Gewerberäumung in Dornbirn oder Ferienhaus-Entrümpelung am Bodensee - wir sind Ihr kompetenter Partner.',
+    detailedIntro: 'Vorarlberg, das westlichste Bundesland Österreichs, ist geprägt von der Bodenseeregion, dem Rheintal und den Bergregionen des Bregenzerwaldes und Montafons. Die hohe Lebensqualität und die wirtschaftliche Dynamik machen das "Ländle" zu einer attraktiven Region. Flächen Frei bietet professionelle Räumungs- und Räumungsdienste in ganz Vorarlberg an - von der Landeshauptstadt Bregenz am Bodensee über die Industriestadt Dornbirn bis zu den malerischen Gemeinden im Bregenzerwald. Unser Team kennt die regionalen Besonderheiten, arbeitet schnell und zuverlässig und passt sich flexibel an Ihre Bedürfnisse an. Ob Wohnungsauflösung in Feldkirch, Gewerberäumung in Dornbirn oder Ferienhaus-Räumung am Bodensee - wir sind Ihr kompetenter Partner.',
     detailedIntroEn: 'Vorarlberg, Austria\'s westernmost state, is characterized by the Lake Constance region, the Rhine Valley, and the mountain regions of Bregenzerwald and Montafon. The high quality of life and economic dynamism make the "Ländle" an attractive region. Flächen Frei offers professional clearing and removal services throughout Vorarlberg - from the capital Bregenz on Lake Constance via the industrial city Dornbirn to picturesque municipalities in Bregenzerwald. Our team knows regional peculiarities, works quickly and reliably, and flexibly adapts to your needs. Whether apartment dissolution in Feldkirch, commercial clearing in Dornbirn, or holiday home clearing at Lake Constance - we are your competent partner.',
-    metaDescription: 'Entrümpelung Vorarlberg - Bregenz, Dornbirn, Feldkirch ✓ Professionelle Räumung ✓ Kostenlose Besichtigung.',
+    metaDescription: 'Räumung Vorarlberg - Bregenz, Dornbirn, Feldkirch ✓ Professionelle Räumung ✓ Kostenlose Besichtigung.',
     metaDescriptionEn: 'Clearing Vorarlberg - Bregenz, Dornbirn, Feldkirch ✓ Professional removal ✓ Free consultation.',
     features: [
       'Bregenz, Dornbirn, Feldkirch',
@@ -696,7 +696,7 @@ export const states: State[] = [
         answer: 'Ja, wir decken ganz Vorarlberg ab - vom Rheintal bis in die Bergtäler.'
       },
       {
-        question: 'Was kostet eine Entrümpelung in Vorarlberg?',
+        question: 'Was kostet eine Räumung in Vorarlberg?',
         answer: 'Die Kosten hängen vom Umfang ab. Wir bieten eine kostenlose Besichtigung und ein transparentes Angebot an.'
       },
     ],
@@ -727,11 +727,11 @@ export const states: State[] = [
     slug: 'kaernten',
     name: 'Kärnten',
     nameEn: 'Carinthia',
-    description: 'Professionelle Entrümpelung in Kärnten. Klagenfurt, Villach und Umgebung - zuverlässiger Service in der südlichsten Region Österreichs.',
+    description: 'Professionelle Räumung in Kärnten. Klagenfurt, Villach und Umgebung - zuverlässiger Service in der südlichsten Region Österreichs.',
     descriptionEn: 'Professional clearing in Carinthia. Klagenfurt, Villach and surroundings - reliable service in Austria\'s southernmost region.',
-    detailedIntro: 'Kärnten, das südlichste Bundesland Österreichs, ist bekannt für seine Seen, Berge und das mediterrane Flair. Von der Landeshauptstadt Klagenfurt über die Industriestadt Villach bis zu den Tourismusregionen an Wörthersee, Millstätter See und Weissensee - Flächen Frei bietet professionelle Entrümpelungsdienste in ganz Kärnten an. Unser erfahrenes Team kennt die Besonderheiten der Region: Tourismusbetriebe mit Saisonbetrieb, historische Villen am Seeufer, moderne Stadtimmobilien und ländliche Gehöfte in den Tälern. Wir arbeiten flexibel, diskret und professionell - ob Ferienhaus-Entrümpelung zwischen Gästen, Hotelräumung nach der Saison oder Wohnungsauflösung in Klagenfurt.',
+    detailedIntro: 'Kärnten, das südlichste Bundesland Österreichs, ist bekannt für seine Seen, Berge und das mediterrane Flair. Von der Landeshauptstadt Klagenfurt über die Industriestadt Villach bis zu den Tourismusregionen an Wörthersee, Millstätter See und Weissensee - Flächen Frei bietet professionelle Räumungsdienste in ganz Kärnten an. Unser erfahrenes Team kennt die Besonderheiten der Region: Tourismusbetriebe mit Saisonbetrieb, historische Villen am Seeufer, moderne Stadtimmobilien und ländliche Gehöfte in den Tälern. Wir arbeiten flexibel, diskret und professionell - ob Ferienhaus-Räumung zwischen Gästen, Hotelräumung nach der Saison oder Wohnungsauflösung in Klagenfurt.',
     detailedIntroEn: 'Carinthia, Austria\'s southernmost state, is known for its lakes, mountains, and Mediterranean flair. From the capital Klagenfurt via the industrial city Villach to tourism regions at Wörthersee, Millstätter See, and Weissensee - Flächen Frei offers professional clearing services throughout Carinthia. Our experienced team knows the region\'s peculiarities: tourism businesses with seasonal operations, historic villas on lakeshores, modern city properties, and rural farms in the valleys. We work flexibly, discreetly, and professionally - whether holiday home clearing between guests, hotel clearing after the season, or apartment dissolution in Klagenfurt.',
-    metaDescription: 'Entrümpelung Kärnten - Klagenfurt, Villach ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Faire Preise.',
+    metaDescription: 'Räumung Kärnten - Klagenfurt, Villach ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Faire Preise.',
     metaDescriptionEn: 'Clearing Carinthia - Klagenfurt, Villach ✓ Professional removal ✓ Free consultation ✓ Fair prices.',
     features: [
       'Klagenfurt, Villach und Umland',
@@ -842,11 +842,11 @@ export const states: State[] = [
     slug: 'steiermark',
     name: 'Steiermark',
     nameEn: 'Styria',
-    description: 'Entrümpelung und Räumung in der Steiermark. Graz und Umgebung - professioneller Service in der grünen Mark.',
+    description: 'Räumung und Räumung in der Steiermark. Graz und Umgebung - professioneller Service in der grünen Mark.',
     descriptionEn: 'Clearing and removal in Styria. Graz and surroundings - professional service in the green state.',
-    detailedIntro: 'Die Steiermark, auch "Grüne Mark" genannt, ist das zweitgrößte Bundesland Österreichs und vereint urbanes Leben in Graz mit ländlichen Regionen, Weinbaugebieten und alpinen Landschaften. Von der Landeshauptstadt Graz über die Industrieregionen Mur-Mürz-Furche bis zu den Tourismusregionen Dachstein, Schladming oder Bad Aussee - Flächen Frei bietet professionelle Entrümpelungsdienste in der gesamten Steiermark an. Unser Team kennt die vielfältigen Anforderungen der Region: Von historischen Stadtpalais in Graz über moderne Gewerbeparks bis zu Almhütten in den Bergen. Wir arbeiten mit lokalen Entsorgungsbetrieben zusammen und garantieren umweltgerechte Verwertung aller Materialien.',
+    detailedIntro: 'Die Steiermark, auch "Grüne Mark" genannt, ist das zweitgrößte Bundesland Österreichs und vereint urbanes Leben in Graz mit ländlichen Regionen, Weinbaugebieten und alpinen Landschaften. Von der Landeshauptstadt Graz über die Industrieregionen Mur-Mürz-Furche bis zu den Tourismusregionen Dachstein, Schladming oder Bad Aussee - Flächen Frei bietet professionelle Räumungsdienste in der gesamten Steiermark an. Unser Team kennt die vielfältigen Anforderungen der Region: Von historischen Stadtpalais in Graz über moderne Gewerbeparks bis zu Almhütten in den Bergen. Wir arbeiten mit lokalen Entsorgungsbetrieben zusammen und garantieren umweltgerechte Verwertung aller Materialien.',
     detailedIntroEn: 'Styria, also called "Green Mark", is Austria\'s second-largest state and combines urban life in Graz with rural regions, wine-growing areas, and alpine landscapes. From the capital Graz via the industrial regions Mur-Mürz-Furche to tourism regions Dachstein, Schladming, or Bad Aussee - Flächen Frei offers professional clearing services throughout Styria. Our team knows the region\'s diverse requirements: From historic city palaces in Graz via modern business parks to alpine huts in the mountains. We work with local disposal companies and guarantee environmentally sound recycling of all materials.',
-    metaDescription: 'Entrümpelung Steiermark - Graz & Umgebung ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Erfahrenes Team.',
+    metaDescription: 'Räumung Steiermark - Graz & Umgebung ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Erfahrenes Team.',
     metaDescriptionEn: 'Clearing Styria - Graz & surroundings ✓ Professional removal ✓ Free consultation ✓ Experienced team.',
     features: [
       'Graz und steirische Gemeinden',
@@ -961,11 +961,11 @@ export const states: State[] = [
     slug: 'burgenland',
     name: 'Burgenland',
     nameEn: 'Burgenland',
-    description: 'Zuverlässige Entrümpelung im Burgenland. Eisenstadt, Neusiedl und Umgebung - schneller Service im östlichsten Bundesland.',
+    description: 'Zuverlässige Räumung im Burgenland. Eisenstadt, Neusiedl und Umgebung - schneller Service im östlichsten Bundesland.',
     descriptionEn: 'Reliable clearing in Burgenland. Eisenstadt, Neusiedl and surroundings - fast service in Austria\'s easternmost state.',
-    detailedIntro: 'Das Burgenland ist das östlichste und flachste Bundesland Österreichs, geprägt von Weinbauregionen, dem Neusiedler See und pannonischem Klima. Von der Landeshauptstadt Eisenstadt über die Seeregion Neusiedl am See bis zu den ländlichen Gemeinden im Süd- und Mittelburgenland - Flächen Frei bietet professionelle Entrümpelungsdienste im gesamten Bundesland an. Unser Team kennt die Besonderheiten der Region: Traditionelle Kellergassen, Weingüter, Tourismusbetriebe am See und ländliche Gehöfte. Dank der Nähe zu Wien können wir besonders schnell reagieren und bieten flexible Termine an. Ob Wohnungsauflösung in Eisenstadt, Kellerentrümpelung in einem Weingut oder Ferienhaus-Räumung am Neusiedler See - wir sind Ihr kompetenter Partner.',
+    detailedIntro: 'Das Burgenland ist das östlichste und flachste Bundesland Österreichs, geprägt von Weinbauregionen, dem Neusiedler See und pannonischem Klima. Von der Landeshauptstadt Eisenstadt über die Seeregion Neusiedl am See bis zu den ländlichen Gemeinden im Süd- und Mittelburgenland - Flächen Frei bietet professionelle Räumungsdienste im gesamten Bundesland an. Unser Team kennt die Besonderheiten der Region: Traditionelle Kellergassen, Weingüter, Tourismusbetriebe am See und ländliche Gehöfte. Dank der Nähe zu Wien können wir besonders schnell reagieren und bieten flexible Termine an. Ob Wohnungsauflösung in Eisenstadt, Kellerräumung in einem Weingut oder Ferienhaus-Räumung am Neusiedler See - wir sind Ihr kompetenter Partner.',
     detailedIntroEn: 'Burgenland is Austria\'s easternmost and flattest state, characterized by wine-growing regions, Lake Neusiedl, and Pannonian climate. From the capital Eisenstadt via the lake region Neusiedl am See to rural municipalities in South and Central Burgenland - Flächen Frei offers professional clearing services throughout the state. Our team knows the region\'s peculiarities: Traditional wine cellars, wineries, tourism businesses at the lake, and rural farms. Thanks to the proximity to Vienna, we can react particularly quickly and offer flexible appointments. Whether apartment dissolution in Eisenstadt, cellar clearing at a winery, or holiday home clearing at Lake Neusiedl - we are your competent partner.',
-    metaDescription: 'Entrümpelung Burgenland - Eisenstadt, Neusiedl ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Schnell & zuverlässig.',
+    metaDescription: 'Räumung Burgenland - Eisenstadt, Neusiedl ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Schnell & zuverlässig.',
     metaDescriptionEn: 'Clearing Burgenland - Eisenstadt, Neusiedl ✓ Professional removal ✓ Free consultation ✓ Fast & reliable.',
     features: [
       'Eisenstadt, Neusiedl am See',
@@ -1045,7 +1045,7 @@ export const states: State[] = [
         answer: 'Ja, wir decken das gesamte Burgenland ab - von Nord bis Süd.'
       },
       {
-        question: 'Was kostet eine Entrümpelung im Burgenland?',
+        question: 'Was kostet eine Räumung im Burgenland?',
         answer: 'Die Kosten hängen vom Umfang ab. Dank kurzer Anfahrt aus Wien sind die Kosten oft günstiger als gedacht.'
       },
     ],

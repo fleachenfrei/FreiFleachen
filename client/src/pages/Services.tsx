@@ -22,17 +22,17 @@ import probateImage from '@assets/generated_images/Probate_estate_clearance_1ead
 import containerImage from '@assets/generated_images/Container_rental_service_f4846763.png';
 
 const serviceImages: Record<string, string> = {
-  'wohnungsentrümpelungen': apartmentImage,
+  'wohnungsräumungen': apartmentImage,
   'haushaltsauflösung': estateImage,
-  'kellerentrümpelung': basementImage,
-  'dachbodenentrümpelung': atticImage,
-  'geschäftsentrümpelung': officeImage,
-  'messie-entrümpelung': messieImage,
+  'kellerräumung': basementImage,
+  'dachbodenräumung': atticImage,
+  'geschäftsräumung': officeImage,
+  'messie-räumung': messieImage,
   'sperrmüllentsorgung': bulkyWasteImage,
   'umzugsservice': movingImage,
-  'garageentrümpelung': garageImage,
+  'garageräumung': garageImage,
   'büroauflösung': officeDissolutionImage,
-  'verlassenschaftsentrümpelung': probateImage,
+  'verlassenschaftsräumung': probateImage,
   'container-service': containerImage,
 };
 
@@ -41,8 +41,8 @@ export default function Services() {
 
   useEffect(() => {
     updateMetaTags({
-      title: 'Unsere Leistungen - Entrümpelung & Räumung in Wien | Flächen Frei',
-      description: 'Professionelle Entrümpelungs-Services in Wien ✓ Wohnungsentrümpelung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43 660 200 5610',
+      title: 'Unsere Leistungen - Räumung & Räumung in Wien | Flächen Frei',
+      description: 'Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43 660 200 5610',
       url: '/leistungen',
       type: 'website',
     });
@@ -57,11 +57,11 @@ export default function Services() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-services-title">
-                Unsere Entrümpelungs-Leistungen
+                Unsere Räumungs-Leistungen
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Von der Wohnungsentrümpelung bis zur Messie-Hilfe - wir bieten professionelle 
-                Entrümpelungsdienste für alle Anforderungen in ganz Wien.
+                Von der Wohnungsräumung bis zur Messie-Hilfe - wir bieten professionelle 
+                Räumungsdienste für alle Anforderungen in ganz Wien.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-services">
@@ -133,7 +133,7 @@ export default function Services() {
             <h2 className="text-3xl font-bold mb-6">Nicht sicher, welche Leistung Sie benötigen?</h2>
             <p className="text-lg text-muted-foreground mb-8">
               Rufen Sie uns einfach an oder schreiben Sie uns. Wir beraten Sie kostenlos 
-              und unverbindlich zu allen Fragen rund um Entrümpelung und Räumung in Wien.
+              und unverbindlich zu allen Fragen rund um Räumung und Räumung in Wien.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">

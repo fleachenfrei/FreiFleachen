@@ -21,7 +21,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Flächen Frei</h3>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Ihr zuverlässiger Partner für Entrümpelung, Räumung und Transport in Wien und Umgebung.
+              Ihr zuverlässiger Partner für Räumung und Transport in Wien und Umgebung.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
               {t.footer.services}
             </h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><Link href="/leistungen#wohnung" className="hover:text-primary-foreground">Wohnungsentrümpelung</Link></li>
+              <li><Link href="/leistungen#wohnung" className="hover:text-primary-foreground">Wohnungsräumung</Link></li>
               <li><Link href="/leistungen#haus" className="hover:text-primary-foreground">Hausräumung</Link></li>
               <li><Link href="/leistungen#verlassenschaft" className="hover:text-primary-foreground">Verlassenschaft</Link></li>
               <li><Link href="/leistungen#transport" className="hover:text-primary-foreground">Transport</Link></li>

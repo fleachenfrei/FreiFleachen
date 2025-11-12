@@ -69,7 +69,7 @@
 
 ### District Pages Template
 - Breadcrumb navigation
-- H1: "Entrümpelung in [District Name]"
+- H1: "Räumung in [District Name]"
 - Hero image relevant to district
 - Service overview specific to area
 - Local trust signals (completed jobs in area)

@@ -29,11 +29,11 @@ export default function Contact() {
 
   useEffect(() => {
     const title = language === 'de' 
-      ? 'Kontakt - Flächen Frei | Entrümpelung Wien und Umgebung ☎ +43660 39 57 587'
+      ? 'Kontakt - Flächen Frei | Räumung Wien und Umgebung ☎ +43660 39 57 587'
       : 'Contact - Flächen Frei | Clearing Services Vienna ☎ +43660 39 57 587';
     
     const description = language === 'de'
-      ? 'Kontaktieren Sie Flächen Frei für professionelle Entrümpelung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ +43660 39 57 587'
+      ? 'Kontaktieren Sie Flächen Frei für professionelle Räumung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ +43660 39 57 587'
       : 'Contact Flächen Frei for professional clearing services in Vienna and throughout Austria ✓ Free consultation ✓ Fast appointments ✓ 24/7 available ☎ +43660 39 57 587';
 
     updateMetaTags({

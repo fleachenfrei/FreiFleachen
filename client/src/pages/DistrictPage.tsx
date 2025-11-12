@@ -18,7 +18,7 @@ export default function DistrictPage() {
 
   useEffect(() => {
     if (district) {
-      const title = `Entrümpelung ${district.postalCode} Wien ${district.name} - Flächen Frei | Professionell & Schnell`;
+      const title = `Räumung ${district.postalCode} Wien ${district.name} - Flächen Frei | Professionell & Schnell`;
       const url = `/bezirke/${district.slug}`;
 
       updateMetaTags({
@@ -31,7 +31,7 @@ export default function DistrictPage() {
       const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: `Flächen Frei - Entrümpelung ${district.name}`,
+        name: `Flächen Frei - Räumung ${district.name}`,
         image: viennaImage,
         '@id': url,
         url: `${window.location.origin}${url}`,
@@ -64,13 +64,13 @@ export default function DistrictPage() {
         description: district.description,
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Entrümpelungsdienstleistungen',
+          name: 'Räumungsdienstleistungen',
           itemListElement: district.popularServices.map((service) => ({
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
               name: service,
-              serviceType: 'Entrümpelung',
+              serviceType: 'Räumung',
             },
           })),
         },
@@ -114,7 +114,7 @@ export default function DistrictPage() {
                 {district.postalCode} Wien
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-district-title">
-                Entrümpelung in {district.postalCode} Wien {district.name}
+                Räumung in {district.postalCode} Wien {district.name}
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-6" data-testid="text-district-subtitle">
                 {district.description}
@@ -142,11 +142,11 @@ export default function DistrictPage() {
               <div className="md:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-3xl font-bold mb-6">
-                    Professionelle Entrümpelung in {district.name}
+                    Professionelle Räumung in {district.name}
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Flächen Frei ist Ihr zuverlässiger Partner für professionelle Entrümpelungen im {district.postalCode} Wien {district.name}. 
-                    Mit über 26 Jahren Erfahrung bieten wir schnelle, diskrete und kostengünstige Entrümpelungsservices in allen Bereichen des Bezirks.
+                    Flächen Frei ist Ihr zuverlässiger Partner für professionelle Räumungen im {district.postalCode} Wien {district.name}. 
+                    Mit über 26 Jahren Erfahrung bieten wir schnelle, diskrete und kostengünstige Räumungsservices in allen Bereichen des Bezirks.
                   </p>
                   <p className="text-lg text-muted-foreground">
                     Egal ob Wohnung, Haus, Keller oder Dachboden - wir kümmern uns um alles und hinterlassen 
@@ -270,7 +270,7 @@ export default function DistrictPage() {
                 {district.faq.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold mb-6">
-                      Häufig gestellte Fragen zur Entrümpelung in {district.name}
+                      Häufig gestellte Fragen zur Räumung in {district.name}
                     </h3>
                     <Accordion type="single" collapsible className="w-full">
                       {district.faq.map((item, i) => (

@@ -24,17 +24,17 @@ import probateImage from '@assets/generated_images/Probate_estate_clearance_1ead
 import containerImage from '@assets/generated_images/Container_rental_service_f4846763.png';
 
 const serviceImages: Record<string, string> = {
-  'wohnungsentrümpelungen': apartmentImage,
+  'wohnungsräumungen': apartmentImage,
   'haushaltsauflösung': estateImage,
-  'kellerentrümpelung': basementImage,
-  'dachbodenentrümpelung': atticImage,
-  'geschäftsentrümpelung': officeImage,
-  'messie-entrümpelung': messieImage,
+  'kellerräumung': basementImage,
+  'dachbodenräumung': atticImage,
+  'geschäftsräumung': officeImage,
+  'messie-räumung': messieImage,
   'sperrmüllentsorgung': bulkyWasteImage,
   'umzugsservice': movingImage,
-  'garageentrümpelung': garageImage,
+  'garageräumung': garageImage,
   'büroauflösung': officeDissolutionImage,
-  'verlassenschaftsentrümpelung': probateImage,
+  'verlassenschaftsräumung': probateImage,
   'container-service': containerImage,
 };
 

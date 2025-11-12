@@ -41,7 +41,7 @@ export default function TrustStats() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {language === 'de' 
-              ? 'Seit über 26 Jahren vertrauen Kunden in ganz Österreich auf unsere professionellen Entrümpelungsdienste.'
+              ? 'Seit über 26 Jahren vertrauen Kunden in ganz Österreich auf unsere professionellen Räumungsdienste.'
               : 'For over 26 years, customers throughout Austria have trusted our professional clearing services.'}
           </p>
         </div>

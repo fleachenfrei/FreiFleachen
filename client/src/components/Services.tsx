@@ -17,7 +17,7 @@ export default function Services() {
       title: t.services.apartment.title,
       description: t.services.apartment.description,
       image: apartmentImage,
-      slug: 'wohnungsentrümpelungen',
+      slug: 'wohnungsräumungen',
     },
     {
       icon: Building2,
@@ -31,14 +31,14 @@ export default function Services() {
       title: t.services.estate.title,
       description: t.services.estate.description,
       image: apartmentImage,
-      slug: 'verlassenschaftsentrümpelung',
+      slug: 'verlassenschaftsräumung',
     },
     {
       icon: Warehouse,
       title: t.services.warehouse.title,
       description: t.services.warehouse.description,
       image: warehouseImage,
-      slug: 'geschäftsentrümpelung',
+      slug: 'geschäftsräumung',
     },
     {
       icon: Truck,
@@ -52,7 +52,7 @@ export default function Services() {
       title: t.services.basement.title,
       description: t.services.basement.description,
       image: basementImage,
-      slug: 'kellerentrümpelung',
+      slug: 'kellerräumung',
     },
   ];
 

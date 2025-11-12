@@ -11,9 +11,9 @@ export const translations = {
       callNow: 'Jetzt anrufen',
     },
     hero: {
-      title: 'Entrümpelung und Räumung in Wien',
+      title: 'Räumung und Transport in Wien',
       subtitle: 'Schnell, zuverlässig, professionell',
-      description: 'Sie brauchen Platz? Wir schaffen ihn für Sie! Unsere professionelle Entrümpelungs- und Räumungsdienste sind Ihre Lösung für eine saubere und ordentliche Umgebung.',
+      description: 'Sie brauchen Platz? Wir schaffen ihn für Sie! Unsere professionelle Räumungs- und Transportdienste sind Ihre Lösung für eine saubere und ordentliche Umgebung.',
       cta1: 'Angebot einholen',
       cta2: 'Mehr erfahren',
     },
@@ -27,8 +27,8 @@ export const translations = {
       title: 'Unsere Dienstleistungen in Wien und Umgebung',
       subtitle: 'Wir verwandeln Chaos in Komfort, Unordnung in Ordnung und machen Platz für Ihre neuen Geschichten!',
       apartment: {
-        title: 'Wohnungsentrümpelung',
-        description: 'Ob klein oder groß, wir machen Platz für ein neues Kapitel. Schnelle und diskrete Entrümpelung Ihrer Wohnung.',
+        title: 'Wohnungsräumung',
+        description: 'Ob klein oder groß, wir machen Platz für ein neues Kapitel. Schnelle und diskrete Räumung Ihrer Wohnung.',
       },
       house: {
         title: 'Hausräumung',
@@ -36,19 +36,19 @@ export const translations = {
       },
       estate: {
         title: 'Verlassenschaft/Nachlass',
-        description: 'Sensible und zuverlässige Entrümpelung von Verlassenschaften. Diskret und respektvoll.',
+        description: 'Sensible und zuverlässige Räumung von Verlassenschaften. Diskret und respektvoll.',
       },
       warehouse: {
-        title: 'Lagerentrümpelung',
-        description: 'Effiziente Entrümpelung Ihres Lagers. Schnell und organisiert.',
+        title: 'Lagerräumung',
+        description: 'Effiziente Räumung Ihres Lagers. Schnell und organisiert.',
       },
       transport: {
         title: 'Transportservice',
         description: 'Sicherer und zuverlässiger Transport Ihrer Güter. Pünktlich und sorgfältig.',
       },
       basement: {
-        title: 'Kellerentrümpelung',
-        description: 'Schnelle und gründliche Kellerentrümpelung. Wir schaffen Platz.',
+        title: 'Kellerräumung',
+        description: 'Schnelle und gründliche Kellerräumung. Wir schaffen Platz.',
       },
     },
     process: {
@@ -68,7 +68,7 @@ export const translations = {
     },
     why: {
       title: 'Warum uns wählen?',
-      subtitle: 'Wir machen Entrümpelung einfach – Ihre Zufriedenheit ist unser Ziel!',
+      subtitle: 'Wir machen Räumung einfach – Ihre Zufriedenheit ist unser Ziel!',
       professional: {
         title: 'Professionell und Zuverlässig',
         description: 'Unsere erfahrenen Teams sorgen für eine reibungslose Abwicklung.',
@@ -88,12 +88,12 @@ export const translations = {
     },
     testimonials: {
       title: 'Was unsere Kunden sagen',
-      subtitle: 'Vertrauen Sie den Experten: Entrümpelung & Räumung in Wien!',
+      subtitle: 'Vertrauen Sie den Experten: Räumung & Räumung in Wien!',
     },
     cta: {
       title: 'Bereit für mehr Platz?',
       subtitle: 'Kontaktieren Sie uns jetzt!',
-      description: 'Rufen Sie uns an und genießen Sie eine stressfreie Entrümpelung - schnell, gründlich und preiswert!',
+      description: 'Rufen Sie uns an und genießen Sie eine stressfreie Räumung - schnell, gründlich und preiswert!',
     },
     footer: {
       services: 'Leistungen',
