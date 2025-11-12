@@ -113,6 +113,19 @@ Preferred communication style: Simple, everyday language.
 - SEO-optimized with meta descriptions and structured content
 - Data stored in `client/src/data/districts.ts`
 
+**Legal Pages**
+- Three bilingual legal pages required for Austrian website compliance
+- Each page contains content directly in components (not i18n.ts) due to extensive legal text
+- Routes:
+  - German (no prefix): `/datenschutz`, `/impressum`, `/agb`
+  - English (with /en prefix): `/en/privacy-policy`, `/en/imprint`, `/en/terms`
+- Footer contains language-aware links to all legal pages
+- SEO: Each page has proper meta tags, canonical URLs, and hreflang tags
+- Pages:
+  1. **Datenschutz / Privacy Policy** - GDPR-compliant privacy information with sections on data collection, processing, user rights, and Austrian-specific legal requirements
+  2. **Impressum / Imprint** - Mandatory Austrian business disclosures per ECG requirements including company information, legal form, VAT ID (UID-Nr), company register number (Firmenbuchnummer), supervisory authority, chamber membership, and disclaimer sections
+  3. **AGB / Terms and Conditions** - Comprehensive terms for clearing/transport services including contract formation, service scope, pricing, client obligations, liability, scheduling, and data protection
+
 **Design System**
 - Reference-based design approach (documented in `design_guidelines.md`)
 - Component library examples in `client/src/components/examples/`

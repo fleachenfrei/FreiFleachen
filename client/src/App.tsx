@@ -14,6 +14,9 @@ import CityPage from "@/pages/CityPage";
 import Services from "@/pages/Services";
 import ServicePage from "@/pages/ServicePage";
 import Contact from "@/pages/Contact";
+import Datenschutz from "@/pages/Datenschutz";
+import Impressum from "@/pages/Impressum";
+import AGB from "@/pages/AGB";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -30,6 +33,9 @@ function Router() {
         <Route path="/leistungen" component={Services} />
         <Route path="/leistungen/:slug" component={ServicePage} />
         <Route path="/kontakt" component={Contact} />
+        <Route path="/datenschutz" component={Datenschutz} />
+        <Route path="/impressum" component={Impressum} />
+        <Route path="/agb" component={AGB} />
         
         <Route path="/en" component={Home} />
         <Route path="/en/districts" component={Districts} />
@@ -40,6 +46,9 @@ function Router() {
         <Route path="/en/services" component={Services} />
         <Route path="/en/services/:slug" component={ServicePage} />
         <Route path="/en/contact" component={Contact} />
+        <Route path="/en/privacy-policy" component={Datenschutz} />
+        <Route path="/en/imprint" component={Impressum} />
+        <Route path="/en/terms" component={AGB} />
         
         <Route component={NotFound} />
       </Switch>

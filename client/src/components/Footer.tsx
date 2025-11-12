@@ -7,6 +7,9 @@ export default function Footer() {
   const { t, language } = useLanguage();
   const servicesPath = language === 'de' ? '/leistungen' : '/en/services';
   const districtsPath = language === 'de' ? '/bezirke' : '/en/districts';
+  const privacyPath = language === 'de' ? '/datenschutz' : '/en/privacy-policy';
+  const imprintPath = language === 'de' ? '/impressum' : '/en/imprint';
+  const termsPath = language === 'de' ? '/agb' : '/en/terms';
 
   const districts = [
     '1010 Wien Innere Stadt',
@@ -79,9 +82,9 @@ export default function Footer() {
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/80">
           <p data-testid="text-footer-copyright">{t.footer.copyright}</p>
           <div className="flex gap-6">
-            <Link href="/datenschutz" className="hover:text-primary-foreground">{t.footer.privacy}</Link>
-            <Link href="/impressum" className="hover:text-primary-foreground">{t.footer.imprint}</Link>
-            <Link href="/agb" className="hover:text-primary-foreground">{t.footer.terms}</Link>
+            <Link href={privacyPath} className="hover:text-primary-foreground" data-testid="link-footer-privacy">{t.footer.privacy}</Link>
+            <Link href={imprintPath} className="hover:text-primary-foreground" data-testid="link-footer-imprint">{t.footer.imprint}</Link>
+            <Link href={termsPath} className="hover:text-primary-foreground" data-testid="link-footer-terms">{t.footer.terms}</Link>
           </div>
         </div>
       </div>
