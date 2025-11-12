@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { getAllServices } from '@/data/services';
 import { updateMetaTags } from '@/lib/seo';
+import { useLanguage } from '@/contexts/LanguageContext';
 import apartmentImage from '@assets/generated_images/Apartment_clearance_Vienna_fd741ce0.png';
 import estateImage from '@assets/generated_images/Estate_clearance_service_46b9585f.png';
 import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.png';
@@ -37,16 +38,25 @@ const serviceImages: Record<string, string> = {
 };
 
 export default function Services() {
+  const { language, t } = useLanguage();
   const services = getAllServices();
 
   useEffect(() => {
+    const title = language === 'de' 
+      ? 'Unsere Leistungen - Räumung & Räumung in Wien | Flächen Frei'
+      : 'Our Services - Clearing & Removal in Vienna | Flächen Frei';
+    
+    const description = language === 'de'
+      ? 'Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43660 39 57 587'
+      : 'Professional clearing services in Vienna ✓ Apartment clearing ✓ Estate dissolution ✓ Basement & Attic ✓ Hoarding help ✓ All districts ☎ +43660 39 57 587';
+    
     updateMetaTags({
-      title: 'Unsere Leistungen - Räumung & Räumung in Wien | Flächen Frei',
-      description: 'Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43660 39 57 587',
+      title,
+      description,
       url: '/leistungen',
       type: 'website',
     });
-  }, []);
+  }, [language]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -57,21 +67,20 @@ export default function Services() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-services-title">
-                Unsere Räumungs-Leistungen
+                {t.servicesPage.title}
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Von der Wohnungsräumung bis zur Messie-Hilfe - wir bieten professionelle 
-                Räumungsdienste für alle Anforderungen in ganz Wien.
+                {t.servicesPage.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-services">
                   <a href="tel:+4366039575587">
-                    Jetzt anrufen: +43660 39 57 587
+                    {t.servicesPage.callNow}: +43660 39 57 587
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
                   <a href="mailto:info@flaechenfrei.at">
-                    E-Mail Anfrage
+                    {t.servicesPage.emailInquiry}
                   </a>
                 </Button>
               </div>
@@ -82,10 +91,9 @@ export default function Services() {
         <section className="py-16 bg-muted/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Alle Leistungen im Überblick</h2>
+              <h2 className="text-3xl font-bold mb-4">{t.servicesPage.allServices}</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Wählen Sie die passende Dienstleistung für Ihre Bedürfnisse. 
-                Jeder Service wird mit höchster Professionalität und Sorgfalt durchgeführt.
+                {t.servicesPage.description}
               </p>
             </div>
 
@@ -117,7 +125,7 @@ export default function Services() {
                         ))}
                       </div>
                       <Button variant="ghost" className="w-full group">
-                        Mehr erfahren
+                        {t.servicesPage.learnMore}
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </CardContent>

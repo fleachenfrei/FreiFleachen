@@ -8,18 +8,28 @@ import { MapPin, ArrowRight } from 'lucide-react';
 import { getAllDistricts } from '@/data/districts';
 import { Button } from '@/components/ui/button';
 import { updateMetaTags } from '@/lib/seo';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Districts() {
+  const { language, t } = useLanguage();
   const districts = getAllDistricts();
 
   useEffect(() => {
+    const title = language === 'de'
+      ? 'Räumung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien'
+      : 'Clearing in All Vienna Districts - Flächen Frei | 1010-1230 Vienna';
+    
+    const description = language === 'de'
+      ? 'Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43660 39 57 587'
+      : 'Professional clearing in all 23 Vienna districts ✓ Fast ✓ Reliable ✓ Fair prices. Free consultation throughout Vienna ☎ +43660 39 57 587';
+    
     updateMetaTags({
-      title: 'Räumung in allen Wiener Bezirken - Flächen Frei | 1010-1230 Wien',
-      description: 'Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43660 39 57 587',
+      title,
+      description,
       url: '/bezirke',
       type: 'website',
     });
-  }, []);
+  }, [language]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -30,11 +40,10 @@ export default function Districts() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-districts-title">
-                Räumung in allen Wiener Bezirken
+                {t.districtsPage.title}
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-8">
-                Professionelle Räumungs- und Räumungsdienste in allen 23 Bezirken Wiens. 
-                Wählen Sie Ihren Bezirk für detaillierte Informationen.
+                {t.districtsPage.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+4366039575587">
@@ -44,7 +53,7 @@ export default function Districts() {
                 </a>
                 <a href="mailto:info@flaechenfrei.at">
                   <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-                    E-Mail senden
+                    {t.districtsPage.sendEmail}
                   </Button>
                 </a>
               </div>
@@ -55,10 +64,9 @@ export default function Districts() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold mb-4">Alle Wiener Bezirke im Überblick</h2>
+              <h2 className="text-3xl font-bold mb-4">{t.districtsPage.allDistricts}</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Von der Inneren Stadt bis nach Liesing - wir sind in ganz Wien für Sie da. 
-                Klicken Sie auf Ihren Bezirk für spezifische Informationen zu unseren Leistungen vor Ort.
+                {t.districtsPage.description}
               </p>
             </div>
 
@@ -104,26 +112,25 @@ export default function Districts() {
         <section className="py-16 bg-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-4">Warum Flächen Frei in Wien?</h2>
+              <h2 className="text-3xl font-bold mb-4">{t.districtsPage.whyTitle}</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Mit über 26 Jahren Erfahrung sind wir Ihr verlässlicher Partner für Räumungen in ganz Wien. 
-                Egal in welchem Bezirk Sie uns brauchen - wir sind schnell vor Ort.
+                {t.districtsPage.whyDescription}
               </p>
               <div className="grid md:grid-cols-3 gap-6 text-left">
                 <div>
                   <div className="text-4xl font-bold text-primary mb-2">23</div>
-                  <div className="font-medium">Bezirke abgedeckt</div>
-                  <div className="text-sm text-muted-foreground">Gesamtes Wiener Stadtgebiet</div>
+                  <div className="font-medium">{t.districtsPage.districtsCovered}</div>
+                  <div className="text-sm text-muted-foreground">{t.districtsPage.entireVienna}</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-primary mb-2">26+</div>
-                  <div className="font-medium">Jahre Erfahrung</div>
-                  <div className="text-sm text-muted-foreground">Professionelle Räumung</div>
+                  <div className="font-medium">{t.districtsPage.yearsExperience}</div>
+                  <div className="text-sm text-muted-foreground">{t.districtsPage.professionalClearing}</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-primary mb-2">24/7</div>
-                  <div className="font-medium">Erreichbar</div>
-                  <div className="text-sm text-muted-foreground">Flexible Terminvereinbarung</div>
+                  <div className="font-medium">{t.districtsPage.available}</div>
+                  <div className="text-sm text-muted-foreground">{t.districtsPage.flexibleScheduling}</div>
                 </div>
               </div>
             </div>

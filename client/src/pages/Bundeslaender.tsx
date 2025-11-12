@@ -11,7 +11,7 @@ import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags } from '@/lib/seo';
 
 export default function Bundeslaender() {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   useEffect(() => {
     const title = language === 'de' 
@@ -19,8 +19,8 @@ export default function Bundeslaender() {
       : 'Clearing Services in All Austrian Federal States | Flächen Frei';
     
     const description = language === 'de'
-      ? 'Professionelle Räumung und Räumung in allen 9 Bundesländern Österreichs. Von Wien bis Vorarlberg - zuverlässiger Service in ganz Österreich.'
-      : 'Professional clearing and removal services in all 9 Austrian federal states. From Vienna to Vorarlberg - reliable service throughout Austria.';
+      ? 'Professionelle Räumung und Transport in allen 9 Bundesländern Österreichs. Von Wien bis Vorarlberg - zuverlässiger Service in ganz Österreich.'
+      : 'Professional clearing and transport services in all 9 Austrian federal states. From Vienna to Vorarlberg - reliable service throughout Austria.';
 
     updateMetaTags({
       title,
@@ -38,12 +38,10 @@ export default function Bundeslaender() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-bundeslaender-title">
-                {language === 'de' ? 'Räumung und Transport in ganz Österreich' : 'Clearing and Transport Throughout Austria'}
+                {t.bundeslaenderPage.title}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-bundeslaender-subtitle">
-                {language === 'de' 
-                  ? 'Professionelle Räumung und Transport in allen 9 Bundesländern. Schnell, zuverlässig und zu fairen Preisen.'
-                  : 'Professional clearing and transport in all 9 federal states. Fast, reliable and at fair prices.'}
+                {t.bundeslaenderPage.subtitle}
               </p>
             </div>
           </div>
@@ -73,7 +71,7 @@ export default function Bundeslaender() {
                   <CardContent>
                     <div className="space-y-3 mb-4">
                       <h4 className="font-semibold text-sm text-foreground">
-                        {language === 'de' ? 'Unsere Leistungen:' : 'Our Services:'}
+                        {t.bundeslaenderPage.ourServices}
                       </h4>
                       <ul className="space-y-2">
                         {(language === 'de' ? state.features : state.featuresEn).slice(0, 3).map((feature, idx) => (
@@ -86,7 +84,7 @@ export default function Bundeslaender() {
                     </div>
                     <Link href={`/bundeslaender/${state.slug}`}>
                       <Button variant="outline" className="w-full" data-testid={`button-state-${state.slug}`}>
-                        {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                        {t.bundeslaenderPage.learnMore}
                       </Button>
                     </Link>
                   </CardContent>
@@ -100,17 +98,15 @@ export default function Bundeslaender() {
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {language === 'de' ? 'Bereit für mehr Platz?' : 'Ready for More Space?'}
+              {t.cta.title}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              {language === 'de'
-                ? 'Kontaktieren Sie uns jetzt für eine kostenlose Beratung und ein unverbindliches Angebot.'
-                : 'Contact us now for a free consultation and a non-binding quote.'}
+              {t.contact.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+4366039575587">
                 <Button size="lg" data-testid="button-call-cta">
-                  {language === 'de' ? 'Jetzt anrufen' : 'Call Now'}
+                  {t.nav.callNow}
                 </Button>
               </a>
               <Link href="/kontakt">
