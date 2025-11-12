@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function CTA() {
   const { t } = useLanguage();
@@ -19,17 +20,17 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="tel:+4366039575587">
+          <a href={`tel:${CONTACT_INFO.phoneLink}`}>
             <Button
               size="lg"
               className="bg-secondary text-secondary-foreground hover:bg-secondary w-full sm:w-auto"
               data-testid="button-cta-phone"
             >
               <Phone className="mr-2 w-5 h-5" />
-              +43660 39 57 587
+              {CONTACT_INFO.phone}
             </Button>
           </a>
-          <a href="mailto:info@flaechenfrei.at">
+          <a href={CONTACT_INFO.emailLink}>
             <Button
               size="lg"
               variant="outline"
@@ -40,7 +41,7 @@ export default function CTA() {
               E-Mail senden
             </Button>
           </a>
-          <a href="https://wa.me/4366039575587" target="_blank" rel="noopener noreferrer">
+          <a href={`https://wa.me/${CONTACT_INFO.phoneLink}`} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               variant="outline"

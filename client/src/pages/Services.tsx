@@ -11,6 +11,7 @@ import { updateMetaTags } from '@/lib/seo';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getAlternateUrls } from '@/lib/urlMapping';
 import { useLocation } from 'wouter';
+import { CONTACT_INFO } from '@/lib/constants';
 import apartmentImage from '@assets/generated_images/Apartment_clearance_Vienna_fd741ce0.png';
 import estateImage from '@assets/generated_images/Estate_clearance_service_46b9585f.png';
 import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.png';
@@ -50,8 +51,8 @@ export default function Services() {
       : 'Our Services - Clearing & Removal in Vienna | Flächen Frei';
     
     const description = language === 'de'
-      ? 'Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ +43660 39 57 587'
-      : 'Professional clearing services in Vienna ✓ Apartment clearing ✓ Estate dissolution ✓ Basement & Attic ✓ Hoarding help ✓ All districts ☎ +43660 39 57 587';
+      ? `Professionelle Räumungs-Services in Wien ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Messie-Hilfe ✓ Alle Bezirke ☎ ${CONTACT_INFO.phone}`
+      : `Professional clearing services in Vienna ✓ Apartment clearing ✓ Estate dissolution ✓ Basement & Attic ✓ Hoarding help ✓ All districts ☎ ${CONTACT_INFO.phone}`;
     
     const alternateUrls = getAlternateUrls(location);
     
@@ -81,12 +82,12 @@ export default function Services() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-services">
-                  <a href="tel:+4366039575587">
-                    {t.servicesPage.callNow}: +43660 39 57 587
+                  <a href={`tel:${CONTACT_INFO.phoneLink}`}>
+                    {t.servicesPage.callNow}: {CONTACT_INFO.phone}
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-                  <a href="mailto:info@flaechenfrei.at">
+                  <a href={CONTACT_INFO.emailLink}>
                     {t.servicesPage.emailInquiry}
                   </a>
                 </Button>
@@ -155,12 +156,12 @@ export default function Services() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" data-testid="button-cta-consultation">
-                <a href="tel:+4366039575587">
-                  {t.servicesPage.cta.freeConsultation}: +43660 39 57 587
+                <a href={`tel:${CONTACT_INFO.phoneLink}`}>
+                  {t.servicesPage.cta.freeConsultation}: {CONTACT_INFO.phone}
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" data-testid="button-cta-email">
-                <a href="mailto:info@flaechenfrei.at">
+                <a href={CONTACT_INFO.emailLink}>
                   {t.servicesPage.cta.sendEmail}
                 </a>
               </Button>

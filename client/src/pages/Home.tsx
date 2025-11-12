@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CONTACT_INFO } from '@/lib/constants';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import HowItWorks from '@/components/HowItWorks';
@@ -18,8 +19,8 @@ export default function Home() {
 
   useEffect(() => {
     const title = language === 'de'
-      ? 'Räumung Wien & Österreich | Flächen Frei - Schnell & Professionell ☎ +43660 39 57 587'
-      : 'Clearing Services Vienna & Austria | Flächen Frei - Fast & Professional ☎ +43660 39 57 587';
+      ? `Räumung Wien & Österreich | Flächen Frei - Schnell & Professionell ☎ ${CONTACT_INFO.phone}`
+      : `Clearing Services Vienna & Austria | Flächen Frei - Fast & Professional ☎ ${CONTACT_INFO.phone}`;
 
     const description = language === 'de'
       ? 'Professionelle Räumung in Wien und ganz Österreich ✓ 26+ Jahre Erfahrung ✓ Faire Festpreise ✓ Kostenlose Besichtigung ✓ Schnelle Termine ✓ Besenreine Übergabe. Jetzt anrufen!'

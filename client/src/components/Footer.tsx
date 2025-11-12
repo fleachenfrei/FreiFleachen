@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Footer() {
   const { t, language } = useLanguage();
@@ -61,11 +62,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                <a href="tel:+4366039575587" className="hover:text-primary-foreground">+43660 39 57 587</a>
+                <a href={`tel:${CONTACT_INFO.phoneLink}`} className="hover:text-primary-foreground">{CONTACT_INFO.phone}</a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                <a href="mailto:info@flaechenfrei.at" className="hover:text-primary-foreground">info@flaechenfrei.at</a>
+                <a href={CONTACT_INFO.emailLink} className="hover:text-primary-foreground">{CONTACT_INFO.email}</a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />

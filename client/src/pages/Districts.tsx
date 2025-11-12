@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { updateMetaTags } from '@/lib/seo';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getLocalizedDistrictsPath } from '@/lib/urlMapping';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Districts() {
   const { language, t } = useLanguage();
@@ -22,8 +23,8 @@ export default function Districts() {
       : 'Clearing in All Vienna Districts - Flächen Frei | 1010-1230 Vienna';
     
     const description = language === 'de'
-      ? 'Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ +43660 39 57 587'
-      : 'Professional clearing in all 23 Vienna districts ✓ Fast ✓ Reliable ✓ Fair prices. Free consultation throughout Vienna ☎ +43660 39 57 587';
+      ? `Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ ${CONTACT_INFO.phone}`
+      : `Professional clearing in all 23 Vienna districts ✓ Fast ✓ Reliable ✓ Fair prices. Free consultation throughout Vienna ☎ ${CONTACT_INFO.phone}`;
     
     updateMetaTags({
       title,
@@ -48,12 +49,12 @@ export default function Districts() {
                 {t.districtsPage.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+4366039575587">
+                <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground">
-                    +43660 39 57 587
+                    {CONTACT_INFO.phone}
                   </Button>
                 </a>
-                <a href="mailto:info@flaechenfrei.at">
+                <a href={CONTACT_INFO.emailLink}>
                   <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
                     {t.districtsPage.sendEmail}
                   </Button>

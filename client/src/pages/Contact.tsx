@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { updateMetaTags, addJsonLd } from '@/lib/seo';
+import { CONTACT_INFO } from '@/lib/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -60,12 +61,12 @@ export default function Contact() {
 
   useEffect(() => {
     const title = language === 'de' 
-      ? 'Kontakt - Flächen Frei | Räumung Wien und Umgebung ☎ +43660 39 57 587'
-      : 'Contact - Flächen Frei | Clearing Services Vienna ☎ +43660 39 57 587';
+      ? `Kontakt - Flächen Frei | Räumung Wien und Umgebung ☎ ${CONTACT_INFO.phone}`
+      : `Contact - Flächen Frei | Clearing Services Vienna ☎ ${CONTACT_INFO.phone}`;
     
     const description = language === 'de'
-      ? 'Kontaktieren Sie Flächen Frei für professionelle Räumung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ +43660 39 57 587'
-      : 'Contact Flächen Frei for professional clearing services in Vienna and throughout Austria ✓ Free consultation ✓ Fast appointments ✓ 24/7 available ☎ +43660 39 57 587';
+      ? `Kontaktieren Sie Flächen Frei für professionelle Räumung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ ${CONTACT_INFO.phone}`
+      : `Contact Flächen Frei for professional clearing services in Vienna and throughout Austria ✓ Free consultation ✓ Fast appointments ✓ 24/7 available ☎ ${CONTACT_INFO.phone}`;
 
     updateMetaTags({
       title,
@@ -82,8 +83,8 @@ export default function Contact() {
       image: `${window.location.origin}/og-image.jpg`,
       '@id': window.location.origin,
       url: window.location.origin,
-      telephone: '+43660 39 57 587',
-      email: 'info@flaechenfrei.at',
+      telephone: CONTACT_INFO.phone,
+      email: CONTACT_INFO.email,
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Herndlgasse 7/17',
@@ -189,8 +190,8 @@ export default function Contact() {
                 <CardDescription>24/7 {t.contact.available247}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="tel:+4366039575 87" className="text-lg font-semibold text-primary hover:underline" data-testid="link-phone">
-                  +43660 39 57 587
+                <a href={`tel:${CONTACT_INFO.phoneLink}`} className="text-lg font-semibold text-primary hover:underline" data-testid="link-phone">
+                  {CONTACT_INFO.phone}
                 </a>
               </CardContent>
             </Card>
@@ -205,8 +206,8 @@ export default function Contact() {
                 <CardDescription>{t.contact.quickResponse}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="mailto:info@flaechenfrei.at" className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
-                  info@flaechenfrei.at
+                <a href={CONTACT_INFO.emailLink} className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
+                  {CONTACT_INFO.email}
                 </a>
               </CardContent>
             </Card>
@@ -221,8 +222,8 @@ export default function Contact() {
                 <CardDescription>{t.contact.directMessage}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="https://wa.me/4366039575 87" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
-                  +43660 39 57 587
+                <a href={`https://wa.me/${CONTACT_INFO.phoneLink}`} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
+                  {CONTACT_INFO.phone}
                 </a>
               </CardContent>
             </Card>
@@ -419,10 +420,10 @@ export default function Contact() {
                   <p className="mb-4 text-sm">
                     {t.contact.callNowForConsultation}
                   </p>
-                  <a href="tel:+4366039575 87">
+                  <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                     <Button variant="outline" size="lg" className="w-full bg-background text-foreground hover:bg-background" data-testid="button-quick-call">
                       <Phone className="w-4 h-4 mr-2" />
-                      +43660 39 57 587
+                      {CONTACT_INFO.phone}
                     </Button>
                   </a>
                 </CardContent>

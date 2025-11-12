@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags } from '@/lib/seo';
 import { getLocalizedBundeslaenderPath, getLocalizedContactPath } from '@/lib/urlMapping';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Bundeslaender() {
   const { language, t } = useLanguage();
@@ -107,7 +108,7 @@ export default function Bundeslaender() {
               {t.contact.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+4366039575587">
+              <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                 <Button size="lg" data-testid="button-call-cta">
                   {t.nav.callNow}
                 </Button>

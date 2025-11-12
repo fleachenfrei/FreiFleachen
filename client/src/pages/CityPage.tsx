@@ -14,6 +14,7 @@ import NotFound from './not-found';
 import cityImage from '@assets/generated_images/House_clearance_service_e0229004.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getLocalizedBundeslaenderPath } from '@/lib/urlMapping';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function CityPage() {
   const { t, language } = useLanguage();
@@ -54,8 +55,8 @@ export default function CityPage() {
         image: cityImage,
         '@id': url,
         url: `${window.location.origin}${url}`,
-        telephone: '+43660 39 57 587',
-        email: 'info@flaechenfrei.at',
+        telephone: CONTACT_INFO.phone,
+        email: CONTACT_INFO.email,
         address: {
           '@type': 'PostalAddress',
           addressLocality: cityName,
@@ -145,7 +146,7 @@ export default function CityPage() {
                 {cityDescription}
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="tel:+436603957587">
+                <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call">
                     <Phone className="mr-2 w-5 h-5" />
                     {t.common.callNow}
@@ -264,26 +265,26 @@ export default function CityPage() {
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <a 
-                      href="tel:+436603957587" 
+                      href={`tel:${CONTACT_INFO.phoneLink}`}
                       className="flex items-center gap-3 p-3 hover-elevate active-elevate-2 rounded-md border"
                       data-testid="link-phone"
                     >
                       <Phone className="w-5 h-5 text-primary shrink-0" />
                       <div>
                         <div className="font-medium">{t.cityPage.contactPhone}</div>
-                        <div className="text-sm text-muted-foreground">+43660 39 57 587</div>
+                        <div className="text-sm text-muted-foreground">{CONTACT_INFO.phone}</div>
                       </div>
                     </a>
                     
                     <a 
-                      href="mailto:info@flaechenfrei.at" 
+                      href={CONTACT_INFO.emailLink}
                       className="flex items-center gap-3 p-3 hover-elevate active-elevate-2 rounded-md border"
                       data-testid="link-email"
                     >
                       <Mail className="w-5 h-5 text-primary shrink-0" />
                       <div>
                         <div className="font-medium">{t.cityPage.contactEmail}</div>
-                        <div className="text-sm text-muted-foreground">info@flaechenfrei.at</div>
+                        <div className="text-sm text-muted-foreground">{CONTACT_INFO.email}</div>
                       </div>
                     </a>
 
@@ -335,13 +336,13 @@ export default function CityPage() {
               {t.cityPage.ctaText} {cityName} {t.cityPage.ctaTextAnd} {cityBundesland} {t.cityPage.ctaTextActive}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="tel:+436603957587">
+              <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                 <Button size="lg" data-testid="button-cta-call">
                   <Phone className="mr-2 w-5 h-5" />
-                  +43660 39 57 587
+                  {CONTACT_INFO.phone}
                 </Button>
               </a>
-              <a href="mailto:info@flaechenfrei.at">
+              <a href={CONTACT_INFO.emailLink}>
                 <Button size="lg" variant="outline" data-testid="button-cta-email">
                   <Mail className="mr-2 w-5 h-5" />
                   {t.cityPage.ctaEmailButton}

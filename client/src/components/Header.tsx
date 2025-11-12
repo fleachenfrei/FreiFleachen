@@ -3,6 +3,7 @@ import { Link, useLocation, useRouter } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CONTACT_INFO } from '@/lib/constants';
 import { getLocalizedPath } from '@/lib/urlMapping';
 
 export default function Header() {
@@ -60,7 +61,7 @@ export default function Header() {
               <Globe className="w-5 h-5" />
             </Button>
             <span className="text-sm font-medium">{language.toUpperCase()}</span>
-            <a href="tel:+4366039575587">
+            <a href={`tel:${CONTACT_INFO.phoneLink}`}>
               <Button variant="outline" size="sm" data-testid="button-call-desktop">
                 <Phone className="w-4 h-4 mr-2" />
                 {t.nav.callNow}
@@ -111,7 +112,7 @@ export default function Header() {
                 <Globe className="w-4 h-4 mr-2" />
                 {language.toUpperCase()}
               </Button>
-              <a href="tel:+4366039575587">
+              <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                 <Button variant="default" size="sm" data-testid="button-call-mobile">
                   <Phone className="w-4 h-4 mr-2" />
                   {t.nav.callNow}

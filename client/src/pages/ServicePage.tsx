@@ -12,6 +12,7 @@ import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/li
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getAlternateUrls } from '@/lib/urlMapping';
+import { CONTACT_INFO } from '@/lib/constants';
 import apartmentImage from '@assets/generated_images/Apartment_clearance_Vienna_fd741ce0.png';
 import estateImage from '@assets/generated_images/Estate_clearance_service_46b9585f.png';
 import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.png';
@@ -74,8 +75,8 @@ export default function ServicePage() {
         provider: {
           '@type': 'LocalBusiness',
           name: 'Flächen Frei',
-          telephone: '+4366039575587',
-          email: 'info@flaechenfrei.at',
+          telephone: CONTACT_INFO.phoneLink,
+          email: CONTACT_INFO.email,
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Wien',
@@ -149,13 +150,13 @@ export default function ServicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-service">
-                  <a href="tel:+4366039575587">
+                  <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                     <Phone className="mr-2 w-5 h-5" />
-                    +43660 39 57 587
+                    {CONTACT_INFO.phone}
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-                  <a href="mailto:info@flaechenfrei.at">
+                  <a href={CONTACT_INFO.emailLink}>
                     <Mail className="mr-2 w-5 h-5" />
                     {t.common.emailInquiry}
                   </a>
@@ -284,13 +285,13 @@ export default function ServicePage() {
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <Button asChild size="lg" className="w-full bg-secondary hover:bg-secondary text-secondary-foreground">
-                        <a href="tel:+4366039575587">
+                        <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                           <Phone className="mr-2 w-5 h-5" />
                           {t.common.callNow}
                         </a>
                       </Button>
                       <Button asChild size="lg" variant="outline" className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20">
-                        <a href="mailto:info@flaechenfrei.at">
+                        <a href={CONTACT_INFO.emailLink}>
                           <Mail className="mr-2 w-5 h-5" />
                           {t.servicePage.sendEmail}
                         </a>

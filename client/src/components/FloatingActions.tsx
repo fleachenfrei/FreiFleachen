@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Phone, MessageCircle } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function FloatingActions() {
   return (
     <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-40 md:hidden">
-      <a href="https://wa.me/4366039575 87" target="_blank" rel="noopener noreferrer">
+      <a href={`https://wa.me/${CONTACT_INFO.phoneLink}`} target="_blank" rel="noopener noreferrer">
         <Button
           size="icon"
           className="w-14 h-14 rounded-full shadow-lg bg-green-500 hover:bg-green-600 text-white"
@@ -13,7 +14,7 @@ export default function FloatingActions() {
           <MessageCircle className="w-6 h-6" />
         </Button>
       </a>
-      <a href="tel:+4366039575 87">
+      <a href={`tel:${CONTACT_INFO.phoneLink}`}>
         <Button
           size="icon"
           className="w-14 h-14 rounded-full shadow-lg bg-secondary hover:bg-secondary text-secondary-foreground"

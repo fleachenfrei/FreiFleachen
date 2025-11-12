@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { CONTACT_INFO } from '@/lib/constants';
 import heroImage from '@assets/generated_images/Cleaning_team_hero_image_83538c0b.png';
 
 export default function Hero() {
@@ -33,7 +34,7 @@ export default function Hero() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </a>
-              <a href="tel:+4366039575587">
+              <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                 <Button
                   size="lg"
                   variant="outline"

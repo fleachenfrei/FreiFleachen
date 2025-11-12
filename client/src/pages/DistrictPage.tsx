@@ -13,6 +13,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getLocalizedDistrictsPath } from '@/lib/urlMapping';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function DistrictPage() {
   const { t, language } = useLanguage();
@@ -57,8 +58,8 @@ export default function DistrictPage() {
         image: viennaImage,
         '@id': url,
         url: `${window.location.origin}${url}`,
-        telephone: '+4366039575587',
-        email: 'info@flaechenfrei.at',
+        telephone: CONTACT_INFO.phoneLink,
+        email: CONTACT_INFO.email,
         address: {
           '@type': 'PostalAddress',
           streetAddress: districtName || '',
@@ -142,7 +143,7 @@ export default function DistrictPage() {
                 {districtDescription}
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="tel:+4366039575587">
+                <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground">
                     <Phone className="mr-2 w-5 h-5" />
                     {t.common.callNow}
@@ -317,13 +318,13 @@ export default function DistrictPage() {
                       {t.districtPage.inspectionText}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <a href="tel:+4366039575587">
+                      <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                         <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground w-full sm:w-auto">
                           <Phone className="mr-2 w-5 h-5" />
-                          +43660 39 57 587
+                          {CONTACT_INFO.phone}
                         </Button>
                       </a>
-                      <a href="mailto:info@flaechenfrei.at">
+                      <a href={CONTACT_INFO.emailLink}>
                         <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto">
                           <Mail className="mr-2 w-5 h-5" />
                           {t.common.sendEmail}
@@ -347,8 +348,8 @@ export default function DistrictPage() {
                       <Phone className="w-5 h-5 text-primary shrink-0" />
                       <div>
                         <div className="text-sm text-muted-foreground">{t.common.phone}</div>
-                        <a href="tel:+4366039575587" className="font-medium hover:text-primary">
-                          +43660 39 57 587
+                        <a href={`tel:${CONTACT_INFO.phoneLink}`} className="font-medium hover:text-primary">
+                          {CONTACT_INFO.phone}
                         </a>
                       </div>
                     </div>
@@ -356,8 +357,8 @@ export default function DistrictPage() {
                       <Mail className="w-5 h-5 text-primary shrink-0" />
                       <div>
                         <div className="text-sm text-muted-foreground">{t.common.email}</div>
-                        <a href="mailto:info@flaechenfrei.at" className="font-medium hover:text-primary break-all">
-                          info@flaechenfrei.at
+                        <a href={CONTACT_INFO.emailLink} className="font-medium hover:text-primary break-all">
+                          {CONTACT_INFO.email}
                         </a>
                       </div>
                     </div>
@@ -369,13 +370,13 @@ export default function DistrictPage() {
                       </div>
                     </div>
                     <div className="pt-4 border-t space-y-2">
-                      <a href="tel:+4366039575587" className="block">
+                      <a href={`tel:${CONTACT_INFO.phoneLink}`} className="block">
                         <Button className="w-full bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-district-call">
                           <Phone className="mr-2 w-4 h-4" />
                           {t.common.callNow}
                         </Button>
                       </a>
-                      <a href="mailto:info@flaechenfrei.at" className="block">
+                      <a href={CONTACT_INFO.emailLink} className="block">
                         <Button variant="outline" className="w-full" data-testid="button-district-email">
                           <Mail className="mr-2 w-4 h-4" />
                           {t.common.sendEmail}

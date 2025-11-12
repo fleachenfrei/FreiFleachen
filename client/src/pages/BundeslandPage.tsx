@@ -15,6 +15,7 @@ import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/li
 import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getLocalizedServicePath } from '@/lib/urlMapping';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
+import { CONTACT_INFO } from '@/lib/constants';
 
 export default function BundeslandPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -50,8 +51,8 @@ export default function BundeslandPage() {
         'provider': {
           '@type': 'LocalBusiness',
           'name': 'Flächen Frei',
-          'telephone': '+4366039575587',
-          'email': 'info@flaechenfrei.at',
+          'telephone': CONTACT_INFO.phoneLink,
+          'email': CONTACT_INFO.email,
           'areaServed': {
             '@type': 'State',
             'name': stateName,
@@ -105,7 +106,7 @@ export default function BundeslandPage() {
                 {description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+4366039575587">
+                <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                   <Button size="lg" data-testid="button-call">
                     <Phone className="w-5 h-5 mr-2" />
                     {t.common.callNow}
@@ -433,10 +434,10 @@ export default function BundeslandPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+4366039575587">
+                <a href={`tel:${CONTACT_INFO.phoneLink}`}>
                   <Button size="lg" data-testid="button-call-cta">
                     <Phone className="w-5 h-5 mr-2" />
-                    +43660 39 57 587
+                    {CONTACT_INFO.phone}
                   </Button>
                 </a>
                 <Link href={contactPath}>
