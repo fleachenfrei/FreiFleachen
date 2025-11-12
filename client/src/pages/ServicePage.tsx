@@ -30,6 +30,9 @@ import goldImage from '@assets/stock_images/gold_jewelry_coins_b_a9ecdc2e.jpg';
 import carpetImage from '@assets/stock_images/antique_persian_orie_54731bea.jpg';
 import paintingImage from '@assets/stock_images/antique_oil_painting_d5919781.jpg';
 import antiqueImage from '@assets/stock_images/antique_furniture_po_13c004b9.jpg';
+import cleaningTeamImage from '@assets/stock_images/professional_cleanin_4637ab2e.jpg';
+import cleanApartmentImage from '@assets/stock_images/empty_clean_apartmen_62f7696d.jpg';
+import movingTruckImage from '@assets/stock_images/moving_truck_loading_e8cb2b49.jpg';
 
 const serviceImages: Record<ServiceId, string> = {
   [ServiceId.WOHNUNGSRAEUMUNG]: apartmentImage,
