@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { updateMetaTags, addJsonLd } from '@/lib/seo';
 import Header from '@/components/Header';
@@ -7,25 +7,54 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { getAllServices } from '@/data/services';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { contactFormSchema, type ContactFormData } from '@shared/schema';
+import { z } from 'zod';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 
 export default function Contact() {
   const { t, language } = useLanguage();
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
+  const services = getAllServices();
+
+  const localizedSchema = useMemo(() => {
+    return z.object({
+      name: z.string().min(2, t.validation.nameMin),
+      email: z.string().email(t.validation.emailInvalid),
+      phone: z.string().optional(),
+      service: z.string().optional(),
+      message: z.string().min(10, t.validation.messageMin),
+    });
+  }, [language, t.validation.nameMin, t.validation.emailInvalid, t.validation.messageMin]);
+
+  const form = useForm<ContactFormData>({
+    resolver: zodResolver(localizedSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+    },
   });
 
-  const services = getAllServices();
+  useEffect(() => {
+    if (Object.keys(form.formState.errors).length > 0) {
+      form.trigger();
+    }
+  }, [language, form]);
 
   useEffect(() => {
     const title = language === 'de' 
@@ -91,17 +120,14 @@ export default function Contact() {
     });
   }, [language]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
+  const handleSubmit = async (values: ContactFormData) => {
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(values),
       });
 
       const data = await response.json();
@@ -112,14 +138,7 @@ export default function Contact() {
           description: t.contact.form.success,
         });
 
-        // Reset form
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          service: '',
-          message: '',
-        });
+        form.reset();
       } else {
         throw new Error(data.message || 'Unknown error');
       }
@@ -130,8 +149,6 @@ export default function Contact() {
         variant: 'destructive',
       });
       console.error('Contact form error:', error);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -223,88 +240,125 @@ export default function Contact() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">{t.contact.form.name} *</Label>
-                      <Input
-                        id="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                        placeholder={language === 'de' ? 'Max Mustermann' : 'John Doe'}
-                        data-testid="input-name"
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t.contact.form.name} *</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder={language === 'de' ? 'Max Mustermann' : 'John Doe'}
+                                data-testid="input-name"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="email">{t.contact.form.email} *</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          required
-                          placeholder="mail@beispiel.at"
-                          data-testid="input-email"
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>{t.contact.form.email} *</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="email"
+                                  placeholder="mail@beispiel.at"
+                                  data-testid="input-email"
+                                  {...field}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>{t.contact.form.phone}</FormLabel>
+                              <FormControl>
+                                <Input
+                                  type="tel"
+                                  placeholder="+43 660 123 4567"
+                                  data-testid="input-phone"
+                                  {...field}
+                                  value={field.value || ''}
+                                />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
 
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">{t.contact.form.phone}</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+43 660 123 4567"
-                          data-testid="input-phone"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="service">{t.contact.form.service}</Label>
-                      <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                        <SelectTrigger id="service" data-testid="select-service">
-                          <SelectValue placeholder={language === 'de' ? 'Wählen Sie eine Leistung' : 'Select a service'} />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {services.map((service) => (
-                            <SelectItem key={service.slug} value={service.slug}>
-                              {service.name}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">{t.contact.form.message} *</Label>
-                      <Textarea
-                        id="message"
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                        rows={6}
-                        placeholder={language === 'de' 
-                          ? 'Beschreiben Sie bitte Ihr Anliegen...'
-                          : 'Please describe your request...'}
-                        data-testid="input-message"
+                      <FormField
+                        control={form.control}
+                        name="service"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t.contact.form.service}</FormLabel>
+                            <Select onValueChange={field.onChange} value={field.value || ''}>
+                              <FormControl>
+                                <SelectTrigger data-testid="select-service">
+                                  <SelectValue placeholder={language === 'de' ? 'Wählen Sie eine Leistung' : 'Select a service'} />
+                                </SelectTrigger>
+                              </FormControl>
+                              <SelectContent>
+                                {services.map((service) => (
+                                  <SelectItem key={service.slug} value={service.slug}>
+                                    {service.name}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                    </div>
 
-                    <Button 
-                      type="submit" 
-                      size="lg" 
-                      className="w-full" 
-                      disabled={isSubmitting}
-                      data-testid="button-submit-form"
-                    >
-                      <Send className="w-4 h-4 mr-2" />
-                      {isSubmitting ? (language === 'de' ? 'Wird gesendet...' : 'Sending...') : t.contact.form.submit}
-                    </Button>
-                  </form>
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>{t.contact.form.message} *</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                rows={6}
+                                placeholder={language === 'de' 
+                                  ? 'Beschreiben Sie bitte Ihr Anliegen...'
+                                  : 'Please describe your request...'}
+                                data-testid="input-message"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="w-full" 
+                        disabled={form.formState.isSubmitting}
+                        data-testid="button-submit-form"
+                      >
+                        <Send className="w-4 h-4 mr-2" />
+                        {form.formState.isSubmitting ? (language === 'de' ? 'Wird gesendet...' : 'Sending...') : t.contact.form.submit}
+                      </Button>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </div>
