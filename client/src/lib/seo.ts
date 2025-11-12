@@ -120,18 +120,47 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
     '@id': 'https://flaechenfrei.at/#business',
     'name': 'Flächen Frei',
     'alternateName': 'Flächen Frei Räumung',
+    'slogan': language === 'de'
+      ? 'Professionelle Räumung - Schnell, zuverlässig, fair'
+      : 'Professional Clearing - Fast, reliable, fair',
     'description': language === 'de'
       ? 'Professionelle Räumung und Transportdienste in Wien und ganz Österreich. Über 26 Jahre Erfahrung. Schnell, zuverlässig und zu fairen Preisen.'
       : 'Professional clearing and transport services in Vienna and throughout Austria. Over 26 years of experience. Fast, reliable, and at fair prices.',
     'url': 'https://flaechenfrei.at',
     'telephone': '+43 660 39 57 587',
     'email': 'info@flaechenfrei.at',
+    'foundingDate': '1999',
     'priceRange': language === 'de' ? 'Faire Preise auf Anfrage' : 'Fair prices on request',
+    'currenciesAccepted': 'EUR',
+    'paymentAccepted': language === 'de' 
+      ? 'Bar, Banküberweisung, Kreditkarte'
+      : 'Cash, Bank Transfer, Credit Card',
     'image': 'https://flaechenfrei.at/og-image.jpg',
     'logo': {
       '@type': 'ImageObject',
       'url': 'https://flaechenfrei.at/logo.png',
     },
+    'knowsAbout': language === 'de'
+      ? [
+          'Wohnungsräumung',
+          'Haushaltsauflösung',
+          'Kellerräumung',
+          'Entrümpelung',
+          'Möbeltransport',
+          'Entsorgung',
+          'Nachlassräumung',
+          'Gewerbliche Räumung'
+        ]
+      : [
+          'Apartment clearing',
+          'Household dissolution',
+          'Basement clearing',
+          'Decluttering',
+          'Furniture transport',
+          'Disposal',
+          'Estate clearing',
+          'Commercial clearing'
+        ],
     'address': {
       '@type': 'PostalAddress',
       'streetAddress': 'Herndlgasse 7/17',
@@ -275,6 +304,24 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
         },
       ],
     },
+    'potentialAction': [
+      {
+        '@type': 'CallAction',
+        'name': language === 'de' ? 'Anrufen' : 'Call',
+        'target': {
+          '@type': 'EntryPoint',
+          'urlTemplate': 'tel:+436603957587',
+        },
+      },
+      {
+        '@type': 'EmailAction',
+        'name': language === 'de' ? 'E-Mail senden' : 'Send Email',
+        'target': {
+          '@type': 'EntryPoint',
+          'urlTemplate': 'mailto:info@flaechenfrei.at',
+        },
+      },
+    ],
   };
 }
 
