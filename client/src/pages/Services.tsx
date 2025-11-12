@@ -24,6 +24,11 @@ import garageImage from '@assets/generated_images/Garage_clearance_service_43538
 import officeDissolutionImage from '@assets/generated_images/Office_dissolution_service_d98c3ee9.png';
 import probateImage from '@assets/generated_images/Probate_estate_clearance_1eadd49e.png';
 import containerImage from '@assets/generated_images/Container_rental_service_f4846763.png';
+import heirloomImage from '@assets/generated_images/Estate_heirloom_purchase_service_26574573.png';
+import goldImage from '@assets/generated_images/Gold_purchase_service_Vienna_0145395b.png';
+import carpetImage from '@assets/generated_images/Carpet_purchase_service_Vienna_53ce3616.png';
+import paintingImage from '@assets/generated_images/Painting_purchase_service_Vienna_6ea34abf.png';
+import antiquesImage from '@assets/generated_images/Antiques_purchase_service_Vienna_7da61782.png';
 
 const serviceImages: Record<ServiceId, string> = {
   [ServiceId.WOHNUNGSRAEUMUNG]: apartmentImage,
@@ -38,6 +43,11 @@ const serviceImages: Record<ServiceId, string> = {
   [ServiceId.BUROAUFLOESUNG]: officeDissolutionImage,
   [ServiceId.VERLASSENSCHAFTSRAEUMUNG]: probateImage,
   [ServiceId.CONTAINERSERVICE]: containerImage,
+  [ServiceId.ERBSTUECKSANKAUF]: heirloomImage,
+  [ServiceId.GOLDANKAUF]: goldImage,
+  [ServiceId.TEPPICHANKAUF]: carpetImage,
+  [ServiceId.BILDERANKAUF]: paintingImage,
+  [ServiceId.ANTIKWARENANKAUF]: antiquesImage,
 };
 
 export default function Services() {
@@ -70,8 +80,8 @@ export default function Services() {
       description,
       url: location,
       items: services.map(service => ({
-        name: language === 'de' ? service.name : service.nameEN,
-        description: language === 'de' ? service.description : service.descriptionEN,
+        name: service.content[language].name,
+        description: service.content[language].shortDescription,
         url: getLocalizedServicePath(service.id, language),
       })),
     });
