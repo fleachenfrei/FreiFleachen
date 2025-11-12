@@ -148,7 +148,7 @@ export default function BundeslandPage() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {cityPages.map((city) => (
-                  <Link key={city.slug} href={`/bundeslaender/${state.slug}/${city.slug}`}>
+                  <Link key={city.slug} href={getLocalizedBundeslaenderPath(language, state.slug, city.slug)}>
                     <Card className="hover-elevate cursor-pointer h-full" data-testid={`card-city-${city.slug}`}>
                       <CardHeader>
                         <div className="flex items-center justify-between gap-3">

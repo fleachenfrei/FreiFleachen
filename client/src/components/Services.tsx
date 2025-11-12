@@ -7,9 +7,20 @@ import apartmentImage from '@assets/generated_images/Apartment_cleaning_before-a
 import basementImage from '@assets/generated_images/Basement_clearing_service_45b66ae1.png';
 import houseImage from '@assets/generated_images/House_clearance_service_e0229004.png';
 import warehouseImage from '@assets/generated_images/Warehouse_clearing_service_06fa396e.png';
+import { getLocalizedServicesPath } from '@/lib/urlMapping';
 
 export default function Services() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const servicesPath = getLocalizedServicesPath(language);
+
+  const serviceSlugMap: Record<string, string> = {
+    'wohnungsräumungen': 'apartment-clearing',
+    'haushaltsauflösung': 'household-dissolution',
+    'verlassenschaftsräumung': 'estate-clearing',
+    'geschäftsräumung': 'commercial-clearing',
+    'umzugsservice': 'moving-service',
+    'kellerräumung': 'basement-clearing',
+  };
 
   const services = [
     {
@@ -71,6 +82,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
+            const localizedSlug = language === 'en' ? serviceSlugMap[service.slug] || service.slug : service.slug;
             return (
               <Card key={index} className="hover-elevate overflow-hidden" data-testid={`card-service-${index}`}>
                 <div className="h-48 overflow-hidden">
@@ -93,7 +105,7 @@ export default function Services() {
                   <CardDescription className="text-base mb-4" data-testid={`text-service-description-${index}`}>
                     {service.description}
                   </CardDescription>
-                  <Link href={`/leistungen/${service.slug}`}>
+                  <Link href={`${servicesPath}/${localizedSlug}`}>
                     <Button variant="outline" size="sm" className="w-full" data-testid={`button-service-${index}`}>
                       Jetzt anfragen
                     </Button>
