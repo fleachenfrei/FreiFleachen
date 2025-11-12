@@ -53,11 +53,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href={language === 'de' ? '/' : '/en'} className="flex items-center gap-2">
-            <div className="flex items-center gap-2">
-              <div className="text-2xl font-bold text-primary">Flächen Frei</div>
-            </div>
+        <div className="flex items-center justify-between h-16 md:h-24">
+          <Link href={language === 'de' ? '/' : '/en'} className="flex items-center gap-2" data-testid="link-logo">
+            <img 
+              src="/logo.png" 
+              alt="Flächen Frei Logo" 
+              className="h-14 md:h-20 w-auto"
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-6">
