@@ -113,18 +113,20 @@ Preferred communication style: Simple, everyday language.
 - SEO-optimized with meta descriptions and structured content
 - Data stored in `client/src/data/districts.ts`
 
-**Legal Pages**
-- Three bilingual legal pages required for Austrian website compliance
-- Each page contains content directly in components (not i18n.ts) due to extensive legal text
+**Legal & Information Pages**
+- Four bilingual static pages for compliance and customer information
+- Legal pages contain content directly in components (not i18n.ts) due to extensive static text
 - Routes:
-  - German (no prefix): `/datenschutz`, `/impressum`, `/agb`
-  - English (with /en prefix): `/en/privacy-policy`, `/en/imprint`, `/en/terms`
-- Footer contains language-aware links to all legal pages
+  - German (no prefix): `/datenschutz`, `/impressum`, `/agb`, `/faq`
+  - English (with /en prefix): `/en/privacy-policy`, `/en/imprint`, `/en/terms`, `/en/faq`
+- Footer contains language-aware links to all pages
 - SEO: Each page has proper meta tags, canonical URLs, and hreflang tags
+- URL mapping system properly handles language switching for all pages
 - Pages:
   1. **Datenschutz / Privacy Policy** - GDPR-compliant privacy information with sections on data collection, processing, user rights, and Austrian-specific legal requirements
   2. **Impressum / Imprint** - Mandatory Austrian business disclosures per ECG requirements including company information, legal form, VAT ID (UID-Nr), company register number (Firmenbuchnummer), supervisory authority, chamber membership, and disclaimer sections
   3. **AGB / Terms and Conditions** - Comprehensive terms for clearing/transport services including contract formation, service scope, pricing, client obligations, liability, scheduling, and data protection
+  4. **FAQ / Häufig gestellte Fragen** - 12 comprehensive questions and answers covering pricing, scheduling, client presence, disposal, service areas, insurance, weekend work, and contact information. Uses Shadcn Accordion component (single mode). Includes contact card with call/email buttons at bottom.
 
 **Design System**
 - Reference-based design approach (documented in `design_guidelines.md`)
@@ -274,3 +276,35 @@ Preferred communication style: Simple, everyday language.
 - Service slug map is hardcoded in `urlMapping.ts` (architect recommends co-locating with servicesData)
 - English service translations are AI-generated and should be reviewed by client
 - Initial `/` redirect depends on browser's Accept-Language header
+
+### November 12, 2025 - FAQ Page & URL Mapping Enhancement
+
+**Added comprehensive bilingual FAQ page:**
+1. **FAQ Page Component** (`client/src/pages/FAQ.tsx`)
+   - 12 detailed questions and answers covering all aspects of the service
+   - Topics: pricing, scheduling, client presence, disposal, service areas, insurance, weekend availability
+   - Uses Shadcn Accordion component in single mode (only one item open at a time)
+   - Contact card at bottom with call and email buttons
+   - Fully responsive design with mobile optimization
+
+2. **URL Mapping System Enhancement**
+   - Extended `urlMapping.ts` to include FAQ and all legal page routes
+   - Added to `routeMapping`: datenschutz, impressum, agb, faq
+   - Added to `pathMappings`: all legal page paths for both languages
+   - Fixes language switcher to properly convert between `/faq` ↔ `/en/faq`
+
+3. **Footer Integration**
+   - Added FAQ link to footer legal links section
+   - Positioned as first link before Privacy, Imprint, and Terms
+   - Language-aware routing for all footer links
+   - Responsive flex layout with wrapping on mobile
+
+4. **i18n Updates**
+   - Added FAQ translations to both German and English sections
+   - Footer now includes `faq: 'FAQ'` (DE) and `faq: 'FAQ'` (EN)
+
+5. **Testing**
+   - Comprehensive e2e tests passed successfully
+   - Verified language switching works correctly
+   - Confirmed all 12 accordion items are functional
+   - Validated responsive design and contact card functionality
