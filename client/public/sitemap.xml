@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============================================ -->
+  <!-- Homepage (Highest Priority) -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://flaechenfrei.at/</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flaechenfrei.at/" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flaechenfrei.at/" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Services Overview -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Service Detail Pages (17 Services x 2 Languages = 34 URLs) -->
+  <!-- ============================================ -->
+
+  <!-- Wohnungsräumung / Apartment Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/wohnungsraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/wohnungsraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/apartment-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/apartment-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/wohnungsraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/apartment-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Haushaltsauflösung / Estate Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/haushaltsaufloesungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/haushaltsaufloesungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/estate-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/estate-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/haushaltsaufloesungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/estate-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Kellerräumung / Basement Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/kellerraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/kellerraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/basement-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/basement-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/kellerraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/basement-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Dachbodenräumung / Attic Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/dachbodenraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/dachbodenraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/attic-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/attic-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/dachbodenraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/attic-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Geschäftsräumung / Office Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/geschaeftsraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/geschaeftsraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/office-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/office-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/geschaeftsraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/office-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Messie-Räumung / Hoarding Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/messieraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/messieraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/hoarding-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/hoarding-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/messieraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/hoarding-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sperrmüllentsorgung / Bulky Waste Disposal -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/sperrmullentsorgung</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/sperrmullentsorgung" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/bulky-waste-disposal" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/bulky-waste-disposal</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/sperrmullentsorgung" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/bulky-waste-disposal" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Umzugsservice / Moving Service -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/umzugsservice</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/umzugsservice" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/moving-service" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/moving-service</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/umzugsservice" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/moving-service" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Garagenräumung / Garage Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/garageraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/garageraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/garage-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/garage-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/garageraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/garage-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Büroauflösung / Office Dissolution -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/buroaufloesungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/buroaufloesungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/office-dissolution" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/office-dissolution</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/buroaufloesungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/office-dissolution" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Verlassenschaftsräumung / Probate Estate Clearing -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/verlassenschaftsraeumungen</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/verlassenschaftsraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/probate-estate-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/probate-estate-clearing</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/verlassenschaftsraeumungen" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/probate-estate-clearing" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Containerservice / Container Service -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/containerservice</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/containerservice" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/container-service" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/container-service</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/containerservice" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/container-service" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Erbstücksankauf / Heirloom Purchase -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/erbstuecksankauf</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/erbstuecksankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/heirloom-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/heirloom-purchase</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/erbstuecksankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/heirloom-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Goldankauf / Gold Purchase -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/goldankauf</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/goldankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/gold-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/gold-purchase</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/goldankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/gold-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Teppichankauf / Carpet Purchase -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/teppichankauf</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/teppichankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/carpet-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/carpet-purchase</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/teppichankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/carpet-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Bilderankauf / Painting Purchase -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/bilderankauf</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/bilderankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/painting-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/painting-purchase</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/bilderankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/painting-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Antikwarenankauf / Antiques Purchase -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/antikwarenankauf</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/antikwarenankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/antiques-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/services/antiques-purchase</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/antikwarenankauf" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/antiques-purchase" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Districts Overview -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bezirke" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/districts" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/districts</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bezirke" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/districts" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- District Detail Pages (23 Vienna Districts) -->
+  <!-- Note: Only DE versions as districts are Vienna-specific -->
+  <!-- ============================================ -->
+
+  <!-- 1010 Innere Stadt -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1010-wien-innere-stadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 1020 Leopoldstadt -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1020-wien-leopoldstadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 1030 Landstraße -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1030-wien-landstrasse</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 1040 Wieden -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1040-wien-wieden</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1050 Margareten -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1050-wien-margareten</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1060 Mariahilf -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1060-wien-mariahilf</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1070 Neubau -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1070-wien-neubau</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1080 Josefstadt -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1080-wien-josefstadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1090 Alsergrund -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1090-wien-alsergrund</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1100 Favoriten -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1100-wien-favoriten</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1110 Simmering -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1110-wien-simmering</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1120 Meidling -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1120-wien-meidling</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1130 Hietzing -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1130-wien-hietzing</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1140 Penzing -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1140-wien-penzing</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1150 Rudolfsheim-Fünfhaus -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1150-wien-rudolfsheim-funfhaus</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1160 Ottakring -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1160-wien-ottakring</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1170 Hernals -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1170-wien-hernals</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1180 Währing -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1180-wien-wahring</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1190 Döbling -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1190-wien-dobling</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1200 Brigittenau -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1200-wien-brigittenau</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1210 Floridsdorf -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1210-wien-floridsdorf</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1220 Donaustadt -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1220-wien-donaustadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 1230 Liesing -->
+  <url>
+    <loc>https://flaechenfrei.at/bezirke/1230-wien-liesing</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Federal States Overview -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Federal State Detail Pages (9 States x 2 Languages = 18 URLs) -->
+  <!-- ============================================ -->
+
+  <!-- Wien / Vienna -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/wien</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/wien" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/vienna" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/vienna</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/wien" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/vienna" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Niederösterreich / Lower Austria -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/niederoesterreich</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/niederoesterreich" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/lower-austria" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/lower-austria</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/niederoesterreich" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/lower-austria" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Oberösterreich / Upper Austria -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/oberoesterreich</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/oberoesterreich" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/upper-austria" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/upper-austria</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/oberoesterreich" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/upper-austria" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Steiermark / Styria -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/steiermark</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/steiermark" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/styria" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/styria</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/steiermark" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/styria" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Salzburg -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/salzburg</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/salzburg" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/salzburg" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/salzburg</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/salzburg" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/salzburg" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Tirol / Tyrol -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/tirol</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/tirol" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/tyrol" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/tyrol</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/tirol" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/tyrol" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Kärnten / Carinthia -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/kaernten</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/kaernten" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/carinthia" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/carinthia</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/kaernten" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/carinthia" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Vorarlberg -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/vorarlberg</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/vorarlberg" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/vorarlberg" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/vorarlberg</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/vorarlberg" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/vorarlberg" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Burgenland -->
+  <url>
+    <loc>https://flaechenfrei.at/bundeslaender/burgenland</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/burgenland" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/burgenland" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/federal-states/burgenland</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/bundeslaender/burgenland" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/federal-states/burgenland" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- FAQ Page -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://flaechenfrei.at/faq</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/faq" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/faq" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/faq" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Contact Page -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://flaechenfrei.at/kontakt</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/contact" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/kontakt" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/contact" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Legal Pages -->
+  <!-- ============================================ -->
+
+  <!-- Datenschutz / Privacy -->
+  <url>
+    <loc>https://flaechenfrei.at/datenschutz</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/privacy" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/datenschutz" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/privacy" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Impressum / Imprint -->
+  <url>
+    <loc>https://flaechenfrei.at/impressum</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/imprint" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/imprint</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/impressum" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/imprint" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- AGB / Terms -->
+  <url>
+    <loc>https://flaechenfrei.at/agb</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/agb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/terms" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/agb" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/terms" />
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- Sample Service+Region Pages (1000+ total exist) -->
+  <!-- Only showing top priority examples -->
+  <!-- ============================================ -->
+
+  <!-- Wohnungsräumung + Top Districts -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/wohnungsraeumungen/bezirk/innere-stadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/wohnungsraeumungen/bezirk/leopoldstadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Haushaltsauflösung + Top Districts -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/haushaltsaufloesungen/bezirk/innere-stadt</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Kellerräumung + Niederösterreich -->
+  <url>
+    <loc>https://flaechenfrei.at/leistungen/kellerraeumungen/bundesland/niederoesterreich</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Note: The website has 1000+ programmatic Service+Region pages -->
+  <!-- Format: /leistungen/{service}/{type}/{region} -->
+  <!-- where type = bezirk | bundesland | stadt -->
+  <!-- These are dynamically generated with unique content -->
+  <!-- Complete listing available on request -->
+
+</urlset>
