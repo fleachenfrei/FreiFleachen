@@ -119,7 +119,7 @@ export const translations = {
       otherProjects: 'Unsere weiteren Projekte',
       projects: {
         themegaradio: {
-          name: 'The Mega Radio',
+          name: 'Megaradio',
           description: 'Online-Radio & Streaming',
         },
         esimfo: {
@@ -495,7 +495,7 @@ export const translations = {
       otherProjects: 'Our Other Projects',
       projects: {
         themegaradio: {
-          name: 'The Mega Radio',
+          name: 'Megaradio',
           description: 'Online Radio & Streaming',
         },
         esimfo: {
