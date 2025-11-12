@@ -3,7 +3,9 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const servicesPath = language === 'de' ? '/de/leistungen' : '/en/services';
+  const districtsPath = language === 'de' ? '/de/bezirke' : '/en/districts';
 
   const districts = [
     '1010 Wien Innere Stadt',
@@ -30,10 +32,10 @@ export default function Footer() {
               {t.footer.services}
             </h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              <li><Link href="/leistungen#wohnung" className="hover:text-primary-foreground">Wohnungsräumung</Link></li>
-              <li><Link href="/leistungen#haus" className="hover:text-primary-foreground">Hausräumung</Link></li>
-              <li><Link href="/leistungen#verlassenschaft" className="hover:text-primary-foreground">Verlassenschaft</Link></li>
-              <li><Link href="/leistungen#transport" className="hover:text-primary-foreground">Transport</Link></li>
+              <li><Link href={servicesPath} className="hover:text-primary-foreground">{language === 'de' ? 'Wohnungsräumung' : 'Apartment Clearing'}</Link></li>
+              <li><Link href={servicesPath} className="hover:text-primary-foreground">{language === 'de' ? 'Hausräumung' : 'House Clearing'}</Link></li>
+              <li><Link href={servicesPath} className="hover:text-primary-foreground">{language === 'de' ? 'Verlassenschaft' : 'Estate Clearing'}</Link></li>
+              <li><Link href={servicesPath} className="hover:text-primary-foreground">{language === 'de' ? 'Transport' : 'Transport'}</Link></li>
             </ul>
           </div>
 
@@ -44,7 +46,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               {districts.slice(0, 4).map((district, i) => (
                 <li key={i}>
-                  <Link href={`/bezirke/${district.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-primary-foreground">
+                  <Link href={`${districtsPath}/${district.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-primary-foreground">
                     {district}
                   </Link>
                 </li>

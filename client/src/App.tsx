@@ -21,15 +21,26 @@ function Router() {
     <>
       <ScrollToTop />
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/bezirke" component={Districts} />
-        <Route path="/bezirke/:slug" component={DistrictPage} />
-        <Route path="/bundeslaender" component={Bundeslaender} />
-        <Route path="/bundeslaender/:bundesland/:city" component={CityPage} />
-        <Route path="/bundeslaender/:slug" component={BundeslandPage} />
-        <Route path="/leistungen" component={Services} />
-        <Route path="/leistungen/:slug" component={ServicePage} />
-        <Route path="/kontakt" component={Contact} />
+        <Route path="/de" component={Home} />
+        <Route path="/de/bezirke" component={Districts} />
+        <Route path="/de/bezirke/:slug" component={DistrictPage} />
+        <Route path="/de/bundeslaender" component={Bundeslaender} />
+        <Route path="/de/bundeslaender/:bundesland/:city" component={CityPage} />
+        <Route path="/de/bundeslaender/:slug" component={BundeslandPage} />
+        <Route path="/de/leistungen" component={Services} />
+        <Route path="/de/leistungen/:slug" component={ServicePage} />
+        <Route path="/de/kontakt" component={Contact} />
+        
+        <Route path="/en" component={Home} />
+        <Route path="/en/districts" component={Districts} />
+        <Route path="/en/districts/:slug" component={DistrictPage} />
+        <Route path="/en/federal-states" component={Bundeslaender} />
+        <Route path="/en/federal-states/:bundesland/:city" component={CityPage} />
+        <Route path="/en/federal-states/:slug" component={BundeslandPage} />
+        <Route path="/en/services" component={Services} />
+        <Route path="/en/services/:slug" component={ServicePage} />
+        <Route path="/en/contact" component={Contact} />
+        
         <Route component={NotFound} />
       </Switch>
     </>

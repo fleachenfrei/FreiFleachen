@@ -1,31 +1,34 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'wouter';
+import { Link, useLocation, useRouter } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getLocalizedPath } from '@/lib/urlMapping';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [location] = useLocation();
-  const { language, setLanguage, t } = useLanguage();
+  const [location, setLocation] = useLocation();
+  const { language, t } = useLanguage();
 
   const toggleLanguage = () => {
-    setLanguage(language === 'de' ? 'en' : 'de');
+    const newLanguage = language === 'de' ? 'en' : 'de';
+    const newPath = getLocalizedPath(location, newLanguage);
+    setLocation(newPath);
   };
 
   const navItems = [
-    { label: t.nav.home, path: '/' },
-    { label: t.nav.services, path: '/leistungen' },
-    { label: t.nav.districts, path: '/bezirke' },
-    { label: t.nav.states, path: '/bundeslaender' },
-    { label: t.nav.contact, path: '/kontakt' },
+    { label: t.nav.home, path: language === 'de' ? '/de' : '/en' },
+    { label: t.nav.services, path: language === 'de' ? '/de/leistungen' : '/en/services' },
+    { label: t.nav.districts, path: language === 'de' ? '/de/bezirke' : '/en/districts' },
+    { label: t.nav.states, path: language === 'de' ? '/de/bundeslaender' : '/en/federal-states' },
+    { label: t.nav.contact, path: language === 'de' ? '/de/kontakt' : '/en/contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={language === 'de' ? '/de' : '/en'} className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <div className="text-2xl font-bold text-primary">Flächen Frei</div>
             </div>

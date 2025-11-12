@@ -13,6 +13,25 @@ export const routeMapping: Record<string, RouteConfig> = {
   contact: { de: '/de/kontakt', en: '/en/contact' },
 };
 
+const serviceSlugMap: Record<string, string> = {
+  'wohnungsraeumungen': 'apartment-clearing',
+  'haushaltsaufloesung': 'household-dissolution',
+  'kellerraeumung': 'basement-clearing',
+  'dachbodenraeumung': 'attic-clearing',
+  'geschaeftsraeumung': 'commercial-clearing',
+  'messie-raeumung': 'hoarding-clearing',
+  'sperrmullentsorgung': 'bulky-waste-disposal',
+  'umzugsservice': 'moving-service',
+  'garageraeumung': 'garage-clearing',
+  'bueroaufloesung': 'office-dissolution',
+  'verlassenschaftsraeumung': 'estate-clearing',
+  'container-service': 'container-service',
+};
+
+const reverseServiceSlugMap = Object.fromEntries(
+  Object.entries(serviceSlugMap).map(([k, v]) => [v, k])
+);
+
 export function getLocalizedPath(basePath: string, language: Language): string {
   if (basePath === '/' || basePath === '/de' || basePath === '/en') {
     return language === 'de' ? '/de' : '/en';
@@ -31,21 +50,6 @@ export function getLocalizedPath(basePath: string, language: Language): string {
     '/contact': routeMapping.contact,
   };
 
-  const serviceMapping: Record<string, string> = {
-    'wohnungsraeumung': 'apartment-clearing',
-    'haushaltsaufloesung': 'household-dissolution',
-    'kellerraeumung': 'basement-clearing',
-    'dachbodenraeumung': 'attic-clearing',
-    'geschaeftsraeumung': 'commercial-clearing',
-    'buroraeumung': 'office-clearing',
-    'entrümpelung': 'decluttering',
-    'sperrmullentsorgung': 'bulk-waste-disposal',
-  };
-
-  const reverseServiceMapping = Object.fromEntries(
-    Object.entries(serviceMapping).map(([k, v]) => [v, k])
-  );
-
   for (const [path, config] of Object.entries(pathMappings)) {
     if (pathWithoutLang.startsWith(path)) {
       const remainder = pathWithoutLang.slice(path.length);
@@ -53,10 +57,10 @@ export function getLocalizedPath(basePath: string, language: Language): string {
         if (path === '/leistungen' || path === '/services') {
           const slug = remainder.slice(1);
           let translatedSlug = slug;
-          if (language === 'en' && serviceMapping[slug]) {
-            translatedSlug = serviceMapping[slug];
-          } else if (language === 'de' && reverseServiceMapping[slug]) {
-            translatedSlug = reverseServiceMapping[slug];
+          if (language === 'en' && serviceSlugMap[slug]) {
+            translatedSlug = serviceSlugMap[slug];
+          } else if (language === 'de' && reverseServiceSlugMap[slug]) {
+            translatedSlug = reverseServiceSlugMap[slug];
           }
           return `${config[language]}/${translatedSlug}`;
         }

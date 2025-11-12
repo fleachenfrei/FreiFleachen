@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRoute, Link } from 'wouter';
+import { useRoute, Link, useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -7,10 +7,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, CheckCircle, ArrowRight, Euro } from 'lucide-react';
-import { getServiceBySlug } from '@/data/services';
+import { getServiceBySlug, getServiceById, ServiceId, getLocalizedServicePath } from '@/data/services';
 import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getAlternateUrls } from '@/lib/urlMapping';
 import apartmentImage from '@assets/generated_images/Apartment_clearance_Vienna_fd741ce0.png';
 import estateImage from '@assets/generated_images/Estate_clearance_service_46b9585f.png';
 import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.png';
@@ -24,44 +25,52 @@ import officeDissolutionImage from '@assets/generated_images/Office_dissolution_
 import probateImage from '@assets/generated_images/Probate_estate_clearance_1eadd49e.png';
 import containerImage from '@assets/generated_images/Container_rental_service_f4846763.png';
 
-const serviceImages: Record<string, string> = {
-  'wohnungsräumungen': apartmentImage,
-  'haushaltsauflösung': estateImage,
-  'kellerräumung': basementImage,
-  'dachbodenräumung': atticImage,
-  'geschäftsräumung': officeImage,
-  'messie-räumung': messieImage,
-  'sperrmüllentsorgung': bulkyWasteImage,
-  'umzugsservice': movingImage,
-  'garageräumung': garageImage,
-  'büroauflösung': officeDissolutionImage,
-  'verlassenschaftsräumung': probateImage,
-  'container-service': containerImage,
+const serviceImages: Record<ServiceId, string> = {
+  [ServiceId.WOHNUNGSRAEUMUNG]: apartmentImage,
+  [ServiceId.HAUSHALTSAUFLOESUNG]: estateImage,
+  [ServiceId.KELLERRAEUMUNG]: basementImage,
+  [ServiceId.DACHBODENRAEUMUNG]: atticImage,
+  [ServiceId.GESCHAEFTSRAEUMUNG]: officeImage,
+  [ServiceId.MESSIERAEUMUNG]: messieImage,
+  [ServiceId.SPERRMULLENTSORGUNG]: bulkyWasteImage,
+  [ServiceId.UMZUGSSERVICE]: movingImage,
+  [ServiceId.GARAGERAEUMUNG]: garageImage,
+  [ServiceId.BUROAUFLOESUNG]: officeDissolutionImage,
+  [ServiceId.VERLASSENSCHAFTSRAEUMUNG]: probateImage,
+  [ServiceId.CONTAINERSERVICE]: containerImage,
 };
 
 export default function ServicePage() {
   const { t, language } = useLanguage();
-  const [match, params] = useRoute('/leistungen/:slug');
-  const service = params?.slug ? getServiceBySlug(params.slug) : null;
+  const [location] = useLocation();
+  const [matchDe, paramsDe] = useRoute('/de/leistungen/:slug');
+  const [matchEn, paramsEn] = useRoute('/en/services/:slug');
+  
+  const match = matchDe || matchEn;
+  const params = paramsDe || paramsEn;
+  const service = params?.slug ? getServiceBySlug(params.slug, language) : null;
 
   useEffect(() => {
     if (service) {
-      const title = `${service.name} Wien - Flächen Frei | Professionell & Schnell`;
-      const url = `/leistungen/${service.slug}`;
+      const content = service.content[language];
+      const title = `${content.name} Wien - Flächen Frei | Professionell & Schnell`;
+      const alternateUrls = getAlternateUrls(location);
 
       updateMetaTags({
         title,
-        description: service.metaDescription,
-        url,
+        description: content.metaDescription,
+        url: location,
         type: 'service',
-        image: serviceImages[service.slug],
+        image: serviceImages[service.id],
+        language,
+        alternateUrls,
       });
 
       const jsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        name: service.name,
-        description: service.description,
+        name: content.name,
+        description: content.description,
         provider: {
           '@type': 'LocalBusiness',
           name: 'Flächen Frei',
@@ -89,19 +98,22 @@ export default function ServicePage() {
 
       const schemas: Record<string, unknown>[] = [jsonLd];
       
-      if (service.faq && service.faq.length > 0) {
-        schemas.push(getFAQSchema(service.faq));
+      if (content.faq && content.faq.length > 0) {
+        schemas.push(getFAQSchema(content.faq));
       }
       
-      addMultipleJsonLd(schemas, `service-${service.slug}-schemas`);
+      addMultipleJsonLd(schemas, `service-${service.id}-schemas`);
     }
-  }, [service]);
+  }, [service, language, location]);
 
   if (!match || !service) {
     return null;
   }
 
-  const serviceImage = serviceImages[service.slug];
+  const content = service.content[language];
+  const serviceImage = serviceImages[service.id];
+  const servicePath = getLocalizedServicePath(service.id, language);
+  const servicesPath = language === 'de' ? '/de/leistungen' : '/en/services';
 
   return (
     <div className="min-h-screen bg-background">
@@ -111,8 +123,8 @@ export default function ServicePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: t.common.services, url: '/#services' },
-              { name: service.name, url: `/leistungen/${service.slug}` }
+              { name: t.common.services, url: `${servicesPath}#services` },
+              { name: content.name, url: servicePath }
             ]} 
           />
         </div>
@@ -130,10 +142,10 @@ export default function ServicePage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-service-title">
-                {service.name} {t.common.in} {t.common.wien}
+                {content.name} {t.common.in} {t.common.wien}
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
-                {service.shortDescription}
+                {content.shortDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call-service">
@@ -159,11 +171,11 @@ export default function ServicePage() {
               <div className="lg:col-span-2">
                 <Card className="mb-8">
                   <CardHeader>
-                    <CardTitle>{t.servicePage.about} {service.name}</CardTitle>
+                    <CardTitle>{t.servicePage.about} {content.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                      {service.description}
+                      {content.description}
                     </p>
                   </CardContent>
                 </Card>
@@ -175,7 +187,7 @@ export default function ServicePage() {
                   </CardHeader>
                   <CardContent>
                     <div className="grid gap-4">
-                      {service.benefits.map((benefit, index) => (
+                      {content.benefits.map((benefit, index) => (
                         <div key={index} className="flex items-start gap-3">
                           <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
                           <p className="text-muted-foreground">{benefit}</p>
@@ -192,7 +204,7 @@ export default function ServicePage() {
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-6">
-                      {service.process.map((step) => (
+                      {content.process.map((step) => (
                         <div key={step.step} className="flex gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
@@ -215,15 +227,15 @@ export default function ServicePage() {
                       <Euro className="w-6 h-6" />
                       {t.servicePage.pricing}
                     </CardTitle>
-                    <CardDescription>{t.servicePage.pricingSubtitle} {service.name}?</CardDescription>
+                    <CardDescription>{t.servicePage.pricingSubtitle} {content.name}?</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-6">
-                      {service.pricing.info}
+                      {content.pricing.info}
                     </p>
                     <h4 className="font-semibold mb-3">{t.servicePage.pricingFactors}</h4>
                     <ul className="space-y-2">
-                      {service.pricing.factors.map((factor, index) => (
+                      {content.pricing.factors.map((factor, index) => (
                         <li key={index} className="flex items-start gap-2 text-muted-foreground">
                           <ArrowRight className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
                           <span>{factor}</span>
@@ -242,11 +254,11 @@ export default function ServicePage() {
                 <Card>
                   <CardHeader>
                     <CardTitle>{t.servicePage.faq}</CardTitle>
-                    <CardDescription>{t.servicePage.faqSubtitle} {service.name}</CardDescription>
+                    <CardDescription>{t.servicePage.faqSubtitle} {content.name}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Accordion type="single" collapsible className="w-full">
-                      {service.faq.map((faq, index) => (
+                      {content.faq.map((faq, index) => (
                         <AccordionItem key={index} value={`faq-${index}`}>
                           <AccordionTrigger className="text-left">
                             {faq.question}
@@ -297,23 +309,25 @@ export default function ServicePage() {
                       <CardTitle className="text-lg">{t.servicePage.relatedServices}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
-                      {service.relatedServices.map((relatedSlug) => {
-                        const relatedService = getServiceBySlug(relatedSlug);
+                      {service.relatedServices.map((relatedId) => {
+                        const relatedService = getServiceById(relatedId);
                         if (!relatedService) return null;
+                        const relatedContent = relatedService.content[language];
+                        const relatedPath = getLocalizedServicePath(relatedService.id, language);
                         return (
-                          <Link key={relatedSlug} href={`/leistungen/${relatedSlug}`}>
+                          <Link key={relatedId} href={relatedPath}>
                             <div className="hover-elevate active-elevate-2 p-3 rounded-lg border cursor-pointer transition-all">
-                              <h4 className="font-semibold text-sm mb-1">{relatedService.name}</h4>
+                              <h4 className="font-semibold text-sm mb-1">{relatedContent.name}</h4>
                               <p className="text-xs text-muted-foreground line-clamp-2">
-                                {relatedService.shortDescription}
+                                {relatedContent.shortDescription}
                               </p>
                             </div>
                           </Link>
                         );
                       })}
-                      <Link href="/leistungen">
+                      <Link href={servicesPath}>
                         <Button variant="ghost" className="w-full">
-                          Alle Leistungen anzeigen
+                          {language === 'de' ? 'Alle Leistungen anzeigen' : 'View All Services'}
                           <ArrowRight className="ml-2 w-4 h-4" />
                         </Button>
                       </Link>
