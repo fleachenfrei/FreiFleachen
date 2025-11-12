@@ -42,7 +42,7 @@ export default function Districts() {
                     +43660 39 57 587
                   </Button>
                 </a>
-                <a href="mailto:office@flaechenfrei.at">
+                <a href="mailto:info@flaechenfrei.at">
                   <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
                     E-Mail senden
                   </Button>

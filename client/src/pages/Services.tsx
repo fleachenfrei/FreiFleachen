@@ -70,7 +70,7 @@ export default function Services() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-                  <a href="mailto:office@flaechenfrei.at">
+                  <a href="mailto:info@flaechenfrei.at">
                     E-Mail Anfrage
                   </a>
                 </Button>
@@ -142,7 +142,7 @@ export default function Services() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <a href="mailto:office@flaechenfrei.at">
+                <a href="mailto:info@flaechenfrei.at">
                   E-Mail senden
                 </a>
               </Button>

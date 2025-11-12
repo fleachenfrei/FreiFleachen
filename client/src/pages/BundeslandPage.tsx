@@ -46,7 +46,7 @@ export default function BundeslandPage() {
           '@type': 'LocalBusiness',
           'name': 'Flächen Frei',
           'telephone': '+4366039575587',
-          'email': 'office@flaechenfrei.at',
+          'email': 'info@flaechenfrei.at',
           'areaServed': {
             '@type': 'State',
             'name': language === 'de' ? state.name : state.nameEn,

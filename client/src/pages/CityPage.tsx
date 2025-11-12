@@ -39,7 +39,7 @@ export default function CityPage() {
         '@id': url,
         url: `${window.location.origin}${url}`,
         telephone: '+43660 39 57 587',
-        email: 'office@flaechenfrei.at',
+        email: 'info@flaechenfrei.at',
         address: {
           '@type': 'PostalAddress',
           addressLocality: city.name,
@@ -261,14 +261,14 @@ export default function CityPage() {
                     </a>
                     
                     <a 
-                      href="mailto:office@flaechenfrei.at" 
+                      href="mailto:info@flaechenfrei.at" 
                       className="flex items-center gap-3 p-3 hover-elevate active-elevate-2 rounded-md border"
                       data-testid="link-email"
                     >
                       <Mail className="w-5 h-5 text-primary shrink-0" />
                       <div>
                         <div className="font-medium">E-Mail</div>
-                        <div className="text-sm text-muted-foreground">office@flaechenfrei.at</div>
+                        <div className="text-sm text-muted-foreground">info@flaechenfrei.at</div>
                       </div>
                     </a>
 
@@ -326,7 +326,7 @@ export default function CityPage() {
                   +43660 39 57 587
                 </Button>
               </a>
-              <a href="mailto:office@flaechenfrei.at">
+              <a href="mailto:info@flaechenfrei.at">
                 <Button size="lg" variant="outline" data-testid="button-cta-email">
                   <Mail className="mr-2 w-5 h-5" />
                   E-Mail schreiben

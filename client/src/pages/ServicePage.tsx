@@ -64,7 +64,7 @@ export default function ServicePage() {
           '@type': 'LocalBusiness',
           name: 'Flächen Frei',
           telephone: '+4366039575587',
-          email: 'office@flaechenfrei.at',
+          email: 'info@flaechenfrei.at',
           address: {
             '@type': 'PostalAddress',
             addressLocality: 'Wien',
@@ -141,7 +141,7 @@ export default function ServicePage() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-                  <a href="mailto:office@flaechenfrei.at">
+                  <a href="mailto:info@flaechenfrei.at">
                     <Mail className="mr-2 w-5 h-5" />
                     E-Mail Anfrage
                   </a>
@@ -277,7 +277,7 @@ export default function ServicePage() {
                         </a>
                       </Button>
                       <Button asChild size="lg" variant="outline" className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20">
-                        <a href="mailto:office@flaechenfrei.at">
+                        <a href="mailto:info@flaechenfrei.at">
                           <Mail className="mr-2 w-5 h-5" />
                           E-Mail senden
                         </a>

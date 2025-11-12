@@ -52,7 +52,7 @@ export default function Contact() {
       '@id': window.location.origin,
       url: window.location.origin,
       telephone: '+43660 39 57 587',
-      email: 'office@flaechenfrei.at',
+      email: 'info@flaechenfrei.at',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Herndlgasse 7/17',
@@ -175,8 +175,8 @@ export default function Contact() {
                 <CardDescription>{language === 'de' ? 'Schnelle Antwort' : 'Quick response'}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="mailto:office@flaechenfrei.at" className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
-                  office@flaechenfrei.at
+                <a href="mailto:info@flaechenfrei.at" className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
+                  info@flaechenfrei.at
                 </a>
               </CardContent>
             </Card>

@@ -97,7 +97,7 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
       : 'Professional clearing and transport services in Vienna and throughout Austria. Fast, reliable, and at fair prices.',
     'url': 'https://flaechenfrei.at',
     'telephone': '+43660 39 57 587',
-    'email': 'office@flaechenfrei.at',
+    'email': 'info@flaechenfrei.at',
     'priceRange': '€€',
     'image': 'https://flaechenfrei.at/og-image.jpg',
     'logo': {
@@ -266,7 +266,7 @@ export function getOrganizationSchema() {
       '@type': 'ContactPoint',
       'telephone': '+43660 39 57 587',
       'contactType': 'customer service',
-      'email': 'office@flaechenfrei.at',
+      'email': 'info@flaechenfrei.at',
       'areaServed': 'AT',
       'availableLanguage': ['de', 'en'],
     },

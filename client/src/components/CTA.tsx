@@ -29,7 +29,7 @@ export default function CTA() {
               +43660 39 57 587
             </Button>
           </a>
-          <a href="mailto:office@flaechenfrei.at">
+          <a href="mailto:info@flaechenfrei.at">
             <Button
               size="lg"
               variant="outline"

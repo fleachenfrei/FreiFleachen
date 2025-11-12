@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-                <a href="mailto:office@flaechenfrei.at" className="hover:text-primary-foreground">office@flaechenfrei.at</a>
+                <a href="mailto:info@flaechenfrei.at" className="hover:text-primary-foreground">info@flaechenfrei.at</a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
