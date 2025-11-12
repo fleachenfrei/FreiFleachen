@@ -3,9 +3,10 @@ import { useParams, Link } from 'wouter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { MapPin, Phone, Mail, CheckCircle, Building2, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, CheckCircle, Building2, Clock, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { states } from '@/data/states';
+import { getCitiesByBundesland } from '@/data/cities';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -68,6 +69,7 @@ export default function BundeslandPage() {
   const cities = language === 'de' ? state.cities : state.citiesEn;
   const whyChooseUs = language === 'de' ? state.whyChooseUs : state.whyChooseUsEn;
   const faqs = language === 'de' ? state.faqs : state.faqsEn;
+  const cityPages = getCitiesByBundesland(state.slug);
 
   return (
     <div className="min-h-screen bg-background">
@@ -129,15 +131,59 @@ export default function BundeslandPage() {
           </div>
         </section>
 
-        {/* Coverage Areas */}
-        <section className="py-16 bg-muted/30">
+        {/* City Pages - SEO Optimized Individual Pages */}
+        {cityPages.length > 0 && (
+          <section className="py-16 bg-muted/30">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-foreground mb-4" data-testid="text-cities-title">
+                {language === 'de' ? `Räumung in Städten von ${stateName}` : `Clearing in Cities of ${stateName}`}
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                {language === 'de' 
+                  ? `Wir sind in allen größeren Städten von ${stateName} tätig. Wählen Sie Ihre Stadt für detaillierte Informationen:`
+                  : `We operate in all major cities of ${stateName}. Select your city for detailed information:`
+                }
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {cityPages.map((city) => (
+                  <Link key={city.slug} href={`/bundeslaender/${state.slug}/${city.slug}`}>
+                    <Card className="hover-elevate cursor-pointer h-full" data-testid={`card-city-${city.slug}`}>
+                      <CardHeader>
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="flex items-center gap-3 flex-1">
+                            <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                              <Building2 className="w-5 h-5 text-primary" />
+                            </div>
+                            <div>
+                              <CardTitle className="text-lg">{city.name}</CardTitle>
+                              <CardDescription className="text-sm">{city.postalCode}</CardDescription>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-5 h-5 text-primary shrink-0" />
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-sm text-muted-foreground line-clamp-2">
+                          {city.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Coverage Areas - General Cities */}
+        <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-coverage-title">
-              {language === 'de' ? 'Unser Einsatzgebiet' : 'Our Service Area'}
+              {language === 'de' ? 'Unser gesamtes Einsatzgebiet' : 'Our Complete Service Area'}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {cities.map((city, index) => (
-                <Card key={index} className="hover-elevate" data-testid={`card-city-${index}`}>
+                <Card key={index} className="hover-elevate" data-testid={`card-coverage-${index}`}>
                   <CardHeader className="flex flex-row items-center gap-3 space-y-0 pb-3">
                     <Building2 className="w-5 h-5 text-primary" />
                     <CardTitle className="text-base">{city}</CardTitle>

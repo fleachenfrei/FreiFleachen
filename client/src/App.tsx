@@ -10,6 +10,7 @@ import Districts from "@/pages/Districts";
 import DistrictPage from "@/pages/DistrictPage";
 import Bundeslaender from "@/pages/Bundeslaender";
 import BundeslandPage from "@/pages/BundeslandPage";
+import CityPage from "@/pages/CityPage";
 import Services from "@/pages/Services";
 import ServicePage from "@/pages/ServicePage";
 import Contact from "@/pages/Contact";
@@ -24,6 +25,7 @@ function Router() {
         <Route path="/bezirke" component={Districts} />
         <Route path="/bezirke/:slug" component={DistrictPage} />
         <Route path="/bundeslaender" component={Bundeslaender} />
+        <Route path="/bundeslaender/:bundesland/:city" component={CityPage} />
         <Route path="/bundeslaender/:slug" component={BundeslandPage} />
         <Route path="/leistungen" component={Services} />
         <Route path="/leistungen/:slug" component={ServicePage} />

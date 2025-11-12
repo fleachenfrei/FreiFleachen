@@ -14,12 +14,12 @@ export interface CityInfo {
 }
 
 export const cities: Record<string, CityInfo[]> = {
-  niederösterreich: [
+  niederoesterreich: [
     {
       name: 'St. Pölten',
       slug: 'st-poelten',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '3100',
       population: 55000,
       description: 'Professionelle Räumung und Transport in St. Pölten, der Landeshauptstadt von Niederösterreich. Wir sind Ihr zuverlässiger Partner für Wohnungsräumung, Haushaltsauflösung und Kellerräumung in St. Pölten und Umgebung.',
@@ -48,7 +48,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Wiener Neustadt',
       slug: 'wiener-neustadt',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '2700',
       population: 45000,
       description: 'Professionelle Räumungsdienste in Wiener Neustadt. Von der Innenstadt bis zu den Außenbezirken - wir räumen Wohnungen, Häuser und Keller schnell und zuverlässig.',
@@ -72,7 +72,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Baden',
       slug: 'baden',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '2500',
       population: 26000,
       description: 'Räumung und Transport in Baden bei Wien. Spezialisiert auf die besonderen Anforderungen der Kurstadt mit ihren historischen Villen und Altbauten.',
@@ -96,7 +96,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Klosterneuburg',
       slug: 'klosterneuburg',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '3400',
       population: 28000,
       description: 'Professionelle Räumung in Klosterneuburg. Schnelle Anfahrt aus Wien, spezialisiert auf Wohnungen und Häuser in allen Stadtteilen.',
@@ -115,7 +115,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Mödling',
       slug: 'moedling',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '2340',
       population: 21000,
       description: 'Räumungsdienste in Mödling. Von kleinen Wohnungen bis zu großen Häusern - wir räumen professionell und zuverlässig.',
@@ -134,7 +134,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Krems an der Donau',
       slug: 'krems',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '3500',
       population: 25000,
       description: 'Räumung in Krems an der Donau und Umgebung. Professionelle Dienstleistungen für die gesamte Wachau-Region.',
@@ -153,7 +153,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Amstetten',
       slug: 'amstetten',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '3300',
       population: 24000,
       description: 'Professionelle Räumung in Amstetten. Schnell und zuverlässig für Wohnungen, Häuser und Gewerbeobjekte.',
@@ -172,7 +172,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Traiskirchen',
       slug: 'traiskirchen',
       bundesland: 'Niederösterreich',
-      bundeslandSlug: 'niederösterreich',
+      bundeslandSlug: 'niederoesterreich',
       postalCode: '2514',
       population: 18000,
       description: 'Räumung in Traiskirchen. Schnelle Anfahrt aus Wien für alle Räumungsarbeiten.',
@@ -271,12 +271,12 @@ export const cities: Record<string, CityInfo[]> = {
       faq: []
     }
   ],
-  oberösterreich: [
+  oberoesterreich: [
     {
       name: 'Linz',
       slug: 'linz',
       bundesland: 'Oberösterreich',
-      bundeslandSlug: 'oberösterreich',
+      bundeslandSlug: 'oberoesterreich',
       postalCode: '4020',
       population: 206000,
       description: 'Professionelle Räumung in Linz, der Landeshauptstadt von Oberösterreich. Schnell, zuverlässig und zu fairen Preisen in allen Stadtteilen.',
@@ -305,7 +305,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Wels',
       slug: 'wels',
       bundesland: 'Oberösterreich',
-      bundeslandSlug: 'oberösterreich',
+      bundeslandSlug: 'oberoesterreich',
       postalCode: '4600',
       population: 62000,
       description: 'Räumung in Wels - professionell, schnell und zuverlässig in der zweitgrößten Stadt Oberösterreichs.',
@@ -324,7 +324,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Steyr',
       slug: 'steyr',
       bundesland: 'Oberösterreich',
-      bundeslandSlug: 'oberösterreich',
+      bundeslandSlug: 'oberoesterreich',
       postalCode: '4400',
       population: 38000,
       description: 'Professionelle Räumungsdienste in Steyr. Expertise für historische Gebäude in der Altstadt.',
@@ -343,7 +343,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Leonding',
       slug: 'leonding',
       bundesland: 'Oberösterreich',
-      bundeslandSlug: 'oberösterreich',
+      bundeslandSlug: 'oberoesterreich',
       postalCode: '4060',
       population: 29000,
       description: 'Räumung in Leonding bei Linz. Schnelle Anfahrt, professioneller Service.',
@@ -548,12 +548,12 @@ export const cities: Record<string, CityInfo[]> = {
       faq: []
     }
   ],
-  kärnten: [
+  kaernten: [
     {
       name: 'Klagenfurt',
       slug: 'klagenfurt',
       bundesland: 'Kärnten',
-      bundeslandSlug: 'kärnten',
+      bundeslandSlug: 'kaernten',
       postalCode: '9020',
       population: 101000,
       description: 'Professionelle Räumung in Klagenfurt am Wörthersee, der Landeshauptstadt von Kärnten.',
@@ -573,7 +573,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Villach',
       slug: 'villach',
       bundesland: 'Kärnten',
-      bundeslandSlug: 'kärnten',
+      bundeslandSlug: 'kaernten',
       postalCode: '9500',
       population: 63000,
       description: 'Räumung in Villach, der zweitgrößten Stadt Kärntens.',
@@ -592,7 +592,7 @@ export const cities: Record<string, CityInfo[]> = {
       name: 'Wolfsberg',
       slug: 'wolfsberg',
       bundesland: 'Kärnten',
-      bundeslandSlug: 'kärnten',
+      bundeslandSlug: 'kaernten',
       postalCode: '9400',
       population: 25000,
       description: 'Professionelle Räumungsdienste in Wolfsberg im Lavanttal.',

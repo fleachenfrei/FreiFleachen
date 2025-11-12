@@ -1,21 +1,46 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-50">
-      <Card className="w-full max-w-md mx-4">
-        <CardContent className="pt-6">
-          <div className="flex mb-4 gap-2">
-            <AlertCircle className="h-8 w-8 text-red-500" />
-            <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="flex min-h-[70vh] items-center justify-center">
+        <div className="w-full max-w-md px-4">
+          <div className="flex flex-col items-center space-y-6 text-center">
+            <div className="rounded-full bg-destructive/10 p-4">
+              <AlertCircle className="h-12 w-12 text-destructive" />
+            </div>
+            <h1 className="text-4xl font-bold tracking-tight">
+              404
+            </h1>
+            <div className="space-y-2">
+              <h2 className="text-xl font-semibold">
+                Seite nicht gefunden
+              </h2>
+              <p className="text-muted-foreground">
+                Die von Ihnen gesuchte Seite existiert leider nicht.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 pt-4">
+              <Link href="/">
+                <Button size="lg">
+                  Zur Startseite
+                </Button>
+              </Link>
+              <Link href="/kontakt">
+                <Button size="lg" variant="outline">
+                  Kontakt
+                </Button>
+              </Link>
+            </div>
           </div>
-
-          <p className="mt-4 text-sm text-gray-600">
-            Did you forget to add the page to the router?
-          </p>
-        </CardContent>
-      </Card>
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
