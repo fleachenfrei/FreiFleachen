@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
 import { states } from '@/data/states';
@@ -88,6 +88,22 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
                 <span>Herndlgasse 7/17, 1100 Wien</span>
+              </li>
+              <li className="flex items-start gap-2 mt-4 pt-3 border-t border-primary-foreground/20">
+                <Clock className="w-4 h-4 mt-0.5 shrink-0" />
+                <div className="flex flex-col">
+                  <div className="flex gap-2">
+                    <span className="font-semibold">{t.contact.hours.weekdays}:</span>
+                    <span>{t.contact.hours.weekdaysTime}</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="font-semibold">{t.contact.hours.saturday}:</span>
+                    <span>{t.contact.hours.saturdayTime}</span>
+                  </div>
+                  <div className="mt-2 text-accent font-semibold">
+                    {t.contact.hours.emergency}
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
