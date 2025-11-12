@@ -3,7 +3,7 @@ import { useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { updateMetaTags } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema } from '@/lib/seo';
 import { getAlternateUrls } from '@/lib/urlMapping';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -20,26 +20,6 @@ export default function FAQ() {
   const { language } = useLanguage();
   const [location] = useLocation();
   const [openItem, setOpenItem] = useState<string>('');
-
-  useEffect(() => {
-    const title = language === 'de'
-      ? 'Häufig gestellte Fragen (FAQ) | Flächen Frei'
-      : 'Frequently Asked Questions (FAQ) | Flächen Frei';
-
-    const description = language === 'de'
-      ? 'Antworten auf häufig gestellte Fragen zu Räumung, Entrümpelung und Transport in Österreich. Preise, Ablauf, Termine und mehr.'
-      : 'Answers to frequently asked questions about clearing, removal and transport services in Austria. Prices, process, scheduling and more.';
-
-    const alternateUrls = getAlternateUrls(location);
-
-    updateMetaTags({
-      title,
-      description,
-      url: location,
-      language,
-      alternateUrls,
-    });
-  }, [language, location]);
 
   const faqsDE: FAQItem[] = [
     {
@@ -144,6 +124,28 @@ export default function FAQ() {
   ];
 
   const faqs = language === 'de' ? faqsDE : faqsEN;
+
+  useEffect(() => {
+    const title = language === 'de'
+      ? 'Häufig gestellte Fragen (FAQ) | Flächen Frei'
+      : 'Frequently Asked Questions (FAQ) | Flächen Frei';
+
+    const description = language === 'de'
+      ? 'Antworten auf häufig gestellte Fragen zu Räumung, Entrümpelung und Transport in Österreich. Preise, Ablauf, Termine und mehr.'
+      : 'Answers to frequently asked questions about clearing, removal and transport services in Austria. Prices, process, scheduling and more.';
+
+    const alternateUrls = getAlternateUrls(location);
+
+    updateMetaTags({
+      title,
+      description,
+      url: location,
+      language,
+      alternateUrls,
+    });
+
+    addJsonLd(getFAQSchema(faqs), 'faq-page-schema');
+  }, [language, location, faqs]);
 
   return (
     <div className="min-h-screen bg-background">
