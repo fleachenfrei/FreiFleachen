@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
-import { getLocalizedPath } from '@/lib/urlMapping';
+import { getLocalizedPath, getLocalizedDistrictsPath, getLocalizedBundeslaenderPath } from '@/lib/urlMapping';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,6 +20,8 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { ServiceId, getLocalizedServicePath } from '@/data/services';
+import { getAllDistricts } from '@/data/districts';
+import { states } from '@/data/states';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,9 +37,10 @@ export default function Header() {
   const navItems = [
     { label: t.nav.home, path: language === 'de' ? '/' : '/en' },
     { label: t.nav.services, path: language === 'de' ? '/leistungen' : '/en/services' },
-    { label: t.nav.districts, path: language === 'de' ? '/bezirke' : '/en/districts' },
-    { label: t.nav.states, path: language === 'de' ? '/bundeslaender' : '/en/federal-states' },
   ];
+
+  const allDistricts = getAllDistricts();
+  const allStates = states;
 
   const estatePurchaseServices = [
     { id: ServiceId.ERBSTUECKSANKAUF, label: t.estatePurchase.heirlooms },
@@ -73,6 +76,52 @@ export default function Header() {
             
             <NavigationMenu>
               <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium h-auto p-0 bg-transparent hover:bg-transparent" data-testid="menu-districts">
+                    {t.nav.districts}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-64 gap-1 p-2 max-h-96 overflow-y-auto">
+                      {allDistricts.map((district) => (
+                        <li key={district.slug}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={getLocalizedDistrictsPath(language, district.slug)}
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                              data-testid={`link-district-${district.slug}`}
+                            >
+                              {language === 'de' ? district.name : district.nameEn}
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium h-auto p-0 bg-transparent hover:bg-transparent" data-testid="menu-states">
+                    {t.nav.states}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-56 gap-1 p-2">
+                      {allStates.map((state) => (
+                        <li key={state.slug}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={getLocalizedBundeslaenderPath(language, state.slug)}
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                              data-testid={`link-state-${state.slug}`}
+                            >
+                              {language === 'de' ? state.name : state.nameEn}
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="text-sm font-medium h-auto p-0 bg-transparent hover:bg-transparent" data-testid="menu-estate-purchase">
                     {t.nav.estatePurchase}
@@ -163,6 +212,48 @@ export default function Header() {
             ))}
             
             <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="districts" className="border-none">
+                <AccordionTrigger className="px-4 py-2 text-sm font-medium hover:no-underline hover:bg-accent rounded-md" data-testid="accordion-districts">
+                  {t.nav.districts}
+                </AccordionTrigger>
+                <AccordionContent className="pb-0">
+                  <div className="space-y-1 pl-4 pt-1 max-h-64 overflow-y-auto">
+                    {allDistricts.map((district) => (
+                      <Link
+                        key={district.slug}
+                        href={getLocalizedDistrictsPath(language, district.slug)}
+                        className="block px-4 py-2 rounded-md text-sm hover:bg-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`link-mobile-district-${district.slug}`}
+                      >
+                        {language === 'de' ? district.name : district.nameEn}
+                      </Link>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="states" className="border-none">
+                <AccordionTrigger className="px-4 py-2 text-sm font-medium hover:no-underline hover:bg-accent rounded-md" data-testid="accordion-states">
+                  {t.nav.states}
+                </AccordionTrigger>
+                <AccordionContent className="pb-0">
+                  <div className="space-y-1 pl-4 pt-1">
+                    {allStates.map((state) => (
+                      <Link
+                        key={state.slug}
+                        href={getLocalizedBundeslaenderPath(language, state.slug)}
+                        className="block px-4 py-2 rounded-md text-sm hover:bg-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`link-mobile-state-${state.slug}`}
+                      >
+                        {language === 'de' ? state.name : state.nameEn}
+                      </Link>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+
               <AccordionItem value="estate-purchase" className="border-none">
                 <AccordionTrigger className="px-4 py-2 text-sm font-medium hover:no-underline hover:bg-accent rounded-md" data-testid="accordion-estate-purchase">
                   {t.nav.estatePurchase}
