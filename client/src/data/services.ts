@@ -11,6 +11,11 @@ export enum ServiceId {
   BUROAUFLOESUNG = 'buroaufloesung',
   VERLASSENSCHAFTSRAEUMUNG = 'verlassenschaftsraeumung',
   CONTAINERSERVICE = 'containerservice',
+  ERBSTUECKSANKAUF = 'erbstuecksankauf',
+  GOLDANKAUF = 'goldankauf',
+  TEPPICHANKAUF = 'teppichankauf',
+  BILDERANKAUF = 'bilderankauf',
+  ANTIKWARENANKAUF = 'antikwarenankauf',
 }
 
 export interface ServiceContent {
@@ -1650,6 +1655,685 @@ export const servicesData: ServiceEntry[] = [
           {
             question: 'What can go in the container?',
             answer: 'Construction debris container: bricks, concrete, tiles, ceramics. Wood container: wood waste, furniture, pallets. Mixed waste: all mixed waste. Not allowed: asbestos, hazardous materials, electrical appliances.',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: ServiceId.ERBSTUECKSANKAUF,
+    slugs: { de: 'erbstuecksankauf', en: 'heirloom-purchase' },
+    relatedServices: [ServiceId.VERLASSENSCHAFTSRAEUMUNG, ServiceId.GOLDANKAUF, ServiceId.ANTIKWARENANKAUF],
+    content: {
+      de: {
+        name: 'Erbstücksankauf',
+        shortDescription: 'Wir kaufen wertvolle Erbstücke in Wien und ganz Österreich - faire Bewertung, seriöse Abwicklung, Barzahlung vor Ort.',
+        description: 'Bei einer Verlassenschaft bleiben oft wertvolle Erbstücke zurück - Familienerbstücke, Sammlerstücke, antike Möbel oder wertvoller Schmuck. Wir kaufen Ihre Erbstücke zu fairen Marktpreisen an. Unsere Experten bewerten Ihre Gegenstände kostenlos und machen Ihnen ein transparentes Angebot. Schnelle, diskrete Abwicklung und Barzahlung vor Ort in ganz Österreich.',
+        metaDescription: 'Erbstücksankauf Wien ✓ Faire Bewertung ✓ Kostenlose Schätzung ✓ Barzahlung sofort ✓ Seriöse Abwicklung ☎ +43660 39 57 587',
+        benefits: [
+          'Kostenlose Bewertung durch Experten',
+          'Faire Marktpreise für Ihre Erbstücke',
+          'Barzahlung sofort vor Ort',
+          'Diskrete und seriöse Abwicklung',
+          'Ankauf in ganz Wien und Österreich',
+          'Komplette Haushaltsauflösung möglich',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Kontaktaufnahme',
+            description: 'Rufen Sie uns an oder schicken Sie uns Fotos Ihrer Erbstücke per WhatsApp oder E-Mail.',
+          },
+          {
+            step: 2,
+            title: 'Kostenlose Bewertung',
+            description: 'Unsere Experten besichtigen und bewerten Ihre Erbstücke kostenlos vor Ort.',
+          },
+          {
+            step: 3,
+            title: 'Faires Angebot',
+            description: 'Sie erhalten ein transparentes Kaufangebot basierend auf aktuellen Marktpreisen.',
+          },
+          {
+            step: 4,
+            title: 'Sofortige Barzahlung',
+            description: 'Bei Annahme zahlen wir sofort in bar und übernehmen die Gegenstände.',
+          },
+        ],
+        pricing: {
+          info: 'Der Ankaufspreis richtet sich nach Art, Zustand und Marktwert der Erbstücke. Wir bieten faire Preise basierend auf aktuellen Marktpreisen.',
+          factors: [
+            'Art und Alter des Erbstücks',
+            'Erhaltungszustand und Originalität',
+            'Aktueller Marktwert und Nachfrage',
+            'Seltenheit und historischer Wert',
+            'Material und Herkunft',
+          ],
+        },
+        faq: [
+          {
+            question: 'Welche Erbstücke kaufen Sie an?',
+            answer: 'Wir kaufen antike Möbel, Schmuck, Uhren, Gemälde, Porzellan, Silber, Münzen, Briefmarken, alte Bücher, Teppiche und vieles mehr. Am besten senden Sie uns Fotos - wir beraten Sie gerne.',
+          },
+          {
+            question: 'Wie wird der Wert meiner Erbstücke ermittelt?',
+            answer: 'Unsere Experten prüfen Alter, Zustand, Herkunft und Seltenheit. Wir orientieren uns an aktuellen Marktpreisen und Auktionsergebnissen. Die Bewertung ist für Sie kostenlos und unverbindlich.',
+          },
+          {
+            question: 'Kaufen Sie auch ganze Nachlässe an?',
+            answer: 'Ja, wir kaufen auch komplette Nachlässe an. Oft kombinieren wir Ankauf wertvoller Stücke mit der Räumung des restlichen Haushalts - so sparen Sie Kosten und haben nur einen Ansprechpartner.',
+          },
+          {
+            question: 'Wie schnell kann die Abwicklung erfolgen?',
+            answer: 'Nach Terminvereinbarung kommen wir meist innerhalb von 24-48 Stunden vorbei. Nach Bewertung und Ihrer Zusage zahlen wir sofort in bar und nehmen die Gegenstände gleich mit.',
+          },
+        ],
+      },
+      en: {
+        name: 'Heirloom Purchase',
+        shortDescription: 'We purchase valuable heirlooms in Vienna and throughout Austria - fair appraisal, professional handling, cash payment on-site.',
+        description: 'Estate settlements often leave behind valuable heirlooms - family treasures, collectibles, antique furniture, or precious jewelry. We purchase your heirlooms at fair market prices. Our experts appraise your items free of charge and make you a transparent offer. Fast, discreet handling and cash payment on-site throughout Austria.',
+        metaDescription: 'Heirloom Purchase Vienna ✓ Fair Appraisal ✓ Free Estimate ✓ Immediate Cash Payment ✓ Professional Service ☎ +43660 39 57 587',
+        benefits: [
+          'Free expert appraisal',
+          'Fair market prices for your heirlooms',
+          'Immediate cash payment on-site',
+          'Discreet and professional handling',
+          'Purchase throughout Vienna and Austria',
+          'Complete estate clearance possible',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Contact',
+            description: 'Call us or send photos of your heirlooms via WhatsApp or email.',
+          },
+          {
+            step: 2,
+            title: 'Free Appraisal',
+            description: 'Our experts inspect and appraise your heirlooms free of charge on-site.',
+          },
+          {
+            step: 3,
+            title: 'Fair Offer',
+            description: 'You receive a transparent purchase offer based on current market prices.',
+          },
+          {
+            step: 4,
+            title: 'Immediate Cash Payment',
+            description: 'Upon acceptance, we pay immediately in cash and take over the items.',
+          },
+        ],
+        pricing: {
+          info: 'Purchase price depends on type, condition, and market value of the heirlooms. We offer fair prices based on current market rates.',
+          factors: [
+            'Type and age of the heirloom',
+            'Condition and authenticity',
+            'Current market value and demand',
+            'Rarity and historical value',
+            'Material and origin',
+          ],
+        },
+        faq: [
+          {
+            question: 'What kind of heirlooms do you purchase?',
+            answer: 'We purchase antique furniture, jewelry, watches, paintings, porcelain, silver, coins, stamps, old books, carpets and much more. Best to send us photos - we are happy to advise you.',
+          },
+          {
+            question: 'How is the value of my heirlooms determined?',
+            answer: 'Our experts examine age, condition, origin and rarity. We base our evaluation on current market prices and auction results. The appraisal is free and non-binding for you.',
+          },
+          {
+            question: 'Do you also purchase complete estates?',
+            answer: 'Yes, we also purchase complete estates. We often combine the purchase of valuable items with clearing the remaining household - saving you costs with only one contact person.',
+          },
+          {
+            question: 'How quickly can the transaction be completed?',
+            answer: 'After scheduling, we usually visit within 24-48 hours. After appraisal and your acceptance, we pay immediately in cash and take the items right away.',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: ServiceId.GOLDANKAUF,
+    slugs: { de: 'goldankauf', en: 'gold-purchase' },
+    relatedServices: [ServiceId.ERBSTUECKSANKAUF, ServiceId.ANTIKWARENANKAUF, ServiceId.VERLASSENSCHAFTSRAEUMUNG],
+    content: {
+      de: {
+        name: 'Goldankauf',
+        shortDescription: 'Seriöser Goldankauf in Wien - Altgold, Schmuck, Münzen zu tagesaktuellen Preisen. Kostenlose Prüfung, faire Bewertung, sofortige Barzahlung.',
+        description: 'Wir kaufen Gold in allen Formen an - Altgold, Goldschmuck, Zahngold, Goldmünzen, Barren und Bruchgold. Sie erhalten tagesaktuelle Goldpreise und transparente Bewertung. Unsere Experten prüfen Ihr Gold kostenlos und zahlen sofort in bar. Seriöser Goldankauf in Wien und ganz Österreich - ohne Termin, ohne Wartezeit.',
+        metaDescription: 'Goldankauf Wien ✓ Tagesaktuelle Preise ✓ Kostenlose Prüfung ✓ Sofort Bargeld ✓ Seriös & Fair ☎ +43660 39 57 587',
+        benefits: [
+          'Tagesaktuelle Goldpreise - faire Bewertung',
+          'Kostenlose Goldprüfung und Analyse',
+          'Sofortige Barzahlung ohne Wartezeit',
+          'Ankauf aller Goldlegierungen (333, 585, 750, 999)',
+          'Auch defekter oder alter Schmuck',
+          'Diskrete Abwicklung in ganz Österreich',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Kontakt & Termin',
+            description: 'Rufen Sie uns an oder kommen Sie direkt vorbei - ohne Terminvereinbarung möglich.',
+          },
+          {
+            step: 2,
+            title: 'Kostenlose Prüfung',
+            description: 'Wir prüfen Ihr Gold professionell auf Reinheit und Gewicht vor Ihren Augen.',
+          },
+          {
+            step: 3,
+            title: 'Transparentes Angebot',
+            description: 'Sie erhalten ein faires Angebot basierend auf dem aktuellen Goldpreis.',
+          },
+          {
+            step: 4,
+            title: 'Sofortige Auszahlung',
+            description: 'Bei Annahme zahlen wir Ihnen den Betrag sofort in bar aus.',
+          },
+        ],
+        pricing: {
+          info: 'Der Ankaufspreis richtet sich nach dem aktuellen Goldkurs, der Legierung (Karat) und dem Gewicht Ihres Goldes.',
+          factors: [
+            'Aktueller Goldkurs (täglich schwankend)',
+            'Goldlegierung (999, 750, 585, 333)',
+            'Gewicht in Gramm',
+            'Zustand und Verarbeitung',
+            'Eventueller Sammlerwert bei Münzen',
+          ],
+        },
+        faq: [
+          {
+            question: 'Was zahlen Sie für 1 Gramm Gold?',
+            answer: 'Der Preis richtet sich nach dem tagesaktuellen Goldkurs und der Legierung. Beispiel bei Goldkurs 60€/Gramm: 999er Gold ca. 57€/g, 750er (18 Karat) ca. 43€/g, 585er (14 Karat) ca. 33€/g. Aktuellen Preis erfahren Sie bei uns telefonisch.',
+          },
+          {
+            question: 'Welches Gold kaufen Sie an?',
+            answer: 'Wir kaufen alle Arten von Gold: Altgold, Schmuck (auch defekt), Zahngold, Goldmünzen, Goldbarren, Bruchgold, Goldringe, Ketten, Armbänder. Egal ob 333er, 585er, 750er oder 999er Gold.',
+          },
+          {
+            question: 'Brauche ich einen Ausweis für den Goldverkauf?',
+            answer: 'Ja, aus gesetzlichen Gründen (Geldwäschegesetz) benötigen wir bei jedem Goldankauf einen gültigen Lichtbildausweis (Personalausweis oder Reisepass).',
+          },
+          {
+            question: 'Wie wird der Goldwert ermittelt?',
+            answer: 'Wir wiegen Ihr Gold auf geeichten Waagen und testen die Legierung mit professionellen Prüfgeräten (Säuretest oder Röntgenfluoreszenz). Die Bewertung erfolgt transparent vor Ihren Augen.',
+          },
+        ],
+      },
+      en: {
+        name: 'Gold Purchase',
+        shortDescription: 'Professional gold purchase in Vienna - scrap gold, jewelry, coins at daily prices. Free testing, fair appraisal, immediate cash payment.',
+        description: 'We purchase gold in all forms - scrap gold, gold jewelry, dental gold, gold coins, bars, and broken gold. You receive daily gold prices and transparent appraisal. Our experts test your gold free of charge and pay immediately in cash. Professional gold purchase in Vienna and throughout Austria - no appointment needed, no waiting time.',
+        metaDescription: 'Gold Purchase Vienna ✓ Daily Updated Prices ✓ Free Testing ✓ Immediate Cash ✓ Professional & Fair ☎ +43660 39 57 587',
+        benefits: [
+          'Daily updated gold prices - fair appraisal',
+          'Free gold testing and analysis',
+          'Immediate cash payment without waiting',
+          'Purchase of all gold alloys (333, 585, 750, 999)',
+          'Also damaged or old jewelry',
+          'Discreet handling throughout Austria',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Contact & Appointment',
+            description: 'Call us or visit directly - walk-ins possible without appointment.',
+          },
+          {
+            step: 2,
+            title: 'Free Testing',
+            description: 'We professionally test your gold for purity and weight before your eyes.',
+          },
+          {
+            step: 3,
+            title: 'Transparent Offer',
+            description: 'You receive a fair offer based on the current gold price.',
+          },
+          {
+            step: 4,
+            title: 'Immediate Payout',
+            description: 'Upon acceptance, we pay you the amount immediately in cash.',
+          },
+        ],
+        pricing: {
+          info: 'Purchase price depends on current gold price, alloy (karat), and weight of your gold.',
+          factors: [
+            'Current gold price (daily fluctuating)',
+            'Gold alloy (999, 750, 585, 333)',
+            'Weight in grams',
+            'Condition and workmanship',
+            'Possible collector value for coins',
+          ],
+        },
+        faq: [
+          {
+            question: 'What do you pay per gram of gold?',
+            answer: 'Price depends on daily gold price and alloy. Example at 60€/gram gold price: 999 gold approx. 57€/g, 750 (18 karat) approx. 43€/g, 585 (14 karat) approx. 33€/g. Current price available by phone.',
+          },
+          {
+            question: 'What types of gold do you purchase?',
+            answer: 'We purchase all types of gold: scrap gold, jewelry (even damaged), dental gold, gold coins, gold bars, broken gold, gold rings, chains, bracelets. Whether 333, 585, 750, or 999 gold.',
+          },
+          {
+            question: 'Do I need ID for selling gold?',
+            answer: 'Yes, for legal reasons (money laundering laws) we require valid photo ID (ID card or passport) for every gold purchase.',
+          },
+          {
+            question: 'How is gold value determined?',
+            answer: 'We weigh your gold on calibrated scales and test the alloy with professional testing equipment (acid test or X-ray fluorescence). Appraisal is done transparently before your eyes.',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: ServiceId.TEPPICHANKAUF,
+    slugs: { de: 'teppichankauf', en: 'carpet-purchase' },
+    relatedServices: [ServiceId.ERBSTUECKSANKAUF, ServiceId.ANTIKWARENANKAUF, ServiceId.HAUSHALTSAUFLOESUNG],
+    content: {
+      de: {
+        name: 'Teppichankauf',
+        shortDescription: 'Ankauf hochwertiger Teppiche in Wien - Perserteppiche, Orient-Teppiche, antike Teppiche. Faire Bewertung durch Experten, sofortige Barzahlung.',
+        description: 'Wir kaufen hochwertige Teppiche an - Perserteppiche, Orient-Teppiche, antike Teppiche und handgeknüpfte Sammlerstücke. Unsere Teppich-Experten bewerten Ihre Stücke kostenlos nach Herkunft, Alter, Knüpfart und Zustand. Sie erhalten ein faires Angebot basierend auf aktuellen Marktpreisen. Schnelle Abwicklung und Barzahlung in ganz Wien und Österreich.',
+        metaDescription: 'Teppichankauf Wien ✓ Perserteppiche ✓ Orientteppiche ✓ Kostenlose Bewertung ✓ Faire Preise ☎ +43660 39 57 587',
+        benefits: [
+          'Expertise für Perserteppiche und Orientteppiche',
+          'Kostenlose Bewertung durch Teppich-Experten',
+          'Faire Marktpreise für Ihre Teppiche',
+          'Ankauf einzelner Teppiche oder ganzer Sammlungen',
+          'Barzahlung sofort vor Ort',
+          'Abholung in ganz Wien und Umgebung',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Erstkontakt',
+            description: 'Senden Sie uns Fotos Ihrer Teppiche per WhatsApp/E-Mail oder rufen Sie uns an.',
+          },
+          {
+            step: 2,
+            title: 'Fachgerechte Bewertung',
+            description: 'Unsere Experten besichtigen Ihre Teppiche und prüfen Herkunft, Alter und Zustand.',
+          },
+          {
+            step: 3,
+            title: 'Kaufangebot',
+            description: 'Sie erhalten ein transparentes Angebot basierend auf Marktwert und Zustand.',
+          },
+          {
+            step: 4,
+            title: 'Abwicklung',
+            description: 'Bei Zusage zahlen wir bar und holen die Teppiche ab oder Sie bringen sie zu uns.',
+          },
+        ],
+        pricing: {
+          info: 'Der Wert eines Teppichs hängt von vielen Faktoren ab. Unsere Experten bewerten fair nach aktuellen Marktpreisen.',
+          factors: [
+            'Herkunft und Provenienz (Persien, Türkei, etc.)',
+            'Alter und historischer Wert',
+            'Knüpfart (handgeknüpft vs. maschinengewebt)',
+            'Zustand (Abnutzung, Schäden, Reparaturen)',
+            'Größe und Seltenheit des Musters',
+          ],
+        },
+        faq: [
+          {
+            question: 'Welche Teppiche kaufen Sie an?',
+            answer: 'Wir kaufen hochwertige handgeknüpfte Teppiche: Perserteppiche (Tabriz, Isfahan, Nain, Ghom), türkische Teppiche (Hereke, Kayseri), afghanische, kaukasische und andere Orientteppiche. Auch antike Teppiche und Sammlerstücke.',
+          },
+          {
+            question: 'Wie ermitteln Sie den Wert meines Teppichs?',
+            answer: 'Wir prüfen Herkunft, Knüpfdichte, Material (Wolle, Seide), Alter, Zustand und Seltenheit. Wir vergleichen mit aktuellen Marktpreisen und Auktionsergebnissen ähnlicher Stücke.',
+          },
+          {
+            question: 'Kaufen Sie auch beschädigte Teppiche?',
+            answer: 'Ja, wir kaufen auch Teppiche mit Gebrauchsspuren oder kleineren Schäden, wenn es sich um hochwertige Stücke handelt. Der Zustand fließt natürlich in die Bewertung ein.',
+          },
+          {
+            question: 'Muss ich den Teppich zu Ihnen bringen?',
+            answer: 'Nein, wir kommen gerne zu Ihnen nach Hause oder ins Büro. Bei größeren Sammlungen oder schweren Teppichen übernehmen wir auch die Abholung nach Kauf.',
+          },
+        ],
+      },
+      en: {
+        name: 'Carpet Purchase',
+        shortDescription: 'Purchase of high-quality carpets in Vienna - Persian carpets, Oriental rugs, antique carpets. Fair expert appraisal, immediate cash payment.',
+        description: 'We purchase high-quality carpets - Persian rugs, Oriental carpets, antique rugs, and hand-knotted collector pieces. Our carpet experts appraise your pieces free of charge based on origin, age, knotting technique, and condition. You receive a fair offer based on current market prices. Fast handling and cash payment throughout Vienna and Austria.',
+        metaDescription: 'Carpet Purchase Vienna ✓ Persian Rugs ✓ Oriental Carpets ✓ Free Appraisal ✓ Fair Prices ☎ +43660 39 57 587',
+        benefits: [
+          'Expertise for Persian and Oriental carpets',
+          'Free appraisal by carpet experts',
+          'Fair market prices for your carpets',
+          'Purchase of individual carpets or entire collections',
+          'Immediate cash payment on-site',
+          'Pickup throughout Vienna and surroundings',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Initial Contact',
+            description: 'Send us photos of your carpets via WhatsApp/email or call us.',
+          },
+          {
+            step: 2,
+            title: 'Expert Appraisal',
+            description: 'Our experts inspect your carpets and examine origin, age, and condition.',
+          },
+          {
+            step: 3,
+            title: 'Purchase Offer',
+            description: 'You receive a transparent offer based on market value and condition.',
+          },
+          {
+            step: 4,
+            title: 'Transaction',
+            description: 'Upon acceptance, we pay cash and pick up the carpets or you bring them to us.',
+          },
+        ],
+        pricing: {
+          info: 'The value of a carpet depends on many factors. Our experts appraise fairly based on current market prices.',
+          factors: [
+            'Origin and provenance (Persia, Turkey, etc.)',
+            'Age and historical value',
+            'Knotting technique (hand-knotted vs. machine-woven)',
+            'Condition (wear, damage, repairs)',
+            'Size and rarity of pattern',
+          ],
+        },
+        faq: [
+          {
+            question: 'What types of carpets do you purchase?',
+            answer: 'We purchase high-quality hand-knotted carpets: Persian rugs (Tabriz, Isfahan, Nain, Qom), Turkish carpets (Hereke, Kayseri), Afghan, Caucasian and other Oriental rugs. Also antique carpets and collector pieces.',
+          },
+          {
+            question: 'How do you determine the value of my carpet?',
+            answer: 'We examine origin, knot density, material (wool, silk), age, condition and rarity. We compare with current market prices and auction results of similar pieces.',
+          },
+          {
+            question: 'Do you also purchase damaged carpets?',
+            answer: 'Yes, we also purchase carpets with signs of use or minor damage if they are high-quality pieces. Condition is of course factored into the appraisal.',
+          },
+          {
+            question: 'Do I have to bring the carpet to you?',
+            answer: 'No, we gladly come to your home or office. For larger collections or heavy carpets, we also arrange pickup after purchase.',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: ServiceId.BILDERANKAUF,
+    slugs: { de: 'bilderankauf', en: 'painting-purchase' },
+    relatedServices: [ServiceId.ERBSTUECKSANKAUF, ServiceId.ANTIKWARENANKAUF, ServiceId.VERLASSENSCHAFTSRAEUMUNG],
+    content: {
+      de: {
+        name: 'Bilderankauf',
+        shortDescription: 'Ankauf von Gemälden und Kunstwerken in Wien - Ölbilder, Aquarelle, Grafiken. Kostenlose Expertise, faire Bewertung, seriöse Abwicklung.',
+        description: 'Wir kaufen Gemälde, Ölbilder, Aquarelle, Grafiken und andere Kunstwerke an. Ob Nachlass, Sammlung oder Einzelstücke - unsere Kunstexperten bewerten Ihre Bilder kostenlos nach Künstler, Epoche, Zustand und Marktwert. Sie erhalten ein faires Angebot für Ihre Kunstwerke. Diskreter Ankauf in Wien und ganz Österreich mit sofortiger Barzahlung.',
+        metaDescription: 'Bilderankauf Wien ✓ Gemälde & Kunstwerke ✓ Kostenlose Expertise ✓ Faire Preise ✓ Seriöser Ankauf ☎ +43660 39 57 587',
+        benefits: [
+          'Kostenlose Expertise durch Kunstexperten',
+          'Ankauf von Gemälden aller Epochen',
+          'Faire Bewertung nach Marktpreisen',
+          'Diskrete und seriöse Abwicklung',
+          'Barzahlung oder Überweisung',
+          'Österreichweiter Service',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Bildersendung',
+            description: 'Senden Sie uns hochwertige Fotos Ihrer Bilder (Vorder- und Rückseite, Signatur).',
+          },
+          {
+            step: 2,
+            title: 'Kunsthistorische Bewertung',
+            description: 'Unsere Experten analysieren Künstler, Epoche, Technik und Zustand.',
+          },
+          {
+            step: 3,
+            title: 'Wertermittlung',
+            description: 'Sie erhalten eine kostenlose Einschätzung und ein Kaufangebot.',
+          },
+          {
+            step: 4,
+            title: 'Ankauf & Zahlung',
+            description: 'Bei Einigung holen wir die Bilder ab und zahlen sofort bar oder per Überweisung.',
+          },
+        ],
+        pricing: {
+          info: 'Der Wert eines Gemäldes hängt stark vom Künstler, der Epoche, dem Zustand und der Marktlage ab. Wir bieten faire Preise.',
+          factors: [
+            'Künstler und dessen Bekanntheit',
+            'Epoche und Stilrichtung',
+            'Technik (Öl, Aquarell, Mischtechnik)',
+            'Zustand und Erhaltung',
+            'Größe und Motiv',
+            'Provenienz und Echtheitszertifikate',
+          ],
+        },
+        faq: [
+          {
+            question: 'Welche Bilder kaufen Sie an?',
+            answer: 'Wir kaufen Ölgemälde, Aquarelle, Grafiken, Zeichnungen und andere Kunstwerke vom 16. bis 21. Jahrhundert. Besonders interessiert sind wir an österreichischen Künstlern, aber auch internationalen Meistern.',
+          },
+          {
+            question: 'Wie erkenne ich, ob mein Bild wertvoll ist?',
+            answer: 'Achten Sie auf Signaturen, Rahmen, Maltechnik und Herkunft. Alte Ölgemälde in Originalrahmen, signierte Werke oder Bilder mit Provenienz-Nachweis sind oft wertvoll. Wir helfen Ihnen bei der Einschätzung - kostenlos.',
+          },
+          {
+            question: 'Brauche ich ein Echtheitszertifikat?',
+            answer: 'Ein Echtheitszertifikat ist hilfreich, aber nicht zwingend nötig. Unsere Experten können die Echtheit oft auch ohne Zertifikat einschätzen. Bei sehr wertvollen Stücken empfehlen wir eine professionelle Expertise.',
+          },
+          {
+            question: 'Kaufen Sie auch Bilder unbekannter Künstler?',
+            answer: 'Ja, wenn die Qualität stimmt. Auch Bilder unbekannter Künstler können wertvoll sein, wenn sie handwerklich hochwertig sind, eine besondere Epoche repräsentieren oder ein interessantes Motiv haben.',
+          },
+        ],
+      },
+      en: {
+        name: 'Painting Purchase',
+        shortDescription: 'Purchase of paintings and artworks in Vienna - oil paintings, watercolors, graphics. Free expertise, fair appraisal, professional handling.',
+        description: 'We purchase paintings, oil paintings, watercolors, graphics and other artworks. Whether estate, collection or individual pieces - our art experts appraise your paintings free of charge based on artist, era, condition and market value. You receive a fair offer for your artworks. Discreet purchase in Vienna and throughout Austria with immediate cash payment.',
+        metaDescription: 'Painting Purchase Vienna ✓ Paintings & Artworks ✓ Free Expertise ✓ Fair Prices ✓ Professional Purchase ☎ +43660 39 57 587',
+        benefits: [
+          'Free expertise by art experts',
+          'Purchase of paintings from all eras',
+          'Fair appraisal based on market prices',
+          'Discreet and professional handling',
+          'Cash payment or bank transfer',
+          'Austria-wide service',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Submit Images',
+            description: 'Send us high-quality photos of your paintings (front and back, signature).',
+          },
+          {
+            step: 2,
+            title: 'Art Historical Appraisal',
+            description: 'Our experts analyze artist, era, technique and condition.',
+          },
+          {
+            step: 3,
+            title: 'Value Assessment',
+            description: 'You receive a free estimate and purchase offer.',
+          },
+          {
+            step: 4,
+            title: 'Purchase & Payment',
+            description: 'Upon agreement, we pick up the paintings and pay immediately in cash or by transfer.',
+          },
+        ],
+        pricing: {
+          info: 'The value of a painting depends heavily on the artist, era, condition and market situation. We offer fair prices.',
+          factors: [
+            'Artist and their renown',
+            'Era and artistic style',
+            'Technique (oil, watercolor, mixed media)',
+            'Condition and preservation',
+            'Size and motif',
+            'Provenance and authenticity certificates',
+          ],
+        },
+        faq: [
+          {
+            question: 'What types of paintings do you purchase?',
+            answer: 'We purchase oil paintings, watercolors, graphics, drawings and other artworks from the 16th to 21st century. We are particularly interested in Austrian artists, but also international masters.',
+          },
+          {
+            question: 'How do I know if my painting is valuable?',
+            answer: 'Look for signatures, frames, painting technique and origin. Old oil paintings in original frames, signed works or paintings with provenance documentation are often valuable. We help you with the assessment - free of charge.',
+          },
+          {
+            question: 'Do I need an authenticity certificate?',
+            answer: 'An authenticity certificate is helpful but not mandatory. Our experts can often assess authenticity without a certificate. For very valuable pieces, we recommend professional expertise.',
+          },
+          {
+            question: 'Do you also purchase paintings by unknown artists?',
+            answer: 'Yes, if the quality is right. Even paintings by unknown artists can be valuable if they are crafted to high standards, represent a special era, or feature an interesting motif.',
+          },
+        ],
+      },
+    },
+  },
+  {
+    id: ServiceId.ANTIKWARENANKAUF,
+    slugs: { de: 'antikwarenankauf', en: 'antique-purchase' },
+    relatedServices: [ServiceId.ERBSTUECKSANKAUF, ServiceId.TEPPICHANKAUF, ServiceId.BILDERANKAUF],
+    content: {
+      de: {
+        name: 'Antikwarenankauf',
+        shortDescription: 'Ankauf von Antiquitäten in Wien - Möbel, Porzellan, Silber, Uhren und mehr. Faire Bewertung, seriöse Abwicklung, Barzahlung vor Ort.',
+        description: 'Wir kaufen hochwertige Antiquitäten und Sammlerstücke an - antike Möbel, Porzellan, Silber, Uhren, Glas, Bronzen, Kronleuchter und vieles mehr. Unsere Antiquitäten-Experten bewerten Ihre Stücke kostenlos nach Alter, Herkunft und Zustand. Sie erhalten ein faires Angebot basierend auf aktuellen Marktpreisen. Diskreter Ankauf in Wien und ganz Österreich mit sofortiger Barzahlung.',
+        metaDescription: 'Antikwarenankauf Wien ✓ Möbel, Porzellan, Silber ✓ Kostenlose Bewertung ✓ Faire Preise ✓ Sofort Bargeld ☎ +43660 39 57 587',
+        benefits: [
+          'Expertise für alle Arten von Antiquitäten',
+          'Kostenlose Bewertung durch Fachexperten',
+          'Faire Marktpreise für Ihre Antiquitäten',
+          'Ankauf einzelner Stücke oder ganzer Sammlungen',
+          'Sofortige Barzahlung vor Ort',
+          'Abholung und Transport inklusive',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Kontakt',
+            description: 'Senden Sie uns Fotos oder Beschreibungen Ihrer Antiquitäten per WhatsApp, E-Mail oder Telefon.',
+          },
+          {
+            step: 2,
+            title: 'Fachkundige Bewertung',
+            description: 'Unsere Experten besichtigen und bewerten Ihre Antiquitäten kostenlos vor Ort.',
+          },
+          {
+            step: 3,
+            title: 'Kaufangebot',
+            description: 'Sie erhalten ein transparentes Angebot basierend auf Marktwert und Zustand.',
+          },
+          {
+            step: 4,
+            title: 'Abwicklung & Abtransport',
+            description: 'Bei Zusage zahlen wir sofort bar und kümmern uns um den fachgerechten Abtransport.',
+          },
+        ],
+        pricing: {
+          info: 'Der Wert von Antiquitäten hängt von Alter, Seltenheit, Zustand und Marktnachfrage ab. Wir bieten faire Preise nach aktueller Marktlage.',
+          factors: [
+            'Alter und Epoche des Stücks',
+            'Herkunft und Provenienz',
+            'Erhaltungszustand und Originalität',
+            'Seltenheit und Marktnachfrage',
+            'Material und Verarbeitung',
+            'Historischer oder künstlerischer Wert',
+          ],
+        },
+        faq: [
+          {
+            question: 'Welche Antiquitäten kaufen Sie an?',
+            answer: 'Wir kaufen antike Möbel (Biedermeier, Jugendstil, Barock), Porzellan (Meissen, Wien Augarten), Silber, alte Uhren, Kronleuchter, Bronzefiguren, Jugendstil-Objekte, Art Deco, Glas und vieles mehr.',
+          },
+          {
+            question: 'Wie alt muss ein Gegenstand sein, um als Antiquität zu gelten?',
+            answer: 'Üblicherweise gelten Gegenstände ab 100 Jahren als Antiquitäten. Wir kaufen aber auch jüngere Sammlerstücke aus dem frühen 20. Jahrhundert (Art Deco, Bauhaus, 50er-Jahre-Design) wenn sie wertvoll sind.',
+          },
+          {
+            question: 'Kaufen Sie auch restaurierungsbedürftige Stücke?',
+            answer: 'Ja, wenn es sich um hochwertige Antiquitäten handelt. Der Restaurierungsbedarf fließt in die Preisbewertung ein. Oft sind auch beschädigte Stücke von bedeutenden Epochen noch wertvoll.',
+          },
+          {
+            question: 'Wie wird der Wert meiner Antiquitäten ermittelt?',
+            answer: 'Wir prüfen Alter (oft durch Stilmerkmale, Handwerkszeichen), Herkunft, Material, Zustand und vergleichen mit aktuellen Marktpreisen ähnlicher Stücke. Die Bewertung erfolgt transparent vor Ort.',
+          },
+        ],
+      },
+      en: {
+        name: 'Antique Purchase',
+        shortDescription: 'Purchase of antiques in Vienna - furniture, porcelain, silver, clocks and more. Fair appraisal, professional handling, cash payment on-site.',
+        description: 'We purchase high-quality antiques and collectibles - antique furniture, porcelain, silver, clocks, glass, bronzes, chandeliers and much more. Our antique experts appraise your pieces free of charge based on age, origin and condition. You receive a fair offer based on current market prices. Discreet purchase in Vienna and throughout Austria with immediate cash payment.',
+        metaDescription: 'Antique Purchase Vienna ✓ Furniture, Porcelain, Silver ✓ Free Appraisal ✓ Fair Prices ✓ Immediate Cash ☎ +43660 39 57 587',
+        benefits: [
+          'Expertise for all types of antiques',
+          'Free appraisal by expert specialists',
+          'Fair market prices for your antiques',
+          'Purchase of individual pieces or entire collections',
+          'Immediate cash payment on-site',
+          'Pickup and transport included',
+        ],
+        process: [
+          {
+            step: 1,
+            title: 'Contact',
+            description: 'Send us photos or descriptions of your antiques via WhatsApp, email or phone.',
+          },
+          {
+            step: 2,
+            title: 'Expert Appraisal',
+            description: 'Our experts inspect and appraise your antiques free of charge on-site.',
+          },
+          {
+            step: 3,
+            title: 'Purchase Offer',
+            description: 'You receive a transparent offer based on market value and condition.',
+          },
+          {
+            step: 4,
+            title: 'Transaction & Transport',
+            description: 'Upon acceptance, we pay immediately in cash and handle professional transport.',
+          },
+        ],
+        pricing: {
+          info: 'The value of antiques depends on age, rarity, condition and market demand. We offer fair prices according to current market conditions.',
+          factors: [
+            'Age and era of the piece',
+            'Origin and provenance',
+            'Condition and authenticity',
+            'Rarity and market demand',
+            'Material and craftsmanship',
+            'Historical or artistic value',
+          ],
+        },
+        faq: [
+          {
+            question: 'What types of antiques do you purchase?',
+            answer: 'We purchase antique furniture (Biedermeier, Art Nouveau, Baroque), porcelain (Meissen, Vienna Augarten), silver, old clocks, chandeliers, bronze figures, Art Nouveau objects, Art Deco, glass and much more.',
+          },
+          {
+            question: 'How old must an item be to be considered an antique?',
+            answer: 'Typically, items from 100 years ago are considered antiques. However, we also purchase younger collectibles from the early 20th century (Art Deco, Bauhaus, 1950s design) if they are valuable.',
+          },
+          {
+            question: 'Do you also purchase items needing restoration?',
+            answer: 'Yes, if they are high-quality antiques. The restoration need is factored into the price appraisal. Often damaged pieces from significant eras are still valuable.',
+          },
+          {
+            question: 'How is the value of my antiques determined?',
+            answer: 'We examine age (often through style features, craftsman marks), origin, material, condition and compare with current market prices of similar pieces. Appraisal is done transparently on-site.',
           },
         ],
       },

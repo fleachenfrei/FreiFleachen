@@ -25,6 +25,11 @@ import garageImage from '@assets/generated_images/Garage_clearance_service_43538
 import officeDissolutionImage from '@assets/generated_images/Office_dissolution_service_d98c3ee9.png';
 import probateImage from '@assets/generated_images/Probate_estate_clearance_1eadd49e.png';
 import containerImage from '@assets/generated_images/Container_rental_service_f4846763.png';
+import heirloomImage from '@assets/stock_images/antique_heirloom_jew_da60341a.jpg';
+import goldImage from '@assets/stock_images/gold_jewelry_coins_b_a9ecdc2e.jpg';
+import carpetImage from '@assets/stock_images/antique_persian_orie_54731bea.jpg';
+import paintingImage from '@assets/stock_images/antique_oil_painting_d5919781.jpg';
+import antiqueImage from '@assets/stock_images/antique_furniture_po_13c004b9.jpg';
 
 const serviceImages: Record<ServiceId, string> = {
   [ServiceId.WOHNUNGSRAEUMUNG]: apartmentImage,
@@ -39,6 +44,11 @@ const serviceImages: Record<ServiceId, string> = {
   [ServiceId.BUROAUFLOESUNG]: officeDissolutionImage,
   [ServiceId.VERLASSENSCHAFTSRAEUMUNG]: probateImage,
   [ServiceId.CONTAINERSERVICE]: containerImage,
+  [ServiceId.ERBSTUECKSANKAUF]: heirloomImage,
+  [ServiceId.GOLDANKAUF]: goldImage,
+  [ServiceId.TEPPICHANKAUF]: carpetImage,
+  [ServiceId.BILDERANKAUF]: paintingImage,
+  [ServiceId.ANTIKWARENANKAUF]: antiqueImage,
 };
 
 export default function ServicePage() {

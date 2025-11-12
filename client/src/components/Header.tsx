@@ -5,6 +5,21 @@ import { Menu, X, Phone, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
 import { getLocalizedPath } from '@/lib/urlMapping';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import { ServiceId, getLocalizedServicePath } from '@/data/services';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,6 +38,14 @@ export default function Header() {
     { label: t.nav.districts, path: language === 'de' ? '/bezirke' : '/en/districts' },
     { label: t.nav.states, path: language === 'de' ? '/bundeslaender' : '/en/federal-states' },
     { label: t.nav.contact, path: language === 'de' ? '/kontakt' : '/en/contact' },
+  ];
+
+  const estatePurchaseServices = [
+    { id: ServiceId.ERBSTUECKSANKAUF, label: t.estatePurchase.heirlooms },
+    { id: ServiceId.GOLDANKAUF, label: t.estatePurchase.gold },
+    { id: ServiceId.TEPPICHANKAUF, label: t.estatePurchase.carpets },
+    { id: ServiceId.BILDERANKAUF, label: t.estatePurchase.paintings },
+    { id: ServiceId.ANTIKWARENANKAUF, label: t.estatePurchase.antiques },
   ];
 
   return (
@@ -48,6 +71,33 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium h-auto p-0 bg-transparent hover:bg-transparent" data-testid="menu-estate-purchase">
+                    {t.nav.estatePurchase}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-56 gap-1 p-2">
+                      {estatePurchaseServices.map((service) => (
+                        <li key={service.id}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              href={getLocalizedServicePath(service.id, language)}
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-sm"
+                              data-testid={`link-estate-${service.id}`}
+                            >
+                              {service.label}
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -102,6 +152,30 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="estate-purchase" className="border-none">
+                <AccordionTrigger className="px-4 py-2 text-sm font-medium hover:no-underline hover:bg-accent rounded-md" data-testid="accordion-estate-purchase">
+                  {t.nav.estatePurchase}
+                </AccordionTrigger>
+                <AccordionContent className="pb-0">
+                  <div className="space-y-1 pl-4 pt-1">
+                    {estatePurchaseServices.map((service) => (
+                      <Link
+                        key={service.id}
+                        href={getLocalizedServicePath(service.id, language)}
+                        className="block px-4 py-2 rounded-md text-sm hover:bg-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                        data-testid={`link-mobile-estate-${service.id}`}
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+
             <div className="pt-4 border-t border-border flex items-center justify-between">
               <Button
                 variant="ghost"

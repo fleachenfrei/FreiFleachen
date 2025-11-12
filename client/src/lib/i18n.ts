@@ -9,6 +9,15 @@ export const translations = {
       contact: 'Kontakt',
       getQuote: 'Angebot einholen',
       callNow: 'Jetzt anrufen',
+      estatePurchase: 'Verlassenschaftsankauf',
+    },
+    estatePurchase: {
+      menu: 'Verlassenschaftsankauf',
+      heirlooms: 'Erbstücksankauf',
+      gold: 'Goldankauf',
+      carpets: 'Teppichankauf',
+      paintings: 'Bilderankauf',
+      antiques: 'Antikwarenankauf',
     },
     hero: {
       title: 'Räumung und Transport in Wien',
@@ -353,6 +362,15 @@ export const translations = {
       contact: 'Contact',
       getQuote: 'Get Quote',
       callNow: 'Call Now',
+      estatePurchase: 'Estate Purchase',
+    },
+    estatePurchase: {
+      menu: 'Estate Purchase',
+      heirlooms: 'Heirloom Purchase',
+      gold: 'Gold Purchase',
+      carpets: 'Carpet Purchase',
+      paintings: 'Painting Purchase',
+      antiques: 'Antique Purchase',
     },
     hero: {
       title: 'Clearing & Removal Services in Vienna',

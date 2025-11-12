@@ -28,6 +28,11 @@ const serviceSlugMap: Record<string, string> = {
   'bueroaufloesung': 'office-dissolution',
   'verlassenschaftsraeumung': 'estate-clearing',
   'container-service': 'container-service',
+  'erbstuecksankauf': 'heirloom-purchase',
+  'goldankauf': 'gold-purchase',
+  'teppichankauf': 'carpet-purchase',
+  'bilderankauf': 'painting-purchase',
+  'antikwarenankauf': 'antique-purchase',
 };
 
 const reverseServiceSlugMap = Object.fromEntries(
