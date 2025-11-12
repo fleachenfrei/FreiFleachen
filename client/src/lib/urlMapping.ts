@@ -8,11 +8,11 @@ interface RouteConfig {
 }
 
 export const routeMapping: Record<string, RouteConfig> = {
-  home: { de: '/de', en: '/en' },
-  services: { de: '/de/leistungen', en: '/en/services' },
-  districts: { de: '/de/bezirke', en: '/en/districts' },
-  bundeslaender: { de: '/de/bundeslaender', en: '/en/federal-states' },
-  contact: { de: '/de/kontakt', en: '/en/contact' },
+  home: { de: '/', en: '/en' },
+  services: { de: '/leistungen', en: '/en/services' },
+  districts: { de: '/bezirke', en: '/en/districts' },
+  bundeslaender: { de: '/bundeslaender', en: '/en/federal-states' },
+  contact: { de: '/kontakt', en: '/en/contact' },
 };
 
 const serviceSlugMap: Record<string, string> = {
@@ -36,7 +36,7 @@ const reverseServiceSlugMap = Object.fromEntries(
 
 export function getLocalizedPath(basePath: string, language: Language): string {
   if (basePath === '/' || basePath === '/de' || basePath === '/en') {
-    return language === 'de' ? '/de' : '/en';
+    return language === 'de' ? '/' : '/en';
   }
 
   const pathWithoutLang = basePath.replace(/^\/(de|en)/, '');

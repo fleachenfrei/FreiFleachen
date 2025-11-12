@@ -18,7 +18,7 @@ import { CONTACT_INFO } from '@/lib/constants';
 export default function DistrictPage() {
   const { t, language } = useLanguage();
   const [location] = useLocation();
-  const [matchDe, paramsDe] = useRoute('/de/bezirke/:slug');
+  const [matchDe, paramsDe] = useRoute('/bezirke/:slug');
   const [matchEn, paramsEn] = useRoute('/en/districts/:slug');
   const match = matchDe || matchEn;
   const params = matchDe ? paramsDe : paramsEn;

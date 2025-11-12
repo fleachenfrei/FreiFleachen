@@ -19,7 +19,7 @@ import { CONTACT_INFO } from '@/lib/constants';
 export default function CityPage() {
   const { t, language } = useLanguage();
   const [location] = useLocation();
-  const [matchDe, paramsDe] = useRoute('/de/bundeslaender/:bundesland/:city');
+  const [matchDe, paramsDe] = useRoute('/bundeslaender/:bundesland/:city');
   const [matchEn, paramsEn] = useRoute('/en/federal-states/:bundesland/:city');
   const match = matchDe || matchEn;
   const params = matchDe ? paramsDe : paramsEn;

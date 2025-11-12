@@ -5,8 +5,8 @@ import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Footer() {
   const { t, language } = useLanguage();
-  const servicesPath = language === 'de' ? '/de/leistungen' : '/en/services';
-  const districtsPath = language === 'de' ? '/de/bezirke' : '/en/districts';
+  const servicesPath = language === 'de' ? '/leistungen' : '/en/services';
+  const districtsPath = language === 'de' ? '/bezirke' : '/en/districts';
 
   const districts = [
     '1010 Wien Innere Stadt',

@@ -44,7 +44,7 @@ const serviceImages: Record<ServiceId, string> = {
 export default function ServicePage() {
   const { t, language } = useLanguage();
   const [location] = useLocation();
-  const [matchDe, paramsDe] = useRoute('/de/leistungen/:slug');
+  const [matchDe, paramsDe] = useRoute('/leistungen/:slug');
   const [matchEn, paramsEn] = useRoute('/en/services/:slug');
   
   const match = matchDe || matchEn;
@@ -114,7 +114,7 @@ export default function ServicePage() {
   const content = service.content[language];
   const serviceImage = serviceImages[service.id];
   const servicePath = getLocalizedServicePath(service.id, language);
-  const servicesPath = language === 'de' ? '/de/leistungen' : '/en/services';
+  const servicesPath = language === 'de' ? '/leistungen' : '/en/services';
 
   return (
     <div className="min-h-screen bg-background">

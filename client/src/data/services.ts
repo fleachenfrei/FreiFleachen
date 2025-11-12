@@ -1685,7 +1685,7 @@ export function getLocalizedServicePath(id: ServiceId, locale: 'de' | 'en' = 'de
   const service = getServiceById(id);
   if (!service) return '/';
   
-  const basePath = locale === 'de' ? '/de/leistungen' : '/en/services';
+  const basePath = locale === 'de' ? '/leistungen' : '/en/services';
   return `${basePath}/${service.slugs[locale]}`;
 }
 

@@ -18,18 +18,18 @@ export default function Header() {
   };
 
   const navItems = [
-    { label: t.nav.home, path: language === 'de' ? '/de' : '/en' },
-    { label: t.nav.services, path: language === 'de' ? '/de/leistungen' : '/en/services' },
-    { label: t.nav.districts, path: language === 'de' ? '/de/bezirke' : '/en/districts' },
-    { label: t.nav.states, path: language === 'de' ? '/de/bundeslaender' : '/en/federal-states' },
-    { label: t.nav.contact, path: language === 'de' ? '/de/kontakt' : '/en/contact' },
+    { label: t.nav.home, path: language === 'de' ? '/' : '/en' },
+    { label: t.nav.services, path: language === 'de' ? '/leistungen' : '/en/services' },
+    { label: t.nav.districts, path: language === 'de' ? '/bezirke' : '/en/districts' },
+    { label: t.nav.states, path: language === 'de' ? '/bundeslaender' : '/en/federal-states' },
+    { label: t.nav.contact, path: language === 'de' ? '/kontakt' : '/en/contact' },
   ];
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <Link href={language === 'de' ? '/de' : '/en'} className="flex items-center gap-2">
+          <Link href={language === 'de' ? '/' : '/en'} className="flex items-center gap-2">
             <div className="flex items-center gap-2">
               <div className="text-2xl font-bold text-primary">Flächen Frei</div>
             </div>
