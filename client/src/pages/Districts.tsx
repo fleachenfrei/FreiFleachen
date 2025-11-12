@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -9,11 +9,12 @@ import { getAllDistricts } from '@/data/districts';
 import { Button } from '@/components/ui/button';
 import { updateMetaTags } from '@/lib/seo';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { getLocalizedDistrictsPath } from '@/lib/urlMapping';
+import { getLocalizedDistrictsPath, getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Districts() {
   const { language, t } = useLanguage();
+  const [location] = useLocation();
   const districts = getAllDistricts();
   const districtsPath = getLocalizedDistrictsPath(language);
 
@@ -26,13 +27,17 @@ export default function Districts() {
       ? `Professionelle Räumung in allen 23 Wiener Bezirken ✓ Schnell ✓ Zuverlässig ✓ Faire Preise. Kostenlose Besichtigung in ganz Wien ☎ ${CONTACT_INFO.phone}`
       : `Professional clearing in all 23 Vienna districts ✓ Fast ✓ Reliable ✓ Fair prices. Free consultation throughout Vienna ☎ ${CONTACT_INFO.phone}`;
     
+    const alternateUrls = getAlternateUrls(location);
+
     updateMetaTags({
       title,
       description,
-      url: districtsPath,
+      url: location,
       type: 'website',
+      language,
+      alternateUrls,
     });
-  }, [language, districtsPath]);
+  }, [language, location, districtsPath]);
 
   return (
     <div className="min-h-screen bg-background">

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRoute } from 'wouter';
+import { useRoute, useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -13,11 +13,12 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 import cityImage from '@assets/generated_images/House_clearance_service_e0229004.png';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { getLocalizedBundeslaenderPath } from '@/lib/urlMapping';
+import { getLocalizedBundeslaenderPath, getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
 
 export default function CityPage() {
   const { t, language } = useLanguage();
+  const [location] = useLocation();
   const [matchDe, paramsDe] = useRoute('/de/bundeslaender/:bundesland/:city');
   const [matchEn, paramsEn] = useRoute('/en/federal-states/:bundesland/:city');
   const match = matchDe || matchEn;
@@ -39,13 +40,15 @@ export default function CityPage() {
   useEffect(() => {
     if (city) {
       const title = `${t.cityPage.pageTitleTemplate} ${cityName} ${cityBundesland} ${t.cityPage.pageTitleSuffix}`;
-      const url = getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug);
+      const alternateUrls = getAlternateUrls(location);
 
       updateMetaTags({
         title,
         description: cityMetaDescription,
-        url,
+        url: location,
         type: 'website',
+        language,
+        alternateUrls,
       });
 
       const localBusinessSchema = {
@@ -53,8 +56,8 @@ export default function CityPage() {
         '@type': 'LocalBusiness',
         name: `${t.cityPage.schemaCompanyName} ${cityName}`,
         image: cityImage,
-        '@id': url,
-        url: `${window.location.origin}${url}`,
+        '@id': location,
+        url: `${window.location.origin}${location}`,
         telephone: CONTACT_INFO.phone,
         email: CONTACT_INFO.email,
         address: {
@@ -108,7 +111,7 @@ export default function CityPage() {
       
       addMultipleJsonLd(schemas, `city-${city.slug}-schemas`);
     }
-  }, [city, cityName, cityBundesland, cityDescription, cityMetaDescription, cityServices, cityFaq, language, t, bundeslaenderPath]);
+  }, [city, cityName, cityBundesland, cityDescription, cityMetaDescription, cityServices, cityFaq, language, location, t, bundeslaenderPath]);
 
   if (!match || !city) {
     return <NotFound />;

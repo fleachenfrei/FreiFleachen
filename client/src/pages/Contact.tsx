@@ -1,4 +1,5 @@
 import { useEffect, useMemo } from 'react';
+import { useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { updateMetaTags, addJsonLd } from '@/lib/seo';
 import { CONTACT_INFO } from '@/lib/constants';
@@ -24,10 +25,11 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { getLocalizedContactPath } from '@/lib/urlMapping';
+import { getLocalizedContactPath, getAlternateUrls } from '@/lib/urlMapping';
 
 export default function Contact() {
   const { t, language } = useLanguage();
+  const [location] = useLocation();
   const { toast } = useToast();
   const services = getAllServices();
   const contactPath = getLocalizedContactPath(language);
@@ -68,11 +70,15 @@ export default function Contact() {
       ? `Kontaktieren Sie Flächen Frei für professionelle Räumung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ ${CONTACT_INFO.phone}`
       : `Contact Flächen Frei for professional clearing services in Vienna and throughout Austria ✓ Free consultation ✓ Fast appointments ✓ 24/7 available ☎ ${CONTACT_INFO.phone}`;
 
+    const alternateUrls = getAlternateUrls(location);
+
     updateMetaTags({
       title,
       description,
-      url: contactPath,
+      url: location,
       type: 'website',
+      language,
+      alternateUrls,
     });
 
     // Add LocalBusiness structured data
@@ -121,7 +127,7 @@ export default function Contact() {
         name: 'Austria',
       },
     });
-  }, [language, contactPath, t]);
+  }, [language, location, contactPath, t]);
 
   const handleSubmit = async (values: ContactFormData) => {
     try {

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useParams, Link } from 'wouter';
+import { useParams, Link, useLocation } from 'wouter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -12,7 +12,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
-import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getLocalizedServicePath } from '@/lib/urlMapping';
+import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getLocalizedServicePath, getAlternateUrls } from '@/lib/urlMapping';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 import { CONTACT_INFO } from '@/lib/constants';
@@ -20,6 +20,7 @@ import { CONTACT_INFO } from '@/lib/constants';
 export default function BundeslandPage() {
   const { slug } = useParams<{ slug: string }>();
   const { language, t } = useLanguage();
+  const [location] = useLocation();
   
   const state = states.find(s => s.slug === slug);
 
@@ -33,12 +34,14 @@ export default function BundeslandPage() {
     const title = `${t.bundeslandPage.pageTitleTemplate} ${stateName} ${t.bundeslandPage.pageTitleSuffix}`;
 
     const description = language === 'de' ? state.metaDescription : state.metaDescriptionEn;
-    const stateUrl = getLocalizedBundeslaenderPath(language, state.slug);
+    const alternateUrls = getAlternateUrls(location);
 
     updateMetaTags({
       title,
       description,
-      url: stateUrl,
+      url: location,
+      language,
+      alternateUrls,
     });
 
     const faqData = language === 'de' ? state.faqs : state.faqsEn;
@@ -62,7 +65,7 @@ export default function BundeslandPage() {
       },
       getFAQSchema(faqData),
     ], `bundesland-${state.slug}-schemas`);
-  }, [state, language, t]);
+  }, [state, language, location, t]);
 
   if (!state) {
     return <NotFound />;

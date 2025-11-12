@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { MapPin, ArrowRight } from 'lucide-react';
@@ -9,11 +9,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags } from '@/lib/seo';
-import { getLocalizedBundeslaenderPath, getLocalizedContactPath } from '@/lib/urlMapping';
+import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
 
 export default function Bundeslaender() {
   const { language, t } = useLanguage();
+  const [location] = useLocation();
   const bundeslaenderPath = getLocalizedBundeslaenderPath(language);
   const contactPath = getLocalizedContactPath(language);
 
@@ -26,12 +27,16 @@ export default function Bundeslaender() {
       ? 'Professionelle Räumung und Transport in allen 9 Bundesländern Österreichs. Von Wien bis Vorarlberg - zuverlässiger Service in ganz Österreich.'
       : 'Professional clearing and transport services in all 9 Austrian federal states. From Vienna to Vorarlberg - reliable service throughout Austria.';
 
+    const alternateUrls = getAlternateUrls(location);
+
     updateMetaTags({
       title,
       description,
-      url: bundeslaenderPath,
+      url: location,
+      language,
+      alternateUrls,
     });
-  }, [language, bundeslaenderPath]);
+  }, [language, location, bundeslaenderPath]);
 
   return (
     <div className="min-h-screen bg-background">

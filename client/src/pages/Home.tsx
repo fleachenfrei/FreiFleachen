@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
 import Header from '@/components/Header';
@@ -13,9 +14,11 @@ import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags, addMultipleJsonLd, getLocalBusinessSchema, getOrganizationSchema } from '@/lib/seo';
+import { getAlternateUrls } from '@/lib/urlMapping';
 
 export default function Home() {
   const { language } = useLanguage();
+  const [location] = useLocation();
 
   useEffect(() => {
     const title = language === 'de'
@@ -30,18 +33,22 @@ export default function Home() {
       ? 'Räumung Wien, Wohnungsräumung, Haushaltsauflösung, Kellerräumung, Räumung Österreich, Räumung Wien, Messie-Räumung, Verlassenschaftsräumung, Geschäftsräumung, Räumungsfirma Wien'
       : 'Clearing Vienna, apartment clearing, household dissolution, basement clearing, clearing Austria, removal Vienna, hoarder clearing, estate clearing, commercial clearing, clearing company Vienna';
 
+    const alternateUrls = getAlternateUrls(location);
+
     updateMetaTags({
       title,
       description,
-      url: '/',
+      url: location,
       keywords,
+      language,
+      alternateUrls,
     });
 
     addMultipleJsonLd([
       getLocalBusinessSchema(language),
       getOrganizationSchema(),
     ], 'home-page-schemas');
-  }, [language]);
+  }, [language, location]);
 
   return (
     <div className="min-h-screen bg-background">

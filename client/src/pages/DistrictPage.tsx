@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useRoute } from 'wouter';
+import { useRoute, useLocation } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -12,11 +12,12 @@ import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/li
 import Breadcrumbs from '@/components/Breadcrumbs';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { getLocalizedDistrictsPath } from '@/lib/urlMapping';
+import { getLocalizedDistrictsPath, getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
 
 export default function DistrictPage() {
   const { t, language } = useLanguage();
+  const [location] = useLocation();
   const [matchDe, paramsDe] = useRoute('/de/bezirke/:slug');
   const [matchEn, paramsEn] = useRoute('/en/districts/:slug');
   const match = matchDe || matchEn;
@@ -40,13 +41,15 @@ export default function DistrictPage() {
       const title = language === 'de'
         ? `Räumung ${district.postalCode} Wien ${districtName} - Flächen Frei | Professionell & Schnell`
         : `Clearing ${district.postalCode} Vienna ${districtName} - Flächen Frei | Professional & Fast`;
-      const url = getLocalizedDistrictsPath(language, district.slug);
+      const alternateUrls = getAlternateUrls(location);
 
       updateMetaTags({
         title,
         description: districtMetaDescription || '',
-        url,
+        url: location,
         type: 'website',
+        language,
+        alternateUrls,
       });
 
       const jsonLd = {
@@ -56,8 +59,8 @@ export default function DistrictPage() {
           ? `Flächen Frei - Räumung ${districtName}`
           : `Flächen Frei - Clearing ${districtName}`,
         image: viennaImage,
-        '@id': url,
-        url: `${window.location.origin}${url}`,
+        '@id': location,
+        url: `${window.location.origin}${location}`,
         telephone: CONTACT_INFO.phoneLink,
         email: CONTACT_INFO.email,
         address: {
@@ -107,7 +110,7 @@ export default function DistrictPage() {
       
       addMultipleJsonLd(schemas, `district-${district.slug}-schemas`);
     }
-  }, [district, language, districtsPath, districtName, districtDescription, districtMetaDescription, districtPopularServices, districtFaq]);
+  }, [district, language, location, districtsPath, districtName, districtDescription, districtMetaDescription, districtPopularServices, districtFaq]);
 
   if (!match || !district) {
     return null;
