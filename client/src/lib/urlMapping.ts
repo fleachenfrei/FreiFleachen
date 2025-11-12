@@ -1,3 +1,5 @@
+import { servicesData, ServiceId } from '@/data/services';
+
 export type Language = 'de' | 'en';
 
 interface RouteConfig {
@@ -91,4 +93,37 @@ export function getAlternateUrls(pathname: string): { de: string; en: string } {
     de: getLocalizedPath(pathWithoutLang, 'de'),
     en: getLocalizedPath(pathWithoutLang, 'en'),
   };
+}
+
+export function getLocalizedHomePath(language: Language): string {
+  return routeMapping.home[language];
+}
+
+export function getLocalizedContactPath(language: Language): string {
+  return routeMapping.contact[language];
+}
+
+export function getLocalizedDistrictsPath(language: Language, slug?: string): string {
+  const base = routeMapping.districts[language];
+  return slug ? `${base}/${slug}` : base;
+}
+
+export function getLocalizedBundeslaenderPath(language: Language, slug?: string, citySlug?: string): string {
+  const base = routeMapping.bundeslaender[language];
+  if (!slug) return base;
+  return citySlug ? `${base}/${slug}/${citySlug}` : `${base}/${slug}`;
+}
+
+export function getLocalizedServicesPath(language: Language): string {
+  return routeMapping.services[language];
+}
+
+export function getLocalizedServicePath(serviceId: ServiceId, language: Language): string {
+  const service = servicesData.find(s => s.id === serviceId);
+  if (!service) {
+    console.warn(`Service not found for id: ${serviceId}`);
+    return routeMapping.services[language];
+  }
+  const slug = service.slugs[language];
+  return `${routeMapping.services[language]}/${slug}`;
 }

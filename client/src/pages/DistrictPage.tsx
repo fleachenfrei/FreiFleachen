@@ -12,16 +12,21 @@ import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/li
 import Breadcrumbs from '@/components/Breadcrumbs';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getLocalizedDistrictsPath } from '@/lib/urlMapping';
 
 export default function DistrictPage() {
   const { t, language } = useLanguage();
-  const [match, params] = useRoute('/bezirke/:slug');
+  const [matchDe, paramsDe] = useRoute('/de/bezirke/:slug');
+  const [matchEn, paramsEn] = useRoute('/en/districts/:slug');
+  const match = matchDe || matchEn;
+  const params = matchDe ? paramsDe : paramsEn;
+  const districtsPath = getLocalizedDistrictsPath(language);
   const district = params?.slug ? getDistrictBySlug(params.slug) : null;
 
   useEffect(() => {
     if (district) {
       const title = `Räumung ${district.postalCode} Wien ${district.name} - Flächen Frei | Professionell & Schnell`;
-      const url = `/bezirke/${district.slug}`;
+      const url = getLocalizedDistrictsPath(language, district.slug);
 
       updateMetaTags({
         title,
@@ -86,7 +91,7 @@ export default function DistrictPage() {
       
       addMultipleJsonLd(schemas, `district-${district.slug}-schemas`);
     }
-  }, [district]);
+  }, [district, language, districtsPath]);
 
   if (!match || !district) {
     return null;
@@ -100,8 +105,8 @@ export default function DistrictPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: t.common.districts, url: '/#districts' },
-              { name: `${district.postalCode} ${district.name}`, url: `/bezirke/${district.slug}` }
+              { name: t.common.districts, url: `${districtsPath}#districts` },
+              { name: `${district.postalCode} ${district.name}`, url: getLocalizedDistrictsPath(language, district.slug) }
             ]} 
           />
         </div>

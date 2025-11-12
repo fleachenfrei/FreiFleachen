@@ -7,10 +7,12 @@ import { MapPin, Phone, Mail, CheckCircle, Building2, Clock, ArrowRight } from '
 import { useLanguage } from '@/contexts/LanguageContext';
 import { states } from '@/data/states';
 import { getCitiesByBundesland } from '@/data/cities';
+import { ServiceId } from '@/data/services';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getLocalizedServicePath } from '@/lib/urlMapping';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 
@@ -20,6 +22,9 @@ export default function BundeslandPage() {
   
   const state = states.find(s => s.slug === slug);
 
+  const bundeslaenderPath = getLocalizedBundeslaenderPath(language);
+  const contactPath = getLocalizedContactPath(language);
+
   useEffect(() => {
     if (!state) return;
 
@@ -27,11 +32,12 @@ export default function BundeslandPage() {
     const title = `${t.bundeslandPage.pageTitleTemplate} ${stateName} ${t.bundeslandPage.pageTitleSuffix}`;
 
     const description = language === 'de' ? state.metaDescription : state.metaDescriptionEn;
+    const stateUrl = getLocalizedBundeslaenderPath(language, state.slug);
 
     updateMetaTags({
       title,
       description,
-      url: `/bundeslaender/${state.slug}`,
+      url: stateUrl,
     });
 
     const faqData = language === 'de' ? state.faqs : state.faqsEn;
@@ -77,8 +83,8 @@ export default function BundeslandPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: t.common.states, url: '/#states' },
-              { name: stateName, url: `/bundeslaender/${state.slug}` }
+              { name: t.common.states, url: `${bundeslaenderPath}#states` },
+              { name: stateName, url: `${bundeslaenderPath}/${state.slug}` }
             ]} 
           />
         </div>
@@ -105,7 +111,7 @@ export default function BundeslandPage() {
                     {t.common.callNow}
                   </Button>
                 </a>
-                <Link href="/kontakt">
+                <Link href={contactPath}>
                   <Button variant="outline" size="lg" data-testid="button-contact">
                     <Mail className="w-5 h-5 mr-2" />
                     {t.bundeslandPage.sendInquiry}
@@ -253,7 +259,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/wohnungsräumungen">
+                  <Link href={getLocalizedServicePath(ServiceId.WOHNUNGSRAEUMUNG, language)}>
                     <Button variant="outline" className="w-full">
                       {t.bundeslandPage.learnMore}
                     </Button>
@@ -269,7 +275,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/haushaltsauflösung">
+                  <Link href={getLocalizedServicePath(ServiceId.HAUSHALTSAUFLOESUNG, language)}>
                     <Button variant="outline" className="w-full">
                       {t.bundeslandPage.learnMore}
                     </Button>
@@ -285,7 +291,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/geschäftsräumung">
+                  <Link href={getLocalizedServicePath(ServiceId.GESCHAEFTSRAEUMUNG, language)}>
                     <Button variant="outline" className="w-full">
                       {t.bundeslandPage.learnMore}
                     </Button>
@@ -301,7 +307,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/kellerräumung">
+                  <Link href={getLocalizedServicePath(ServiceId.KELLERRAEUMUNG, language)}>
                     <Button variant="outline" className="w-full">
                       {t.bundeslandPage.learnMore}
                     </Button>
@@ -317,7 +323,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/dachbodenräumung">
+                  <Link href={getLocalizedServicePath(ServiceId.DACHBODENRAEUMUNG, language)}>
                     <Button variant="outline" className="w-full">
                       {t.bundeslandPage.learnMore}
                     </Button>
@@ -333,7 +339,7 @@ export default function BundeslandPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Link href="/leistungen/verlassenschaftsräumung">
+                  <Link href={getLocalizedServicePath(ServiceId.VERLASSENSCHAFTSRAEUMUNG, language)}>
                     <Button variant="outline" className="w-full">
                       {t.bundeslandPage.learnMore}
                     </Button>
@@ -433,7 +439,7 @@ export default function BundeslandPage() {
                     +43660 39 57 587
                   </Button>
                 </a>
-                <Link href="/kontakt">
+                <Link href={contactPath}>
                   <Button variant="outline" size="lg" data-testid="button-contact-cta">
                     <Mail className="w-5 h-5 mr-2" />
                     {t.bundeslandPage.sendInquiry}

@@ -9,9 +9,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
 import { updateMetaTags } from '@/lib/seo';
+import { getLocalizedBundeslaenderPath, getLocalizedContactPath } from '@/lib/urlMapping';
 
 export default function Bundeslaender() {
   const { language, t } = useLanguage();
+  const bundeslaenderPath = getLocalizedBundeslaenderPath(language);
+  const contactPath = getLocalizedContactPath(language);
 
   useEffect(() => {
     const title = language === 'de' 
@@ -25,9 +28,9 @@ export default function Bundeslaender() {
     updateMetaTags({
       title,
       description,
-      url: '/bundeslaender',
+      url: bundeslaenderPath,
     });
-  }, [language]);
+  }, [language, bundeslaenderPath]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -82,7 +85,7 @@ export default function Bundeslaender() {
                         ))}
                       </ul>
                     </div>
-                    <Link href={`/bundeslaender/${state.slug}`}>
+                    <Link href={getLocalizedBundeslaenderPath(language, state.slug)}>
                       <Button variant="outline" className="w-full" data-testid={`button-state-${state.slug}`}>
                         {t.bundeslaenderPage.learnMore}
                       </Button>
@@ -109,7 +112,7 @@ export default function Bundeslaender() {
                   {t.nav.callNow}
                 </Button>
               </a>
-              <Link href="/kontakt">
+              <Link href={contactPath}>
                 <Button variant="outline" size="lg" data-testid="button-contact-cta">
                   {language === 'de' ? 'Kontaktformular' : 'Contact Form'}
                 </Button>

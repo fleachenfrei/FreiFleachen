@@ -3,8 +3,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { getLocalizedHomePath, getLocalizedContactPath } from "@/lib/urlMapping";
 
 export default function NotFound() {
+  const { language } = useLanguage();
+  const homePath = getLocalizedHomePath(language);
+  const contactPath = getLocalizedContactPath(language);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -26,12 +32,12 @@ export default function NotFound() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
-              <Link href="/">
+              <Link href={homePath}>
                 <Button size="lg">
                   Zur Startseite
                 </Button>
               </Link>
-              <Link href="/kontakt">
+              <Link href={contactPath}>
                 <Button size="lg" variant="outline">
                   Kontakt
                 </Button>

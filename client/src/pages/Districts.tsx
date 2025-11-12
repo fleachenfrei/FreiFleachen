@@ -9,10 +9,12 @@ import { getAllDistricts } from '@/data/districts';
 import { Button } from '@/components/ui/button';
 import { updateMetaTags } from '@/lib/seo';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getLocalizedDistrictsPath } from '@/lib/urlMapping';
 
 export default function Districts() {
   const { language, t } = useLanguage();
   const districts = getAllDistricts();
+  const districtsPath = getLocalizedDistrictsPath(language);
 
   useEffect(() => {
     const title = language === 'de'
@@ -26,10 +28,10 @@ export default function Districts() {
     updateMetaTags({
       title,
       description,
-      url: '/bezirke',
+      url: districtsPath,
       type: 'website',
     });
-  }, [language]);
+  }, [language, districtsPath]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -72,7 +74,7 @@ export default function Districts() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {districts.map((district, index) => (
-                <Link key={district.slug} href={`/bezirke/${district.slug}`}>
+                <Link key={district.slug} href={getLocalizedDistrictsPath(language, district.slug)}>
                   <Card className="hover-elevate active-elevate-2 cursor-pointer h-full transition-all" data-testid={`card-district-${index}`}>
                     <CardHeader>
                       <div className="flex items-center justify-between mb-3">

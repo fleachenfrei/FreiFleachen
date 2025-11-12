@@ -13,10 +13,15 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 import cityImage from '@assets/generated_images/House_clearance_service_e0229004.png';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getLocalizedBundeslaenderPath } from '@/lib/urlMapping';
 
 export default function CityPage() {
-  const { t } = useLanguage();
-  const [match, params] = useRoute('/bundeslaender/:bundesland/:city');
+  const { t, language } = useLanguage();
+  const [matchDe, paramsDe] = useRoute('/de/bundeslaender/:bundesland/:city');
+  const [matchEn, paramsEn] = useRoute('/en/federal-states/:bundesland/:city');
+  const match = matchDe || matchEn;
+  const params = matchDe ? paramsDe : paramsEn;
+  const bundeslaenderPath = getLocalizedBundeslaenderPath(language);
   const city = params?.bundesland && params?.city 
     ? getCityBySlug(params.bundesland, params.city) 
     : null;
@@ -24,7 +29,7 @@ export default function CityPage() {
   useEffect(() => {
     if (city) {
       const title = `${t.cityPage.pageTitleTemplate} ${city.name} ${city.bundesland} ${t.cityPage.pageTitleSuffix}`;
-      const url = `/bundeslaender/${city.bundeslandSlug}/${city.slug}`;
+      const url = getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug);
 
       updateMetaTags({
         title,
@@ -80,9 +85,9 @@ export default function CityPage() {
       };
 
       const breadcrumbSchema = getBreadcrumbSchema([
-        { name: t.common.states, url: '/bundeslaender' },
-        { name: city.bundesland, url: `/bundeslaender/${city.bundeslandSlug}` },
-        { name: city.name, url: `/bundeslaender/${city.bundeslandSlug}/${city.slug}` },
+        { name: t.common.states, url: bundeslaenderPath },
+        { name: city.bundesland, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug) },
+        { name: city.name, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) },
       ]);
 
       const schemas: Record<string, unknown>[] = [localBusinessSchema, breadcrumbSchema];
@@ -93,7 +98,7 @@ export default function CityPage() {
       
       addMultipleJsonLd(schemas, `city-${city.slug}-schemas`);
     }
-  }, [city, t]);
+  }, [city, language, t, bundeslaenderPath]);
 
   if (!match || !city) {
     return <NotFound />;
@@ -107,9 +112,9 @@ export default function CityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: t.common.states, url: '/bundeslaender' },
-              { name: city.bundesland, url: `/bundeslaender/${city.bundeslandSlug}` },
-              { name: city.name, url: `/bundeslaender/${city.bundeslandSlug}/${city.slug}` }
+              { name: t.common.states, url: bundeslaenderPath },
+              { name: city.bundesland, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug) },
+              { name: city.name, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) }
             ]} 
           />
         </div>

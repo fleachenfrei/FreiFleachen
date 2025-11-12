@@ -23,11 +23,13 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
+import { getLocalizedContactPath } from '@/lib/urlMapping';
 
 export default function Contact() {
   const { t, language } = useLanguage();
   const { toast } = useToast();
   const services = getAllServices();
+  const contactPath = getLocalizedContactPath(language);
 
   const localizedSchema = useMemo(() => {
     return z.object({
@@ -68,7 +70,7 @@ export default function Contact() {
     updateMetaTags({
       title,
       description,
-      url: '/kontakt',
+      url: contactPath,
       type: 'website',
     });
 
@@ -118,7 +120,7 @@ export default function Contact() {
         name: 'Austria',
       },
     });
-  }, [language]);
+  }, [language, contactPath, t]);
 
   const handleSubmit = async (values: ContactFormData) => {
     try {
