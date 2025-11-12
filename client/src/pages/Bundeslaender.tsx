@@ -38,12 +38,12 @@ export default function Bundeslaender() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4" data-testid="text-bundeslaender-title">
-                {language === 'de' ? 'Räumung in ganz Österreich' : 'Clearing Services Throughout Austria'}
+                {language === 'de' ? 'Räumung und Transport in ganz Österreich' : 'Clearing and Transport Throughout Austria'}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto" data-testid="text-bundeslaender-subtitle">
                 {language === 'de' 
-                  ? 'Professionelle Räumung und Räumung in allen 9 Bundesländern. Schnell, zuverlässig und zu fairen Preisen.'
-                  : 'Professional clearing and removal in all 9 federal states. Fast, reliable and at fair prices.'}
+                  ? 'Professionelle Räumung und Transport in allen 9 Bundesländern. Schnell, zuverlässig und zu fairen Preisen.'
+                  : 'Professional clearing and transport in all 9 federal states. Fast, reliable and at fair prices.'}
               </p>
             </div>
           </div>
