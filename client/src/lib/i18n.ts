@@ -188,6 +188,11 @@ export const translations = {
       in: 'in',
       wien: 'Wien',
     },
+    validation: {
+      nameMin: 'Name muss mindestens 2 Zeichen lang sein',
+      emailInvalid: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+      messageMin: 'Nachricht muss mindestens 10 Zeichen lang sein',
+    },
     servicePage: {
       about: 'Über',
       benefits: 'Ihre Vorteile',
@@ -494,6 +499,11 @@ export const translations = {
       cities: 'Cities',
       in: 'in',
       wien: 'Vienna',
+    },
+    validation: {
+      nameMin: 'Name must be at least 2 characters long',
+      emailInvalid: 'Please enter a valid email address',
+      messageMin: 'Message must be at least 10 characters long',
     },
     servicePage: {
       about: 'About',
