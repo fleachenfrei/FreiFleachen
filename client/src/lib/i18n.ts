@@ -20,7 +20,7 @@ export const translations = {
       antiques: 'Antikwarenankauf',
     },
     hero: {
-      title: 'Räumung und Transport in Wien',
+      title: 'Räumung und Transport in Österreich',
       subtitle: 'Schnell, zuverlässig, professionell',
       description: 'Sie brauchen Platz? Wir schaffen ihn für Sie! Unsere professionelle Räumungs- und Transportdienste sind Ihre Lösung für eine saubere und ordentliche Umgebung.',
       cta1: 'Angebot einholen',
@@ -101,7 +101,7 @@ export const translations = {
       subtitle: 'Vertrauen Sie den Experten: Räumung & Räumung in Wien!',
     },
     footer: {
-      companyDescription: 'Ihr zuverlässiger Partner für Räumung und Transport in Wien und Umgebung.',
+      companyDescription: 'Ihr zuverlässiger Partner für Räumung und Transport in Österreich.',
       services: 'Leistungen',
       districts: 'Bezirke',
       contact: 'Kontakt',
@@ -373,7 +373,7 @@ export const translations = {
       antiques: 'Antique Purchase',
     },
     hero: {
-      title: 'Clearing & Removal Services in Vienna',
+      title: 'Clearing & Removal Services in Austria',
       subtitle: 'Fast, Reliable, Professional',
       description: 'Need space? We create it for you! Our professional clearing and removal services are your solution for a clean and organized environment.',
       cta1: 'Get Quote',
@@ -454,7 +454,7 @@ export const translations = {
       subtitle: 'Trust the experts: Clearing & Removal in Vienna!',
     },
     footer: {
-      companyDescription: 'Your reliable partner for clearing and transport in Vienna and surrounding areas.',
+      companyDescription: 'Your reliable partner for clearing and transport in Austria.',
       services: 'Services',
       districts: 'Districts',
       contact: 'Contact',
