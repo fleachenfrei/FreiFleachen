@@ -2,28 +2,26 @@ import { Link } from 'wouter';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
+import { states } from '@/data/states';
+import { getAllDistricts } from '@/data/districts';
 
 export default function Footer() {
   const { t, language } = useLanguage();
   const servicesPath = language === 'de' ? '/leistungen' : '/en/services';
   const districtsPath = language === 'de' ? '/bezirke' : '/en/districts';
+  const statesPath = language === 'de' ? '/bundeslaender' : '/en/federal-states';
   const privacyPath = language === 'de' ? '/datenschutz' : '/en/privacy-policy';
   const imprintPath = language === 'de' ? '/impressum' : '/en/imprint';
   const termsPath = language === 'de' ? '/agb' : '/en/terms';
 
-  const districts = [
-    '1010 Wien Innere Stadt',
-    '1020 Wien Leopoldstadt',
-    '1030 Wien Landstraße',
-    '1100 Wien Favoriten',
-    '1110 Wien Simmering',
-    '1120 Wien Meidling',
-  ];
+  const allDistricts = getAllDistricts();
+  const displayDistricts = allDistricts.slice(0, 8);
+  const displayStates = states;
 
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Flächen Frei</h3>
             <p className="text-sm text-primary-foreground/80 mb-4">
@@ -48,10 +46,25 @@ export default function Footer() {
               {t.footer.districts}
             </h4>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
-              {districts.slice(0, 4).map((district, i) => (
-                <li key={i}>
-                  <Link href={`${districtsPath}/${district.toLowerCase().replace(/\s+/g, '-')}`} className="hover:text-primary-foreground">
-                    {district}
+              {displayDistricts.map((district) => (
+                <li key={district.slug}>
+                  <Link href={`${districtsPath}/${district.slug}`} className="hover:text-primary-foreground">
+                    {language === 'de' ? district.name : (district.nameEn || district.name)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-4" data-testid="text-footer-states">
+              {t.footer.states}
+            </h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/80">
+              {displayStates.map((state) => (
+                <li key={state.slug}>
+                  <Link href={`${statesPath}/${state.slug}`} className="hover:text-primary-foreground">
+                    {language === 'de' ? state.name : state.nameEn}
                   </Link>
                 </li>
               ))}
