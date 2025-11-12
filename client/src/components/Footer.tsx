@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
 import { states } from '@/data/states';
@@ -106,6 +106,48 @@ export default function Footer() {
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-primary-foreground/20 pt-8 pb-8">
+          <h4 className="font-bold mb-4 text-center md:text-left" data-testid="text-footer-other-projects">
+            {t.footer.otherProjects}
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto md:mx-0">
+            <a
+              href="https://themegaradio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 hover-elevate p-4 rounded-md transition-all group"
+              data-testid="link-footer-themegaradio"
+            >
+              <ExternalLink className="w-5 h-5 mt-0.5 shrink-0 text-primary-foreground/60 group-hover:text-primary-foreground transition-colors" />
+              <div>
+                <div className="font-semibold text-primary-foreground group-hover:text-primary-foreground transition-colors">
+                  {t.footer.projects.themegaradio.name}
+                </div>
+                <div className="text-sm text-primary-foreground/70">
+                  {t.footer.projects.themegaradio.description}
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://esimfo.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 hover-elevate p-4 rounded-md transition-all group"
+              data-testid="link-footer-esimfo"
+            >
+              <ExternalLink className="w-5 h-5 mt-0.5 shrink-0 text-primary-foreground/60 group-hover:text-primary-foreground transition-colors" />
+              <div>
+                <div className="font-semibold text-primary-foreground group-hover:text-primary-foreground transition-colors">
+                  {t.footer.projects.esimfo.name}
+                </div>
+                <div className="text-sm text-primary-foreground/70">
+                  {t.footer.projects.esimfo.description}
+                </div>
+              </div>
+            </a>
           </div>
         </div>
 
