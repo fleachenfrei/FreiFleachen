@@ -10,6 +10,7 @@ import { Phone, Mail, CheckCircle, ArrowRight, Euro } from 'lucide-react';
 import { getServiceBySlug } from '@/data/services';
 import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { useLanguage } from '@/contexts/LanguageContext';
 import apartmentImage from '@assets/generated_images/Apartment_clearance_Vienna_fd741ce0.png';
 import estateImage from '@assets/generated_images/Estate_clearance_service_46b9585f.png';
 import basementImage from '@assets/generated_images/Basement_clearance_759c9b49.png';
@@ -39,6 +40,7 @@ const serviceImages: Record<string, string> = {
 };
 
 export default function ServicePage() {
+  const { t, language } = useLanguage();
   const [match, params] = useRoute('/leistungen/:slug');
   const service = params?.slug ? getServiceBySlug(params.slug) : null;
 
@@ -109,7 +111,7 @@ export default function ServicePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: 'Leistungen', url: '/#services' },
+              { name: t.common.services, url: '/#services' },
               { name: service.name, url: `/leistungen/${service.slug}` }
             ]} 
           />
@@ -128,7 +130,7 @@ export default function ServicePage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-service-title">
-                {service.name} in Wien
+                {service.name} {t.common.in} {t.common.wien}
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
                 {service.shortDescription}
@@ -143,7 +145,7 @@ export default function ServicePage() {
                 <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
                   <a href="mailto:info@flaechenfrei.at">
                     <Mail className="mr-2 w-5 h-5" />
-                    E-Mail Anfrage
+                    {t.common.emailInquiry}
                   </a>
                 </Button>
               </div>
@@ -157,7 +159,7 @@ export default function ServicePage() {
               <div className="lg:col-span-2">
                 <Card className="mb-8">
                   <CardHeader>
-                    <CardTitle>Über {service.name}</CardTitle>
+                    <CardTitle>{t.servicePage.about} {service.name}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-lg text-muted-foreground leading-relaxed">
@@ -168,8 +170,8 @@ export default function ServicePage() {
 
                 <Card className="mb-8">
                   <CardHeader>
-                    <CardTitle>Ihre Vorteile</CardTitle>
-                    <CardDescription>Was Sie von unserem Service erwarten können</CardDescription>
+                    <CardTitle>{t.servicePage.benefits}</CardTitle>
+                    <CardDescription>{t.servicePage.benefitsSubtitle}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="grid gap-4">
@@ -185,8 +187,8 @@ export default function ServicePage() {
 
                 <Card className="mb-8">
                   <CardHeader>
-                    <CardTitle>So läuft der Ablauf</CardTitle>
-                    <CardDescription>Schritt für Schritt zu Ihrer entrümpelten Immobilie</CardDescription>
+                    <CardTitle>{t.servicePage.process}</CardTitle>
+                    <CardDescription>{t.servicePage.processSubtitle}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-6">
@@ -211,15 +213,15 @@ export default function ServicePage() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Euro className="w-6 h-6" />
-                      Preise & Kosten
+                      {t.servicePage.pricing}
                     </CardTitle>
-                    <CardDescription>Was kostet {service.name}?</CardDescription>
+                    <CardDescription>{t.servicePage.pricingSubtitle} {service.name}?</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-6">
                       {service.pricing.info}
                     </p>
-                    <h4 className="font-semibold mb-3">Einflussfaktoren auf den Preis:</h4>
+                    <h4 className="font-semibold mb-3">{t.servicePage.pricingFactors}</h4>
                     <ul className="space-y-2">
                       {service.pricing.factors.map((factor, index) => (
                         <li key={index} className="flex items-start gap-2 text-muted-foreground">
@@ -229,10 +231,9 @@ export default function ServicePage() {
                       ))}
                     </ul>
                     <div className="mt-6 p-4 bg-accent rounded-lg">
-                      <p className="font-semibold mb-2">Kostenlose Besichtigung & Festpreis</p>
+                      <p className="font-semibold mb-2">{t.servicePage.freeInspection}</p>
                       <p className="text-sm text-muted-foreground">
-                        Wir besichtigen Ihr Objekt kostenlos und erstellen ein transparentes 
-                        Festpreisangebot - keine versteckten Kosten, keine Überraschungen.
+                        {t.servicePage.inspectionText}
                       </p>
                     </div>
                   </CardContent>
@@ -240,8 +241,8 @@ export default function ServicePage() {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Häufig gestellte Fragen</CardTitle>
-                    <CardDescription>Antworten auf die wichtigsten Fragen zu {service.name}</CardDescription>
+                    <CardTitle>{t.servicePage.faq}</CardTitle>
+                    <CardDescription>{t.servicePage.faqSubtitle} {service.name}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <Accordion type="single" collapsible className="w-full">
@@ -264,28 +265,28 @@ export default function ServicePage() {
                 <div className="sticky top-24 space-y-6">
                   <Card className="bg-primary text-primary-foreground">
                     <CardHeader>
-                      <CardTitle>Jetzt Termin vereinbaren</CardTitle>
+                      <CardTitle>{t.servicePage.bookAppointment}</CardTitle>
                       <CardDescription className="text-primary-foreground/80">
-                        Kostenlose Besichtigung & Beratung
+                        {t.servicePage.freeConsultation}
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <Button asChild size="lg" className="w-full bg-secondary hover:bg-secondary text-secondary-foreground">
                         <a href="tel:+4366039575587">
                           <Phone className="mr-2 w-5 h-5" />
-                          Jetzt anrufen
+                          {t.common.callNow}
                         </a>
                       </Button>
                       <Button asChild size="lg" variant="outline" className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20">
                         <a href="mailto:info@flaechenfrei.at">
                           <Mail className="mr-2 w-5 h-5" />
-                          E-Mail senden
+                          {t.servicePage.sendEmail}
                         </a>
                       </Button>
                       <div className="pt-4 border-t border-primary-foreground/20">
                         <p className="text-sm text-primary-foreground/80">
-                          Telefonisch erreichbar:<br />
-                          Mo-So: 6:00 - 22:00 Uhr
+                          {t.servicePage.phoneAvailable}<br />
+                          {t.servicePage.phoneHours}
                         </p>
                       </div>
                     </CardContent>
@@ -293,7 +294,7 @@ export default function ServicePage() {
 
                   <Card>
                     <CardHeader>
-                      <CardTitle className="text-lg">Weitere Leistungen</CardTitle>
+                      <CardTitle className="text-lg">{t.servicePage.relatedServices}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-3">
                       {service.relatedServices.map((relatedSlug) => {

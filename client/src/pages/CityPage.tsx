@@ -12,8 +12,10 @@ import { updateMetaTags, getFAQSchema, addMultipleJsonLd, getBreadcrumbSchema } 
 import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 import cityImage from '@assets/generated_images/House_clearance_service_e0229004.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function CityPage() {
+  const { t } = useLanguage();
   const [match, params] = useRoute('/bundeslaender/:bundesland/:city');
   const city = params?.bundesland && params?.city 
     ? getCityBySlug(params.bundesland, params.city) 
@@ -21,7 +23,7 @@ export default function CityPage() {
 
   useEffect(() => {
     if (city) {
-      const title = `Räumung ${city.name} ${city.bundesland} - Flächen Frei | Professionell & Schnell`;
+      const title = `${t.cityPage.pageTitleTemplate} ${city.name} ${city.bundesland} ${t.cityPage.pageTitleSuffix}`;
       const url = `/bundeslaender/${city.bundeslandSlug}/${city.slug}`;
 
       updateMetaTags({
@@ -34,7 +36,7 @@ export default function CityPage() {
       const localBusinessSchema = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: `Flächen Frei - Räumung ${city.name}`,
+        name: `${t.cityPage.schemaCompanyName} ${city.name}`,
         image: cityImage,
         '@id': url,
         url: `${window.location.origin}${url}`,
@@ -65,20 +67,20 @@ export default function CityPage() {
         description: city.description,
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Räumungsdienstleistungen',
+          name: t.cityPage.schemaCatalogName,
           itemListElement: city.services.map((service) => ({
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
               name: service,
-              serviceType: 'Räumung',
+              serviceType: t.cityPage.schemaServiceType,
             },
           })),
         },
       };
 
       const breadcrumbSchema = getBreadcrumbSchema([
-        { name: 'Bundesländer', url: '/bundeslaender' },
+        { name: t.common.states, url: '/bundeslaender' },
         { name: city.bundesland, url: `/bundeslaender/${city.bundeslandSlug}` },
         { name: city.name, url: `/bundeslaender/${city.bundeslandSlug}/${city.slug}` },
       ]);
@@ -91,7 +93,7 @@ export default function CityPage() {
       
       addMultipleJsonLd(schemas, `city-${city.slug}-schemas`);
     }
-  }, [city]);
+  }, [city, t]);
 
   if (!match || !city) {
     return <NotFound />;
@@ -105,7 +107,7 @@ export default function CityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: 'Bundesländer', url: '/bundeslaender' },
+              { name: t.common.states, url: '/bundeslaender' },
               { name: city.bundesland, url: `/bundeslaender/${city.bundeslandSlug}` },
               { name: city.name, url: `/bundeslaender/${city.bundeslandSlug}/${city.slug}` }
             ]} 
@@ -123,7 +125,7 @@ export default function CityPage() {
                 {city.postalCode} {city.name}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-city-title">
-                Räumung in {city.name}, {city.bundesland}
+                {t.cityPage.clearingIn} {city.name}, {city.bundesland}
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-6" data-testid="text-city-subtitle">
                 {city.description}
@@ -132,12 +134,12 @@ export default function CityPage() {
                 <a href="tel:+436603957587">
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground" data-testid="button-call">
                     <Phone className="mr-2 w-5 h-5" />
-                    Jetzt anrufen
+                    {t.common.callNow}
                   </Button>
                 </a>
                 <a href="#kontakt">
                   <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm" data-testid="button-consultation">
-                    Kostenlose Besichtigung
+                    {t.common.freeConsultation}
                   </Button>
                 </a>
               </div>
@@ -151,22 +153,21 @@ export default function CityPage() {
               <div className="md:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-3xl font-bold mb-6">
-                    Professionelle Räumung in {city.name}
+                    {t.cityPage.professionalClearing} {city.name}
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Flächen Frei ist Ihr zuverlässiger Partner für professionelle Räumungen in {city.name}, {city.bundesland}. 
-                    Mit über 26 Jahren Erfahrung bieten wir schnelle, diskrete und kostengünstige Räumungsservices in ganz {city.name} und Umgebung.
+                    {t.cityPage.description1} {city.name}, {city.bundesland}. 
+                    {t.cityPage.description2} {city.name} {t.cityPage.description3}
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    Egal ob Wohnung, Haus, Keller oder Dachboden - wir kümmern uns um alles und hinterlassen 
-                    Ihre Räumlichkeiten in besenreinem Zustand. Kostenlose Besichtigung und transparente Preise garantiert!
+                    {t.cityPage.description4}
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                     <CheckCircle className="w-6 h-6 text-primary" />
-                    Unsere Leistungen in {city.name}
+                    {t.cityPage.ourServicesIn} {city.name}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-4">
                     {city.services.map((service, i) => (
@@ -186,7 +187,7 @@ export default function CityPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                       <Star className="w-6 h-6 text-primary" />
-                      Ihre Vorteile in {city.name}
+                      {t.cityPage.benefitsTitle} {city.name}
                     </h3>
                     <div className="space-y-3">
                       {city.benefits.map((benefit, i) => (
@@ -208,10 +209,10 @@ export default function CityPage() {
                     <CardHeader>
                       <div className="flex items-center gap-2 mb-2">
                         <MapPinned className="w-5 h-5 text-primary" />
-                        <CardTitle>Unser Einsatzgebiet</CardTitle>
+                        <CardTitle>{t.cityPage.coverageTitle}</CardTitle>
                       </div>
                       <CardDescription>
-                        Wo wir in {city.name} tätig sind
+                        {t.cityPage.coverageSubtitle} {city.name} {t.cityPage.coverageActive}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -223,7 +224,7 @@ export default function CityPage() {
                 {city.faq && city.faq.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold mb-6">
-                      Häufig gestellte Fragen zu Räumungen in {city.name}
+                      {t.cityPage.faqTitle} {city.name}
                     </h3>
                     <Accordion type="single" collapsible className="w-full">
                       {city.faq.map((faqItem, i) => (
@@ -244,8 +245,8 @@ export default function CityPage() {
               <div className="space-y-6">
                 <Card className="sticky top-24">
                   <CardHeader>
-                    <CardTitle>Schnellkontakt</CardTitle>
-                    <CardDescription>Kostenlose Besichtigung anfragen</CardDescription>
+                    <CardTitle>{t.cityPage.quickContact}</CardTitle>
+                    <CardDescription>{t.cityPage.requestInspection}</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <a 
@@ -255,7 +256,7 @@ export default function CityPage() {
                     >
                       <Phone className="w-5 h-5 text-primary shrink-0" />
                       <div>
-                        <div className="font-medium">Telefon</div>
+                        <div className="font-medium">{t.cityPage.contactPhone}</div>
                         <div className="text-sm text-muted-foreground">+43660 39 57 587</div>
                       </div>
                     </a>
@@ -267,7 +268,7 @@ export default function CityPage() {
                     >
                       <Mail className="w-5 h-5 text-primary shrink-0" />
                       <div>
-                        <div className="font-medium">E-Mail</div>
+                        <div className="font-medium">{t.cityPage.contactEmail}</div>
                         <div className="text-sm text-muted-foreground">info@flaechenfrei.at</div>
                       </div>
                     </a>
@@ -275,7 +276,7 @@ export default function CityPage() {
                     <div className="flex items-start gap-3 p-3 rounded-md border bg-muted/50">
                       <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                       <div>
-                        <div className="font-medium">Zentrale Wien</div>
+                        <div className="font-medium">{t.cityPage.contactAddress}</div>
                         <div className="text-sm text-muted-foreground">
                           Herndlgasse 7/17<br />
                           1100 Wien
@@ -287,19 +288,19 @@ export default function CityPage() {
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2">
                           <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Kostenlose Besichtigung</span>
+                          <span>{t.cityPage.benefit1}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Festpreisgarantie</span>
+                          <span>{t.cityPage.benefit2}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Besenreine Übergabe</span>
+                          <span>{t.cityPage.benefit3}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <CheckCircle className="w-4 h-4 text-primary" />
-                          <span>Über 26 Jahre Erfahrung</span>
+                          <span>{t.cityPage.benefit4}</span>
                         </div>
                       </div>
                     </div>
@@ -314,10 +315,10 @@ export default function CityPage() {
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-3xl font-bold mb-4">
-              Jetzt kostenlose Besichtigung vereinbaren
+              {t.cityPage.bookFreeInspection}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Rufen Sie uns an oder schreiben Sie uns - wir sind für Sie in {city.name} und ganz {city.bundesland} im Einsatz!
+              {t.cityPage.ctaText} {city.name} {t.cityPage.ctaTextAnd} {city.bundesland} {t.cityPage.ctaTextActive}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:+436603957587">
@@ -329,7 +330,7 @@ export default function CityPage() {
               <a href="mailto:info@flaechenfrei.at">
                 <Button size="lg" variant="outline" data-testid="button-cta-email">
                   <Mail className="mr-2 w-5 h-5" />
-                  E-Mail schreiben
+                  {t.cityPage.ctaEmailButton}
                 </Button>
               </a>
             </div>

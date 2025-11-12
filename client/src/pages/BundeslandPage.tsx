@@ -16,16 +16,15 @@ import NotFound from './not-found';
 
 export default function BundeslandPage() {
   const { slug } = useParams<{ slug: string }>();
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   
   const state = states.find(s => s.slug === slug);
 
   useEffect(() => {
     if (!state) return;
 
-    const title = language === 'de'
-      ? `Räumung ${state.name} | Professionelle Räumung | Flächen Frei`
-      : `Clearing Services ${state.nameEn} | Professional Removal | Flächen Frei`;
+    const stateName = language === 'de' ? state.name : state.nameEn;
+    const title = `${t.bundeslandPage.pageTitleTemplate} ${stateName} ${t.bundeslandPage.pageTitleSuffix}`;
 
     const description = language === 'de' ? state.metaDescription : state.metaDescriptionEn;
 
@@ -41,7 +40,7 @@ export default function BundeslandPage() {
       {
         '@context': 'https://schema.org',
         '@type': 'Service',
-        'serviceType': language === 'de' ? 'Räumung und Räumung' : 'Clearing and Removal',
+        'serviceType': t.bundeslandPage.schemaServiceType,
         'provider': {
           '@type': 'LocalBusiness',
           'name': 'Flächen Frei',
@@ -49,14 +48,14 @@ export default function BundeslandPage() {
           'email': 'info@flaechenfrei.at',
           'areaServed': {
             '@type': 'State',
-            'name': language === 'de' ? state.name : state.nameEn,
+            'name': stateName,
           },
         },
         'description': description,
       },
       getFAQSchema(faqData),
     ], `bundesland-${state.slug}-schemas`);
-  }, [state, language]);
+  }, [state, language, t]);
 
   if (!state) {
     return <NotFound />;
@@ -78,7 +77,7 @@ export default function BundeslandPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: language === 'de' ? 'Bundesländer' : 'States', url: '/#states' },
+              { name: t.common.states, url: '/#states' },
               { name: stateName, url: `/bundeslaender/${state.slug}` }
             ]} 
           />
@@ -93,7 +92,7 @@ export default function BundeslandPage() {
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground" data-testid="text-state-title">
-                  {language === 'de' ? `Räumung ${stateName}` : `Clearing Services ${stateName}`}
+                  {t.bundeslandPage.heroTitlePrefix} {stateName}
                 </h1>
               </div>
               <p className="text-lg md:text-xl text-muted-foreground mb-8" data-testid="text-state-description">
@@ -103,13 +102,13 @@ export default function BundeslandPage() {
                 <a href="tel:+4366039575587">
                   <Button size="lg" data-testid="button-call">
                     <Phone className="w-5 h-5 mr-2" />
-                    {language === 'de' ? 'Jetzt anrufen' : 'Call Now'}
+                    {t.common.callNow}
                   </Button>
                 </a>
                 <Link href="/kontakt">
                   <Button variant="outline" size="lg" data-testid="button-contact">
                     <Mail className="w-5 h-5 mr-2" />
-                    {language === 'de' ? 'Anfrage senden' : 'Send Inquiry'}
+                    {t.bundeslandPage.sendInquiry}
                   </Button>
                 </Link>
               </div>
@@ -122,7 +121,7 @@ export default function BundeslandPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl">
               <h2 className="text-3xl font-bold text-foreground mb-6" data-testid="text-intro-title">
-                {language === 'de' ? `Räumung in ${stateName} - Ihr zuverlässiger Partner` : `Clearing in ${stateName} - Your Reliable Partner`}
+                {t.bundeslandPage.introTitle} {stateName} {t.bundeslandPage.introSuffix}
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed" data-testid="text-intro-content">
                 {detailedIntro}
@@ -136,13 +135,10 @@ export default function BundeslandPage() {
           <section className="py-16 bg-muted/30">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="text-3xl font-bold text-foreground mb-4" data-testid="text-cities-title">
-                {language === 'de' ? `Räumung in Städten von ${stateName}` : `Clearing in Cities of ${stateName}`}
+                {t.bundeslandPage.citiesTitle} {stateName}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                {language === 'de' 
-                  ? `Wir sind in allen größeren Städten von ${stateName} tätig. Wählen Sie Ihre Stadt für detaillierte Informationen:`
-                  : `We operate in all major cities of ${stateName}. Select your city for detailed information:`
-                }
+                {t.bundeslandPage.citiesDescription} {stateName} {t.bundeslandPage.citiesDescriptionSuffix}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {cityPages.map((city) => (
@@ -179,7 +175,7 @@ export default function BundeslandPage() {
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-coverage-title">
-              {language === 'de' ? 'Unser gesamtes Einsatzgebiet' : 'Our Complete Service Area'}
+              {t.bundeslandPage.coverageTitle}
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {cities.map((city, index) => (
@@ -198,7 +194,7 @@ export default function BundeslandPage() {
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8" data-testid="text-features-title">
-              {language === 'de' ? `Unsere Leistungen in ${stateName}` : `Our Services in ${stateName}`}
+              {t.bundeslandPage.ourServicesIn} {stateName}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {features.map((feature, index) => (
@@ -219,12 +215,10 @@ export default function BundeslandPage() {
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4 text-center" data-testid="text-why-title">
-              {language === 'de' ? `Warum Flächen Frei in ${stateName}?` : `Why Flächen Frei in ${stateName}?`}
+              {t.bundeslandPage.whyUsIn} {stateName}?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center max-w-3xl mx-auto">
-              {language === 'de' 
-                ? `Diese Vorteile sprechen für uns als Ihren Räumungspartner in ${stateName}:`
-                : `These advantages make us your clearing partner in ${stateName}:`}
+              {t.bundeslandPage.whyUsDescription} {stateName}:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {whyChooseUs.map((reason, index) => (
@@ -245,27 +239,23 @@ export default function BundeslandPage() {
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              {language === 'de' ? 'Unsere Dienstleistungen' : 'Our Services'}
+              {t.bundeslandPage.ourServices}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              {language === 'de' 
-                ? 'Von der Wohnungsauflösung bis zur Gewerberäumung - wir bieten Ihnen den kompletten Service.'
-                : 'From apartment dissolution to commercial clearing - we offer you the complete service.'}
+              {t.bundeslandPage.servicesDescription}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Wohnungsräumung' : 'Apartment Clearing'}</CardTitle>
+                  <CardTitle>{t.bundeslandPage.apartmentClearing}</CardTitle>
                   <CardDescription>
-                    {language === 'de' 
-                      ? 'Schnelle und diskrete Räumung Ihrer Wohnung'
-                      : 'Fast and discreet clearing of your apartment'}
+                    {t.bundeslandPage.apartmentDescription}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link href="/leistungen/wohnungsräumungen">
                     <Button variant="outline" className="w-full">
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                      {t.bundeslandPage.learnMore}
                     </Button>
                   </Link>
                 </CardContent>
@@ -273,17 +263,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Haushaltsauflösung' : 'House Clearance'}</CardTitle>
+                  <CardTitle>{t.bundeslandPage.householdClearing}</CardTitle>
                   <CardDescription>
-                    {language === 'de'
-                      ? 'Komplette Auflösung Ihres Haushalts'
-                      : 'Complete household dissolution'}
+                    {t.bundeslandPage.householdDescription}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link href="/leistungen/haushaltsauflösung">
                     <Button variant="outline" className="w-full">
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                      {t.bundeslandPage.learnMore}
                     </Button>
                   </Link>
                 </CardContent>
@@ -291,17 +279,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Geschäftsräumung' : 'Commercial Properties'}</CardTitle>
+                  <CardTitle>{t.bundeslandPage.commercialClearing}</CardTitle>
                   <CardDescription>
-                    {language === 'de'
-                      ? 'Professionelle Räumung von Geschäftsräumen'
-                      : 'Professional clearing of business premises'}
+                    {t.bundeslandPage.professionalClearing}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link href="/leistungen/geschäftsräumung">
                     <Button variant="outline" className="w-full">
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                      {t.bundeslandPage.learnMore}
                     </Button>
                   </Link>
                 </CardContent>
@@ -309,17 +295,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Kellerräumung' : 'Basement Clearing'}</CardTitle>
+                  <CardTitle>{t.bundeslandPage.basementClearing}</CardTitle>
                   <CardDescription>
-                    {language === 'de'
-                      ? 'Schnelle und gründliche Kellerräumung'
-                      : 'Fast and thorough basement clearing'}
+                    {t.bundeslandPage.basementDescription}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link href="/leistungen/kellerräumung">
                     <Button variant="outline" className="w-full">
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                      {t.bundeslandPage.learnMore}
                     </Button>
                   </Link>
                 </CardContent>
@@ -327,17 +311,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Dachbodenräumung' : 'Attic Clearing'}</CardTitle>
+                  <CardTitle>{t.bundeslandPage.atticClearing}</CardTitle>
                   <CardDescription>
-                    {language === 'de'
-                      ? 'Professionelle Dachbodenräumung'
-                      : 'Professional attic clearing'}
+                    {t.bundeslandPage.professionalAtticClearing}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link href="/leistungen/dachbodenräumung">
                     <Button variant="outline" className="w-full">
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                      {t.bundeslandPage.learnMore}
                     </Button>
                   </Link>
                 </CardContent>
@@ -345,17 +327,15 @@ export default function BundeslandPage() {
 
               <Card className="hover-elevate">
                 <CardHeader>
-                  <CardTitle>{language === 'de' ? 'Verlassenschaftsräumung' : 'Estate Clearing'}</CardTitle>
+                  <CardTitle>{t.bundeslandPage.estateClearing}</CardTitle>
                   <CardDescription>
-                    {language === 'de'
-                      ? 'Sensible Räumung von Verlassenschaften'
-                      : 'Sensitive clearing of estates'}
+                    {t.bundeslandPage.estateDescription}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Link href="/leistungen/verlassenschaftsräumung">
                     <Button variant="outline" className="w-full">
-                      {language === 'de' ? 'Mehr erfahren' : 'Learn More'}
+                      {t.bundeslandPage.learnMore}
                     </Button>
                   </Link>
                 </CardContent>
@@ -368,12 +348,10 @@ export default function BundeslandPage() {
         <section className="py-16 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-4 text-center" data-testid="text-faq-title">
-              {language === 'de' ? 'Häufig gestellte Fragen' : 'Frequently Asked Questions'}
+              {t.bundeslandPage.faqTitle}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 text-center">
-              {language === 'de' 
-                ? `Antworten auf die häufigsten Fragen zur Räumung in ${stateName}`
-                : `Answers to the most common questions about clearing in ${stateName}`}
+              {t.bundeslandPage.faqDescription} {stateName}
             </p>
             <Accordion type="single" collapsible className="w-full" data-testid="accordion-faq">
               {faqs.map((faq, index) => (
@@ -394,7 +372,7 @@ export default function BundeslandPage() {
         <section className="py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-              {language === 'de' ? 'So funktioniert es' : 'How It Works'}
+              {t.bundeslandPage.howItWorks}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <Card className="text-center">
@@ -402,11 +380,9 @@ export default function BundeslandPage() {
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Phone className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle>{language === 'de' ? '1. Kostenlose Besichtigung' : '1. Free Consultation'}</CardTitle>
+                  <CardTitle>1. {t.bundeslandPage.freeConsultation}</CardTitle>
                   <CardDescription className="text-base">
-                    {language === 'de'
-                      ? 'Kontaktieren Sie uns telefonisch oder per E-Mail. Wir vereinbaren einen kostenlosen Besichtigungstermin.'
-                      : 'Contact us by phone or email. We arrange a free consultation appointment.'}
+                    {t.bundeslandPage.contactPhone}
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -416,11 +392,9 @@ export default function BundeslandPage() {
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <CheckCircle className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle>{language === 'de' ? '2. Professionelle Durchführung' : '2. Professional Execution'}</CardTitle>
+                  <CardTitle>2. {t.bundeslandPage.professionalExecution}</CardTitle>
                   <CardDescription className="text-base">
-                    {language === 'de'
-                      ? 'Unser erfahrenes Team übernimmt die komplette Räumung schnell, effizient und diskret.'
-                      : 'Our experienced team handles the complete clearing quickly, efficiently, and discreetly.'}
+                    {t.process.step2.description}
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -430,11 +404,9 @@ export default function BundeslandPage() {
                   <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Clock className="w-8 h-8 text-primary" />
                   </div>
-                  <CardTitle>{language === 'de' ? '3. Besenreine Übergabe' : '3. Broom-Clean Handover'}</CardTitle>
+                  <CardTitle>3. {t.process.step3.title}</CardTitle>
                   <CardDescription className="text-base">
-                    {language === 'de'
-                      ? 'Wir übergeben Ihnen die Räumlichkeiten in besenreinem Zustand - inklusive fachgerechter Entsorgung.'
-                      : 'We hand over the premises in broom-clean condition - including professional disposal.'}
+                    {t.process.step3.description}
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -448,12 +420,10 @@ export default function BundeslandPage() {
             <Card className="bg-background/80 backdrop-blur border-primary/20">
               <CardHeader className="text-center">
                 <CardTitle className="text-3xl md:text-4xl mb-4">
-                  {language === 'de' ? `Räumung in ${stateName} gewünscht?` : `Need Clearing in ${stateName}?`}
+                  {t.bundeslandPage.clearingIn} {stateName} {t.bundeslandPage.ctaTitleSuffix}
                 </CardTitle>
                 <CardDescription className="text-base md:text-lg">
-                  {language === 'de'
-                    ? 'Kontaktieren Sie uns jetzt für eine kostenlose Besichtigung und ein unverbindliches Angebot. Wir beraten Sie gerne!'
-                    : 'Contact us now for a free consultation and a non-binding quote. We are happy to advise you!'}
+                  {t.bundeslandPage.contactUs}
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -466,7 +436,7 @@ export default function BundeslandPage() {
                 <Link href="/kontakt">
                   <Button variant="outline" size="lg" data-testid="button-contact-cta">
                     <Mail className="w-5 h-5 mr-2" />
-                    {language === 'de' ? 'Anfrage senden' : 'Send Inquiry'}
+                    {t.bundeslandPage.sendInquiry}
                   </Button>
                 </Link>
               </CardContent>

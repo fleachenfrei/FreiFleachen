@@ -11,8 +11,10 @@ import { getDistrictBySlug } from '@/data/districts';
 import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function DistrictPage() {
+  const { t, language } = useLanguage();
   const [match, params] = useRoute('/bezirke/:slug');
   const district = params?.slug ? getDistrictBySlug(params.slug) : null;
 
@@ -98,7 +100,7 @@ export default function DistrictPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs 
             items={[
-              { name: 'Bezirke', url: '/#districts' },
+              { name: t.common.districts, url: '/#districts' },
               { name: `${district.postalCode} ${district.name}`, url: `/bezirke/${district.slug}` }
             ]} 
           />
@@ -114,7 +116,7 @@ export default function DistrictPage() {
                 {district.postalCode} Wien
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-district-title">
-                Räumung in {district.postalCode} Wien {district.name}
+                {t.districtPage.clearingIn} {district.postalCode} Wien {district.name}
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-6" data-testid="text-district-subtitle">
                 {district.description}
@@ -123,12 +125,12 @@ export default function DistrictPage() {
                 <a href="tel:+4366039575587">
                   <Button size="lg" className="bg-secondary hover:bg-secondary text-secondary-foreground">
                     <Phone className="mr-2 w-5 h-5" />
-                    Jetzt anrufen
+                    {t.common.callNow}
                   </Button>
                 </a>
                 <a href="#kontakt">
                   <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm">
-                    Kostenlose Besichtigung
+                    {t.common.freeConsultation}
                   </Button>
                 </a>
               </div>
@@ -142,15 +144,14 @@ export default function DistrictPage() {
               <div className="md:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-3xl font-bold mb-6">
-                    Professionelle Räumung in {district.name}
+                    {t.districtPage.professionalClearing} {district.name}
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6">
-                    Flächen Frei ist Ihr zuverlässiger Partner für professionelle Räumungen im {district.postalCode} Wien {district.name}. 
-                    Mit über 26 Jahren Erfahrung bieten wir schnelle, diskrete und kostengünstige Räumungsservices in allen Bereichen des Bezirks.
+                    {t.districtPage.description1} {district.postalCode} Wien {district.name}. 
+                    {t.districtPage.description2}
                   </p>
                   <p className="text-lg text-muted-foreground">
-                    Egal ob Wohnung, Haus, Keller oder Dachboden - wir kümmern uns um alles und hinterlassen 
-                    Ihre Räumlichkeiten in besenreinem Zustand. Kostenlose Besichtigung und transparente Preise garantiert!
+                    {t.districtPage.description3}
                   </p>
                 </div>
 
@@ -159,10 +160,10 @@ export default function DistrictPage() {
                     <CardHeader>
                       <div className="flex items-center gap-2 mb-2">
                         <Landmark className="w-5 h-5 text-primary" />
-                        <CardTitle>Bekannte Orte in {district.name}</CardTitle>
+                        <CardTitle>{t.districtPage.knownPlaces} {district.name}</CardTitle>
                       </div>
                       <CardDescription>
-                        Wir sind im gesamten Bezirk tätig
+                        {t.districtPage.activeInDistrict}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -180,7 +181,7 @@ export default function DistrictPage() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                     <CheckCircle className="w-6 h-6 text-primary" />
-                    Unsere Leistungen in {district.name}
+                    {t.districtPage.ourServicesIn} {district.name}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-4">
                     {district.popularServices.map((service, i) => (
@@ -200,10 +201,10 @@ export default function DistrictPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                       <MapPinned className="w-6 h-6 text-primary" />
-                      Unsere Einsatzgebiete in {district.postalCode}
+                      {t.districtPage.serviceAreas} {district.postalCode}
                     </h3>
                     <p className="text-muted-foreground mb-4">
-                      Wir sind in allen Teilen des {district.postalCode}. Bezirks tätig, einschließlich:
+                      {t.districtPage.activeInAllParts} {district.postalCode}. {t.districtPage.district}
                     </p>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                       {district.serviceAreas.map((area, i) => (
@@ -219,7 +220,7 @@ export default function DistrictPage() {
                 {district.characteristics.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold mb-4">
-                      Besonderheiten von {district.name}
+                      {t.districtPage.characteristics} {district.name}
                     </h3>
                     <div className="space-y-3">
                       {district.characteristics.map((char, i) => (
@@ -234,7 +235,7 @@ export default function DistrictPage() {
 
                 <div>
                   <h3 className="text-2xl font-bold mb-4">
-                    Warum Flächen Frei in {district.name}?
+                    {t.districtPage.whyUs} {district.name}?
                   </h3>
                   <div className="space-y-3">
                     {district.whyChooseUs.map((reason, i) => (
@@ -249,9 +250,9 @@ export default function DistrictPage() {
                 {district.neighborhoods.length > 0 && (
                   <Card className="bg-accent/50">
                     <CardHeader>
-                      <CardTitle>Stadtteile und Grätzl in {district.name}</CardTitle>
+                      <CardTitle>{t.districtPage.neighborhoods} {district.name}</CardTitle>
                       <CardDescription>
-                        Wir kennen jeden Winkel des Bezirks
+                        {t.districtPage.neighborhoodsSubtitle}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -270,7 +271,7 @@ export default function DistrictPage() {
                 {district.faq.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold mb-6">
-                      Häufig gestellte Fragen zur Räumung in {district.name}
+                      {t.districtPage.faqTitle} {district.name}
                     </h3>
                     <Accordion type="single" collapsible className="w-full">
                       {district.faq.map((item, i) => (
@@ -290,11 +291,10 @@ export default function DistrictPage() {
                 <Card className="bg-primary text-primary-foreground">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4">
-                      Kostenlose Besichtigung in {district.name}
+                      {t.districtPage.freeInspectionIn} {district.name}
                     </h3>
                     <p className="mb-6 text-primary-foreground/90">
-                      Wir bieten Ihnen eine kostenlose und unverbindliche Besichtigung vor Ort. 
-                      Dabei erstellen wir einen transparenten Kostenvoranschlag ohne versteckte Gebühren.
+                      {t.districtPage.inspectionText}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a href="tel:+4366039575587">
