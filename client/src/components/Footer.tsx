@@ -59,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                <a href="tel:+436602005610" className="hover:text-primary-foreground">+43 660 200 5610</a>
+                <a href="tel:+4366039575 87" className="hover:text-primary-foreground">+43660 39 57 587</a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 mt-0.5 shrink-0" />
@@ -67,7 +67,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>Wien, Österreich</span>
+                <span>Herndlgasse 7/17, 1100 Wien</span>
               </li>
             </ul>
           </div>

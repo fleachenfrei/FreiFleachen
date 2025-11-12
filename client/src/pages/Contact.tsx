@@ -29,12 +29,12 @@ export default function Contact() {
 
   useEffect(() => {
     const title = language === 'de' 
-      ? 'Kontakt - Flächen Frei | Entrümpelung Wien und Umgebung ☎ +43 660 200 5610'
-      : 'Contact - Flächen Frei | Clearing Services Vienna ☎ +43 660 200 5610';
+      ? 'Kontakt - Flächen Frei | Entrümpelung Wien und Umgebung ☎ +43660 39 57 587'
+      : 'Contact - Flächen Frei | Clearing Services Vienna ☎ +43660 39 57 587';
     
     const description = language === 'de'
-      ? 'Kontaktieren Sie Flächen Frei für professionelle Entrümpelung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ +43 660 200 5610'
-      : 'Contact Flächen Frei for professional clearing services in Vienna and throughout Austria ✓ Free consultation ✓ Fast appointments ✓ 24/7 available ☎ +43 660 200 5610';
+      ? 'Kontaktieren Sie Flächen Frei für professionelle Entrümpelung in Wien und ganz Österreich ✓ Kostenlose Beratung ✓ Schnelle Termine ✓ 24/7 Erreichbar ☎ +43660 39 57 587'
+      : 'Contact Flächen Frei for professional clearing services in Vienna and throughout Austria ✓ Free consultation ✓ Fast appointments ✓ 24/7 available ☎ +43660 39 57 587';
 
     updateMetaTags({
       title,
@@ -51,38 +51,32 @@ export default function Contact() {
       image: `${window.location.origin}/og-image.jpg`,
       '@id': window.location.origin,
       url: window.location.origin,
-      telephone: '+43-660-200-5610',
-      email: 'info@flaechenfrei.at',
+      telephone: '+43660 39 57 587',
+      email: 'office@flaechenfrei.at',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Wiener Straße',
+        streetAddress: 'Herndlgasse 7/17',
         addressLocality: 'Wien',
-        postalCode: '1010',
+        postalCode: '1100',
         addressCountry: 'AT',
       },
       geo: {
         '@type': 'GeoCoordinates',
-        latitude: 48.2082,
-        longitude: 16.3738,
+        latitude: 48.1756,
+        longitude: 16.3858,
       },
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '07:00',
-          closes: '20:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Saturday',
-          opens: '08:00',
+          opens: '09:00',
           closes: '18:00',
         },
         {
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Sunday',
+          dayOfWeek: 'Saturday',
           opens: '09:00',
-          closes: '17:00',
+          closes: '12:00',
         },
       ],
       sameAs: [
@@ -165,8 +159,8 @@ export default function Contact() {
                 <CardDescription>24/7 {language === 'de' ? 'erreichbar' : 'available'}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="tel:+436602005610" className="text-lg font-semibold text-primary hover:underline" data-testid="link-phone">
-                  +43 660 200 5610
+                <a href="tel:+4366039575 87" className="text-lg font-semibold text-primary hover:underline" data-testid="link-phone">
+                  +43660 39 57 587
                 </a>
               </CardContent>
             </Card>
@@ -181,8 +175,8 @@ export default function Contact() {
                 <CardDescription>{language === 'de' ? 'Schnelle Antwort' : 'Quick response'}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="mailto:info@flaechenfrei.at" className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
-                  info@flaechenfrei.at
+                <a href="mailto:office@flaechenfrei.at" className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
+                  office@flaechenfrei.at
                 </a>
               </CardContent>
             </Card>
@@ -197,8 +191,8 @@ export default function Contact() {
                 <CardDescription>{language === 'de' ? 'Direktnachricht' : 'Direct message'}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href="https://wa.me/436602005610" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
-                  +43 660 200 5610
+                <a href="https://wa.me/4366039575 87" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
+                  +43660 39 57 587
                 </a>
               </CardContent>
             </Card>
@@ -323,10 +317,6 @@ export default function Contact() {
                     <span className="font-medium">{t.contact.hours.saturday}:</span>
                     <span className="text-muted-foreground">{t.contact.hours.saturdayTime}</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="font-medium">{t.contact.hours.sunday}:</span>
-                    <span className="text-muted-foreground">{t.contact.hours.sundayTime}</span>
-                  </div>
                   <div className="pt-3 border-t">
                     <p className="text-sm font-semibold text-primary">{t.contact.hours.emergency}</p>
                   </div>
@@ -348,7 +338,8 @@ export default function Contact() {
                   <div className="space-y-2 text-sm">
                     <p className="font-medium">{language === 'de' ? 'Hauptsitz:' : 'Headquarters:'}</p>
                     <p className="text-muted-foreground">
-                      Wien, Österreich
+                      Herndlgasse 7/17<br />
+                      1100 Wien, Österreich
                     </p>
                   </div>
                 </CardContent>
@@ -365,10 +356,10 @@ export default function Contact() {
                       ? 'Rufen Sie uns jetzt an für eine kostenlose Beratung!'
                       : 'Call us now for a free consultation!'}
                   </p>
-                  <a href="tel:+436602005610">
+                  <a href="tel:+4366039575 87">
                     <Button variant="outline" size="lg" className="w-full bg-background text-foreground hover:bg-background" data-testid="button-quick-call">
                       <Phone className="w-4 h-4 mr-2" />
-                      +43 660 200 5610
+                      +43660 39 57 587
                     </Button>
                   </a>
                 </CardContent>

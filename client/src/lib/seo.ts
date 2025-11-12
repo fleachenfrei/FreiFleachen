@@ -96,7 +96,7 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
       ? 'Professionelle Entrümpelung und Räumungsdienste in Wien und ganz Österreich. Schnell, zuverlässig und zu fairen Preisen.'
       : 'Professional clearing and removal services in Vienna and throughout Austria. Fast, reliable, and at fair prices.',
     'url': 'https://flaechenfrei.at',
-    'telephone': '+43 664 99124972',
+    'telephone': '+43660 39 57 587',
     'email': 'office@flaechenfrei.at',
     'priceRange': '€€',
     'image': 'https://flaechenfrei.at/og-image.jpg',
@@ -106,10 +106,10 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
     },
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': 'Wien',
+      'streetAddress': 'Herndlgasse 7/17',
       'addressLocality': 'Wien',
       'addressRegion': 'Wien',
-      'postalCode': '1010',
+      'postalCode': '1100',
       'addressCountry': 'AT',
     },
     'geo': {
@@ -165,14 +165,14 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'Thursday',
           'Friday',
         ],
-        'opens': '07:00',
-        'closes': '20:00',
+        'opens': '09:00',
+        'closes': '18:00',
       },
       {
         '@type': 'OpeningHoursSpecification',
         'dayOfWeek': 'Saturday',
-        'opens': '08:00',
-        'closes': '18:00',
+        'opens': '09:00',
+        'closes': '12:00',
       },
     ],
     'sameAs': [
@@ -264,7 +264,7 @@ export function getOrganizationSchema() {
     },
     'contactPoint': {
       '@type': 'ContactPoint',
-      'telephone': '+43 664 99124972',
+      'telephone': '+43660 39 57 587',
       'contactType': 'customer service',
       'email': 'office@flaechenfrei.at',
       'areaServed': 'AT',

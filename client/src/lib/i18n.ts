@@ -127,11 +127,9 @@ export const translations = {
       hours: {
         title: 'Öffnungszeiten',
         weekdays: 'Mo - Fr',
-        weekdaysTime: '07:00 - 20:00 Uhr',
+        weekdaysTime: '09:00 - 18:00 Uhr',
         saturday: 'Samstag',
-        saturdayTime: '08:00 - 18:00 Uhr',
-        sunday: 'Sonntag',
-        sundayTime: '09:00 - 17:00 Uhr',
+        saturdayTime: '09:00 - 12:00 Uhr',
         emergency: 'Notfälle: 24/7',
       },
       info: {
@@ -272,11 +270,9 @@ export const translations = {
       hours: {
         title: 'Opening Hours',
         weekdays: 'Mon - Fri',
-        weekdaysTime: '07:00 AM - 08:00 PM',
+        weekdaysTime: '09:00 AM - 06:00 PM',
         saturday: 'Saturday',
-        saturdayTime: '08:00 AM - 06:00 PM',
-        sunday: 'Sunday',
-        sundayTime: '09:00 AM - 05:00 PM',
+        saturdayTime: '09:00 AM - 12:00 PM',
         emergency: 'Emergencies: 24/7',
       },
       info: {
