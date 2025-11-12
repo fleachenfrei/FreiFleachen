@@ -75,17 +75,37 @@ Preferred communication style: Simple, everyday language.
 ### Internationalization (i18n)
 
 **Language Support**
-- German (primary) and English
+- German (primary) and English with dedicated URL paths
+- URL-based language detection: `/de/*` for German, `/en/*` for English
+- Server-side redirect from `/` to `/de` or `/en` based on Accept-Language header
 - Context-based translation system (`LanguageContext`)
 - Translation keys organized by feature/section
 - Translations stored in `client/src/lib/i18n.ts`
 
 **Implementation**
-- React Context provides `t` (translation) and `setLanguage` functions
-- Language preference stored in localStorage
+- Language-specific URL structure:
+  - German: `/de`, `/de/leistungen`, `/de/leistungen/{slug}`
+  - English: `/en`, `/en/services`, `/en/services/{slug}`
+- React Context provides `t` (translation), `language`, and `setLanguage` functions
+- Language state derived from URL path using `getLanguageFromPath()`
+- URL translation helper `getLocalizedPath()` for language switching
 - No external i18n library - custom lightweight solution
 
+**SEO Integration**
+- Canonical URLs for each language version
+- Hreflang tags linking German ↔ English versions
+- Language-specific meta tags (og:locale)
+- Service slug translations (e.g., `wohnungsraeumungen` ↔ `apartment-clearing`)
+
 ### Content Architecture
+
+**Service Data**
+- Multilingual service data structure with canonical ServiceId enum
+- Each service has language-specific slugs and content
+- 12 services total: Wohnungsräumungen, Haushaltsauflösung, Kellerräumung, etc.
+- Service helper functions: `getServiceBySlug()`, `getServiceContent()`, `getLocalizedServicePath()`
+- Professional AI-generated English translations (marked for client review)
+- Data stored in `client/src/data/services.ts`
 
 **District Data**
 - Static data-driven approach for Vienna's 23 districts
@@ -195,3 +215,49 @@ Preferred communication style: Simple, everyday language.
 - Environment variables via `.env` (DATABASE_URL expected)
 - TypeScript configuration with path aliases (`@/`, `@shared/`, `@assets/`)
 - Module resolution set to "bundler" for modern module handling
+
+## Recent Changes
+
+### November 12, 2025 - Multilingual URL Routing & SEO
+
+**Major architectural changes to support language-specific URLs:**
+
+1. **Server-Side Redirect**
+   - Added Express middleware to redirect `/` to `/de` or `/en` based on Accept-Language header
+   - Implemented in `server/routes.ts`
+
+2. **URL Mapping System**
+   - Created `client/src/lib/urlMapping.ts` with helpers:
+     - `getLocalizedPath()` - Translates URLs between languages
+     - `getLanguageFromPath()` - Detects language from URL
+     - `getAlternateUrls()` - Generates alternate language URLs for SEO
+   - Hardcoded service slug mapping for all 12 services (DE ↔ EN)
+
+3. **Enhanced SEO**
+   - Updated `updateMetaTags()` to support language parameter
+   - Added hreflang tags for alternate language versions
+   - Implemented canonical URLs per language
+   - Language-specific og:locale meta tags
+
+4. **Service Data Refactor**
+   - Complete restructure with ServiceId enum for canonical identification
+   - Language-specific content objects for all 12 services
+   - Professional English translations (AI-generated, ~6000 words)
+   - Helper utilities for service lookup and path generation
+
+5. **Component Updates**
+   - LanguageContext: Now derives language from URL path
+   - App.tsx: Dual routing for `/de/*` and `/en/*` patterns
+   - Header: Logo and language switcher use language-aware navigation
+   - Services & ServicePage: Use new multilingual data structure
+   - Footer: Language-aware links for services and districts
+
+6. **Testing**
+   - Comprehensive e2e tests using Playwright
+   - Validated language switching, navigation, and SEO tags
+   - All tests passed successfully
+
+**Known Considerations:**
+- Service slug map is hardcoded in `urlMapping.ts` (architect recommends co-locating with servicesData)
+- English service translations are AI-generated and should be reviewed by client
+- Initial `/` redirect depends on browser's Accept-Language header
