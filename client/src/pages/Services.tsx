@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { getAllServices, ServiceId, getLocalizedServicePath } from '@/data/services';
-import { updateMetaTags } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getCollectionPageSchema } from '@/lib/seo';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getAlternateUrls } from '@/lib/urlMapping';
 import { useLocation } from 'wouter';
@@ -64,7 +64,20 @@ export default function Services() {
       language,
       alternateUrls,
     });
-  }, [language, location]);
+
+    const collectionSchema = getCollectionPageSchema(language, {
+      name: language === 'de' ? 'Unsere Leistungen' : 'Our Services',
+      description,
+      url: location,
+      items: services.map(service => ({
+        name: language === 'de' ? service.name : service.nameEN,
+        description: language === 'de' ? service.description : service.descriptionEN,
+        url: getLocalizedServicePath(service.id, language),
+      })),
+    });
+
+    addJsonLd(collectionSchema, 'services-collection-schema');
+  }, [language, location, services]);
 
   return (
     <div className="min-h-screen bg-background">

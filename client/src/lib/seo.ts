@@ -353,6 +353,91 @@ export function getBreadcrumbSchema(items: Array<{ name: string; url: string }>)
   };
 }
 
+export function getCollectionPageSchema(
+  language: 'de' | 'en',
+  config: {
+    name: string;
+    description: string;
+    url: string;
+    itemType?: 'Service' | 'Place' | 'AdministrativeArea';
+    items: Array<{
+      name: string;
+      description: string;
+      url: string;
+    }>;
+  }
+) {
+  const itemType = config.itemType || 'Service';
+  const isServiceType = itemType === 'Service';
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': config.name,
+    'description': config.description,
+    'url': `https://flaechenfrei.at${config.url}`,
+    'inLanguage': language,
+    'isPartOf': {
+      '@type': 'WebSite',
+      'name': 'Flächen Frei',
+      'url': 'https://flaechenfrei.at',
+    },
+    'mainEntity': {
+      '@type': 'ItemList',
+      'itemListElement': config.items.map((item, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'item': {
+          '@type': itemType,
+          'name': item.name,
+          'description': item.description,
+          'url': `https://flaechenfrei.at${item.url}`,
+          ...(isServiceType && {
+            'provider': {
+              '@type': 'MovingCompany',
+              'name': 'Flächen Frei',
+              'url': 'https://flaechenfrei.at',
+            },
+          }),
+        },
+      })),
+    },
+  };
+}
+
+export function getWebPageSchema(
+  language: 'de' | 'en',
+  config: {
+    type: 'WebPage' | 'AboutPage' | 'ContactPage' | 'FAQPage';
+    name: string;
+    description: string;
+    url: string;
+  }
+) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': config.type,
+    'name': config.name,
+    'description': config.description,
+    'url': `https://flaechenfrei.at${config.url}`,
+    'inLanguage': language,
+    'isPartOf': {
+      '@type': 'WebSite',
+      'name': 'Flächen Frei',
+      'url': 'https://flaechenfrei.at',
+    },
+    'publisher': {
+      '@type': 'Organization',
+      'name': 'Flächen Frei',
+      'url': 'https://flaechenfrei.at',
+      'logo': {
+        '@type': 'ImageObject',
+        'url': 'https://flaechenfrei.at/logo.png',
+      },
+    },
+  };
+}
+
 export function getOrganizationSchema() {
   return {
     '@context': 'https://schema.org',

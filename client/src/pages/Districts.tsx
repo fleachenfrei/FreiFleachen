@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { MapPin, ArrowRight } from 'lucide-react';
 import { getAllDistricts } from '@/data/districts';
 import { Button } from '@/components/ui/button';
-import { updateMetaTags } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getCollectionPageSchema } from '@/lib/seo';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getLocalizedDistrictsPath, getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
@@ -37,7 +37,23 @@ export default function Districts() {
       language,
       alternateUrls,
     });
-  }, [language, location, districtsPath]);
+
+    const collectionSchema = getCollectionPageSchema(language, {
+      name: language === 'de' ? 'Alle Wiener Bezirke' : 'All Vienna Districts',
+      description,
+      url: location,
+      itemType: 'Place',
+      items: districts.map(district => ({
+        name: `${district.postalCode} ${language === 'de' ? district.name : district.nameEn}`,
+        description: language === 'de'
+          ? `Professionelle Räumungsdienstleistungen in Wien ${district.name} (${district.postalCode})`
+          : `Professional clearing services in Vienna ${district.nameEn} (${district.postalCode})`,
+        url: getLocalizedDistrictsPath(language, district.slug),
+      })),
+    });
+
+    addJsonLd(collectionSchema, 'districts-collection-schema');
+  }, [language, location, districtsPath, districts]);
 
   return (
     <div className="min-h-screen bg-background">

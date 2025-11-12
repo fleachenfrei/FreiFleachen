@@ -3,7 +3,7 @@ import { useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { updateMetaTags } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getWebPageSchema } from '@/lib/seo';
 import { getAlternateUrls } from '@/lib/urlMapping';
 
 export default function AGB() {
@@ -28,6 +28,15 @@ export default function AGB() {
       language,
       alternateUrls,
     });
+
+    const webPageSchema = getWebPageSchema(language, {
+      type: 'WebPage',
+      name: language === 'de' ? 'Allgemeine Geschäftsbedingungen' : 'Terms and Conditions',
+      description,
+      url: location,
+    });
+
+    addJsonLd(webPageSchema, 'agb-webpage-schema');
   }, [language, location]);
 
   const content = language === 'de' ? (

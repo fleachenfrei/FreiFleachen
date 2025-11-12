@@ -8,7 +8,7 @@ import { states } from '@/data/states';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
-import { updateMetaTags } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getCollectionPageSchema } from '@/lib/seo';
 import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
 
@@ -36,6 +36,20 @@ export default function Bundeslaender() {
       language,
       alternateUrls,
     });
+
+    const collectionSchema = getCollectionPageSchema(language, {
+      name: language === 'de' ? 'Alle Bundesländer Österreichs' : 'All Austrian Federal States',
+      description,
+      url: location,
+      itemType: 'AdministrativeArea',
+      items: states.map(state => ({
+        name: language === 'de' ? state.name : state.nameEn,
+        description: language === 'de' ? state.description : state.descriptionEn,
+        url: getLocalizedBundeslaenderPath(language, state.slug),
+      })),
+    });
+
+    addJsonLd(collectionSchema, 'bundeslaender-collection-schema');
   }, [language, location, bundeslaenderPath]);
 
   return (

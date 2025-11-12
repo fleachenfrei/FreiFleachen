@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { updateMetaTags, addJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, addMultipleJsonLd, getLocalBusinessSchema, getWebPageSchema } from '@/lib/seo';
 import { CONTACT_INFO } from '@/lib/constants';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -81,52 +81,15 @@ export default function Contact() {
       alternateUrls,
     });
 
-    // Add LocalBusiness structured data
-    addJsonLd({
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      name: 'Flächen Frei',
-      image: `${window.location.origin}/og-image.jpg`,
-      '@id': window.location.origin,
-      url: window.location.origin,
-      telephone: CONTACT_INFO.phone,
-      email: CONTACT_INFO.email,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Herndlgasse 7/17',
-        addressLocality: 'Wien',
-        postalCode: '1100',
-        addressCountry: 'AT',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 48.1756,
-        longitude: 16.3858,
-      },
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '09:00',
-          closes: '18:00',
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: 'Saturday',
-          opens: '09:00',
-          closes: '12:00',
-        },
-      ],
-      sameAs: [
-        'https://www.facebook.com/flaechenfrei',
-        'https://www.instagram.com/flaechenfrei',
-      ],
-      priceRange: '€€',
-      areaServed: {
-        '@type': 'Country',
-        name: 'Austria',
-      },
-    });
+    addMultipleJsonLd([
+      getLocalBusinessSchema(language),
+      getWebPageSchema(language, {
+        type: 'ContactPage',
+        name: language === 'de' ? 'Kontakt' : 'Contact',
+        description,
+        url: location,
+      }),
+    ], 'contact-page-schemas');
   }, [language, location, contactPath, t]);
 
   const handleSubmit = async (values: ContactFormData) => {

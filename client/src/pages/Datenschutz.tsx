@@ -3,7 +3,7 @@ import { useLocation } from 'wouter';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { updateMetaTags } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getWebPageSchema } from '@/lib/seo';
 import { getAlternateUrls } from '@/lib/urlMapping';
 import { CONTACT_INFO } from '@/lib/constants';
 
@@ -29,6 +29,15 @@ export default function Datenschutz() {
       language,
       alternateUrls,
     });
+
+    const webPageSchema = getWebPageSchema(language, {
+      type: 'WebPage',
+      name: language === 'de' ? 'Datenschutzerklärung' : 'Privacy Policy',
+      description,
+      url: location,
+    });
+
+    addJsonLd(webPageSchema, 'datenschutz-webpage-schema');
   }, [language, location]);
 
   const content = language === 'de' ? (
