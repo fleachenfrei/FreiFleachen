@@ -10,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { useToast } from '@/hooks/use-toast';
 import { getAllServices } from '@/data/services';
 import { useForm } from 'react-hook-form';
@@ -33,6 +34,7 @@ export default function Contact() {
   const { toast } = useToast();
   const services = getAllServices();
   const contactPath = getLocalizedContactPath(language);
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.phoneLink}?text=${encodeURIComponent(t.contact.whatsappMessage)}`;
 
   const localizedSchema = useMemo(() => {
     return z.object({
@@ -185,13 +187,13 @@ export default function Contact() {
             <Card className="hover-elevate" data-testid="card-whatsapp-info">
               <CardHeader>
                 <div className="w-12 h-12 bg-primary/10 rounded-md flex items-center justify-center mb-4">
-                  <MessageCircle className="w-6 h-6 text-primary" />
+                  <SiWhatsapp className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>{t.contact.whatsapp}</CardTitle>
                 <CardDescription>{t.contact.directMessage}</CardDescription>
               </CardHeader>
               <CardContent>
-                <a href={`https://wa.me/${CONTACT_INFO.phoneLink}`} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
                   {CONTACT_INFO.phone}
                 </a>
               </CardContent>

@@ -1,10 +1,12 @@
 import { Button } from '@/components/ui/button';
-import { Phone, Mail, MessageCircle } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
+import { SiWhatsapp } from 'react-icons/si';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { CONTACT_INFO } from '@/lib/constants';
 
 export default function CTA() {
   const { t } = useLanguage();
+  const whatsappUrl = `https://wa.me/${CONTACT_INFO.phoneLink}?text=${encodeURIComponent(t.contact.whatsappMessage)}`;
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-r from-primary to-primary/90 text-white">
@@ -41,14 +43,14 @@ export default function CTA() {
               E-Mail senden
             </Button>
           </a>
-          <a href={`https://wa.me/${CONTACT_INFO.phoneLink}`} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               variant="outline"
               className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm w-full sm:w-auto"
               data-testid="button-cta-whatsapp"
             >
-              <MessageCircle className="mr-2 w-5 h-5" />
+              <SiWhatsapp className="mr-2 w-5 h-5" />
               WhatsApp
             </Button>
           </a>
