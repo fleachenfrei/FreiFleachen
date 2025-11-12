@@ -6,6 +6,12 @@ import { z } from "zod";
 import { contactFormSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  app.get("/", (req, res) => {
+    const acceptLanguage = req.headers['accept-language'] || '';
+    const preferredLang = acceptLanguage.toLowerCase().includes('en') ? 'en' : 'de';
+    res.redirect(302, `/${preferredLang}`);
+  });
+
   // Contact form endpoint
   app.post("/api/contact", async (req, res) => {
     try {

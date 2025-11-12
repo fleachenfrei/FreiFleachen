@@ -5,12 +5,17 @@ export function updateMetaTags(config: {
   image?: string;
   type?: string;
   keywords?: string;
+  language?: 'de' | 'en';
+  alternateUrls?: { de: string; en: string };
 }) {
   const baseUrl = window.location.origin;
   const fullUrl = `${baseUrl}${config.url}`;
   const defaultImage = `${baseUrl}/og-image.jpg`;
+  const language = config.language || 'de';
+  const locale = language === 'de' ? 'de_AT' : 'en_US';
 
   document.title = config.title;
+  document.documentElement.lang = language;
 
   const metaTags = [
     { name: 'description', content: config.description },
@@ -20,7 +25,8 @@ export function updateMetaTags(config: {
     { property: 'og:type', content: config.type || 'website' },
     { property: 'og:image', content: config.image || defaultImage },
     { property: 'og:site_name', content: 'Flächen Frei' },
-    { property: 'og:locale', content: 'de_AT' },
+    { property: 'og:locale', content: locale },
+    { property: 'og:locale:alternate', content: language === 'de' ? 'en_US' : 'de_AT' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: config.title },
     { name: 'twitter:description', content: config.description },
@@ -52,6 +58,28 @@ export function updateMetaTags(config: {
     document.head.appendChild(canonical);
   }
   canonical.href = fullUrl;
+
+  document.querySelectorAll('link[rel="alternate"]').forEach(el => el.remove());
+
+  if (config.alternateUrls) {
+    const hreflangDe = document.createElement('link');
+    hreflangDe.rel = 'alternate';
+    hreflangDe.hreflang = 'de';
+    hreflangDe.href = `${baseUrl}${config.alternateUrls.de}`;
+    document.head.appendChild(hreflangDe);
+
+    const hreflangEn = document.createElement('link');
+    hreflangEn.rel = 'alternate';
+    hreflangEn.hreflang = 'en';
+    hreflangEn.href = `${baseUrl}${config.alternateUrls.en}`;
+    document.head.appendChild(hreflangEn);
+
+    const hreflangXDefault = document.createElement('link');
+    hreflangXDefault.rel = 'alternate';
+    hreflangXDefault.hreflang = 'x-default';
+    hreflangXDefault.href = `${baseUrl}${config.alternateUrls.de}`;
+    document.head.appendChild(hreflangXDefault);
+  }
 }
 
 export function addJsonLd(data: Record<string, unknown>, id?: string) {
