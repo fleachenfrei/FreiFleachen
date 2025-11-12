@@ -153,7 +153,7 @@ export default function ServicePage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-testid="text-service-title">
-                {content.name} {t.common.in} {t.common.wien}
+                {content.name} {t.common.in} {t.common.oesterreich}
               </h1>
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8">
                 {content.shortDescription}
