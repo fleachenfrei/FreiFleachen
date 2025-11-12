@@ -5,10 +5,13 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CTA from '@/components/CTA';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { updateMetaTags, addMultipleJsonLd } from '@/lib/seo';
+import { updateMetaTags, addMultipleJsonLd, getWebPageSchema } from '@/lib/seo';
 import { getAlternateUrls } from '@/lib/urlMapping';
 import { generateServiceLocationContent, getServiceLocationPath, type RegionType } from '@/lib/serviceLocationContent';
 import { servicesData, ServiceId } from '@/data/services';
+import { getDistrictBySlug } from '@/data/districts';
+import { states } from '@/data/states';
+import { getCityBySlug } from '@/data/cities';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -81,6 +84,37 @@ export default function ServiceRegionPage() {
     const locContent = language === 'de' ? generatedContent.de : generatedContent.en;
     const serviceContent = service.content[language];
 
+    // Get region name from structured data instead of parsing headline
+    let regionName = '';
+    if (mappedRegionType === 'bezirk') {
+      const district = getDistrictBySlug(regionSlug);
+      regionName = district ? (language === 'de' ? district.name : (district.nameEn || district.name)) : '';
+    } else if (mappedRegionType === 'bundesland') {
+      const state = states.find(s => s.slug === regionSlug);
+      regionName = state ? (language === 'de' ? state.name : state.nameEn) : '';
+    } else if (mappedRegionType === 'stadt') {
+      const citySlugParts = regionSlug.split('/');
+      if (citySlugParts.length === 2) {
+        const city = getCityBySlug(citySlugParts[0], citySlugParts[1]);
+        regionName = city ? (language === 'de' ? city.name : (city.nameEn || city.name)) : '';
+      }
+    }
+
+    // Fallback: if region name is still empty, try to extract from locContent if available
+    if (!regionName && 'regionName' in locContent && typeof locContent.regionName === 'string') {
+      regionName = locContent.regionName;
+    }
+    
+    // Last resort: parse from headline (but only if it contains " in ")
+    if (!regionName && locContent.headline.includes(' in ')) {
+      regionName = locContent.headline.split(' in ')[1] || '';
+    }
+    
+    // Ultimate fallback to prevent empty name
+    if (!regionName) {
+      regionName = language === 'de' ? 'Österreich' : 'Austria';
+    }
+
     // Update meta tags
     const title = `${locContent.headline} | Flächen Frei`;
     const description = locContent.subheadline;
@@ -96,41 +130,50 @@ export default function ServiceRegionPage() {
     });
 
     // Add JSON-LD schemas
-    const schemas = [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        '@id': `https://flaechenfrei.at${location}#service`,
-        name: locContent.headline,
-        description: locContent.intro,
-        provider: {
-          '@type': 'LocalBusiness',
-          '@id': 'https://flaechenfrei.at/#organization',
-        },
-        areaServed: {
-          '@type': 'Place',
-          name: locContent.headline.split(' in ')[1] || '',
-        },
-        offers: {
-          '@type': 'Offer',
-          availability: 'https://schema.org/InStock',
-        },
+    const serviceSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `https://flaechenfrei.at${location}#service`,
+      name: locContent.headline,
+      description: locContent.intro,
+      serviceType: serviceContent.name,
+      provider: {
+        '@type': 'MovingCompany',
+        '@id': 'https://flaechenfrei.at/#organization',
+        name: 'Flächen Frei',
       },
-      {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: locContent.faq.map(item => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer,
-          },
-        })),
+      areaServed: {
+        '@type': 'Place',
+        name: regionName,
       },
-    ];
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/InStock',
+        priceCurrency: 'EUR',
+      },
+    };
 
-    addMultipleJsonLd(schemas, `service-${mappedRegionType}-${regionSlug}-schemas`);
+    const webPageSchema = getWebPageSchema(language, {
+      type: 'WebPage',
+      name: locContent.headline,
+      description: locContent.subheadline,
+      url: location,
+    });
+
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: locContent.faq.map(item => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    };
+
+    addMultipleJsonLd([serviceSchema, webPageSchema, faqSchema], `service-${mappedRegionType}-${regionSlug}-schemas`);
   }, [language, location, params]);
 
   if (loading) {
