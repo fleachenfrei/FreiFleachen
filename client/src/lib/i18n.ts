@@ -26,6 +26,7 @@ export const translations = {
     services: {
       title: 'Unsere Dienstleistungen in Wien und Umgebung',
       subtitle: 'Wir verwandeln Chaos in Komfort, Unordnung in Ordnung und machen Platz für Ihre neuen Geschichten!',
+      requestNow: 'Jetzt anfragen',
       apartment: {
         title: 'Wohnungsräumung',
         description: 'Ob klein oder groß, wir machen Platz für ein neues Kapitel. Schnelle und diskrete Räumung Ihrer Wohnung.',
@@ -90,20 +91,20 @@ export const translations = {
       title: 'Was unsere Kunden sagen',
       subtitle: 'Vertrauen Sie den Experten: Räumung & Räumung in Wien!',
     },
+    footer: {
+      companyDescription: 'Ihr zuverlässiger Partner für Räumung und Transport in Wien und Umgebung.',
+      services: 'Leistungen',
+      districts: 'Bezirke',
+      contact: 'Kontakt',
+      copyright: '© 2024 Flächen Frei. Alle Rechte vorbehalten.',
+      privacy: 'Datenschutz',
+      imprint: 'Impressum',
+      terms: 'AGB',
+    },
     cta: {
       title: 'Bereit für mehr Platz?',
       subtitle: 'Kontaktieren Sie uns jetzt!',
       description: 'Rufen Sie uns an und genießen Sie eine stressfreie Räumung - schnell, gründlich und preiswert!',
-    },
-    footer: {
-      services: 'Leistungen',
-      districts: 'Bezirke',
-      contact: 'Kontakt',
-      legal: 'Rechtliches',
-      privacy: 'Datenschutz',
-      imprint: 'Impressum',
-      terms: 'AGB',
-      copyright: '© 2024 Flächen Frei. Alle Rechte vorbehalten.',
     },
     contact: {
       phone: 'Telefon',
@@ -350,6 +351,7 @@ export const translations = {
     services: {
       title: 'Our Services in Vienna and Surroundings',
       subtitle: 'We transform chaos into comfort, disorder into order, and create space for your new stories!',
+      requestNow: 'Request Now',
       apartment: {
         title: 'Apartment Clearing',
         description: 'Whether small or large, we make room for a new chapter. Fast and discreet apartment clearing.',
@@ -414,20 +416,20 @@ export const translations = {
       title: 'What Our Customers Say',
       subtitle: 'Trust the experts: Clearing & Removal in Vienna!',
     },
+    footer: {
+      companyDescription: 'Your reliable partner for clearing and transport in Vienna and surrounding areas.',
+      services: 'Services',
+      districts: 'Districts',
+      contact: 'Contact',
+      copyright: '© 2024 Flächen Frei. All rights reserved.',
+      privacy: 'Privacy Policy',
+      imprint: 'Imprint',
+      terms: 'Terms & Conditions',
+    },
     cta: {
       title: 'Ready for More Space?',
       subtitle: 'Contact Us Now!',
       description: 'Call us and enjoy a stress-free clearing - fast, thorough and affordable!',
-    },
-    footer: {
-      services: 'Services',
-      districts: 'Districts',
-      contact: 'Contact',
-      legal: 'Legal',
-      privacy: 'Privacy',
-      imprint: 'Imprint',
-      terms: 'Terms',
-      copyright: '© 2024 Flächen Frei. All rights reserved.',
     },
     contact: {
       phone: 'Phone',

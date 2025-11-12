@@ -6,25 +6,31 @@ import jonasImage from '@assets/generated_images/Customer_testimonial_Jonas_4fad
 import marcelImage from '@assets/generated_images/Customer_testimonial_Marcel_4b3a0d9e.png';
 
 export default function Testimonials() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const testimonials = [
     {
       name: 'Jonas M.',
       rating: 5,
-      text: 'Top-Service! Ich bin begeistert von der professionellen und zuverlässigen Arbeit von Flächen Frei. Das Team war pünktlich, freundlich und hat meine Wohnung blitzschnell entrümpelt. Ich kann sie jedem wärmstens empfehlen!',
+      text: language === 'de' 
+        ? 'Top-Service! Ich bin begeistert von der professionellen und zuverlässigen Arbeit von Flächen Frei. Das Team war pünktlich, freundlich und hat meine Wohnung blitzschnell entrümpelt. Ich kann sie jedem wärmstens empfehlen!'
+        : 'Top service! I am thrilled with the professional and reliable work of Flächen Frei. The team was punctual, friendly and cleared my apartment in no time. I highly recommend them!',
       image: jonasImage,
     },
     {
       name: 'Marcel R.',
       rating: 5,
-      text: 'Absolut empfehlenswert! Ich habe Flächen Frei für die Räumung meines Elternhauses engagiert und bin rundum zufrieden. Das Team war äußerst professionell, respektvoll und effizient. Sie haben einen herausragenden Job gemacht!',
+      text: language === 'de'
+        ? 'Absolut empfehlenswert! Ich habe Flächen Frei für die Räumung meines Elternhauses engagiert und bin rundum zufrieden. Das Team war äußerst professionell, respektvoll und effizient. Sie haben einen herausragenden Job gemacht!'
+        : 'Absolutely recommendable! I hired Flächen Frei to clear my parents\' house and am completely satisfied. The team was extremely professional, respectful and efficient. They did an outstanding job!',
       image: marcelImage,
     },
     {
       name: 'Sarah K.',
       rating: 5,
-      text: 'Schnelle und unkomplizierte Abwicklung! Die Kellerräumung wurde professionell durchgeführt und das Ergebnis war perfekt. Faire Preise und freundlicher Service. Sehr zu empfehlen!',
+      text: language === 'de'
+        ? 'Schnelle und unkomplizierte Abwicklung! Die Kellerräumung wurde professionell durchgeführt und das Ergebnis war perfekt. Faire Preise und freundlicher Service. Sehr zu empfehlen!'
+        : 'Fast and uncomplicated process! The basement clearing was carried out professionally and the result was perfect. Fair prices and friendly service. Highly recommended!',
       image: jonasImage,
     },
   ];

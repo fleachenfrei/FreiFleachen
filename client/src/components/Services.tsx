@@ -107,7 +107,7 @@ export default function Services() {
                   </CardDescription>
                   <Link href={`${servicesPath}/${localizedSlug}`}>
                     <Button variant="outline" size="sm" className="w-full" data-testid={`button-service-${index}`}>
-                      Jetzt anfragen
+                      {t.services.requestNow}
                     </Button>
                   </Link>
                 </CardContent>

@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Flächen Frei</h3>
             <p className="text-sm text-primary-foreground/80 mb-4">
-              Ihr zuverlässiger Partner für Räumung und Transport in Wien und Umgebung.
+              {t.footer.companyDescription}
             </p>
           </div>
 
