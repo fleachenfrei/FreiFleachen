@@ -186,7 +186,7 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>{t.contact.phone}</CardTitle>
-                <CardDescription>24/7 {language === 'de' ? 'erreichbar' : 'available'}</CardDescription>
+                <CardDescription>24/7 {t.contact.available247}</CardDescription>
               </CardHeader>
               <CardContent>
                 <a href="tel:+4366039575 87" className="text-lg font-semibold text-primary hover:underline" data-testid="link-phone">
@@ -202,7 +202,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>{t.contact.email}</CardTitle>
-                <CardDescription>{language === 'de' ? 'Schnelle Antwort' : 'Quick response'}</CardDescription>
+                <CardDescription>{t.contact.quickResponse}</CardDescription>
               </CardHeader>
               <CardContent>
                 <a href="mailto:info@flaechenfrei.at" className="text-lg font-semibold text-primary hover:underline" data-testid="link-email">
@@ -218,7 +218,7 @@ export default function Contact() {
                   <MessageCircle className="w-6 h-6 text-primary" />
                 </div>
                 <CardTitle>{t.contact.whatsapp}</CardTitle>
-                <CardDescription>{language === 'de' ? 'Direktnachricht' : 'Direct message'}</CardDescription>
+                <CardDescription>{t.contact.directMessage}</CardDescription>
               </CardHeader>
               <CardContent>
                 <a href="https://wa.me/4366039575 87" target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-primary hover:underline" data-testid="link-whatsapp">
@@ -236,9 +236,7 @@ export default function Contact() {
                 <CardHeader>
                   <CardTitle className="text-2xl">{t.contact.form.title}</CardTitle>
                   <CardDescription>
-                    {language === 'de' 
-                      ? 'Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.'
-                      : 'Fill out the form and we will contact you as soon as possible.'}
+                    {t.contact.formDescription}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -317,8 +315,8 @@ export default function Contact() {
                               </FormControl>
                               <SelectContent>
                                 {services.map((service) => (
-                                  <SelectItem key={service.slug} value={service.slug}>
-                                    {service.name}
+                                  <SelectItem key={service.id} value={service.id}>
+                                    {service.content[language].name}
                                   </SelectItem>
                                 ))}
                               </SelectContent>
@@ -403,7 +401,7 @@ export default function Contact() {
                     {t.contact.coverage.description}
                   </p>
                   <div className="space-y-2 text-sm">
-                    <p className="font-medium">{language === 'de' ? 'Hauptsitz:' : 'Headquarters:'}</p>
+                    <p className="font-medium">{t.contact.headquarters}:</p>
                     <p className="text-muted-foreground">
                       Herndlgasse 7/17<br />
                       1100 Wien, Österreich
@@ -416,12 +414,10 @@ export default function Contact() {
               <Card className="bg-secondary text-secondary-foreground" data-testid="card-quick-call">
                 <CardContent className="pt-6">
                   <h3 className="font-bold text-lg mb-2">
-                    {language === 'de' ? 'Sofortiger Kontakt?' : 'Immediate Contact?'}
+                    {t.contact.immediateContact}
                   </h3>
                   <p className="mb-4 text-sm">
-                    {language === 'de' 
-                      ? 'Rufen Sie uns jetzt an für eine kostenlose Beratung!'
-                      : 'Call us now for a free consultation!'}
+                    {t.contact.callNowForConsultation}
                   </p>
                   <a href="tel:+4366039575 87">
                     <Button variant="outline" size="lg" className="w-full bg-background text-foreground hover:bg-background" data-testid="button-quick-call">

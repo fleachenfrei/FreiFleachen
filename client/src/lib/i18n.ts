@@ -120,6 +120,13 @@ export const translations = {
       title: 'Kontakt',
       subtitle: 'Wir sind für Sie da',
       description: 'Kontaktieren Sie uns für eine kostenlose Beratung und unverbindliches Angebot.',
+      available247: 'erreichbar',
+      quickResponse: 'Schnelle Antwort',
+      directMessage: 'Direktnachricht',
+      headquarters: 'Hauptsitz',
+      immediateContact: 'Sofortiger Kontakt?',
+      callNowForConsultation: 'Rufen Sie uns jetzt an für eine kostenlose Beratung!',
+      formDescription: 'Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.',
       form: {
         title: 'Angebot anfragen',
         name: 'Ihr Name',
@@ -156,6 +163,12 @@ export const translations = {
       allServices: 'Alle Leistungen im Überblick',
       description: 'Wählen Sie die passende Dienstleistung für Ihre Bedürfnisse. Jeder Service wird mit höchster Professionalität und Sorgfalt durchgeführt.',
       learnMore: 'Mehr erfahren',
+      cta: {
+        title: 'Nicht sicher, welche Leistung Sie benötigen?',
+        description: 'Rufen Sie uns einfach an oder schreiben Sie uns. Wir beraten Sie kostenlos und unverbindlich zu allen Fragen rund um Räumung und Räumung in Wien.',
+        freeConsultation: 'Kostenlose Beratung',
+        sendEmail: 'E-Mail senden',
+      },
     },
     districtsPage: {
       title: 'Räumung in allen Wiener Bezirken',
@@ -451,6 +464,13 @@ export const translations = {
       title: 'Contact',
       subtitle: 'We are here for you',
       description: 'Contact us for a free consultation and no-obligation quote.',
+      available247: 'available',
+      quickResponse: 'Quick response',
+      directMessage: 'Direct message',
+      headquarters: 'Headquarters',
+      immediateContact: 'Immediate Contact?',
+      callNowForConsultation: 'Call us now for a free consultation!',
+      formDescription: 'Fill out the form and we will contact you as soon as possible.',
       form: {
         title: 'Request Quote',
         name: 'Your Name',
@@ -487,6 +507,12 @@ export const translations = {
       allServices: 'All Services Overview',
       description: 'Choose the right service for your needs. Every service is carried out with the highest professionalism and care.',
       learnMore: 'Learn More',
+      cta: {
+        title: 'Not sure which service you need?',
+        description: 'Just give us a call or write to us. We will advise you free of charge and without obligation on all questions regarding clearing and removal in Vienna.',
+        freeConsultation: 'Free Consultation',
+        sendEmail: 'Send Email',
+      },
     },
     districtsPage: {
       title: 'Clearing in All Vienna Districts',

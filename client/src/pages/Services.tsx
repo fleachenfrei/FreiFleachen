@@ -149,20 +149,19 @@ export default function Services() {
 
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">Nicht sicher, welche Leistung Sie benötigen?</h2>
+            <h2 className="text-3xl font-bold mb-6" data-testid="text-services-cta-title">{t.servicesPage.cta.title}</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Rufen Sie uns einfach an oder schreiben Sie uns. Wir beraten Sie kostenlos 
-              und unverbindlich zu allen Fragen rund um Räumung und Räumung in Wien.
+              {t.servicesPage.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
+              <Button asChild size="lg" data-testid="button-cta-consultation">
                 <a href="tel:+4366039575587">
-                  Kostenlose Beratung: +43660 39 57 587
+                  {t.servicesPage.cta.freeConsultation}: +43660 39 57 587
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" data-testid="button-cta-email">
                 <a href="mailto:info@flaechenfrei.at">
-                  E-Mail senden
+                  {t.servicesPage.cta.sendEmail}
                 </a>
               </Button>
             </div>

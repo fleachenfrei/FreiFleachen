@@ -87,10 +87,10 @@ export default function Districts() {
                         <ArrowRight className="w-5 h-5 text-muted-foreground" />
                       </div>
                       <CardTitle className="text-xl" data-testid={`text-district-name-${index}`}>
-                        {district.name}
+                        {language === 'de' ? district.name : district.nameEn}
                       </CardTitle>
                       <CardDescription>
-                        Wien {district.name}
+                        {t.common.wien} {language === 'de' ? district.name : district.nameEn}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
