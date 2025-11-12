@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import { sendContactEmail, type ContactFormData } from "./email";
 import { z } from "zod";
 import { contactFormSchema } from "@shared/schema";
+import { submitUrlToIndexNow, submitUrlsToIndexNow, submitSitemapToIndexNow, logIndexNowResponse } from "./indexnow";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/", (req, res) => {
@@ -38,6 +39,91 @@ export async function registerRoutes(app: Express): Promise<Server> {
           message: "Beim Senden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut." 
         });
       }
+    }
+  });
+
+  // IndexNow API endpoints
+  
+  // Submit single URL to IndexNow
+  app.post("/api/indexnow/submit-url", async (req, res) => {
+    try {
+      const { url } = req.body;
+      
+      if (!url || typeof url !== 'string') {
+        return res.status(400).json({ 
+          success: false, 
+          message: "URL is required and must be a string" 
+        });
+      }
+
+      // Validate URL belongs to this domain
+      if (!url.startsWith('https://flaechenfrei.at')) {
+        return res.status(422).json({ 
+          success: false, 
+          message: "URL must belong to flaechenfrei.at domain" 
+        });
+      }
+
+      const result = await submitUrlToIndexNow(url);
+      logIndexNowResponse(result, url);
+      
+      res.status(result.success ? 200 : result.status).json(result);
+    } catch (error) {
+      console.error("IndexNow single URL submission error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Internal server error" 
+      });
+    }
+  });
+
+  // Submit multiple URLs to IndexNow
+  app.post("/api/indexnow/submit-urls", async (req, res) => {
+    try {
+      const { urls } = req.body;
+      
+      if (!Array.isArray(urls) || urls.length === 0) {
+        return res.status(400).json({ 
+          success: false, 
+          message: "URLs must be a non-empty array" 
+        });
+      }
+
+      // Validate all URLs belong to this domain
+      const invalidUrls = urls.filter(url => !url.startsWith('https://flaechenfrei.at'));
+      if (invalidUrls.length > 0) {
+        return res.status(422).json({ 
+          success: false, 
+          message: `${invalidUrls.length} URL(s) do not belong to flaechenfrei.at domain` 
+        });
+      }
+
+      const result = await submitUrlsToIndexNow(urls);
+      logIndexNowResponse(result, `${urls.length} URLs`);
+      
+      res.status(result.success ? 200 : result.status).json(result);
+    } catch (error) {
+      console.error("IndexNow batch submission error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Internal server error" 
+      });
+    }
+  });
+
+  // Submit entire sitemap to IndexNow (priority pages)
+  app.post("/api/indexnow/submit-sitemap", async (req, res) => {
+    try {
+      const result = await submitSitemapToIndexNow();
+      logIndexNowResponse(result, "Sitemap submission");
+      
+      res.status(result.success ? 200 : result.status).json(result);
+    } catch (error) {
+      console.error("IndexNow sitemap submission error:", error);
+      res.status(500).json({ 
+        success: false, 
+        message: "Internal server error" 
+      });
     }
   });
 
