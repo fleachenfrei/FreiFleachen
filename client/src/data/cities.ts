@@ -1,30 +1,43 @@
 export interface CityInfo {
   name: string;
+  nameEn?: string;
   slug: string;
   bundesland: string;
+  bundeslandEn?: string;
   bundeslandSlug: string;
   postalCode: string;
   population?: number;
   description: string;
+  descriptionEn?: string;
   metaDescription: string;
+  metaDescriptionEn?: string;
   services: string[];
+  servicesEn?: string[];
   benefits: string[];
+  benefitsEn?: string[];
   coverage: string;
+  coverageEn?: string;
   faq: Array<{ question: string; answer: string }>;
+  faqEn?: Array<{ question: string; answer: string }>;
 }
 
 export const cities: Record<string, CityInfo[]> = {
   niederoesterreich: [
     {
       name: 'St. Pölten',
+      nameEn: 'St. Pölten',
       slug: 'st-poelten',
       bundesland: 'Niederösterreich',
+      bundeslandEn: 'Lower Austria',
       bundeslandSlug: 'niederoesterreich',
       postalCode: '3100',
       population: 55000,
       description: 'Professionelle Räumung und Transport in St. Pölten, der Landeshauptstadt von Niederösterreich. Wir sind Ihr zuverlässiger Partner für Wohnungsräumung, Haushaltsauflösung und Kellerräumung in St. Pölten und Umgebung.',
+      descriptionEn: 'Professional clearing and transport services in St. Pölten, the capital of Lower Austria. We are your reliable partner for apartment clearance, household dissolution, and basement clearing in St. Pölten and surrounding areas.',
       metaDescription: 'Räumung St. Pölten ✓ Wohnungsräumung ✓ Haushaltsauflösung ✓ Transport ✓ Schnell & zuverlässig in ganz St. Pölten ☎ +43660 39 57 587',
+      metaDescriptionEn: 'Clearing St. Pölten ✓ Apartment Clearance ✓ Household Dissolution ✓ Transport ✓ Fast & reliable throughout St. Pölten ☎ +43660 39 57 587',
       services: ['Wohnungsräumung', 'Haushaltsauflösung', 'Kellerräumung', 'Dachbodenräumung', 'Geschäftsräumung', 'Transportservice'],
+      servicesEn: ['Apartment Clearance', 'Household Dissolution', 'Basement Clearing', 'Attic Clearing', 'Commercial Clearance', 'Transport Service'],
       benefits: [
         'Schnelle Anfahrt in St. Pölten und Umgebung',
         'Erfahrung mit Altbauten im Stadtzentrum',
@@ -32,7 +45,15 @@ export const cities: Record<string, CityInfo[]> = {
         'Besenreine Übergabe garantiert',
         'Faire Festpreise nach kostenloser Besichtigung'
       ],
+      benefitsEn: [
+        'Quick arrival in St. Pölten and surrounding areas',
+        'Experience with old buildings in the city center',
+        'Flexible appointments including weekends',
+        'Broom-clean handover guaranteed',
+        'Fair fixed prices after free inspection'
+      ],
       coverage: 'Wir sind in ganz St. Pölten tätig - vom Zentrum bis zu den Stadtteilen wie Wagram, Spratzern, Pottenbrunn und Viehofen.',
+      coverageEn: 'We operate throughout St. Pölten - from the center to districts like Wagram, Spratzern, Pottenbrunn, and Viehofen.',
       faq: [
         {
           question: 'Wie schnell können Sie in St. Pölten anfahren?',
@@ -42,73 +63,131 @@ export const cities: Record<string, CityInfo[]> = {
           question: 'Arbeiten Sie auch in den Stadtteilen von St. Pölten?',
           answer: 'Ja, wir arbeiten in allen Stadtteilen von St. Pölten - Wagram, Spratzern, Pottenbrunn, Viehofen und allen weiteren Bezirken der Landeshauptstadt.'
         }
+      ],
+      faqEn: [
+        {
+          question: 'How quickly can you arrive in St. Pölten?',
+          answer: 'We can be on-site in St. Pölten within 30-45 minutes. For urgent cases, we offer express service within 24 hours.'
+        },
+        {
+          question: 'Do you also work in the districts of St. Pölten?',
+          answer: 'Yes, we work in all districts of St. Pölten - Wagram, Spratzern, Pottenbrunn, Viehofen, and all other districts of the capital.'
+        }
       ]
     },
     {
       name: 'Wiener Neustadt',
+      nameEn: 'Wiener Neustadt',
       slug: 'wiener-neustadt',
       bundesland: 'Niederösterreich',
+      bundeslandEn: 'Lower Austria',
       bundeslandSlug: 'niederoesterreich',
       postalCode: '2700',
       population: 45000,
       description: 'Professionelle Räumungsdienste in Wiener Neustadt. Von der Innenstadt bis zu den Außenbezirken - wir räumen Wohnungen, Häuser und Keller schnell und zuverlässig.',
+      descriptionEn: 'Professional clearing services in Wiener Neustadt. From the city center to the outer districts - we clear apartments, houses, and basements quickly and reliably.',
       metaDescription: 'Räumung Wiener Neustadt ✓ Wohnungsräumung ✓ Kellerräumung ✓ Transport ✓ Schnell & professionell ☎ +43660 39 57 587',
+      metaDescriptionEn: 'Clearing Wiener Neustadt ✓ Apartment Clearance ✓ Basement Clearing ✓ Transport ✓ Fast & professional ☎ +43660 39 57 587',
       services: ['Wohnungsräumung', 'Hausräumung', 'Kellerräumung', 'Transportservice'],
+      servicesEn: ['Apartment Clearance', 'House Clearance', 'Basement Clearing', 'Transport Service'],
       benefits: [
         'Kurze Anfahrtswege aus Wien',
         'Erfahrung mit historischen Gebäuden',
         'Besenreine Übergabe',
         'Transparente Festpreise'
       ],
+      benefitsEn: [
+        'Short travel distance from Vienna',
+        'Experience with historic buildings',
+        'Broom-clean handover',
+        'Transparent fixed prices'
+      ],
       coverage: 'Gesamtes Stadtgebiet Wiener Neustadt und Umgebung.',
+      coverageEn: 'Entire city area of Wiener Neustadt and surrounding areas.',
       faq: [
         {
           question: 'Wie lange dauert eine Wohnungsräumung in Wiener Neustadt?',
           answer: 'Eine durchschnittliche 70m² Wohnung räumen wir in 4-6 Stunden. Bei größeren Objekten oder Altbauten ohne Lift kann es 6-8 Stunden dauern.'
         }
+      ],
+      faqEn: [
+        {
+          question: 'How long does an apartment clearance take in Wiener Neustadt?',
+          answer: 'We clear an average 70m² apartment in 4-6 hours. For larger properties or old buildings without elevators, it can take 6-8 hours.'
+        }
       ]
     },
     {
       name: 'Baden',
+      nameEn: 'Baden',
       slug: 'baden',
       bundesland: 'Niederösterreich',
+      bundeslandEn: 'Lower Austria',
       bundeslandSlug: 'niederoesterreich',
       postalCode: '2500',
       population: 26000,
       description: 'Räumung und Transport in Baden bei Wien. Spezialisiert auf die besonderen Anforderungen der Kurstadt mit ihren historischen Villen und Altbauten.',
+      descriptionEn: 'Clearing and transport services in Baden near Vienna. Specialized in the unique requirements of the spa town with its historic villas and old buildings.',
       metaDescription: 'Räumung Baden bei Wien ✓ Villenräumung ✓ Altbau-Expertise ✓ Diskret & professionell ☎ +43660 39 57 587',
+      metaDescriptionEn: 'Clearing Baden near Vienna ✓ Villa Clearance ✓ Historic Building Expertise ✓ Discreet & professional ☎ +43660 39 57 587',
       services: ['Wohnungsräumung', 'Villenräumung', 'Haushaltsauflösung', 'Kellerräumung'],
+      servicesEn: ['Apartment Clearance', 'Villa Clearance', 'Household Dissolution', 'Basement Clearing'],
       benefits: [
         'Erfahrung mit historischen Villen',
         'Diskrete Abwicklung in gehobenen Wohngegenden',
         'Schonendes Arbeiten in denkmalgeschützten Gebäuden',
         'Kurze Anfahrt aus Wien'
       ],
+      benefitsEn: [
+        'Experience with historic villas',
+        'Discreet handling in upscale residential areas',
+        'Careful work in listed buildings',
+        'Short distance from Vienna'
+      ],
       coverage: 'Baden Zentrum, Weikersdorf, Leesdorf und alle Ortsteile.',
+      coverageEn: 'Baden center, Weikersdorf, Leesdorf, and all districts.',
       faq: [
         {
           question: 'Können Sie auch denkmalgeschützte Villen in Baden räumen?',
           answer: 'Ja, wir haben umfangreiche Erfahrung mit historischen Gebäuden und Villen in Baden. Wir arbeiten besonders schonend und achten auf die Bausubstanz.'
         }
+      ],
+      faqEn: [
+        {
+          question: 'Can you also clear listed villas in Baden?',
+          answer: 'Yes, we have extensive experience with historic buildings and villas in Baden. We work with particular care and pay attention to the building structure.'
+        }
       ]
     },
     {
       name: 'Klosterneuburg',
+      nameEn: 'Klosterneuburg',
       slug: 'klosterneuburg',
       bundesland: 'Niederösterreich',
+      bundeslandEn: 'Lower Austria',
       bundeslandSlug: 'niederoesterreich',
       postalCode: '3400',
       population: 28000,
       description: 'Professionelle Räumung in Klosterneuburg. Schnelle Anfahrt aus Wien, spezialisiert auf Wohnungen und Häuser in allen Stadtteilen.',
+      descriptionEn: 'Professional clearing in Klosterneuburg. Quick arrival from Vienna, specialized in apartments and houses in all districts.',
       metaDescription: 'Räumung Klosterneuburg ✓ Wohnungsräumung ✓ Hausräumung ✓ Schnelle Anfahrt ☎ +43660 39 57 587',
+      metaDescriptionEn: 'Clearing Klosterneuburg ✓ Apartment Clearance ✓ House Clearance ✓ Quick arrival ☎ +43660 39 57 587',
       services: ['Wohnungsräumung', 'Hausräumung', 'Kellerräumung', 'Transportservice'],
+      servicesEn: ['Apartment Clearance', 'House Clearance', 'Basement Clearing', 'Transport Service'],
       benefits: [
         'Sehr schnelle Anfahrt aus Wien',
         'Lokale Marktkenntnis',
         'Flexible Terminvereinbarung',
         'Faire Preise'
       ],
+      benefitsEn: [
+        'Very quick arrival from Vienna',
+        'Local market knowledge',
+        'Flexible appointment scheduling',
+        'Fair prices'
+      ],
       coverage: 'Alle Stadtteile von Klosterneuburg inklusive Kierling, Weidling und Kritzendorf.',
+      coverageEn: 'All districts of Klosterneuburg including Kierling, Weidling, and Kritzendorf.',
       faq: []
     },
     {
@@ -191,25 +270,43 @@ export const cities: Record<string, CityInfo[]> = {
   burgenland: [
     {
       name: 'Eisenstadt',
+      nameEn: 'Eisenstadt',
       slug: 'eisenstadt',
       bundesland: 'Burgenland',
+      bundeslandEn: 'Burgenland',
       bundeslandSlug: 'burgenland',
       postalCode: '7000',
       population: 15000,
       description: 'Räumung in Eisenstadt, der Landeshauptstadt des Burgenlandes. Professionelle Dienstleistungen für Wohnungen, Häuser und Geschäfte.',
+      descriptionEn: 'Clearing services in Eisenstadt, the capital of Burgenland. Professional services for apartments, houses, and commercial properties.',
       metaDescription: 'Räumung Eisenstadt ✓ Burgenland ✓ Wohnungen & Häuser ✓ Professionell ☎ +43660 39 57 587',
+      metaDescriptionEn: 'Clearing Eisenstadt ✓ Burgenland ✓ Apartments & Houses ✓ Professional ☎ +43660 39 57 587',
       services: ['Wohnungsräumung', 'Hausräumung', 'Geschäftsräumung', 'Kellerräumung'],
+      servicesEn: ['Apartment Clearance', 'House Clearance', 'Commercial Clearance', 'Basement Clearing'],
       benefits: [
         'Kurze Anfahrt aus Wien',
         'Regionale Expertise im Burgenland',
         'Flexible Terminvereinbarung',
         'Faire Festpreise'
       ],
+      benefitsEn: [
+        'Short travel time from Vienna',
+        'Regional expertise in Burgenland',
+        'Flexible appointment scheduling',
+        'Fair fixed prices'
+      ],
       coverage: 'Eisenstadt und gesamtes nördliches Burgenland.',
+      coverageEn: 'Eisenstadt and entire northern Burgenland.',
       faq: [
         {
           question: 'Wie schnell können Sie in Eisenstadt sein?',
           answer: 'Von Wien aus erreichen wir Eisenstadt in etwa 45-60 Minuten. Termine können oft schon innerhalb von 24-48 Stunden vereinbart werden.'
+        }
+      ],
+      faqEn: [
+        {
+          question: 'How quickly can you be in Eisenstadt?',
+          answer: 'We reach Eisenstadt from Vienna in about 45-60 minutes. Appointments can often be arranged within 24-48 hours.'
         }
       ]
     },

@@ -26,14 +26,23 @@ export default function CityPage() {
     ? getCityBySlug(params.bundesland, params.city) 
     : null;
 
+  const cityName = language === 'en' && city?.nameEn ? city.nameEn : city?.name || '';
+  const cityBundesland = language === 'en' && city?.bundeslandEn ? city.bundeslandEn : city?.bundesland || '';
+  const cityDescription = language === 'en' && city?.descriptionEn ? city.descriptionEn : city?.description || '';
+  const cityMetaDescription = language === 'en' && city?.metaDescriptionEn ? city.metaDescriptionEn : city?.metaDescription || '';
+  const cityServices = language === 'en' && city?.servicesEn ? city.servicesEn : city?.services || [];
+  const cityBenefits = language === 'en' && city?.benefitsEn ? city.benefitsEn : city?.benefits || [];
+  const cityCoverage = language === 'en' && city?.coverageEn ? city.coverageEn : city?.coverage || '';
+  const cityFaq = language === 'en' && city?.faqEn ? city.faqEn : city?.faq || [];
+
   useEffect(() => {
     if (city) {
-      const title = `${t.cityPage.pageTitleTemplate} ${city.name} ${city.bundesland} ${t.cityPage.pageTitleSuffix}`;
+      const title = `${t.cityPage.pageTitleTemplate} ${cityName} ${cityBundesland} ${t.cityPage.pageTitleSuffix}`;
       const url = getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug);
 
       updateMetaTags({
         title,
-        description: city.metaDescription,
+        description: cityMetaDescription,
         url,
         type: 'website',
       });
@@ -41,7 +50,7 @@ export default function CityPage() {
       const localBusinessSchema = {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: `${t.cityPage.schemaCompanyName} ${city.name}`,
+        name: `${t.cityPage.schemaCompanyName} ${cityName}`,
         image: cityImage,
         '@id': url,
         url: `${window.location.origin}${url}`,
@@ -49,17 +58,17 @@ export default function CityPage() {
         email: 'info@flaechenfrei.at',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: city.name,
+          addressLocality: cityName,
           postalCode: city.postalCode,
-          addressRegion: city.bundesland,
+          addressRegion: cityBundesland,
           addressCountry: 'AT',
         },
         areaServed: {
           '@type': 'City',
-          name: city.name,
+          name: cityName,
           containedIn: {
             '@type': 'State',
-            name: city.bundesland,
+            name: cityBundesland,
           },
         },
         priceRange: '€€',
@@ -69,11 +78,11 @@ export default function CityPage() {
           opens: '09:00',
           closes: '18:00',
         },
-        description: city.description,
+        description: cityDescription,
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: t.cityPage.schemaCatalogName,
-          itemListElement: city.services.map((service) => ({
+          itemListElement: cityServices.map((service) => ({
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
@@ -86,19 +95,19 @@ export default function CityPage() {
 
       const breadcrumbSchema = getBreadcrumbSchema([
         { name: t.common.states, url: bundeslaenderPath },
-        { name: city.bundesland, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug) },
-        { name: city.name, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) },
+        { name: cityBundesland, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug) },
+        { name: cityName, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) },
       ]);
 
       const schemas: Record<string, unknown>[] = [localBusinessSchema, breadcrumbSchema];
       
-      if (city.faq && city.faq.length > 0) {
-        schemas.push(getFAQSchema(city.faq));
+      if (cityFaq && cityFaq.length > 0) {
+        schemas.push(getFAQSchema(cityFaq));
       }
       
       addMultipleJsonLd(schemas, `city-${city.slug}-schemas`);
     }
-  }, [city, language, t, bundeslaenderPath]);
+  }, [city, cityName, cityBundesland, cityDescription, cityMetaDescription, cityServices, cityFaq, language, t, bundeslaenderPath]);
 
   if (!match || !city) {
     return <NotFound />;
@@ -113,8 +122,8 @@ export default function CityPage() {
           <Breadcrumbs 
             items={[
               { name: t.common.states, url: bundeslaenderPath },
-              { name: city.bundesland, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug) },
-              { name: city.name, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) }
+              { name: cityBundesland, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug) },
+              { name: cityName, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) }
             ]} 
           />
         </div>
@@ -127,13 +136,13 @@ export default function CityPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <div className="inline-block bg-secondary text-secondary-foreground px-4 py-1 rounded-full text-sm font-medium mb-4">
-                {city.postalCode} {city.name}
+                {city.postalCode} {cityName}
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-city-title">
-                {t.cityPage.clearingIn} {city.name}, {city.bundesland}
+                {t.cityPage.clearingIn} {cityName}, {cityBundesland}
               </h1>
               <p className="text-xl text-primary-foreground/90 mb-6" data-testid="text-city-subtitle">
-                {city.description}
+                {cityDescription}
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="tel:+436603957587">
@@ -158,11 +167,11 @@ export default function CityPage() {
               <div className="md:col-span-2 space-y-12">
                 <div>
                   <h2 className="text-3xl font-bold mb-6">
-                    {t.cityPage.professionalClearing} {city.name}
+                    {t.cityPage.professionalClearing} {cityName}
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6">
-                    {t.cityPage.description1} {city.name}, {city.bundesland}. 
-                    {t.cityPage.description2} {city.name} {t.cityPage.description3}
+                    {t.cityPage.description1} {cityName}, {cityBundesland}. 
+                    {t.cityPage.description2} {cityName} {t.cityPage.description3}
                   </p>
                   <p className="text-lg text-muted-foreground">
                     {t.cityPage.description4}
@@ -172,10 +181,10 @@ export default function CityPage() {
                 <div>
                   <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                     <CheckCircle className="w-6 h-6 text-primary" />
-                    {t.cityPage.ourServicesIn} {city.name}
+                    {t.cityPage.ourServicesIn} {cityName}
                   </h3>
                   <div className="grid sm:grid-cols-2 gap-4">
-                    {city.services.map((service, i) => (
+                    {cityServices.map((service, i) => (
                       <Card key={i} className="hover-elevate" data-testid={`service-item-${i}`}>
                         <CardContent className="p-4">
                           <div className="flex items-start gap-3">
@@ -188,14 +197,14 @@ export default function CityPage() {
                   </div>
                 </div>
 
-                {city.benefits.length > 0 && (
+                {cityBenefits.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
                       <Star className="w-6 h-6 text-primary" />
-                      {t.cityPage.benefitsTitle} {city.name}
+                      {t.cityPage.benefitsTitle} {cityName}
                     </h3>
                     <div className="space-y-3">
-                      {city.benefits.map((benefit, i) => (
+                      {cityBenefits.map((benefit, i) => (
                         <Card key={i} className="hover-elevate" data-testid={`benefit-item-${i}`}>
                           <CardContent className="p-4">
                             <div className="flex items-start gap-3">
@@ -209,7 +218,7 @@ export default function CityPage() {
                   </div>
                 )}
 
-                {city.coverage && (
+                {cityCoverage && (
                   <Card>
                     <CardHeader>
                       <div className="flex items-center gap-2 mb-2">
@@ -217,22 +226,22 @@ export default function CityPage() {
                         <CardTitle>{t.cityPage.coverageTitle}</CardTitle>
                       </div>
                       <CardDescription>
-                        {t.cityPage.coverageSubtitle} {city.name} {t.cityPage.coverageActive}
+                        {t.cityPage.coverageSubtitle} {cityName} {t.cityPage.coverageActive}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">{city.coverage}</p>
+                      <p className="text-muted-foreground">{cityCoverage}</p>
                     </CardContent>
                   </Card>
                 )}
 
-                {city.faq && city.faq.length > 0 && (
+                {cityFaq && cityFaq.length > 0 && (
                   <div>
                     <h3 className="text-2xl font-bold mb-6">
-                      {t.cityPage.faqTitle} {city.name}
+                      {t.cityPage.faqTitle} {cityName}
                     </h3>
                     <Accordion type="single" collapsible className="w-full">
-                      {city.faq.map((faqItem, i) => (
+                      {cityFaq.map((faqItem, i) => (
                         <AccordionItem key={i} value={`item-${i}`}>
                           <AccordionTrigger className="text-left" data-testid={`faq-question-${i}`}>
                             {faqItem.question}
@@ -323,7 +332,7 @@ export default function CityPage() {
               {t.cityPage.bookFreeInspection}
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              {t.cityPage.ctaText} {city.name} {t.cityPage.ctaTextAnd} {city.bundesland} {t.cityPage.ctaTextActive}
+              {t.cityPage.ctaText} {cityName} {t.cityPage.ctaTextAnd} {cityBundesland} {t.cityPage.ctaTextActive}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:+436603957587">
