@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import GalleryLightbox from '@/components/GalleryLightbox';
 import cleaningTeamImage from '@assets/stock_images/professional_cleanin_4637ab2e.jpg';
 import cleanApartmentImage from '@assets/stock_images/empty_clean_apartmen_62f7696d.jpg';
 import basementImage from '@assets/stock_images/basement_storage_roo_2b9b9feb.jpg';
@@ -8,6 +10,8 @@ import antiqueExpertImage from '@assets/stock_images/antique_expert_appra_c4e20b
 
 export default function Gallery() {
   const { t } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const galleryImages = [
     {
@@ -58,7 +62,11 @@ export default function Gallery() {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="group relative h-80 rounded-lg overflow-hidden hover-elevate active-elevate-2"
+              className="group relative h-80 rounded-lg overflow-hidden hover-elevate active-elevate-2 cursor-pointer"
+              onClick={() => {
+                setCurrentImageIndex(index);
+                setLightboxOpen(true);
+              }}
               data-testid={`gallery-item-${index}`}
             >
               <img
@@ -76,6 +84,14 @@ export default function Gallery() {
             </div>
           ))}
         </div>
+
+        <GalleryLightbox
+          images={galleryImages}
+          currentIndex={currentImageIndex}
+          isOpen={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+          onNavigate={setCurrentImageIndex}
+        />
       </div>
     </section>
   );
