@@ -67,7 +67,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const result = await submitUrlToIndexNow(url);
       logIndexNowResponse(result, url);
       
-      res.status(result.success ? 200 : result.status).json(result);
+      // Use result.status if valid, otherwise default to 500 for errors
+      const httpStatus = result.success ? result.status : (result.status || 500);
+      res.status(httpStatus).json(result);
     } catch (error) {
       console.error("IndexNow single URL submission error:", error);
       res.status(500).json({ 
@@ -101,7 +103,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const result = await submitUrlsToIndexNow(urls);
       logIndexNowResponse(result, `${urls.length} URLs`);
       
-      res.status(result.success ? 200 : result.status).json(result);
+      // Use result.status if valid, otherwise default to 500 for errors
+      const httpStatus = result.success ? result.status : (result.status || 500);
+      res.status(httpStatus).json(result);
     } catch (error) {
       console.error("IndexNow batch submission error:", error);
       res.status(500).json({ 
@@ -117,7 +121,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const result = await submitSitemapToIndexNow();
       logIndexNowResponse(result, "Sitemap submission");
       
-      res.status(result.success ? 200 : result.status).json(result);
+      // Use result.status if valid, otherwise default to 500 for errors
+      const httpStatus = result.success ? result.status : (result.status || 500);
+      res.status(httpStatus).json(result);
     } catch (error) {
       console.error("IndexNow sitemap submission error:", error);
       res.status(500).json({ 

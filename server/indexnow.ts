@@ -61,8 +61,8 @@ export async function submitUrlToIndexNow(url: string): Promise<IndexNowResponse
     console.error('IndexNow submission error:', error);
     return {
       success: false,
-      status: 0,
-      message: error instanceof Error ? error.message : 'Unknown error',
+      status: 502,
+      message: error instanceof Error ? error.message : 'Network error - failed to reach IndexNow API',
     };
   }
 }
@@ -112,8 +112,8 @@ export async function submitUrlsToIndexNow(urls: string[]): Promise<IndexNowResp
     console.error('IndexNow batch submission error:', error);
     return {
       success: false,
-      status: 0,
-      message: error instanceof Error ? error.message : 'Unknown error',
+      status: 502,
+      message: error instanceof Error ? error.message : 'Network error - failed to reach IndexNow API',
     };
   }
 }
