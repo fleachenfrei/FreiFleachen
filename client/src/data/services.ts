@@ -1667,7 +1667,7 @@ export const servicesData: ServiceEntry[] = [
     content: {
       de: {
         name: 'Erbstücksankauf',
-        shortDescription: 'Wir kaufen wertvolle Erbstücke in Wien und ganz Österreich - faire Bewertung, seriöse Abwicklung, Barzahlung vor Ort.',
+        shortDescription: 'Wir kaufen wertvolle Erbstücke in Österreich - faire Bewertung, seriöse Abwicklung, Barzahlung vor Ort.',
         description: 'Bei einer Verlassenschaft bleiben oft wertvolle Erbstücke zurück - Familienerbstücke, Sammlerstücke, antike Möbel oder wertvoller Schmuck. Wir kaufen Ihre Erbstücke zu fairen Marktpreisen an. Unsere Experten bewerten Ihre Gegenstände kostenlos und machen Ihnen ein transparentes Angebot. Schnelle, diskrete Abwicklung und Barzahlung vor Ort in ganz Österreich.',
         metaDescription: 'Erbstücksankauf Wien ✓ Faire Bewertung ✓ Kostenlose Schätzung ✓ Barzahlung sofort ✓ Seriöse Abwicklung ☎ +43660 39 57 587',
         benefits: [
@@ -1731,7 +1731,7 @@ export const servicesData: ServiceEntry[] = [
       },
       en: {
         name: 'Heirloom Purchase',
-        shortDescription: 'We purchase valuable heirlooms in Vienna and throughout Austria - fair appraisal, professional handling, cash payment on-site.',
+        shortDescription: 'We purchase valuable heirlooms in Austria - fair appraisal, professional handling, cash payment on-site.',
         description: 'Estate settlements often leave behind valuable heirlooms - family treasures, collectibles, antique furniture, or precious jewelry. We purchase your heirlooms at fair market prices. Our experts appraise your items free of charge and make you a transparent offer. Fast, discreet handling and cash payment on-site throughout Austria.',
         metaDescription: 'Heirloom Purchase Vienna ✓ Fair Appraisal ✓ Free Estimate ✓ Immediate Cash Payment ✓ Professional Service ☎ +43660 39 57 587',
         benefits: [
@@ -1802,8 +1802,8 @@ export const servicesData: ServiceEntry[] = [
     content: {
       de: {
         name: 'Goldankauf',
-        shortDescription: 'Seriöser Goldankauf in Wien - Altgold, Schmuck, Münzen zu tagesaktuellen Preisen. Kostenlose Prüfung, faire Bewertung, sofortige Barzahlung.',
-        description: 'Wir kaufen Gold in allen Formen an - Altgold, Goldschmuck, Zahngold, Goldmünzen, Barren und Bruchgold. Sie erhalten tagesaktuelle Goldpreise und transparente Bewertung. Unsere Experten prüfen Ihr Gold kostenlos und zahlen sofort in bar. Seriöser Goldankauf in Wien und ganz Österreich - ohne Termin, ohne Wartezeit.',
+        shortDescription: 'Seriöser Goldankauf in Österreich - Altgold, Schmuck, Münzen zu tagesaktuellen Preisen. Kostenlose Prüfung, faire Bewertung, sofortige Barzahlung.',
+        description: 'Wir kaufen Gold in allen Formen an - Altgold, Goldschmuck, Zahngold, Goldmünzen, Barren und Bruchgold. Sie erhalten tagesaktuelle Goldpreise und transparente Bewertung. Unsere Experten prüfen Ihr Gold kostenlos und zahlen sofort in bar. Seriöser Goldankauf in Österreich - ohne Termin, ohne Wartezeit.',
         metaDescription: 'Goldankauf Wien ✓ Tagesaktuelle Preise ✓ Kostenlose Prüfung ✓ Sofort Bargeld ✓ Seriös & Fair ☎ +43660 39 57 587',
         benefits: [
           'Tagesaktuelle Goldpreise - faire Bewertung',
@@ -1866,8 +1866,8 @@ export const servicesData: ServiceEntry[] = [
       },
       en: {
         name: 'Gold Purchase',
-        shortDescription: 'Professional gold purchase in Vienna - scrap gold, jewelry, coins at daily prices. Free testing, fair appraisal, immediate cash payment.',
-        description: 'We purchase gold in all forms - scrap gold, gold jewelry, dental gold, gold coins, bars, and broken gold. You receive daily gold prices and transparent appraisal. Our experts test your gold free of charge and pay immediately in cash. Professional gold purchase in Vienna and throughout Austria - no appointment needed, no waiting time.',
+        shortDescription: 'Professional gold purchase in Austria - scrap gold, jewelry, coins at daily prices. Free testing, fair appraisal, immediate cash payment.',
+        description: 'We purchase gold in all forms - scrap gold, gold jewelry, dental gold, gold coins, bars, and broken gold. You receive daily gold prices and transparent appraisal. Our experts test your gold free of charge and pay immediately in cash. Professional gold purchase in Austria - no appointment needed, no waiting time.',
         metaDescription: 'Gold Purchase Vienna ✓ Daily Updated Prices ✓ Free Testing ✓ Immediate Cash ✓ Professional & Fair ☎ +43660 39 57 587',
         benefits: [
           'Daily updated gold prices - fair appraisal',
@@ -1937,8 +1937,8 @@ export const servicesData: ServiceEntry[] = [
     content: {
       de: {
         name: 'Teppichankauf',
-        shortDescription: 'Ankauf hochwertiger Teppiche in Wien - Perserteppiche, Orient-Teppiche, antike Teppiche. Faire Bewertung durch Experten, sofortige Barzahlung.',
-        description: 'Wir kaufen hochwertige Teppiche an - Perserteppiche, Orient-Teppiche, antike Teppiche und handgeknüpfte Sammlerstücke. Unsere Teppich-Experten bewerten Ihre Stücke kostenlos nach Herkunft, Alter, Knüpfart und Zustand. Sie erhalten ein faires Angebot basierend auf aktuellen Marktpreisen. Schnelle Abwicklung und Barzahlung in ganz Wien und Österreich.',
+        shortDescription: 'Ankauf hochwertiger Teppiche in Österreich - Perserteppiche, Orient-Teppiche, antike Teppiche. Faire Bewertung durch Experten, sofortige Barzahlung.',
+        description: 'Wir kaufen hochwertige Teppiche an - Perserteppiche, Orient-Teppiche, antike Teppiche und handgeknüpfte Sammlerstücke. Unsere Teppich-Experten bewerten Ihre Stücke kostenlos nach Herkunft, Alter, Knüpfart und Zustand. Sie erhalten ein faires Angebot basierend auf aktuellen Marktpreisen. Schnelle Abwicklung und Barzahlung in ganz Österreich.',
         metaDescription: 'Teppichankauf Wien ✓ Perserteppiche ✓ Orientteppiche ✓ Kostenlose Bewertung ✓ Faire Preise ☎ +43660 39 57 587',
         benefits: [
           'Expertise für Perserteppiche und Orientteppiche',
@@ -2001,8 +2001,8 @@ export const servicesData: ServiceEntry[] = [
       },
       en: {
         name: 'Carpet Purchase',
-        shortDescription: 'Purchase of high-quality carpets in Vienna - Persian carpets, Oriental rugs, antique carpets. Fair expert appraisal, immediate cash payment.',
-        description: 'We purchase high-quality carpets - Persian rugs, Oriental carpets, antique rugs, and hand-knotted collector pieces. Our carpet experts appraise your pieces free of charge based on origin, age, knotting technique, and condition. You receive a fair offer based on current market prices. Fast handling and cash payment throughout Vienna and Austria.',
+        shortDescription: 'Purchase of high-quality carpets in Austria - Persian carpets, Oriental rugs, antique carpets. Fair expert appraisal, immediate cash payment.',
+        description: 'We purchase high-quality carpets - Persian rugs, Oriental carpets, antique rugs, and hand-knotted collector pieces. Our carpet experts appraise your pieces free of charge based on origin, age, knotting technique, and condition. You receive a fair offer based on current market prices. Fast handling and cash payment throughout Austria.',
         metaDescription: 'Carpet Purchase Vienna ✓ Persian Rugs ✓ Oriental Carpets ✓ Free Appraisal ✓ Fair Prices ☎ +43660 39 57 587',
         benefits: [
           'Expertise for Persian and Oriental carpets',
@@ -2072,8 +2072,8 @@ export const servicesData: ServiceEntry[] = [
     content: {
       de: {
         name: 'Bilderankauf',
-        shortDescription: 'Ankauf von Gemälden und Kunstwerken in Wien - Ölbilder, Aquarelle, Grafiken. Kostenlose Expertise, faire Bewertung, seriöse Abwicklung.',
-        description: 'Wir kaufen Gemälde, Ölbilder, Aquarelle, Grafiken und andere Kunstwerke an. Ob Nachlass, Sammlung oder Einzelstücke - unsere Kunstexperten bewerten Ihre Bilder kostenlos nach Künstler, Epoche, Zustand und Marktwert. Sie erhalten ein faires Angebot für Ihre Kunstwerke. Diskreter Ankauf in Wien und ganz Österreich mit sofortiger Barzahlung.',
+        shortDescription: 'Ankauf von Gemälden und Kunstwerken in Österreich - Ölbilder, Aquarelle, Grafiken. Kostenlose Expertise, faire Bewertung, seriöse Abwicklung.',
+        description: 'Wir kaufen Gemälde, Ölbilder, Aquarelle, Grafiken und andere Kunstwerke an. Ob Nachlass, Sammlung oder Einzelstücke - unsere Kunstexperten bewerten Ihre Bilder kostenlos nach Künstler, Epoche, Zustand und Marktwert. Sie erhalten ein faires Angebot für Ihre Kunstwerke. Diskreter Ankauf in Österreich mit sofortiger Barzahlung.',
         metaDescription: 'Bilderankauf Wien ✓ Gemälde & Kunstwerke ✓ Kostenlose Expertise ✓ Faire Preise ✓ Seriöser Ankauf ☎ +43660 39 57 587',
         benefits: [
           'Kostenlose Expertise durch Kunstexperten',
@@ -2137,8 +2137,8 @@ export const servicesData: ServiceEntry[] = [
       },
       en: {
         name: 'Painting Purchase',
-        shortDescription: 'Purchase of paintings and artworks in Vienna - oil paintings, watercolors, graphics. Free expertise, fair appraisal, professional handling.',
-        description: 'We purchase paintings, oil paintings, watercolors, graphics and other artworks. Whether estate, collection or individual pieces - our art experts appraise your paintings free of charge based on artist, era, condition and market value. You receive a fair offer for your artworks. Discreet purchase in Vienna and throughout Austria with immediate cash payment.',
+        shortDescription: 'Purchase of paintings and artworks in Austria - oil paintings, watercolors, graphics. Free expertise, fair appraisal, professional handling.',
+        description: 'We purchase paintings, oil paintings, watercolors, graphics and other artworks. Whether estate, collection or individual pieces - our art experts appraise your paintings free of charge based on artist, era, condition and market value. You receive a fair offer for your artworks. Discreet purchase in Austria with immediate cash payment.',
         metaDescription: 'Painting Purchase Vienna ✓ Paintings & Artworks ✓ Free Expertise ✓ Fair Prices ✓ Professional Purchase ☎ +43660 39 57 587',
         benefits: [
           'Free expertise by art experts',
@@ -2209,8 +2209,8 @@ export const servicesData: ServiceEntry[] = [
     content: {
       de: {
         name: 'Antikwarenankauf',
-        shortDescription: 'Ankauf von Antiquitäten in Wien - Möbel, Porzellan, Silber, Uhren und mehr. Faire Bewertung, seriöse Abwicklung, Barzahlung vor Ort.',
-        description: 'Wir kaufen hochwertige Antiquitäten und Sammlerstücke an - antike Möbel, Porzellan, Silber, Uhren, Glas, Bronzen, Kronleuchter und vieles mehr. Unsere Antiquitäten-Experten bewerten Ihre Stücke kostenlos nach Alter, Herkunft und Zustand. Sie erhalten ein faires Angebot basierend auf aktuellen Marktpreisen. Diskreter Ankauf in Wien und ganz Österreich mit sofortiger Barzahlung.',
+        shortDescription: 'Ankauf von Antiquitäten in Österreich - Möbel, Porzellan, Silber, Uhren und mehr. Faire Bewertung, seriöse Abwicklung, Barzahlung vor Ort.',
+        description: 'Wir kaufen hochwertige Antiquitäten und Sammlerstücke an - antike Möbel, Porzellan, Silber, Uhren, Glas, Bronzen, Kronleuchter und vieles mehr. Unsere Antiquitäten-Experten bewerten Ihre Stücke kostenlos nach Alter, Herkunft und Zustand. Sie erhalten ein faires Angebot basierend auf aktuellen Marktpreisen. Diskreter Ankauf in Österreich mit sofortiger Barzahlung.',
         metaDescription: 'Antikwarenankauf Wien ✓ Möbel, Porzellan, Silber ✓ Kostenlose Bewertung ✓ Faire Preise ✓ Sofort Bargeld ☎ +43660 39 57 587',
         benefits: [
           'Expertise für alle Arten von Antiquitäten',
@@ -2274,8 +2274,8 @@ export const servicesData: ServiceEntry[] = [
       },
       en: {
         name: 'Antique Purchase',
-        shortDescription: 'Purchase of antiques in Vienna - furniture, porcelain, silver, clocks and more. Fair appraisal, professional handling, cash payment on-site.',
-        description: 'We purchase high-quality antiques and collectibles - antique furniture, porcelain, silver, clocks, glass, bronzes, chandeliers and much more. Our antique experts appraise your pieces free of charge based on age, origin and condition. You receive a fair offer based on current market prices. Discreet purchase in Vienna and throughout Austria with immediate cash payment.',
+        shortDescription: 'Purchase of antiques in Austria - furniture, porcelain, silver, clocks and more. Fair appraisal, professional handling, cash payment on-site.',
+        description: 'We purchase high-quality antiques and collectibles - antique furniture, porcelain, silver, clocks, glass, bronzes, chandeliers and much more. Our antique experts appraise your pieces free of charge based on age, origin and condition. You receive a fair offer based on current market prices. Discreet purchase in Austria with immediate cash payment.',
         metaDescription: 'Antique Purchase Vienna ✓ Furniture, Porcelain, Silver ✓ Free Appraisal ✓ Fair Prices ✓ Immediate Cash ☎ +43660 39 57 587',
         benefits: [
           'Expertise for all types of antiques',
