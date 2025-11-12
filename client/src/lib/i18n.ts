@@ -100,6 +100,16 @@ export const translations = {
       title: 'Was unsere Kunden sagen',
       subtitle: 'Vertrauen Sie den Experten: Räumung & Räumung in Wien!',
     },
+    gallery: {
+      title: 'Unsere Arbeit in Bildern',
+      subtitle: 'Ein Blick sagt mehr als tausend Worte - sehen Sie selbst, wie wir Platz schaffen!',
+      image1Title: 'Professionelles Team',
+      image2Title: 'Besenreine Übergabe',
+      image3Title: 'Kellerräumung',
+      image4Title: 'Dachbodenräumung',
+      image5Title: 'Umzugsservice',
+      image6Title: 'Ankauf & Bewertung',
+    },
     footer: {
       companyDescription: 'Ihr zuverlässiger Partner für Räumung und Transport in Österreich.',
       services: 'Leistungen',
@@ -452,6 +462,16 @@ export const translations = {
     testimonials: {
       title: 'What Our Customers Say',
       subtitle: 'Trust the experts: Clearing & Removal in Vienna!',
+    },
+    gallery: {
+      title: 'Our Work in Pictures',
+      subtitle: 'A picture is worth a thousand words - see for yourself how we create space!',
+      image1Title: 'Professional Team',
+      image2Title: 'Broom-Clean Handover',
+      image3Title: 'Basement Clearance',
+      image4Title: 'Attic Clearance',
+      image5Title: 'Moving Service',
+      image6Title: 'Purchase & Appraisal',
     },
     footer: {
       companyDescription: 'Your reliable partner for clearing and transport in Austria.',
