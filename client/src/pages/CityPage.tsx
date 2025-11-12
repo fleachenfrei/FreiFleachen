@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin, CheckCircle, Star, Building2, MapPinned } from 'lucide-react';
 import { getCityBySlug } from '@/data/cities';
-import { updateMetaTags, getFAQSchema, addMultipleJsonLd, getBreadcrumbSchema } from '@/lib/seo';
+import { updateMetaTags, getFAQSchema, addMultipleJsonLd, getBreadcrumbSchema, getWebPageSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
 import cityImage from '@assets/generated_images/House_clearance_service_e0229004.png';
@@ -103,7 +103,14 @@ export default function CityPage() {
         { name: cityName, url: getLocalizedBundeslaenderPath(language, city.bundeslandSlug, city.slug) },
       ]);
 
-      const schemas: Record<string, unknown>[] = [localBusinessSchema, breadcrumbSchema];
+      const webPageSchema = getWebPageSchema(language, {
+        type: 'WebPage',
+        name: cityName,
+        description: cityMetaDescription,
+        url: location,
+      });
+
+      const schemas: Record<string, unknown>[] = [localBusinessSchema, webPageSchema, breadcrumbSchema];
       
       if (cityFaq && cityFaq.length > 0) {
         schemas.push(getFAQSchema(cityFaq));

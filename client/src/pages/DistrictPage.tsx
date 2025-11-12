@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin, CheckCircle, Star, Landmark, MapPinned } from 'lucide-react';
 import { getDistrictBySlug } from '@/data/districts';
-import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd, getWebPageSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import viennaImage from '@assets/generated_images/Vienna_landmark_Stephansdom_a1284b43.png';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -52,20 +52,14 @@ export default function DistrictPage() {
         alternateUrls,
       });
 
-      const jsonLd = {
+      const placeSchema = {
         '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: language === 'de' 
-          ? `Flächen Frei - Räumung ${districtName}`
-          : `Flächen Frei - Clearing ${districtName}`,
-        image: viennaImage,
-        '@id': location,
-        url: `${window.location.origin}${location}`,
-        telephone: CONTACT_INFO.phoneLink,
-        email: CONTACT_INFO.email,
+        '@type': 'Place',
+        '@id': `https://flaechenfrei.at${location}#place`,
+        name: `${district.postalCode} ${districtName}`,
+        description: districtDescription,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: districtName || '',
           addressLocality: language === 'de' ? 'Wien' : 'Vienna',
           postalCode: district.postalCode,
           addressCountry: 'AT',
@@ -75,19 +69,32 @@ export default function DistrictPage() {
           latitude: 48.2082,
           longitude: 16.3738,
         },
-        areaServed: {
+        containedInPlace: {
           '@type': 'City',
-          name: language === 'de' ? `Wien ${districtName}` : `Vienna ${districtName}`,
-          '@id': `https://www.wikidata.org/wiki/Q1741`,
+          name: language === 'de' ? 'Wien' : 'Vienna',
         },
-        priceRange: '€€',
-        openingHoursSpecification: {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '00:00',
-          closes: '23:59',
+      };
+
+      const serviceSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        '@id': `https://flaechenfrei.at${location}#service`,
+        name: language === 'de' 
+          ? `Räumung in ${districtName}`
+          : `Clearing in ${districtName}`,
+        description: districtMetaDescription,
+        provider: {
+          '@type': 'MovingCompany',
+          '@id': 'https://flaechenfrei.at/#organization',
+          name: 'Flächen Frei',
+          telephone: CONTACT_INFO.phone,
+          email: CONTACT_INFO.email,
         },
-        description: districtDescription,
+        areaServed: {
+          '@type': 'Place',
+          '@id': `https://flaechenfrei.at${location}#place`,
+          name: `${district.postalCode} ${districtName}`,
+        },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: language === 'de' ? 'Räumungsdienstleistungen' : 'Clearing Services',
@@ -102,7 +109,14 @@ export default function DistrictPage() {
         },
       };
 
-      const schemas: Record<string, unknown>[] = [jsonLd];
+      const webPageSchema = getWebPageSchema(language, {
+        type: 'WebPage',
+        name: `${district.postalCode} ${districtName}`,
+        description: districtMetaDescription || '',
+        url: location,
+      });
+
+      const schemas: Record<string, unknown>[] = [placeSchema, serviceSchema, webPageSchema];
       
       if (districtFaq && districtFaq.length > 0) {
         schemas.push(getFAQSchema(districtFaq));

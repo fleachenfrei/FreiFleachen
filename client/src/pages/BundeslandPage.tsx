@@ -11,7 +11,7 @@ import { ServiceId } from '@/data/services';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
-import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd, getWebPageSchema } from '@/lib/seo';
 import { getLocalizedBundeslaenderPath, getLocalizedContactPath, getLocalizedServicePath, getAlternateUrls } from '@/lib/urlMapping';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import NotFound from './not-found';
@@ -46,23 +46,48 @@ export default function BundeslandPage() {
 
     const faqData = language === 'de' ? state.faqs : state.faqsEn;
     
-    addMultipleJsonLd([
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        'serviceType': t.bundeslandPage.schemaServiceType,
-        'provider': {
-          '@type': 'LocalBusiness',
-          'name': 'Flächen Frei',
-          'telephone': CONTACT_INFO.phoneLink,
-          'email': CONTACT_INFO.email,
-          'areaServed': {
-            '@type': 'State',
-            'name': stateName,
-          },
-        },
-        'description': description,
+    const serviceSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `https://flaechenfrei.at${location}#service`,
+      'name': language === 'de'
+        ? `Räumung in ${stateName}`
+        : `Clearing in ${stateName}`,
+      'serviceType': t.bundeslandPage.schemaServiceType,
+      'provider': {
+        '@type': 'MovingCompany',
+        '@id': 'https://flaechenfrei.at/#organization',
+        'name': 'Flächen Frei',
+        'telephone': CONTACT_INFO.phone,
+        'email': CONTACT_INFO.email,
+        'url': 'https://flaechenfrei.at',
       },
+      'areaServed': {
+        '@type': 'State',
+        'name': stateName,
+        'containedInPlace': {
+          '@type': 'Country',
+          'name': language === 'de' ? 'Österreich' : 'Austria',
+        },
+      },
+      'description': description,
+      'offers': {
+        '@type': 'Offer',
+        'availability': 'https://schema.org/InStock',
+        'priceCurrency': 'EUR',
+      },
+    };
+
+    const webPageSchema = getWebPageSchema(language, {
+      type: 'WebPage',
+      name: stateName,
+      description,
+      url: location,
+    });
+    
+    addMultipleJsonLd([
+      serviceSchema,
+      webPageSchema,
       getFAQSchema(faqData),
     ], `bundesland-${state.slug}-schemas`);
   }, [state, language, location, t]);

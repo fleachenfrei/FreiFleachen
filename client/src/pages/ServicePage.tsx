@@ -8,7 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, CheckCircle, ArrowRight, Euro } from 'lucide-react';
 import { getServiceBySlug, getServiceById, ServiceId, getLocalizedServicePath } from '@/data/services';
-import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd } from '@/lib/seo';
+import { updateMetaTags, addJsonLd, getFAQSchema, addMultipleJsonLd, getWebPageSchema } from '@/lib/seo';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { getAlternateUrls } from '@/lib/urlMapping';
@@ -80,37 +80,83 @@ export default function ServicePage() {
         alternateUrls,
       });
 
-      const jsonLd = {
+      const serviceSchema = {
         '@context': 'https://schema.org',
         '@type': 'Service',
+        '@id': `https://flaechenfrei.at${location}#service`,
         name: content.name,
         description: content.description,
+        image: serviceImages[service.id],
+        url: `https://flaechenfrei.at${location}`,
         provider: {
-          '@type': 'LocalBusiness',
+          '@type': 'MovingCompany',
+          '@id': 'https://flaechenfrei.at/#organization',
           name: 'Flächen Frei',
-          telephone: CONTACT_INFO.phoneLink,
+          telephone: CONTACT_INFO.phone,
           email: CONTACT_INFO.email,
           address: {
             '@type': 'PostalAddress',
+            streetAddress: 'Herndlgasse 7/17',
             addressLocality: 'Wien',
+            postalCode: '1100',
             addressCountry: 'AT',
           },
+          url: 'https://flaechenfrei.at',
         },
-        areaServed: {
-          '@type': 'City',
-          name: 'Wien',
-        },
+        areaServed: [
+          {
+            '@type': 'City',
+            name: language === 'de' ? 'Wien' : 'Vienna',
+          },
+          {
+            '@type': 'Country',
+            name: language === 'de' ? 'Österreich' : 'Austria',
+          },
+        ],
+        serviceType: content.name,
         offers: {
           '@type': 'Offer',
           availability: 'https://schema.org/InStock',
+          priceCurrency: 'EUR',
           priceSpecification: {
             '@type': 'PriceSpecification',
             priceCurrency: 'EUR',
           },
         },
+        potentialAction: [
+          {
+            '@type': 'ContactAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: `https://flaechenfrei.at${language === 'de' ? '/kontakt' : '/en/contact'}`,
+              actionPlatform: [
+                'http://schema.org/DesktopWebPlatform',
+                'http://schema.org/MobileWebPlatform'
+              ]
+            }
+          },
+          {
+            '@type': 'CallAction',
+            target: {
+              '@type': 'EntryPoint',
+              urlTemplate: `tel:${CONTACT_INFO.phoneLink}`,
+              actionPlatform: [
+                'http://schema.org/DesktopWebPlatform',
+                'http://schema.org/MobileWebPlatform'
+              ]
+            }
+          }
+        ]
       };
 
-      const schemas: Record<string, unknown>[] = [jsonLd];
+      const webPageSchema = getWebPageSchema(language, {
+        type: 'WebPage',
+        name: content.name,
+        description: content.metaDescription,
+        url: location,
+      });
+
+      const schemas: Record<string, unknown>[] = [serviceSchema, webPageSchema];
       
       if (content.faq && content.faq.length > 0) {
         schemas.push(getFAQSchema(content.faq));
