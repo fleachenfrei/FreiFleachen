@@ -1,29 +1,46 @@
 export interface DistrictInfo {
   name: string;
+  nameEn?: string;
   postalCode: string;
   slug: string;
   description: string;
+  descriptionEn?: string;
   metaDescription: string;
+  metaDescriptionEn?: string;
   shortSummary: string;
+  shortSummaryEn?: string;
   landmarks: string[];
+  landmarksEn?: string[];
   neighborhoods: string[];
+  neighborhoodsEn?: string[];
   characteristics: string[];
+  characteristicsEn?: string[];
   serviceAreas: string[];
+  serviceAreasEn?: string[];
   popularServices: string[];
+  popularServicesEn?: string[];
   whyChooseUs: string[];
+  whyChooseUsEn?: string[];
   faq: Array<{ question: string; answer: string }>;
+  faqEn?: Array<{ question: string; answer: string }>;
 }
 
 export const viennaDistricts: Record<string, DistrictInfo> = {
   '1010-wien-innere-stadt': {
     name: 'Innere Stadt',
+    nameEn: 'Inner City',
     postalCode: '1010',
     slug: '1010-wien-innere-stadt',
     description: 'Die Innere Stadt ist das historische und kulturelle Herz Wiens. Als UNESCO-Weltkulturerbe beherbergt der 1. Bezirk weltberühmte Sehenswürdigkeiten wie den Stephansdom, die Hofburg und die Staatsoper.',
+    descriptionEn: 'The Inner City is the historic and cultural heart of Vienna. As a UNESCO World Heritage Site, the 1st district is home to world-famous landmarks such as St. Stephen\'s Cathedral, the Hofburg Palace, and the State Opera.',
     metaDescription: 'Räumung 1010 Wien Innere Stadt ✓ UNESCO-Weltkulturerbe ✓ Denkmalgeschützte Altbauten ✓ Diskrete Geschäftsräumung am Graben ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1010 Vienna Inner City ✓ UNESCO World Heritage ✓ Listed Historic Buildings ✓ Discreet Business Clearing at Graben ☎ +43660 39 57 587',
     shortSummary: 'Professionelle Räumung im historischen 1. Bezirk. Diskrete Arbeit in UNESCO-Weltkulturerbe mit Erfahrung in denkmalgeschützten Gebäuden.',
+    shortSummaryEn: 'Professional clearing in the historic 1st district. Discreet work in UNESCO World Heritage site with experience in listed buildings.',
     landmarks: ['Stephansdom', 'Hofburg', 'Staatsoper', 'Graben', 'Ringstraße', 'Burgtheater'],
+    landmarksEn: ['St. Stephen\'s Cathedral', 'Hofburg Palace', 'State Opera', 'Graben', 'Ringstraße', 'Burgtheater'],
     neighborhoods: ['Stubenviertel', 'Freihausviertel', 'Schottenviertel', 'Franziskanerviertel'],
+    neighborhoodsEn: ['Stubenviertel', 'Freihausviertel', 'Schottenviertel', 'Franziskanerviertel'],
     characteristics: [
       'UNESCO-Weltkulturerbe',
       'Historische Altbauten und Geschäftsgebäude',
@@ -31,7 +48,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Viele Geschäftsräume und Büros',
       'Luxuswohnungen und Penthäuser',
     ],
+    characteristicsEn: [
+      'UNESCO World Heritage Site',
+      'Historic buildings and commercial properties',
+      'City center with high building density',
+      'Many commercial spaces and offices',
+      'Luxury apartments and penthouses',
+    ],
     serviceAreas: ['Stephansplatz', 'Graben', 'Kärntner Straße', 'Ringstraße', 'Herrengasse', 'Wollzeile'],
+    serviceAreasEn: ['Stephansplatz', 'Graben', 'Kärntner Straße', 'Ringstraße', 'Herrengasse', 'Wollzeile'],
     popularServices: [
       'Büro- und Geschäftsräumung',
       'Wohnungsräumung in Altbauten',
@@ -40,12 +65,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Dachbodenräumung',
       'Geschäftsauflösung',
     ],
+    popularServicesEn: [
+      'Office and Commercial Clearing',
+      'Apartment Clearing in Historic Buildings',
+      'Penthouse Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'Business Liquidation',
+    ],
     whyChooseUs: [
       'Spezialisiert auf UNESCO-Weltkulturerbe-Gebäude seit 15 Jahren',
       'Neutrale Fahrzeuge für diskrete Arbeit am Graben und Kohlmarkt',
       'Kenntnis aller Fußgängerzonenzufahrten und Sondergenehmigungsverfahren',
       'Räumung außerhalb der Geschäftszeiten für Wiener Luxusboutiquen',
       'Expertise im Umgang mit Stuckdecken, Parkettböden und Wendeltreppen',
+    ],
+    whyChooseUsEn: [
+      'Specialized in UNESCO World Heritage buildings for 15 years',
+      'Unmarked vehicles for discreet work at Graben and Kohlmarkt',
+      'Knowledge of all pedestrian zone access routes and special permit procedures',
+      'Clearing outside business hours for Viennese luxury boutiques',
+      'Expertise in handling stucco ceilings, parquet floors, and spiral staircases',
     ],
     faq: [
       {
@@ -61,16 +101,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Für die Fußgängerzone (Graben, Kärntner Straße, Kohlmarkt) organisieren wir Zufahrtsgenehmigungen für Zeitfenster 6-10 Uhr. In der Herrengasse und Wollzeile haben wir ganztägig Zugang mit kleineren Fahrzeugen.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also clear listed buildings?',
+        answer: 'Absolutely. Our team knows the special requirements of historic buildings in the Inner City - from narrow spiral staircases to historic stucco ceilings. We protect all surfaces during the clearing process.',
+      },
+      {
+        question: 'How long does a clearing take in the 1st district?',
+        answer: 'We clear a typical 80m² historic apartment in Franziskanerviertel in 5-7 hours. For penthouses at Graben, we plan 8-12 hours, depending on floor height and volume of items.',
+      },
+      {
+        question: 'Are there access restrictions in the old town?',
+        answer: 'For the pedestrian zone (Graben, Kärntner Straße, Kohlmarkt), we organize access permits for time windows from 6-10 AM. In Herrengasse and Wollzeile, we have all-day access with smaller vehicles.',
+      },
+    ],
   },
   '1020-wien-leopoldstadt': {
     name: 'Leopoldstadt',
+    nameEn: 'Leopoldstadt',
     postalCode: '1020',
     slug: '1020-wien-leopoldstadt',
     description: 'Die Leopoldstadt ist der zweitgrößte Bezirk Wiens und bekannt für den Prater und das moderne Stadtviertel rund um den Praterstern. Der Bezirk verbindet historischen Charme mit modernem Stadtleben.',
+    descriptionEn: 'Leopoldstadt is the second-largest district in Vienna, known for the Prater and the modern urban quarter around Praterstern. The district combines historic charm with modern city life.',
     metaDescription: 'Räumung 1020 Leopoldstadt ✓ Nordbahnviertel ✓ Prater ✓ Taborstraße ✓ Großobjekte & Gewerbe vom Praterstern bis Augarten ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1020 Leopoldstadt ✓ Nordbahnviertel ✓ Prater ✓ Taborstraße ✓ Large Properties & Commercial from Praterstern to Augarten ☎ +43660 39 57 587',
     shortSummary: 'Räumung im 2. Bezirk von Prater bis Nordbahnviertel. Schnelle Erreichbarkeit vom Praterstern und Erfahrung mit Gewerbeobjekten.',
+    shortSummaryEn: 'Clearing in the 2nd district from Prater to Nordbahnviertel. Quick access from Praterstern and experience with commercial properties.',
     landmarks: ['Prater', 'Riesenrad', 'Augarten', 'Praterstern', 'Messe Wien', 'Ernst-Happel-Stadion'],
+    landmarksEn: ['Prater', 'Giant Ferris Wheel', 'Augarten', 'Praterstern', 'Messe Wien', 'Ernst-Happel-Stadion'],
     neighborhoods: ['Prater', 'Stuwerviertel', 'Nordbahnviertel', 'Volkertviertel', 'Mazzesinsel'],
+    neighborhoodsEn: ['Prater', 'Stuwerviertel', 'Nordbahnviertel', 'Volkertviertel', 'Mazzesinsel'],
     characteristics: [
       'Mix aus Altbau und Neubauten',
       'Große Grünflächen (Prater, Augarten)',
@@ -78,7 +138,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Internationale Bevölkerung',
       'Viele Gewerbeflächen',
     ],
+    characteristicsEn: [
+      'Mix of historic and new buildings',
+      'Large green spaces (Prater, Augarten)',
+      'Growing urban quarter Nordbahnhof',
+      'International population',
+      'Many commercial areas',
+    ],
     serviceAreas: ['Praterstern', 'Taborstraße', 'Nordbahnstraße', 'Lassallestraße', 'Prater', 'Augarten'],
+    serviceAreasEn: ['Praterstern', 'Taborstraße', 'Nordbahnstraße', 'Lassallestraße', 'Prater', 'Augarten'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -87,12 +155,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Büroräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Garage Clearing in Prater Area',
+      'Commercial Clearing',
+      'Office Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Direkte Anfahrt vom Praterstern in unter 8 Minuten zu jedem Standort',
       'Räumung von Gewerbeflächen bis 500m² in der Messe Wien Umgebung',
       'Spezialfahrzeuge für das enge Stuwerviertel und Mazzesinsel',
       'Räumung rund um die Uhr für Gastronomie am Nordbahnhof',
       'Erfahrung mit modernen Neubauwohnungen im Nordbahnviertel seit 2015',
+    ],
+    whyChooseUsEn: [
+      'Direct access from Praterstern in under 8 minutes to any location',
+      'Clearing of commercial spaces up to 500m² in the Messe Wien area',
+      'Specialized vehicles for the narrow Stuwerviertel and Mazzesinsel',
+      '24/7 clearing for restaurants at Nordbahnhof',
+      'Experience with modern new-build apartments in Nordbahnviertel since 2015',
     ],
     faq: [
       {
@@ -108,16 +191,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Von unserem Stützpunkt beim Praterstern erreichen wir jeden Punkt im 2. Bezirk in maximal 15 Minuten. Express-Einsätze in der Taborstraße oder am Augarten sind oft noch am selben Tag möglich.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also work in Nordbahnviertel?',
+        answer: 'Absolutely! Nordbahnviertel is one of our main operating areas. We know all access routes, underground garages, and the special requirements of modern new builds. We have express teams for apartments in the Bruno-Marek-Allee high-rises.',
+      },
+      {
+        question: 'Can you also clear garages in the Prater area?',
+        answer: 'Yes, specifically for the Prater area, we have smaller vans for narrow garage entrances. We regularly clear storage units at Messe Wien and in Prater basements - including damp, cluttered basement compartments.',
+      },
+      {
+        question: 'How quickly can you come?',
+        answer: 'From our base at Praterstern, we reach any point in the 2nd district in maximum 15 minutes. Express assignments in Taborstraße or at Augarten are often possible the same day.',
+      },
+    ],
   },
   '1030-wien-landstrasse': {
     name: 'Landstraße',
+    nameEn: 'Landstraße',
     postalCode: '1030',
     slug: '1030-wien-landstrasse',
     description: 'Der 3. Bezirk Landstraße ist geprägt von prächtigen Botschaftsgebäuden, dem barocken Schloss Belvedere und modernen Bürokomplexen. Ein gehobener Wohnbezirk mit ausgezeichneter Infrastruktur.',
+    descriptionEn: 'The 3rd district Landstraße is characterized by magnificent embassy buildings, the baroque Belvedere Palace, and modern office complexes. An upscale residential district with excellent infrastructure.',
     metaDescription: 'Räumung 1030 Landstraße ✓ Botschaftsviertel Rennweg ✓ Diplomatenviertel ✓ Wien Mitte ✓ Diskret für gehobene Altbauten ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1030 Landstraße ✓ Embassy Quarter Rennweg ✓ Diplomatic District ✓ Wien Mitte ✓ Discreet for Upscale Historic Buildings ☎ +43660 39 57 587',
     shortSummary: 'Diskrete Räumung im gehobenen 3. Bezirk. Botschaftsviertel, Belvedere-Gegend mit Erfahrung in hochwertigen Immobilien.',
+    shortSummaryEn: 'Discreet clearing in the upscale 3rd district. Embassy quarter, Belvedere area with experience in high-quality properties.',
     landmarks: ['Schloss Belvedere', 'Wien Mitte', 'Stadtpark', 'Hundertwasserhaus', 'Botanischer Garten'],
+    landmarksEn: ['Belvedere Palace', 'Wien Mitte', 'Stadtpark', 'Hundertwasser House', 'Botanical Garden'],
     neighborhoods: ['Botschaftsviertel', 'Erdberg', 'Rennweg', 'Landstraßer Hauptstraße', 'Weißgerber'],
+    neighborhoodsEn: ['Botschaftsviertel', 'Erdberg', 'Rennweg', 'Landstraßer Hauptstraße', 'Weißgerber'],
     characteristics: [
       'Gehobene Wohngegend',
       'Viele Botschaften und Konsulate',
@@ -125,7 +228,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Ausgezeichnete Verkehrsanbindung',
       'Hochwertige Altbausubstanz',
     ],
+    characteristicsEn: [
+      'Upscale residential area',
+      'Many embassies and consulates',
+      'Historic palaces and modern offices',
+      'Excellent transport connections',
+      'High-quality historic building stock',
+    ],
     serviceAreas: ['Landstraßer Hauptstraße', 'Rennweg', 'Arsenal', 'Erdberg', 'Wien Mitte', 'Stadtpark'],
+    serviceAreasEn: ['Landstraßer Hauptstraße', 'Rennweg', 'Arsenal', 'Erdberg', 'Wien Mitte', 'Stadtpark'],
     popularServices: [
       'Wohnungsräumung in Altbauten',
       'Büroräumung',
@@ -134,12 +245,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Verlassenschaftsräumung',
       'Geschäftsauflösung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing in Historic Buildings',
+      'Office Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'Estate Clearing',
+      'Business Liquidation',
+    ],
     whyChooseUs: [
       'Absolute Diskretion für Botschaften am Rennweg und diplomatische Residenzen',
       'Wertgegenständeversicherung bis 50.000€ für Belvedere-Palais-Wohnungen',
       'Geräuscharme Räumung in Bürokomplexen Wien Mitte während Öffnungszeiten',
       'Spezialisiert auf Jugendstil-Altbauten im Weißgerberviertel seit 2008',
       'Firmenwagen ohne Logo für unerkannte Räumung im Diplomatenviertel',
+    ],
+    whyChooseUsEn: [
+      'Absolute discretion for embassies on Rennweg and diplomatic residences',
+      'Valuables insurance up to €50,000 for Belvedere Palace apartments',
+      'Low-noise clearing in Wien Mitte office complexes during business hours',
+      'Specialized in Art Nouveau buildings in Weißgerberviertel since 2008',
+      'Unmarked company vehicles for discreet clearing in diplomatic quarter',
     ],
     faq: [
       {
@@ -155,16 +281,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Speziell für Wien Mitte und das Botschaftsviertel bieten wir Samstag-Termine an, wenn diskrete Räumungen außerhalb der Bürozeiten gewünscht werden. Sonntags nur bei dringenden Verlassenschaftsräumungen.',
       },
     ],
+    faqEn: [
+      {
+        question: 'How discreetly do you work in upscale residential areas?',
+        answer: 'In the embassy quarter on Rennweg, we exclusively use unmarked sedans and plain vans without company logos. Our staff wears business attire, not work overalls. Clearings in diplomatic buildings are conducted according to security protocols with prior notification.',
+      },
+      {
+        question: 'Can you safely handle valuables?',
+        answer: 'For high-end properties in the Belvedere quarter, we offer a separate valuables service. Artworks, antiques, and jewelry are documented, photographed, and transported in locked boxes. Our staff is insured up to €50,000.',
+      },
+      {
+        question: 'Do you also work on weekends?',
+        answer: 'Specifically for Wien Mitte and the embassy quarter, we offer Saturday appointments when discreet clearings outside office hours are desired. Sundays only for urgent estate clearings.',
+      },
+    ],
   },
   '1040-wien-wieden': {
     name: 'Wieden',
+    nameEn: 'Wieden',
     postalCode: '1040',
     slug: '1040-wien-wieden',
     description: 'Wieden ist ein lebendiger, zentrumsnaher Bezirk mit vielen Altbauten, der Karlskirche und dem beliebten Naschmarkt. Eine perfekte Mischung aus Wohnen, Arbeiten und Kultur.',
+    descriptionEn: 'Wieden is a vibrant, central district with many historic buildings, the Karlskirche, and the popular Naschmarkt. A perfect blend of living, working, and culture.',
     metaDescription: 'Räumung 1040 Wieden ✓ Altbau-Expertise Paulanerviertel ✓ Naschmarkt-Gebiet ✓ Stiegenhäuser ohne Lift bis 5. Stock ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1040 Wieden ✓ Historic Building Expertise Paulanerviertel ✓ Naschmarkt Area ✓ Staircases Without Elevator up to 5th Floor ☎ +43660 39 57 587',
     shortSummary: 'Professionelle Räumung im 4. Bezirk nahe Naschmarkt und Karlskirche. Erfahrung mit Altbau-Stiegenhäusern ohne Lift.',
+    shortSummaryEn: 'Professional clearing in the 4th district near Naschmarkt and Karlskirche. Experience with historic stairways without elevators.',
     landmarks: ['Karlskirche', 'Naschmarkt', 'Karlsplatz', 'Resselpark', 'Wiedner Hauptstraße'],
+    landmarksEn: ['Karlskirche', 'Naschmarkt', 'Karlsplatz', 'Resselpark', 'Wiedner Hauptstraße'],
     neighborhoods: ['Freihausviertel', 'Paulanerviertel', 'Schaumburggasse', 'Favoritenstraße'],
+    neighborhoodsEn: ['Freihausviertel', 'Paulanerviertel', 'Schaumburggasse', 'Favoritenstraße'],
     characteristics: [
       'Zentrale Lage',
       'Historische Altbausubstanz',
@@ -172,7 +318,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Viele kleine Geschäfte und Lokale',
       'Gut erhaltene Gründerzeithäuser',
     ],
+    characteristicsEn: [
+      'Central location',
+      'Historic building stock',
+      'Cultural diversity',
+      'Many small shops and restaurants',
+      'Well-preserved historic buildings',
+    ],
     serviceAreas: ['Wiedner Hauptstraße', 'Margaretenstraße', 'Favoritenstraße', 'Naschmarkt', 'Karlsplatz'],
+    serviceAreasEn: ['Wiedner Hauptstraße', 'Margaretenstraße', 'Favoritenstraße', 'Naschmarkt', 'Karlsplatz'],
     popularServices: [
       'Wohnungsräumung',
       'Altbau-Kellerräumung',
@@ -181,12 +335,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Haushaltsauflösung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Historic Building Basement Clearing',
+      'Commercial Clearing',
+      'Attic Clearing',
+      'Household Liquidation',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Tragen von Möbeln bis 5. Stock ohne Lift - täglich in Wiedner Gründerzeithäusern',
       'Zufahrt zu verwinkelten Innenhöfen im Freihausviertel seit 18 Jahren',
       'Räumung während Naschmarkt-Öffnungszeiten für Gastro-Lokale',
       'Samstagstermine für Berufstätige rund um Karlsplatz besonders nachgefragt',
       'Fixpreise auch für verwinkelte Altbauwohnungen im Paulanerviertel',
+    ],
+    whyChooseUsEn: [
+      'Carrying furniture up to 5th floor without elevator - daily in Wieden historic buildings',
+      'Access to winding courtyards in Freihausviertel for 18 years',
+      'Clearing during Naschmarkt opening hours for restaurants',
+      'Saturday appointments for working professionals around Karlsplatz highly requested',
+      'Fixed prices even for maze-like historic apartments in Paulanerviertel',
     ],
     faq: [
       {
@@ -202,16 +371,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Eine 70m² Altbauwohnung im Paulanerviertel ohne Lift räumen wir in 5-7 Stunden. Bei Wohnungen am Karlsplatz mit Lift sind wir schneller - meist 3-5 Stunden. Messie-Wohnungen am Naschmarkt benötigen erfahrungsgemäß 8-12 Stunden.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also work without an elevator?',
+        answer: 'In the 4th district, there are many historic buildings without elevators - that\'s our daily business. Our teams routinely carry furniture up to the 5th floor via narrow spiral staircases. For pianos and cabinets over 100kg, we use carrying straps and furniture dollies.',
+      },
+      {
+        question: 'What does a clearing cost in the 4th district?',
+        answer: 'In the Naschmarkt area, we calculate from €600 for small clearings. A 70m² historic apartment in Paulanerviertel costs on average €1,200-1,800. After a phone consultation, we provide binding fixed-price quotes.',
+      },
+      {
+        question: 'How long does an apartment clearing take?',
+        answer: 'We clear a 70m² historic apartment in Paulanerviertel without elevator in 5-7 hours. For apartments at Karlsplatz with elevator, we\'re faster - usually 3-5 hours. Hoarding apartments at Naschmarkt typically require 8-12 hours.',
+      },
+    ],
   },
   '1050-wien-margareten': {
     name: 'Margareten',
+    nameEn: 'Margareten',
     postalCode: '1050',
     slug: '1050-wien-margareten',
     description: 'Margareten ist ein bunter, lebendiger Bezirk mit multikulturellen Einflüssen, vielen Lokalen und dem beliebten Margaretenplatz. Traditionelle Altbauten prägen das Stadtbild.',
+    descriptionEn: 'Margareten is a colorful, vibrant district with multicultural influences, many restaurants, and the popular Margaretenplatz. Traditional historic buildings shape the cityscape.',
     metaDescription: 'Räumung 1050 Wien Margareten ✓ Reinprechtsdorfer Straße ✓ Margaretenplatz. Schnell & günstig. Jetzt anrufen ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1050 Vienna Margareten ✓ Reinprechtsdorfer Straße ✓ Margaretenplatz. Fast & Affordable. Call Now ☎ +43660 39 57 587',
     shortSummary: 'Faire Räumung im 5. Bezirk mit Verständnis für besondere Situationen. Diskrete Messie-Räumungen und soziale Preisgestaltung.',
+    shortSummaryEn: 'Fair clearing in the 5th district with understanding for special situations. Discreet hoarding clearings and social pricing.',
     landmarks: ['Margaretenplatz', 'Rüdigerhof', 'Matzleinsdorfer Platz'],
+    landmarksEn: ['Margaretenplatz', 'Rüdigerhof', 'Matzleinsdorfer Platz'],
     neighborhoods: ['Hundsturm', 'Arbeiterviertel', 'Reinprechtsdorf', 'Laurenzberg'],
+    neighborhoodsEn: ['Hundsturm', 'Arbeiterviertel', 'Reinprechtsdorf', 'Laurenzberg'],
     characteristics: [
       'Dichte Wohnbebauung',
       'Traditionelle Arbeiterbezirk',
@@ -219,7 +408,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Multikulturell geprägt',
       'Lebendiges Grätzl-Leben',
     ],
+    characteristicsEn: [
+      'Dense residential development',
+      'Traditional working-class district',
+      'Many historic buildings',
+      'Multiculturally influenced',
+      'Vibrant neighborhood life',
+    ],
     serviceAreas: ['Margaretenstraße', 'Reinprechtsdorfer Straße', 'Schönbrunner Straße', 'Matzleinsdorfer Platz'],
+    serviceAreasEn: ['Margaretenstraße', 'Reinprechtsdorfer Straße', 'Schönbrunner Straße', 'Matzleinsdorfer Platz'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -228,12 +425,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Dachbodenräumung',
       'Geschäftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Household Liquidation',
+      'Hoarding Clearing',
+      'Attic Clearing',
+      'Commercial Clearing',
+    ],
     whyChooseUs: [
       'Soziale Preisgestaltung',
       'Verständnis für besondere Situationen',
       'Diskrete Messie-Räumungen',
       'Schnelle Terminvergabe',
       'Erfahrene Teams',
+    ],
+    whyChooseUsEn: [
+      'Social pricing',
+      'Understanding for special situations',
+      'Discreet hoarding clearings',
+      'Quick appointment scheduling',
+      'Experienced teams',
     ],
     faq: [
       {
@@ -249,16 +461,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir entsorgen fachgerecht und führen brauchbare Gegenstände sozialen Einrichtungen zu.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also offer hoarding clearings?',
+        answer: 'Yes, we have extensive experience with sensitive situations and work discreetly and respectfully.',
+      },
+      {
+        question: 'Can you also come on short notice?',
+        answer: 'Yes, often we can arrange an appointment within 1-2 days.',
+      },
+      {
+        question: 'What happens to the cleared items?',
+        answer: 'We dispose of items professionally and donate usable items to social institutions.',
+      },
+    ],
   },
   '1060-wien-mariahilf': {
     name: 'Mariahilf',
+    nameEn: 'Mariahilf',
     postalCode: '1060',
     slug: '1060-wien-mariahilf',
     description: 'Mariahilf ist ein urbaner Szenebezirk mit der Mariahilfer Straße als Shopping-Meile, vielen Cafés, Bars und einer lebendigen Kulturszene. Ein beliebter Wohnbezirk mit Altbaucharme.',
+    descriptionEn: 'Mariahilf is an urban trendy district with Mariahilfer Straße as a shopping mile, many cafés, bars, and a vibrant cultural scene. A popular residential district with historic building charm.',
     metaDescription: 'Räumung 1060 Wien Mariahilf ✓ Mariahilfer Straße ✓ Naschmarkt ✓ Professionell & schnell. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1060 Vienna Mariahilf ✓ Mariahilfer Straße ✓ Naschmarkt ✓ Professional & Fast. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Schnelle Räumung im urbanen 6. Bezirk. Mariahilfer Straße und Umgebung mit flexiblen Arbeitszeiten für Geschäftskunden.',
+    shortSummaryEn: 'Fast clearing in the urban 6th district. Mariahilfer Straße and surroundings with flexible working hours for business clients.',
     landmarks: ['Mariahilfer Straße', 'Haus des Meeres', 'Theater an der Wien', 'Naschmarkt'],
+    landmarksEn: ['Mariahilfer Straße', 'House of the Sea', 'Theater an der Wien', 'Naschmarkt'],
     neighborhoods: ['Gumpendorf', 'Windmühle', 'Laimgrube', 'Magdalenengrund'],
+    neighborhoodsEn: ['Gumpendorf', 'Windmühle', 'Laimgrube', 'Magdalenengrund'],
     characteristics: [
       'Zentrale Einkaufsstraße',
       'Lebendige Szene',
@@ -266,7 +498,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Hohe Wohndichte',
       'Kulturelle Vielfalt',
     ],
+    characteristicsEn: [
+      'Central shopping street',
+      'Vibrant scene',
+      'Historic buildings',
+      'High residential density',
+      'Cultural diversity',
+    ],
     serviceAreas: ['Mariahilfer Straße', 'Gumpendorfer Straße', 'Stumpergasse', 'Linke Wienzeile', 'Webgasse'],
+    serviceAreasEn: ['Mariahilfer Straße', 'Gumpendorfer Straße', 'Stumpergasse', 'Linke Wienzeile', 'Webgasse'],
     popularServices: [
       'Wohnungsräumung',
       'Geschäftsräumung',
@@ -275,12 +515,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Büroräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Commercial Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'Office Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Erfahrung in belebten Einkaufsstraßen',
       'Flexible Arbeitszeiten',
       'Schnelle Abwicklung',
       'Professionelle Teams',
       'Faire Preise',
+    ],
+    whyChooseUsEn: [
+      'Experience in busy shopping streets',
+      'Flexible working hours',
+      'Fast processing',
+      'Professional teams',
+      'Fair prices',
     ],
     faq: [
       {
@@ -296,16 +551,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir haben direkte Zufahrten zu Entsorgungsstellen und arbeiten effizient.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also work on Mariahilfer Straße?',
+        answer: 'Yes, we know the access routes and work efficiently even in busy areas.',
+      },
+      {
+        question: 'Do you also work in the evenings?',
+        answer: 'Yes, we offer flexible working hours to meet your needs.',
+      },
+      {
+        question: 'How do you dispose in the city?',
+        answer: 'We have direct access to disposal facilities and work efficiently.',
+      },
+    ],
   },
   '1070-wien-neubau': {
     name: 'Neubau',
+    nameEn: 'Neubau',
     postalCode: '1070',
     slug: '1070-wien-neubau',
     description: 'Neubau ist der kreative und hippe Bezirk Wiens mit vielen Designläden, Galerien, Cafés und dem MuseumsQuartier. Ein lebendiger Bezirk mit hoher Lebensqualität.',
+    descriptionEn: 'Neubau is the creative and trendy district of Vienna with many design shops, galleries, cafés, and the MuseumsQuartier. A vibrant district with high quality of life.',
     metaDescription: 'Räumung 1070 Wien Neubau ✓ MuseumsQuartier ✓ Spittelberg ✓ Schnell & professionell. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1070 Vienna Neubau ✓ MuseumsQuartier ✓ Spittelberg ✓ Fast & Professional. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Professionelle Räumung im kreativen 7. Bezirk. MuseumsQuartier, Spittelberg mit sorgfältigem Umgang mit Kunstobjekten.',
+    shortSummaryEn: 'Professional clearing in the creative 7th district. MuseumsQuartier, Spittelberg with careful handling of art objects.',
     landmarks: ['MuseumsQuartier', 'Spittelberg', 'Volkstheater', 'Neubaugasse'],
+    landmarksEn: ['MuseumsQuartier', 'Spittelberg', 'Volkstheater', 'Neubaugasse'],
     neighborhoods: ['Spittelberg', 'Schottenfeld', 'Neubaugasse', 'Westbahnhof'],
+    neighborhoodsEn: ['Spittelberg', 'Schottenfeld', 'Neubaugasse', 'Westbahnhof'],
     characteristics: [
       'Kreative Szene',
       'Viele Galerien und Designer-Shops',
@@ -313,7 +588,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Hohe Lebensqualität',
       'Kulturelles Zentrum',
     ],
+    characteristicsEn: [
+      'Creative scene',
+      'Many galleries and designer shops',
+      'Historic Biedermeier quarters',
+      'High quality of life',
+      'Cultural center',
+    ],
     serviceAreas: ['Neubaugasse', 'Burggasse', 'Lerchenfelder Straße', 'Westbahnstraße', 'Siebensterngasse'],
+    serviceAreasEn: ['Neubaugasse', 'Burggasse', 'Lerchenfelder Straße', 'Westbahnstraße', 'Siebensterngasse'],
     popularServices: [
       'Wohnungsräumung',
       'Altbau-Kellerräumung',
@@ -322,12 +605,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Dachbodenräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Historic Building Basement Clearing',
+      'Commercial Clearing',
+      'Studio Clearing',
+      'Attic Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Verständnis für kreative Räume',
       'Sorgfältiger Umgang mit Kunstobjekten',
       'Diskrete Arbeitsweise',
       'Erfahrung mit Altbauten',
       'Flexible Termingestaltung',
+    ],
+    whyChooseUsEn: [
+      'Understanding for creative spaces',
+      'Careful handling of art objects',
+      'Discreet working style',
+      'Experience with historic buildings',
+      'Flexible appointment scheduling',
     ],
     faq: [
       {
@@ -343,16 +641,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Ja, wir sind im gesamten 7. Bezirk tätig, auch in engen Gassen wie am Spittelberg.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also clear studios?',
+        answer: 'Yes, we have experience with studios and handle artworks carefully.',
+      },
+      {
+        question: 'How do you handle valuable items?',
+        answer: 'We treat all items with care and can handle valuables separately upon request.',
+      },
+      {
+        question: 'Do you also work at Spittelberg?',
+        answer: 'Yes, we operate throughout the entire 7th district, including narrow streets like Spittelberg.',
+      },
+    ],
   },
   '1080-wien-josefstadt': {
     name: 'Josefstadt',
+    nameEn: 'Josefstadt',
     postalCode: '1080',
     slug: '1080-wien-josefstadt',
     description: 'Die Josefstadt ist der kleinste und feinste Bezirk Wiens mit historischen Bürgerhäusern, dem berühmten Josefstädter Theater und einer gehobenen Wohnlage in Zentrumsnähe.',
+    descriptionEn: 'Josefstadt is the smallest and most refined district in Vienna with historic townhouses, the famous Theater in der Josefstadt, and an upscale residential location near the city center.',
     metaDescription: 'Räumung 1080 Wien Josefstadt ✓ Josefstädter Straße ✓ Rathaus ✓ Diskret & professionell. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1080 Vienna Josefstadt ✓ Josefstädter Straße ✓ City Hall ✓ Discreet & Professional. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Diskrete Räumung im kleinsten Bezirk Wiens. Historische Bürgerhäuser mit Erfahrung in gehobenen Wohnlagen.',
+    shortSummaryEn: 'Discreet clearing in Vienna\'s smallest district. Historic townhouses with experience in upscale residential areas.',
     landmarks: ['Theater in der Josefstadt', 'Rathaus', 'Piaristenkirche'],
+    landmarksEn: ['Theater in der Josefstadt', 'City Hall', 'Piaristenkirche'],
     neighborhoods: ['Josefstadt', 'Breitenfeld', 'Albertplatz', 'Strozzigasse'],
+    neighborhoodsEn: ['Josefstadt', 'Breitenfeld', 'Albertplatz', 'Strozzigasse'],
     characteristics: [
       'Kleinster Bezirk Wiens',
       'Gehobene Wohnlage',
@@ -360,7 +678,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Zentrale Lage',
       'Hochwertige Altbausubstanz',
     ],
+    characteristicsEn: [
+      'Smallest district in Vienna',
+      'Upscale residential area',
+      'Historic townhouses',
+      'Central location',
+      'High-quality historic building stock',
+    ],
     serviceAreas: ['Josefstädter Straße', 'Lerchenfelder Straße', 'Florianigasse', 'Albertgasse', 'Bennoplatz'],
+    serviceAreasEn: ['Josefstädter Straße', 'Lerchenfelder Straße', 'Florianigasse', 'Albertgasse', 'Bennoplatz'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -369,12 +695,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Büroräumung',
       'Haushaltsauflösung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'Estate Clearing',
+      'Office Clearing',
+      'Household Liquidation',
+    ],
     whyChooseUs: [
       'Diskrete Arbeit in gehobener Wohnlage',
       'Erfahrung mit historischen Gebäuden',
       'Sorgfältiger Umgang mit Immobilien',
       'Pünktlichkeit und Professionalität',
       'Faire Preisgestaltung',
+    ],
+    whyChooseUsEn: [
+      'Discreet work in upscale residential area',
+      'Experience with historic buildings',
+      'Careful handling of properties',
+      'Punctuality and professionalism',
+      'Fair pricing',
     ],
     faq: [
       {
@@ -390,16 +731,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Selbstverständlich, unsere Teams sind erfahren im Tragen über Stiegen.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also work in listed buildings?',
+        answer: 'Yes, we have extensive experience with historic and listed buildings.',
+      },
+      {
+        question: 'How discreetly do you work?',
+        answer: 'We work very discreetly with unmarked vehicles and in consultation with you.',
+      },
+      {
+        question: 'Can you also clear without an elevator?',
+        answer: 'Of course, our teams are experienced in carrying items via staircases.',
+      },
+    ],
   },
   '1090-wien-alsergrund': {
     name: 'Alsergrund',
+    nameEn: 'Alsergrund',
     postalCode: '1090',
     slug: '1090-wien-alsergrund',
     description: 'Der Alsergrund ist ein traditionsreicher Bezirk mit der Universität Wien, dem AKH und vielen medizinischen Einrichtungen. Ein lebendiger Studentenbezirk mit historischem Flair.',
+    descriptionEn: 'Alsergrund is a traditional district with the University of Vienna, the AKH hospital, and many medical facilities. A vibrant student district with historic flair.',
     metaDescription: 'Räumung 1090 Wien Alsergrund ✓ Universität Wien ✓ AKH ✓ Schnell & günstig. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1090 Vienna Alsergrund ✓ University of Vienna ✓ AKH ✓ Fast & Affordable. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Günstige Räumung im Universitätsviertel. Studenten-freundliche Preise und Erfahrung mit medizinischen Einrichtungen.',
+    shortSummaryEn: 'Affordable clearing in the university quarter. Student-friendly prices and experience with medical facilities.',
     landmarks: ['Universität Wien', 'Allgemeines Krankenhaus', 'Sigmund Freud Museum', 'Votivkirche'],
+    landmarksEn: ['University of Vienna', 'General Hospital', 'Sigmund Freud Museum', 'Votive Church'],
     neighborhoods: ['Rossau', 'Lichtental', 'Althangrund', 'Servitenviertel'],
+    neighborhoodsEn: ['Rossau', 'Lichtental', 'Althangrund', 'Servitenviertel'],
     characteristics: [
       'Universitätsviertel',
       'Viele Studenten',
@@ -407,7 +768,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Historische Altbauten',
       'Kulturelle Vielfalt',
     ],
+    characteristicsEn: [
+      'University quarter',
+      'Many students',
+      'Medical center',
+      'Historic buildings',
+      'Cultural diversity',
+    ],
     serviceAreas: ['Währinger Straße', 'Nußdorfer Straße', 'Alser Straße', 'Spitalgasse', 'Rossauer Lände'],
+    serviceAreasEn: ['Währinger Straße', 'Nußdorfer Straße', 'Alser Straße', 'Spitalgasse', 'Rossauer Lände'],
     popularServices: [
       'Wohnungsräumung',
       'Studenten-Wohnungsräumung',
@@ -416,12 +785,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Büroräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Student Apartment Clearing',
+      'Basement Clearing',
+      'Medical Practice Clearing',
+      'Office Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Günstige Preise für Studenten',
       'Schnelle Abwicklung',
       'Erfahrung mit medizinischen Einrichtungen',
       'Flexible Termine',
       'Professionelle Entsorgung',
+    ],
+    whyChooseUsEn: [
+      'Affordable prices for students',
+      'Fast processing',
+      'Experience with medical facilities',
+      'Flexible appointments',
+      'Professional disposal',
     ],
     faq: [
       {
@@ -437,16 +821,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Oft können wir innerhalb von 24-48 Stunden einen Termin anbieten.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Are there special prices for students?',
+        answer: 'We offer fair prices and can accommodate your individual situation.',
+      },
+      {
+        question: 'Can you also clear medical practices?',
+        answer: 'Yes, we have experience with medical facilities and dispose of items professionally.',
+      },
+      {
+        question: 'How quickly can you come?',
+        answer: 'Often we can offer an appointment within 24-48 hours.',
+      },
+    ],
   },
   '1100-wien-favoriten': {
     name: 'Favoriten',
+    nameEn: 'Favoriten',
     postalCode: '1100',
     slug: '1100-wien-favoriten',
     description: 'Favoriten ist der bevölkerungsreichste Bezirk Wiens mit dem Hauptbahnhof, vielfältigen Wohngebieten und dem Erholungsgebiet Laaer Berg. Ein dynamischer Bezirk im Wandel.',
+    descriptionEn: 'Favoriten is Vienna\'s most populous district with the main railway station, diverse residential areas, and the Laaer Berg recreation area. A dynamic district in transformation.',
     metaDescription: 'Räumung 1100 Wien Favoriten ✓ Hauptbahnhof ✓ Laaer Berg ✓ Professionell & günstig. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1100 Vienna Favoriten ✓ Main Station ✓ Laaer Berg ✓ Professional & Affordable. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Räumung im bevölkerungsreichsten Bezirk. Hauptbahnhof, Sonnwendviertel mit großer Fahrzeugflotte für große Objekte.',
+    shortSummaryEn: 'Clearing in the most populous district. Main station, Sonnwendviertel with large vehicle fleet for big properties.',
     landmarks: ['Wien Hauptbahnhof', 'Laaer Berg', 'Favoriten-Straße', 'Therme Wien'],
+    landmarksEn: ['Vienna Main Station', 'Laaer Berg', 'Favoriten-Straße', 'Therme Wien'],
     neighborhoods: ['Sonnwendviertel', 'Laaer Berg', 'Oberlaa', 'Unterlaa', 'Inzersdorf'],
+    neighborhoodsEn: ['Sonnwendviertel', 'Laaer Berg', 'Oberlaa', 'Unterlaa', 'Inzersdorf'],
     characteristics: [
       'Größter Bezirk nach Einwohnern',
       'Mix aus Alt- und Neubau',
@@ -454,7 +858,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Hauptbahnhof als Verkehrsdrehscheibe',
       'Viele Gewerbebetriebe',
     ],
+    characteristicsEn: [
+      'Largest district by population',
+      'Mix of old and new buildings',
+      'International flair',
+      'Main station as transport hub',
+      'Many commercial businesses',
+    ],
     serviceAreas: ['Favoritenstraße', 'Triester Straße', 'Quellenstraße', 'Laaer-Berg-Straße', 'Hauptbahnhof'],
+    serviceAreasEn: ['Favoritenstraße', 'Triester Straße', 'Quellenstraße', 'Laaer-Berg-Straße', 'Hauptbahnhof'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -463,12 +875,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Haushaltsauflösung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Commercial Clearing',
+      'Warehouse Clearing',
+      'Household Liquidation',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Erfahrung mit großen Objekten',
       'Schnelle Anfahrt vom Hauptbahnhof',
       'Günstige Preise',
       'Große Fahrzeugflotte',
       'Flexible Termine',
+    ],
+    whyChooseUsEn: [
+      'Experience with large properties',
+      'Quick access from main station',
+      'Affordable prices',
+      'Large vehicle fleet',
+      'Flexible appointments',
     ],
     faq: [
       {
@@ -484,16 +911,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Nach einer kostenlosen Besichtigung erhalten Sie einen fairen Festpreis.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also work in the new Sonnwendviertel?',
+        answer: 'Yes, we operate throughout the entire 10th district, including the new urban quarters.',
+      },
+      {
+        question: 'Can you also clear large commercial properties?',
+        answer: 'Yes, we have the capacity for large properties and commercial spaces.',
+      },
+      {
+        question: 'What does a clearing cost in Favoriten?',
+        answer: 'After a free inspection, you will receive a fair fixed price.',
+      },
+    ],
   },
   '1110-wien-simmering': {
     name: 'Simmering',
+    nameEn: 'Simmering',
     postalCode: '1110',
     slug: '1110-wien-simmering',
     description: 'Simmering ist ein großflächiger Bezirk im Südosten Wiens mit Industrie, Wohngebieten und viel Grünraum. Der Bezirk verbindet Arbeiten und Wohnen in aufstrebenden Vierteln.',
+    descriptionEn: 'Simmering is a large district in southeast Vienna with industry, residential areas, and abundant green space. The district combines working and living in emerging neighborhoods.',
     metaDescription: 'Räumung 1110 Wien Simmering ✓ Simmeringer Hauptstraße ✓ Schnell & zuverlässig. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1110 Vienna Simmering ✓ Simmeringer Hauptstraße ✓ Fast & Reliable. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Gewerbeobjekt-Räumung im 11. Bezirk. Lagerhallen, Industrie mit Erfahrung und großer Entsorgungskapazität.',
+    shortSummaryEn: 'Commercial property clearing in the 11th district. Warehouses, industry with experience and large disposal capacity.',
     landmarks: ['Simmeringer Hauptstraße', 'Zentralfriedhof', 'Gasometer', 'Haidepark'],
+    landmarksEn: ['Simmeringer Hauptstraße', 'Central Cemetery', 'Gasometer', 'Haidepark'],
     neighborhoods: ['Simmering', 'Kaiserebersdorf', 'Albern', 'Schwechat'],
+    neighborhoodsEn: ['Simmering', 'Kaiserebersdorf', 'Albern', 'Schwechat'],
     characteristics: [
       'Industrie- und Gewerbebetriebe',
       'Gemischte Wohngebiete',
@@ -501,7 +948,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Gute Verkehrsanbindung',
       'Entwicklungsgebiet',
     ],
+    characteristicsEn: [
+      'Industrial and commercial businesses',
+      'Mixed residential areas',
+      'Many warehouses',
+      'Good transport connections',
+      'Development area',
+    ],
     serviceAreas: ['Simmeringer Hauptstraße', 'Braunhubergasse', 'Grillgasse', 'Eleven Vienna', 'Haidestraße'],
+    serviceAreasEn: ['Simmeringer Hauptstraße', 'Braunhubergasse', 'Grillgasse', 'Eleven Vienna', 'Haidestraße'],
     popularServices: [
       'Lagerräumung',
       'Gewerbeobjekt-Räumung',
@@ -510,12 +965,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Geschäftsräumung',
       'Industrieräumung',
     ],
+    popularServicesEn: [
+      'Warehouse Clearing',
+      'Commercial Property Clearing',
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Business Clearing',
+      'Industrial Clearing',
+    ],
     whyChooseUs: [
       'Erfahrung mit Gewerbeobjekten',
       'Große Entsorgungskapazität',
       'Flexible Arbeitszeiten',
       'Professionelle Abwicklung',
       'Faire Preise für große Objekte',
+    ],
+    whyChooseUsEn: [
+      'Experience with commercial properties',
+      'Large disposal capacity',
+      'Flexible working hours',
+      'Professional processing',
+      'Fair prices for large properties',
     ],
     faq: [
       {
@@ -531,16 +1001,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir haben direkte Partnerschaften mit Entsorgungsbetrieben für große Volumina.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also clear warehouses?',
+        answer: 'Yes, we have extensive experience with large commercial properties and warehouses.',
+      },
+      {
+        question: 'Do you also work at night?',
+        answer: 'For commercial properties, we can offer flexible working hours, including nights.',
+      },
+      {
+        question: 'How do you dispose of large quantities?',
+        answer: 'We have direct partnerships with disposal companies for large volumes.',
+      },
+    ],
   },
   '1120-wien-meidling': {
     name: 'Meidling',
+    nameEn: 'Meidling',
     postalCode: '1120',
     slug: '1120-wien-meidling',
     description: 'Meidling ist ein traditioneller Arbeiterbezirk mit dem Einkaufszentrum Huma Eleven, der Schönbrunner Straße und vielfältigen Wohngegenden. Ein lebendiger Bezirk mit guter Infrastruktur.',
+    descriptionEn: 'Meidling is a traditional working-class district with the Huma Eleven shopping center, Schönbrunner Straße, and diverse residential areas. A lively district with good infrastructure.',
     metaDescription: 'Räumung 1120 Wien Meidling ✓ Schönbrunner Straße ✓ Hetzendorf ✓ Professionell & fair. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1120 Vienna Meidling ✓ Schönbrunner Straße ✓ Hetzendorf ✓ Professional & Fair. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Faire Räumung im traditionellen 12. Bezirk. Zentrale Verkehrslage mit schneller Anfahrt und lokalem Engagement.',
+    shortSummaryEn: 'Fair clearing in the traditional 12th district. Central transport location with quick access and local commitment.',
     landmarks: ['Huma Eleven', 'Schönbrunn', 'Gaudenzdorf', 'Meidlinger Markt'],
+    landmarksEn: ['Huma Eleven', 'Schönbrunn', 'Gaudenzdorf', 'Meidlinger Markt'],
     neighborhoods: ['Hetzendorf', 'Altmannsdorf', 'Gaudenzdorf', 'Hetzendorf'],
+    neighborhoodsEn: ['Hetzendorf', 'Altmannsdorf', 'Gaudenzdorf', 'Hetzendorf'],
     characteristics: [
       'Traditioneller Arbeiterbezirk',
       'Gute Einkaufsmöglichkeiten',
@@ -548,7 +1038,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Internationale Bevölkerung',
       'Zentrale Verkehrslage',
     ],
+    characteristicsEn: [
+      'Traditional working-class district',
+      'Good shopping facilities',
+      'Mix of old and new buildings',
+      'International population',
+      'Central transport location',
+    ],
     serviceAreas: ['Schönbrunner Straße', 'Meidlinger Hauptstraße', 'Hetzendorfer Straße', 'Gaudenzdorfer Gürtel'],
+    serviceAreasEn: ['Schönbrunner Straße', 'Meidlinger Hauptstraße', 'Hetzendorfer Straße', 'Gaudenzdorfer Gürtel'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -557,12 +1055,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Dachbodenräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Business Clearing',
+      'Household Liquidation',
+      'Attic Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Lokale Verwurzelung',
       'Faire Preise',
       'Schnelle Abwicklung',
       'Soziales Engagement',
       'Erfahrene Teams',
+    ],
+    whyChooseUsEn: [
+      'Local roots',
+      'Fair prices',
+      'Fast processing',
+      'Social commitment',
+      'Experienced teams',
     ],
     faq: [
       {
@@ -578,16 +1091,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Nein, wir kalkulieren fair nach Aufwand. Auch kleine Räumungen sind möglich.',
       },
     ],
+    faqEn: [
+      {
+        question: 'How quickly can you be in Meidling?',
+        answer: 'Due to our central location, we can be on-site very quickly, often within 24 hours.',
+      },
+      {
+        question: 'Can you also clear larger properties?',
+        answer: 'Yes, we have the capacity for properties of any size.',
+      },
+      {
+        question: 'Is there a minimum price?',
+        answer: 'No, we calculate fairly based on effort. Small clearings are also possible.',
+      },
+    ],
   },
   '1130-wien-hietzing': {
     name: 'Hietzing',
+    nameEn: 'Hietzing',
     postalCode: '1130',
     slug: '1130-wien-hietzing',
     description: 'Hietzing ist einer der vornehmsten Bezirke Wiens mit Schloss Schönbrunn, dem Lainzer Tiergarten und noblen Villenvierteln. Eine grüne Oase mit höchster Lebensqualität.',
+    descriptionEn: 'Hietzing is one of Vienna\'s most distinguished districts with Schönbrunn Palace, the Lainzer Tiergarten, and noble villa quarters. A green oasis with the highest quality of life.',
     metaDescription: 'Räumung 1130 Wien Hietzing ✓ Schönbrunn ✓ Lainz ✓ Diskret & professionell. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1130 Vienna Hietzing ✓ Schönbrunn ✓ Lainz ✓ Discreet & Professional. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Exklusive Räumung im nobelsten Bezirk. Villen, Herrschaftshäuser mit höchster Diskretion und Sorgfalt.',
+    shortSummaryEn: 'Exclusive clearing in the most distinguished district. Villas, manor houses with highest discretion and care.',
     landmarks: ['Schloss Schönbrunn', 'Lainzer Tiergarten', 'Schönbrunner Schlosspark', 'Gloriette'],
+    landmarksEn: ['Schönbrunn Palace', 'Lainzer Tiergarten', 'Schönbrunn Palace Park', 'Gloriette'],
     neighborhoods: ['Hietzing', 'Unter St. Veit', 'Ober St. Veit', 'Lainz', 'Speising'],
+    neighborhoodsEn: ['Hietzing', 'Unter St. Veit', 'Ober St. Veit', 'Lainz', 'Speising'],
     characteristics: [
       'Nobelster Bezirk Wiens',
       'Villen und Herrschaftshäuser',
@@ -595,7 +1128,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Hohe Lebensqualität',
       'Gehobene Wohnlage',
     ],
+    characteristicsEn: [
+      'Most distinguished district in Vienna',
+      'Villas and manor houses',
+      'Largest green spaces',
+      'High quality of life',
+      'Upscale residential area',
+    ],
     serviceAreas: ['Hietzinger Hauptstraße', 'Lainzer Straße', 'Auhofstraße', 'Maxingstraße', 'Schönbrunner Schlossstraße'],
+    serviceAreasEn: ['Hietzinger Hauptstraße', 'Lainzer Straße', 'Auhofstraße', 'Maxingstraße', 'Schönbrunner Schlossstraße'],
     popularServices: [
       'Villen-Räumung',
       'Herrschaftshaus-Räumung',
@@ -604,12 +1145,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Verlassenschaftsräumung',
       'Gartenräumung',
     ],
+    popularServicesEn: [
+      'Villa Clearing',
+      'Manor House Clearing',
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Estate Clearing',
+      'Garden Clearing',
+    ],
     whyChooseUs: [
       'Höchste Diskretion',
       'Erfahrung mit gehobenen Objekten',
       'Sorgfältiger Umgang mit Wertgegenständen',
       'Professionelle Abwicklung',
       'Vertrauenswürdige Teams',
+    ],
+    whyChooseUsEn: [
+      'Highest discretion',
+      'Experience with upscale properties',
+      'Careful handling of valuables',
+      'Professional processing',
+      'Trustworthy teams',
     ],
     faq: [
       {
@@ -625,16 +1181,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir behandeln alle Gegenstände mit größter Sorgfalt und können Experten hinzuziehen.',
       },
     ],
+    faqEn: [
+      {
+        question: 'How discreetly do you work in Hietzing?',
+        answer: 'We work very discreetly with unmarked vehicles and in close consultation with you.',
+      },
+      {
+        question: 'Can you also clear villas?',
+        answer: 'Yes, we have extensive experience with large, high-quality properties.',
+      },
+      {
+        question: 'How do you handle valuable antiques?',
+        answer: 'We treat all items with the greatest care and can consult experts.',
+      },
+    ],
   },
   '1140-wien-penzing': {
     name: 'Penzing',
+    nameEn: 'Penzing',
     postalCode: '1140',
     slug: '1140-wien-penzing',
     description: 'Penzing ist ein weitläufiger Bezirk im Westen Wiens mit dem Wienerwald, Schloss Schönbrunn und vielfältigen Wohngebieten. Viel Grün und hohe Lebensqualität prägen den Bezirk.',
+    descriptionEn: 'Penzing is a spacious district in western Vienna with the Vienna Woods, Schönbrunn Palace, and diverse residential areas. Abundant greenery and high quality of life characterize the district.',
     metaDescription: 'Räumung 1140 Wien Penzing ✓ Hütteldorf ✓ Baumgarten ✓ Professionell & schnell. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1140 Vienna Penzing ✓ Hütteldorf ✓ Baumgarten ✓ Professional & Fast. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Räumung im grünen 14. Bezirk. Hütteldorf bis Wienerwald mit Erfahrung in Gärten und Außenbereichen.',
+    shortSummaryEn: 'Clearing in the green 14th district. Hütteldorf to Vienna Woods with experience in gardens and outdoor areas.',
     landmarks: ['Technisches Museum', 'Schloss Schönbrunn', 'Wienerwald', 'Dehnepark'],
+    landmarksEn: ['Technical Museum', 'Schönbrunn Palace', 'Vienna Woods', 'Dehnepark'],
     neighborhoods: ['Hütteldorf', 'Baumgarten', 'Breitensee', 'Hadikgasse', 'Hadersdorf'],
+    neighborhoodsEn: ['Hütteldorf', 'Baumgarten', 'Breitensee', 'Hadikgasse', 'Hadersdorf'],
     characteristics: [
       'Weitläufiger Bezirk',
       'Viel Grünraum',
@@ -642,7 +1218,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Nähe zum Wienerwald',
       'Gute Lebensqualität',
     ],
+    characteristicsEn: [
+      'Spacious district',
+      'Abundant green space',
+      'Mix of villas and residential buildings',
+      'Proximity to Vienna Woods',
+      'Good quality of life',
+    ],
     serviceAreas: ['Hütteldorfer Straße', 'Hadikgasse', 'Linzer Straße', 'Johnstraße', 'Felbigergasse'],
+    serviceAreasEn: ['Hütteldorfer Straße', 'Hadikgasse', 'Linzer Straße', 'Johnstraße', 'Felbigergasse'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -651,12 +1235,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Hausräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'Garden Clearing',
+      'House Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Kenntnis der weitläufigen Gebiete',
       'Erfahrung mit Gärten und Außenflächen',
       'Flexible Anfahrt',
       'Faire Preise',
       'Umweltbewusste Entsorgung',
+    ],
+    whyChooseUsEn: [
+      'Knowledge of spacious areas',
+      'Experience with gardens and outdoor spaces',
+      'Flexible access',
+      'Fair prices',
+      'Environmentally conscious disposal',
     ],
     faq: [
       {
@@ -672,16 +1271,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir entsorgen Gartenabfälle fachgerecht über spezialisierte Entsorgungsbetriebe.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also clear gardens?',
+        answer: 'Yes, we also clear gardens, sheds, and outdoor areas.',
+      },
+      {
+        question: 'Do you go as far as Hadersdorf?',
+        answer: 'Yes, we cover the entire 14th district, including outlying areas.',
+      },
+      {
+        question: 'How do you dispose of garden waste?',
+        answer: 'We dispose of garden waste professionally through specialized disposal companies.',
+      },
+    ],
   },
   '1150-wien-rudolfsheim-fuenfhaus': {
     name: 'Rudolfsheim-Fünfhaus',
+    nameEn: 'Rudolfsheim-Fünfhaus',
     postalCode: '1150',
     slug: '1150-wien-rudolfsheim-fuenfhaus',
     description: 'Rudolfsheim-Fünfhaus ist ein lebendiger, multikultureller Bezirk mit der Mariahilfer Straße, dem Westbahnhof und traditionellen Wohnvierteln. Ein Bezirk im Aufbruch.',
+    descriptionEn: 'Rudolfsheim-Fünfhaus is a lively, multicultural district with Mariahilfer Straße, the Westbahnhof, and traditional residential quarters. A district in transformation.',
     metaDescription: 'Räumung 1150 Wien Rudolfsheim-Fünfhaus ✓ Westbahnhof ✓ Mariahilfer Straße ✓ Günstig & schnell ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1150 Vienna Rudolfsheim-Fünfhaus ✓ Westbahnhof ✓ Mariahilfer Straße ✓ Affordable & Fast ☎ +43660 39 57 587',
     shortSummary: 'Soziale Räumung im multikulturellen 15. Bezirk. Westbahnhof-Nähe mit mehrsprachigen Teams und fairen Preisen.',
+    shortSummaryEn: 'Social clearing in the multicultural 15th district. Near Westbahnhof with multilingual teams and fair prices.',
     landmarks: ['Westbahnhof', 'Mariahilfer Straße', 'Stadthalle'],
+    landmarksEn: ['Westbahnhof', 'Mariahilfer Straße', 'Stadthalle'],
     neighborhoods: ['Rudolfsheim', 'Fünfhaus', 'Rustendorf', 'Sechshaus'],
+    neighborhoodsEn: ['Rudolfsheim', 'Fünfhaus', 'Rustendorf', 'Sechshaus'],
     characteristics: [
       'Multikultureller Bezirk',
       'Traditionelle Wohnviertel',
@@ -689,7 +1308,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Lebendiges Grätzl-Leben',
       'Entwicklungsgebiet',
     ],
+    characteristicsEn: [
+      'Multicultural district',
+      'Traditional residential quarters',
+      'Good transport connections',
+      'Lively neighborhood life',
+      'Development area',
+    ],
     serviceAreas: ['Mariahilfer Straße', 'Schmelz', 'Johnstraße', 'Hütteldorfer Straße', 'Westbahnstraße'],
+    serviceAreasEn: ['Mariahilfer Straße', 'Schmelz', 'Johnstraße', 'Hütteldorfer Straße', 'Westbahnstraße'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -698,12 +1325,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Haushaltsauflösung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Business Clearing',
+      'Hoarding Clearing',
+      'Household Liquidation',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Soziale Preisgestaltung',
       'Verständnis für vielfältige Situationen',
       'Schnelle Terminvergabe',
       'Mehrsprachige Teams',
       'Lokale Verwurzelung',
+    ],
+    whyChooseUsEn: [
+      'Social pricing',
+      'Understanding for diverse situations',
+      'Quick appointment scheduling',
+      'Multilingual teams',
+      'Local roots',
     ],
     faq: [
       {
@@ -719,16 +1361,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Oft können wir innerhalb von 1-2 Tagen vor Ort sein.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do your teams also speak other languages?',
+        answer: 'Yes, our teams speak multiple languages and can communicate in various languages.',
+      },
+      {
+        question: 'Can you also help in difficult situations?',
+        answer: 'Yes, we have extensive experience and work sensitively and professionally.',
+      },
+      {
+        question: 'How quickly can you come?',
+        answer: 'Often we can be on-site within 1-2 days.',
+      },
+    ],
   },
   '1160-wien-ottakring': {
     name: 'Ottakring',
+    nameEn: 'Ottakring',
     postalCode: '1160',
     slug: '1160-wien-ottakring',
     description: 'Ottakring ist ein traditioneller Bezirk mit dem Brunnenmarkt, dem Wienerwald und gemütlichen Wohnvierteln. Multikulturell, lebendig und mit viel Charakter.',
+    descriptionEn: 'Ottakring is a traditional district with the Brunnenmarkt, the Vienna Woods, and cozy residential areas. Multicultural, vibrant, and full of character.',
     metaDescription: 'Räumung 1160 Wien Ottakring ✓ Brunnenmarkt ✓ Wilhelminenspital ✓ Professionell & fair. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1160 Vienna Ottakring ✓ Brunnenmarkt ✓ Wilhelminenspital ✓ Professional & Fair. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Faire Räumung im 16. Bezirk rund um den Brunnenmarkt. Lokale Kenntnis und verständnisvolle Teams.',
+    shortSummaryEn: 'Fair clearing in the 16th district around Brunnenmarkt. Local knowledge and understanding teams.',
     landmarks: ['Brunnenmarkt', 'Wilhelminenspital', 'Ottakringer Brauerei', 'Gallitzinberg'],
+    landmarksEn: ['Brunnenmarkt', 'Wilhelminenspital', 'Ottakringer Brewery', 'Gallitzinberg'],
     neighborhoods: ['Ottakring', 'Neulerchenfeld', 'Sandleiten'],
+    neighborhoodsEn: ['Ottakring', 'Neulerchenfeld', 'Sandleiten'],
     characteristics: [
       'Traditioneller Arbeiterbezirk',
       'Größter Straßenmarkt Wiens',
@@ -736,7 +1398,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Nähe zum Wienerwald',
       'Gemütliche Altbauviertel',
     ],
+    characteristicsEn: [
+      'Traditional working-class district',
+      'Largest street market in Vienna',
+      'Multicultural',
+      'Proximity to Vienna Woods',
+      'Cozy historic quarters',
+    ],
     serviceAreas: ['Brunnengasse', 'Ottakringer Straße', 'Thaliastraße', 'Wilhelminenstraße', 'Neulerchenfelder Straße'],
+    serviceAreasEn: ['Brunnengasse', 'Ottakringer Straße', 'Thaliastraße', 'Wilhelminenstraße', 'Neulerchenfelder Straße'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -745,12 +1415,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Dachbodenräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Business Clearing',
+      'Household Liquidation',
+      'Attic Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Lokale Kenntnis',
       'Faire, soziale Preise',
       'Verständnisvolle Teams',
       'Schnelle Abwicklung',
       'Mehrsprachigkeit',
+    ],
+    whyChooseUsEn: [
+      'Local knowledge',
+      'Fair, social pricing',
+      'Understanding teams',
+      'Fast processing',
+      'Multilingual staff',
     ],
     faq: [
       {
@@ -766,16 +1451,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Ja, wir bemühen uns um schnelle Termine, oft innerhalb von 24-48 Stunden.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also work in the Brunnenmarkt area?',
+        answer: 'Yes, we know the area well and work efficiently even with difficult access routes.',
+      },
+      {
+        question: 'What does a clearing cost in Ottakring?',
+        answer: 'After a free inspection, you receive a fair fixed price.',
+      },
+      {
+        question: 'Can you also come on short notice?',
+        answer: 'Yes, we strive for quick appointments, often within 24-48 hours.',
+      },
+    ],
   },
   '1170-wien-hernals': {
     name: 'Hernals',
+    nameEn: 'Hernals',
     postalCode: '1170',
     slug: '1170-wien-hernals',
     description: 'Hernals ist ein grüner Bezirk am Fuße des Wienerwalds mit dem Hernalser Gürtel, Dornbach und ruhigen Wohngebieten. Hohe Lebensqualität und Naturnähe zeichnen den Bezirk aus.',
+    descriptionEn: 'Hernals is a green district at the foot of the Vienna Woods with the Hernalser Gürtel, Dornbach, and quiet residential areas. High quality of life and proximity to nature characterize the district.',
     metaDescription: 'Räumung 1170 Wien Hernals ✓ Dornbach ✓ Hernalser Gürtel ✓ Schnell & professionell. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1170 Vienna Hernals ✓ Dornbach ✓ Hernalser Gürtel ✓ Fast & Professional. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Grüne Räumung im 17. Bezirk am Wienerwald. Hanglagen, Dornbach mit Erfahrung in Gärten und Außenbereichen.',
+    shortSummaryEn: 'Green clearing in the 17th district at Vienna Woods. Hillside locations, Dornbach with experience in gardens and outdoor areas.',
     landmarks: ['Alszeile', 'Dornbacher Park', 'Kongresspark Neuwaldegg'],
+    landmarksEn: ['Alszeile', 'Dornbacher Park', 'Kongresspark Neuwaldegg'],
     neighborhoods: ['Hernals', 'Dornbach', 'Neuwaldegg'],
+    neighborhoodsEn: ['Hernals', 'Dornbach', 'Neuwaldegg'],
     characteristics: [
       'Grüner Bezirk',
       'Nähe zum Wienerwald',
@@ -783,7 +1488,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Gute Luft',
       'Hohe Lebensqualität',
     ],
+    characteristicsEn: [
+      'Green district',
+      'Proximity to Vienna Woods',
+      'Quiet residential areas',
+      'Good air quality',
+      'High quality of life',
+    ],
     serviceAreas: ['Hernalser Hauptstraße', 'Alszeile', 'Dornbacher Straße', 'Gürtel', 'Neuwaldegg'],
+    serviceAreasEn: ['Hernalser Hauptstraße', 'Alszeile', 'Dornbacher Straße', 'Gürtel', 'Neuwaldegg'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -792,12 +1505,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Gartenräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'House Clearing',
+      'Garden Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Kenntnis der Hanglagen',
       'Erfahrung mit Gärten',
       'Zuverlässige Anfahrt',
       'Umweltbewusste Entsorgung',
       'Faire Preise',
+    ],
+    whyChooseUsEn: [
+      'Knowledge of hillside locations',
+      'Experience with gardens',
+      'Reliable access',
+      'Environmentally conscious disposal',
+      'Fair prices',
     ],
     faq: [
       {
@@ -813,16 +1541,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir entsorgen fachgerecht oder können brauchbare Geräte nach Wunsch separat behandeln.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Can you also work on hillside locations?',
+        answer: 'Yes, we have experience with difficult access routes and hillside locations.',
+      },
+      {
+        question: 'Do you also clear as far as Neuwaldegg?',
+        answer: 'Yes, we cover the entire 17th district, including outlying areas.',
+      },
+      {
+        question: 'How do you handle garden equipment?',
+        answer: 'We dispose of items professionally or can treat usable equipment separately upon request.',
+      },
+    ],
   },
   '1180-wien-waehring': {
     name: 'Währing',
+    nameEn: 'Währing',
     postalCode: '1180',
     slug: '1180-wien-waehring',
     description: 'Währing ist ein vornehmer, grüner Bezirk mit Villen, dem Türkenschanzpark und der Währinger Straße. Eine gehobene Wohnlage mit exzellenter Infrastruktur.',
+    descriptionEn: 'Währing is a distinguished, green district with villas, the Türkenschanzpark, and Währinger Straße. An upscale residential area with excellent infrastructure.',
     metaDescription: 'Räumung 1180 Wien Währing ✓ Türkenschanzpark ✓ Währinger Straße ✓ Diskret & professionell. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1180 Vienna Währing ✓ Türkenschanzpark ✓ Währinger Straße ✓ Discreet & Professional. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Diskrete Villen-Räumung im gehobenen 18. Bezirk. Türkenschanzpark-Gebiet mit höchster Professionalität.',
+    shortSummaryEn: 'Discreet villa clearing in the upscale 18th district. Türkenschanzpark area with highest professionalism.',
     landmarks: ['Türkenschanzpark', 'Schubertpark', 'Währinger Straße', 'Gersthofer Straße'],
+    landmarksEn: ['Türkenschanzpark', 'Schubertpark', 'Währinger Straße', 'Gersthofer Straße'],
     neighborhoods: ['Währing', 'Gersthof', 'Pötzleinsdorf', 'Weinhaus'],
+    neighborhoodsEn: ['Währing', 'Gersthof', 'Pötzleinsdorf', 'Weinhaus'],
     characteristics: [
       'Gehobener Bezirk',
       'Villen und Herrschaftshäuser',
@@ -830,7 +1578,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Gute Schulen',
       'Hohe Lebensqualität',
     ],
+    characteristicsEn: [
+      'Upscale district',
+      'Villas and manor houses',
+      'Many parks',
+      'Good schools',
+      'High quality of life',
+    ],
     serviceAreas: ['Währinger Straße', 'Gersthofer Straße', 'Gymnasiumstraße', 'Gentzgasse', 'Kreuzgasse'],
+    serviceAreasEn: ['Währinger Straße', 'Gersthofer Straße', 'Gymnasiumstraße', 'Gentzgasse', 'Kreuzgasse'],
     popularServices: [
       'Villen-Räumung',
       'Wohnungsräumung',
@@ -839,12 +1595,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Verlassenschaftsräumung',
       'Gartenräumung',
     ],
+    popularServicesEn: [
+      'Villa Clearing',
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Attic Clearing',
+      'Estate Clearing',
+      'Garden Clearing',
+    ],
     whyChooseUs: [
       'Höchste Diskretion',
       'Erfahrung mit gehobenen Immobilien',
       'Sorgfältiger Umgang',
       'Professionelle Teams',
       'Vertrauenswürdig',
+    ],
+    whyChooseUsEn: [
+      'Highest discretion',
+      'Experience with upscale properties',
+      'Careful handling',
+      'Professional teams',
+      'Trustworthy',
     ],
     faq: [
       {
@@ -860,16 +1631,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir können bei Bedarf Experten für Wertermittlungen hinzuziehen.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also work in villa areas?',
+        answer: 'Yes, we have extensive experience with upscale properties and villas.',
+      },
+      {
+        question: 'How discreetly do you work?',
+        answer: 'We work very discreetly and in close consultation with you.',
+      },
+      {
+        question: 'Can you appraise valuables?',
+        answer: 'We can consult experts for valuations if needed.',
+      },
+    ],
   },
   '1190-wien-doebling': {
     name: 'Döbling',
+    nameEn: 'Döbling',
     postalCode: '1190',
     slug: '1190-wien-doebling',
     description: 'Döbling ist der vornehmste Bezirk Wiens mit Grinzing, dem Kahlenberg und noblen Villenvierteln. Weinberge, Heurige und höchste Lebensqualität prägen den Bezirk.',
+    descriptionEn: 'Döbling is Vienna\'s most distinguished district with Grinzing, the Kahlenberg, and noble villa quarters. Vineyards, wine taverns, and highest quality of life characterize the district.',
     metaDescription: 'Räumung 1190 Wien Döbling ✓ Grinzing ✓ Heiligenstadt ✓ Diskret & professionell. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1190 Vienna Döbling ✓ Grinzing ✓ Heiligenstadt ✓ Discreet & Professional. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Exklusive Herrschaftshaus-Räumung im vornehmsten Bezirk. Grinzing, Kahlenberg mit absoluter Diskretion.',
+    shortSummaryEn: 'Exclusive manor house clearing in the most distinguished district. Grinzing, Kahlenberg with absolute discretion.',
     landmarks: ['Grinzing', 'Kahlenberg', 'Heiligenstadt', 'Beethoven-Wohnhaus', 'Hohe Warte'],
+    landmarksEn: ['Grinzing', 'Kahlenberg', 'Heiligenstadt', 'Beethoven House', 'Hohe Warte'],
     neighborhoods: ['Grinzing', 'Heiligenstadt', 'Nußdorf', 'Sievering', 'Oberdöbling'],
+    neighborhoodsEn: ['Grinzing', 'Heiligenstadt', 'Nußdorf', 'Sievering', 'Oberdöbling'],
     characteristics: [
       'Vornehmster Bezirk',
       'Weinberge und Heurige',
@@ -877,7 +1668,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Viel Grün',
       'Höchste Lebensqualität',
     ],
+    characteristicsEn: [
+      'Most distinguished district',
+      'Vineyards and wine taverns',
+      'Villas and manor houses',
+      'Abundant greenery',
+      'Highest quality of life',
+    ],
     serviceAreas: ['Döblinger Hauptstraße', 'Heiligenstädter Straße', 'Grinzinger Straße', 'Hohe Warte', 'Sieveringer Straße'],
+    serviceAreasEn: ['Döblinger Hauptstraße', 'Heiligenstädter Straße', 'Grinzinger Straße', 'Hohe Warte', 'Sieveringer Straße'],
     popularServices: [
       'Villen-Räumung',
       'Herrschaftshaus-Räumung',
@@ -886,12 +1685,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Verlassenschaftsräumung',
       'Gartenräumung',
     ],
+    popularServicesEn: [
+      'Villa Clearing',
+      'Manor House Clearing',
+      'Apartment Clearing',
+      'Wine Cellar Clearing',
+      'Estate Clearing',
+      'Garden Clearing',
+    ],
     whyChooseUs: [
       'Absolute Diskretion',
       'Erfahrung mit Luxusimmobilien',
       'Sorgfältigster Umgang',
       'Höchste Professionalität',
       'Vertrauenswürdige Abwicklung',
+    ],
+    whyChooseUsEn: [
+      'Absolute discretion',
+      'Experience with luxury properties',
+      'Most careful handling',
+      'Highest professionalism',
+      'Trustworthy processing',
     ],
     faq: [
       {
@@ -907,16 +1721,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Ja, wir sind auf die besonderen Anforderungen der Weinberggegend vorbereitet.',
       },
     ],
+    faqEn: [
+      {
+        question: 'How discreetly do you work in Döbling?',
+        answer: 'We work with the highest discretion, unmarked vehicles, and according to your wishes.',
+      },
+      {
+        question: 'Can you also clear wine cellars?',
+        answer: 'Yes, we have experience with wine cellars and handle wine bottles with care.',
+      },
+      {
+        question: 'Do you also work on hillside locations?',
+        answer: 'Yes, we are prepared for the special requirements of the vineyard area.',
+      },
+    ],
   },
   '1200-wien-brigittenau': {
     name: 'Brigittenau',
+    nameEn: 'Brigittenau',
     postalCode: '1200',
     slug: '1200-wien-brigittenau',
     description: 'Die Brigittenau ist eine Donauinsel zwischen Donaukanal und Donau mit dem Millennium Tower, Handelskai und vielfältigen Wohngebieten. Ein Bezirk im Wandel.',
+    descriptionEn: 'Brigittenau is a Danube island between the Danube Canal and the Danube with the Millennium Tower, Handelskai, and diverse residential areas. A district in transformation.',
     metaDescription: 'Räumung 1200 Wien Brigittenau ✓ Millennium Tower ✓ Handelskai ✓ Professionell & günstig. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1200 Vienna Brigittenau ✓ Millennium Tower ✓ Handelskai ✓ Professional & Affordable. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Professionelle Räumung im 20. Bezirk zwischen Donau und Kanal. Millennium City, Handelskai mit flexiblen Terminen.',
+    shortSummaryEn: 'Professional clearing in the 20th district between Danube and canal. Millennium City, Handelskai with flexible appointments.',
     landmarks: ['Millennium Tower', 'Augarten', 'Donaukanal', 'Handelskai'],
+    landmarksEn: ['Millennium Tower', 'Augarten', 'Danube Canal', 'Handelskai'],
     neighborhoods: ['Brigittenau', 'Zwischenbrücken'],
+    neighborhoodsEn: ['Brigittenau', 'Zwischenbrücken'],
     characteristics: [
       'Insel zwischen Donau und Kanal',
       'Mix aus Alt und Neu',
@@ -924,7 +1758,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Nähe zur Donau',
       'Multikulturell',
     ],
+    characteristicsEn: [
+      'Island between Danube and canal',
+      'Mix of old and new',
+      'Up-and-coming district',
+      'Proximity to Danube',
+      'Multicultural',
+    ],
     serviceAreas: ['Brigittenauer Lände', 'Handelskai', 'Wallensteinstraße', 'Dresdner Straße', 'Millennium City'],
+    serviceAreasEn: ['Brigittenauer Lände', 'Handelskai', 'Wallensteinstraße', 'Dresdner Straße', 'Millennium City'],
     popularServices: [
       'Wohnungsräumung',
       'Kellerräumung',
@@ -933,12 +1775,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Haushaltsauflösung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Business Clearing',
+      'Office Clearing',
+      'Household Liquidation',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Kenntnis der Insel-Topografie',
       'Schnelle Anfahrt',
       'Faire Preise',
       'Flexible Termine',
       'Professionelle Abwicklung',
+    ],
+    whyChooseUsEn: [
+      'Knowledge of island topography',
+      'Quick access',
+      'Fair prices',
+      'Flexible appointments',
+      'Professional processing',
     ],
     faq: [
       {
@@ -954,16 +1811,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Oft können wir innerhalb von 24-48 Stunden einen Termin anbieten.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also come to Handelskai?',
+        answer: 'Yes, we cover the entire 20th district, including the Danube riverfront areas.',
+      },
+      {
+        question: 'Can you also clear offices?',
+        answer: 'Yes, we have experience with office clearings and business clearings.',
+      },
+      {
+        question: 'How quickly can you come?',
+        answer: 'Often we can offer an appointment within 24-48 hours.',
+      },
+    ],
   },
   '1210-wien-floridsdorf': {
     name: 'Floridsdorf',
+    nameEn: 'Floridsdorf',
     postalCode: '1210',
     slug: '1210-wien-floridsdorf',
     description: 'Floridsdorf ist der zweitgrößte Bezirk Wiens nördlich der Donau mit der Alten Donau, Stammersdorf und vielfältigen Wohn- und Erholungsgebieten. Ländlicher Charme trifft auf urbanes Leben.',
+    descriptionEn: 'Floridsdorf is the second-largest district in Vienna north of the Danube with the Alte Donau, Stammersdorf, and diverse residential and recreational areas. Rural charm meets urban life.',
     metaDescription: 'Räumung 1210 Wien Floridsdorf ✓ Alte Donau ✓ Stammersdorf ✓ Schnell & zuverlässig. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1210 Vienna Floridsdorf ✓ Alte Donau ✓ Stammersdorf ✓ Fast & Reliable. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Hausräumung im zweitgrößten Bezirk nördlich der Donau. Stammersdorf, Alte Donau mit Erfahrung in Einfamilienhäusern.',
+    shortSummaryEn: 'House clearing in the second-largest district north of the Danube. Stammersdorf, Alte Donau with experience in single-family homes.',
     landmarks: ['Alte Donau', 'Bisamberg', 'Stammersdorf', 'Donauinsel'],
+    landmarksEn: ['Alte Donau', 'Bisamberg', 'Stammersdorf', 'Danube Island'],
     neighborhoods: ['Floridsdorf', 'Stammersdorf', 'Strebersdorf', 'Jedlesee', 'Schwarze Lackenau'],
+    neighborhoodsEn: ['Floridsdorf', 'Stammersdorf', 'Strebersdorf', 'Jedlesee', 'Schwarze Lackenau'],
     characteristics: [
       'Zweitgrößter Bezirk',
       'Ländlicher Charakter',
@@ -971,7 +1848,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Weinbaugebiet Stammersdorf',
       'Naherholungsgebiet Alte Donau',
     ],
+    characteristicsEn: [
+      'Second-largest district',
+      'Rural character',
+      'Many single-family homes',
+      'Wine-growing area Stammersdorf',
+      'Recreation area Alte Donau',
+    ],
     serviceAreas: ['Floridsdorfer Hauptstraße', 'Brünner Straße', 'Stammersdorfer Straße', 'Leopoldauer Straße', 'Alte Donau'],
+    serviceAreasEn: ['Floridsdorfer Hauptstraße', 'Brünner Straße', 'Stammersdorfer Straße', 'Leopoldauer Straße', 'Alte Donau'],
     popularServices: [
       'Hausräumung',
       'Wohnungsräumung',
@@ -980,12 +1865,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Dachbodenräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'House Clearing',
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Garden Clearing',
+      'Attic Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Kenntnis der weitläufigen Gebiete',
       'Erfahrung mit Einfamilienhäusern',
       'Gartenräumungen',
       'Faire Preise',
       'Zuverlässige Anfahrt auch in Randlagen',
+    ],
+    whyChooseUsEn: [
+      'Knowledge of spacious areas',
+      'Experience with single-family homes',
+      'Garden clearings',
+      'Fair prices',
+      'Reliable access even to outlying areas',
     ],
     faq: [
       {
@@ -1001,16 +1901,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir räumen auch Gartenhäuser, Schuppen und Außenbereiche komplett.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also come to Stammersdorf?',
+        answer: 'Yes, we cover the entire 21st district, including outlying areas like Stammersdorf.',
+      },
+      {
+        question: 'Can you also clear single-family homes?',
+        answer: 'Yes, we have extensive experience with house clearings and garden clearings.',
+      },
+      {
+        question: 'How do you handle garden sheds?',
+        answer: 'We also completely clear garden houses, sheds, and outdoor areas.',
+      },
+    ],
   },
   '1220-wien-donaustadt': {
     name: 'Donaustadt',
+    nameEn: 'Donaustadt',
     postalCode: '1220',
     slug: '1220-wien-donaustadt',
     description: 'Die Donaustadt ist der flächenmäßig größte Bezirk Wiens mit der Donau City, Kaisermühlen und der Seestadt Aspern. Ein moderner, wachsender Bezirk mit Zukunft.',
+    descriptionEn: 'Donaustadt is the largest district in Vienna by area with the Donau City, Kaisermühlen, and Seestadt Aspern. A modern, growing district with a future.',
     metaDescription: 'Räumung 1220 Wien Donaustadt ✓ Donau City ✓ Seestadt ✓ Kagran ✓ Professionell & schnell. Kostenlose Beratung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1220 Vienna Donaustadt ✓ Donau City ✓ Seestadt ✓ Kagran ✓ Professional & Fast. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Moderne Räumung im größten Bezirk. Donau City, Seestadt Aspern mit Erfahrung in Neubauten und großer Kapazität.',
+    shortSummaryEn: 'Modern clearing in the largest district. Donau City, Seestadt Aspern with experience in new buildings and large capacity.',
     landmarks: ['Donau City', 'UNO City', 'Seestadt Aspern', 'Donauturm', 'Alte Donau'],
+    landmarksEn: ['Donau City', 'UNO City', 'Seestadt Aspern', 'Donauturm', 'Alte Donau'],
     neighborhoods: ['Kaisermühlen', 'Kagran', 'Stadlau', 'Aspern', 'Essling', 'Hirschstetten'],
+    neighborhoodsEn: ['Kaisermühlen', 'Kagran', 'Stadlau', 'Aspern', 'Essling', 'Hirschstetten'],
     characteristics: [
       'Größter Bezirk Wiens',
       'Moderne Stadtentwicklung',
@@ -1018,7 +1938,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Viele Neubauprojekte',
       'Donaunahe Lage',
     ],
+    characteristicsEn: [
+      'Largest district in Vienna',
+      'Modern urban development',
+      'Seestadt Aspern',
+      'Many new construction projects',
+      'Proximity to Danube',
+    ],
     serviceAreas: ['Wagramer Straße', 'Donaustadtstraße', 'Erzherzog-Karl-Straße', 'Donau City', 'Seestadt Aspern'],
+    serviceAreasEn: ['Wagramer Straße', 'Donaustadtstraße', 'Erzherzog-Karl-Straße', 'Donau City', 'Seestadt Aspern'],
     popularServices: [
       'Wohnungsräumung',
       'Neubau-Räumung',
@@ -1027,12 +1955,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Geschäftsräumung',
       'Haushaltsauflösung',
     ],
+    popularServicesEn: [
+      'Apartment Clearing',
+      'New Building Clearing',
+      'Office Clearing',
+      'Basement Clearing',
+      'Business Clearing',
+      'Household Liquidation',
+    ],
     whyChooseUs: [
       'Erfahrung mit Neubauten',
       'Kenntnis der modernen Stadtteile',
       'Große Kapazität',
       'Flexible Termine',
       'Professionelle Abwicklung',
+    ],
+    whyChooseUsEn: [
+      'Experience with new buildings',
+      'Knowledge of modern districts',
+      'Large capacity',
+      'Flexible appointments',
+      'Professional processing',
     ],
     faq: [
       {
@@ -1048,16 +1991,36 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Wir kennen die Zufahrtsmöglichkeiten und organisieren bei Bedarf Genehmigungen.',
       },
     ],
+    faqEn: [
+      {
+        question: 'Do you also work in Seestadt?',
+        answer: 'Yes, we operate throughout the 22nd district, including the new urban areas.',
+      },
+      {
+        question: 'Can you also clear large new-build apartments?',
+        answer: 'Yes, we have experience with modern apartments and properties of any size.',
+      },
+      {
+        question: 'Are there access restrictions in Donau City?',
+        answer: 'We know the access routes and organize permits when needed.',
+      },
+    ],
   },
   '1230-wien-liesing': {
     name: 'Liesing',
+    nameEn: 'Liesing',
     postalCode: '1230',
     slug: '1230-wien-liesing',
     description: 'Liesing ist der südlichste Bezirk Wiens mit dem Liesing-Fluss, Wohn- und Industriegebieten und viel Grünraum. Ein Bezirk der Kontraste zwischen Natur und Urbanität.',
+    descriptionEn: 'Liesing is the southernmost district in Vienna with the Liesing River, residential and industrial areas, and abundant green space. A district of contrasts between nature and urbanity.',
     metaDescription: 'Räumung 1230 Wien Liesing ✓ Atzgersdorf ✓ Erlaa ✓ Mauer ✓ Professionell & fair. Kostenlose Besichtigung ☎ +43660 39 57 587',
+    metaDescriptionEn: 'Clearing 1230 Vienna Liesing ✓ Atzgersdorf ✓ Erlaa ✓ Mauer ✓ Professional & Fair. Free Inspection ☎ +43660 39 57 587',
     shortSummary: 'Räumung im südlichsten Bezirk. Rodaun, Kalksburg bis Erlaa mit Erfahrung in Einfamilienhäusern und Industrie.',
+    shortSummaryEn: 'Clearing in the southernmost district. Rodaun, Kalksburg to Erlaa with experience in single-family homes and industry.',
     landmarks: ['Perchtoldsdorfer Heide', 'Maurer Wald', 'Liesing-Fluss', 'Himmelhof'],
+    landmarksEn: ['Perchtoldsdorfer Heide', 'Maurer Wald', 'Liesing River', 'Himmelhof'],
     neighborhoods: ['Liesing', 'Atzgersdorf', 'Erlaa', 'Mauer', 'Rodaun', 'Kalksburg'],
+    neighborhoodsEn: ['Liesing', 'Atzgersdorf', 'Erlaa', 'Mauer', 'Rodaun', 'Kalksburg'],
     characteristics: [
       'Südlichster Bezirk',
       'Mix aus Wohnen und Industrie',
@@ -1065,7 +2028,15 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Einfamilienhäuser',
       'Nähe zum Wienerwald',
     ],
+    characteristicsEn: [
+      'Southernmost district',
+      'Mix of residential and industrial',
+      'Abundant green space',
+      'Single-family homes',
+      'Proximity to Vienna Woods',
+    ],
     serviceAreas: ['Breitenfurter Straße', 'Ketzergasse', 'Perfektastraße', 'Erlaaer Straße', 'Kalks burger Straße'],
+    serviceAreasEn: ['Breitenfurter Straße', 'Ketzergasse', 'Perfektastraße', 'Erlaaer Straße', 'Kalksburger Straße'],
     popularServices: [
       'Hausräumung',
       'Wohnungsräumung',
@@ -1074,12 +2045,27 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Lagerräumung',
       'Verlassenschaftsräumung',
     ],
+    popularServicesEn: [
+      'House Clearing',
+      'Apartment Clearing',
+      'Basement Clearing',
+      'Garden Clearing',
+      'Warehouse Clearing',
+      'Estate Clearing',
+    ],
     whyChooseUs: [
       'Kenntnis der weitläufigen Gebiete',
       'Erfahrung mit Einfamilienhäusern',
       'Garten- und Außenbereich-Expertise',
       'Flexible Anfahrt',
       'Faire Preise',
+    ],
+    whyChooseUsEn: [
+      'Knowledge of spacious areas',
+      'Experience with single-family homes',
+      'Garden and outdoor area expertise',
+      'Flexible access',
+      'Fair prices',
     ],
     faq: [
       {
@@ -1093,6 +2079,20 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       {
         question: 'Wie schnell können Sie in Liesing sein?',
         answer: 'Wir streben schnelle Termine an, meist innerhalb von 1-2 Tagen.',
+      },
+    ],
+    faqEn: [
+      {
+        question: 'Do you also come to Rodaun or Kalksburg?',
+        answer: 'Yes, we cover the entire 23rd district, including outlying areas.',
+      },
+      {
+        question: 'Can you also clear industrial properties?',
+        answer: 'Yes, we have experience with commercial and industrial properties.',
+      },
+      {
+        question: 'How quickly can you be in Liesing?',
+        answer: 'We aim for quick appointments, usually within 1-2 days.',
       },
     ],
   },
