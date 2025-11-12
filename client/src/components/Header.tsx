@@ -37,7 +37,6 @@ export default function Header() {
     { label: t.nav.services, path: language === 'de' ? '/leistungen' : '/en/services' },
     { label: t.nav.districts, path: language === 'de' ? '/bezirke' : '/en/districts' },
     { label: t.nav.states, path: language === 'de' ? '/bundeslaender' : '/en/federal-states' },
-    { label: t.nav.contact, path: language === 'de' ? '/kontakt' : '/en/contact' },
   ];
 
   const estatePurchaseServices = [
@@ -98,6 +97,16 @@ export default function Header() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+
+            <Link
+              href={language === 'de' ? '/kontakt' : '/en/contact'}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                location === (language === 'de' ? '/kontakt' : '/en/contact') ? 'text-primary' : 'text-foreground'
+              }`}
+              data-testid="link-nav-contact"
+            >
+              {t.nav.contact}
+            </Link>
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
@@ -175,6 +184,17 @@ export default function Header() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+
+            <Link
+              href={language === 'de' ? '/kontakt' : '/en/contact'}
+              className={`block px-4 py-2 rounded-md text-sm font-medium ${
+                location === (language === 'de' ? '/kontakt' : '/en/contact') ? 'bg-primary text-primary-foreground' : 'hover:bg-accent'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+              data-testid="link-mobile-contact"
+            >
+              {t.nav.contact}
+            </Link>
 
             <div className="pt-4 border-t border-border flex items-center justify-between">
               <Button
