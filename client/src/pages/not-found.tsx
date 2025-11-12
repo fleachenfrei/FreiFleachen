@@ -7,7 +7,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { getLocalizedHomePath, getLocalizedContactPath } from "@/lib/urlMapping";
 
 export default function NotFound() {
-  const { language } = useLanguage();
+  const { t, language } = useLanguage();
   const homePath = getLocalizedHomePath(language);
   const contactPath = getLocalizedContactPath(language);
 
@@ -25,21 +25,21 @@ export default function NotFound() {
             </h1>
             <div className="space-y-2">
               <h2 className="text-xl font-semibold">
-                Seite nicht gefunden
+                {t.notFound.title}
               </h2>
               <p className="text-muted-foreground">
-                Die von Ihnen gesuchte Seite existiert leider nicht.
+                {t.notFound.description}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <Link href={homePath}>
-                <Button size="lg">
-                  Zur Startseite
+                <Button size="lg" data-testid="button-back-home">
+                  {t.notFound.backToHome}
                 </Button>
               </Link>
               <Link href={contactPath}>
-                <Button size="lg" variant="outline">
-                  Kontakt
+                <Button size="lg" variant="outline" data-testid="button-contact">
+                  {t.notFound.contact}
                 </Button>
               </Link>
             </div>

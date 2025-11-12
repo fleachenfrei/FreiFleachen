@@ -106,6 +106,12 @@ export const translations = {
       subtitle: 'Kontaktieren Sie uns jetzt!',
       description: 'Rufen Sie uns an und genießen Sie eine stressfreie Räumung - schnell, gründlich und preiswert!',
     },
+    notFound: {
+      title: 'Seite nicht gefunden',
+      description: 'Die von Ihnen gesuchte Seite existiert leider nicht.',
+      backToHome: 'Zur Startseite',
+      contact: 'Kontakt',
+    },
     contact: {
       phone: 'Telefon',
       email: 'E-Mail',
@@ -430,6 +436,12 @@ export const translations = {
       title: 'Ready for More Space?',
       subtitle: 'Contact Us Now!',
       description: 'Call us and enjoy a stress-free clearing - fast, thorough and affordable!',
+    },
+    notFound: {
+      title: 'Page Not Found',
+      description: 'The page you are looking for does not exist.',
+      backToHome: 'Back to Home',
+      contact: 'Contact',
     },
     contact: {
       phone: 'Phone',
