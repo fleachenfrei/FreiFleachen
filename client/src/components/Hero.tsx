@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="relative bg-gradient-to-br from-primary to-primary/90 text-white overflow-hidden">
       <div className="absolute inset-0 bg-black/20"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-24">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" data-testid="text-hero-title">
