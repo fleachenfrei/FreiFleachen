@@ -43,6 +43,18 @@ const reverseServiceSlugMap = Object.fromEntries(
   Object.entries(serviceSlugMap).map(([k, v]) => [v, k])
 );
 
+const regionTypeToEnglish: Record<string, string> = {
+  'bezirk': 'district',
+  'bundesland': 'federal-state',
+  'stadt': 'city',
+};
+
+const regionTypeToGerman: Record<string, string> = {
+  'district': 'bezirk',
+  'federal-state': 'bundesland',
+  'city': 'stadt',
+};
+
 export function getLocalizedPath(basePath: string, language: Language): string {
   if (basePath === '/' || basePath === '/de' || basePath === '/en') {
     return language === 'de' ? '/' : '/en';
@@ -73,14 +85,44 @@ export function getLocalizedPath(basePath: string, language: Language): string {
       const remainder = pathWithoutLang.slice(path.length);
       if (remainder) {
         if (path === '/leistungen' || path === '/services') {
-          const slug = remainder.slice(1);
-          let translatedSlug = slug;
-          if (language === 'en' && serviceSlugMap[slug]) {
-            translatedSlug = serviceSlugMap[slug];
-          } else if (language === 'de' && reverseServiceSlugMap[slug]) {
-            translatedSlug = reverseServiceSlugMap[slug];
+          // Check if this is a 3-level service-location path
+          // Format: /leistungen/serviceSlug/regionType/regionSlug
+          // Filter empty strings to handle trailing slashes
+          const parts = remainder.slice(1).split('/').filter(p => p.length > 0);
+          
+          if (parts.length === 3) {
+            // Service-location page
+            const [serviceSlug, regionType, regionSlug] = parts;
+            
+            // Translate service slug
+            let translatedServiceSlug = serviceSlug;
+            if (language === 'en' && serviceSlugMap[serviceSlug]) {
+              translatedServiceSlug = serviceSlugMap[serviceSlug];
+            } else if (language === 'de' && reverseServiceSlugMap[serviceSlug]) {
+              translatedServiceSlug = reverseServiceSlugMap[serviceSlug];
+            }
+            
+            // Translate region type based on target language
+            let translatedRegionType = regionType;
+            if (language === 'en' && regionTypeToEnglish[regionType]) {
+              translatedRegionType = regionTypeToEnglish[regionType];
+            } else if (language === 'de' && regionTypeToGerman[regionType]) {
+              translatedRegionType = regionTypeToGerman[regionType];
+            }
+            
+            // Region slug stays the same (language-neutral)
+            return `${config[language]}/${translatedServiceSlug}/${translatedRegionType}/${regionSlug}`;
+          } else if (parts.length === 1) {
+            // Regular service page (2-level)
+            const slug = parts[0];
+            let translatedSlug = slug;
+            if (language === 'en' && serviceSlugMap[slug]) {
+              translatedSlug = serviceSlugMap[slug];
+            } else if (language === 'de' && reverseServiceSlugMap[slug]) {
+              translatedSlug = reverseServiceSlugMap[slug];
+            }
+            return `${config[language]}/${translatedSlug}`;
           }
-          return `${config[language]}/${translatedSlug}`;
         }
         return `${config[language]}${remainder}`;
       }
