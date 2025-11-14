@@ -122,6 +122,14 @@ Allow: /
 Sitemap: https://flaechenfrei.at/sitemap.xml
 
 # ============================================
+# IndexNow Protocol (Instant Search Engine Indexing)
+# ============================================
+
+# IndexNow API Key Location for Bing, Yandex, DuckDuckGo
+# Allows instant notification when content is updated
+# Key: https://flaechenfrei.at/4360887d417651be8e892bc97ab0625dce0349081491ae37c119b83258d0df32.txt
+
+# ============================================
 # Crawl-delay (optional - prevent server overload)
 # ============================================
 
