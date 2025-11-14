@@ -95,3 +95,84 @@ Preferred communication style: Simple, everyday language.
 
 ### Font Integration
 - Google Fonts (Inter, Open Sans, DM Sans, Fira Code, Geist Mono, Architects Daughter)
+
+## Deployment & Automation
+
+### Railway.app Configuration (Production Ready)
+- **Platform:** Railway.app with automatic SSL/HTTPS
+- **Configuration:** `railway.json` with build/start commands
+- **Storage:** In-memory storage (no database needed for production)
+- **Build:** `npm run build` (Vite production build)
+- **Start:** `npm start` (Express server serving static files)
+- **Domain:** `flaechenfrei.at` (configured in Railway)
+
+### IndexNow Integration (Automatic)
+- **Protocol:** IndexNow for instant search engine notification
+- **Key:** `436053f3c8c7406799a1cea417ed8a4a` (stored in `client/public/`)
+- **Endpoints:** 
+  - `/api/indexnow/submit-sitemap` - Submits all 120+ URLs
+  - `/api/indexnow/submit-url` - Submits single URL
+  - `/436053f3c8c7406799a1cea417ed8a4a.txt` - Key verification file
+- **Search Engines:** Bing, Yandex, DuckDuckGo (automatic propagation)
+- **robots.txt:** Updated with IndexNow reference
+
+### GitHub Actions Workflows (Fully Automated)
+
+#### 1. Deploy to IndexNow (Automatic on Push)
+- **Trigger:** After Railway deployment completes
+- **Flow:** 
+  1. Waits 60s for Railway deployment
+  2. Verifies website is live (5 retries)
+  3. Submits 120+ URLs to IndexNow
+  4. Verifies IndexNow key file accessibility
+- **Success Criteria (Strict):** 
+  - ✅ Green = URLs successfully submitted to search engines
+  - ❌ Red = URLs NOT submitted (requires retry)
+- **Status Tracking:** Environment variables track submission status
+- **Error Types:**
+  - `failed_temporary` - IndexNow API down (retry manually or wait for daily check)
+  - `failed_config` - Configuration issue (fix required)
+
+#### 2. Health Check & Auto-Submit (Daily)
+- **Schedule:** Daily at 08:00 UTC
+- **Flow:**
+  1. Checks website availability
+  2. On success: Triggers IndexNow submission workflow
+- **Purpose:** Automatic retry mechanism for temporary IndexNow failures
+
+### Branding & Design Updates
+- **Logo:** Custom yellow banner logo (HSL 46,100%,50%) at 112px height
+- **File:** `client/public/logo.png` (458KB PNG)
+- **Header:** Responsive design with reduced padding
+- **Hero:** Reduced mobile padding (py-8) to compensate for larger header
+- **Colors:** Yellow primary (#F5C518), professional dark theme
+
+### Recent Changes (Latest Session)
+- **Date:** November 14, 2025
+- **IndexNow Workflow:** Implemented strict success criteria - workflow only succeeds when URLs are actually submitted
+- **Status Reporting:** Added environment variables and detailed status messages
+- **Error Handling:** Distinguishes between temporary API failures and configuration errors
+- **Summary Step:** Shows accurate status with actionable solutions
+- **Documentation:** Created `FINAL_DEPLOYMENT_CHECKLIST.md` with complete deployment guide
+
+## Important Files
+
+### Configuration
+- `railway.json` - Railway deployment configuration
+- `package.json` - Build scripts and dependencies
+- `.github/workflows/deploy-indexnow.yml` - Automatic deployment workflow
+- `.github/workflows/health-check.yml` - Daily monitoring
+- `RAILWAY_DEPLOYMENT_GUIDE.md` - Deployment instructions
+- `FINAL_DEPLOYMENT_CHECKLIST.md` - Complete deployment checklist
+
+### IndexNow Files
+- `server/indexnow.ts` - IndexNow implementation
+- `server/routes.ts` - API routes including IndexNow endpoints
+- `client/public/436053f3c8c7406799a1cea417ed8a4a.txt` - Key verification file
+- `client/public/robots.txt` - Updated with IndexNow reference
+- `client/public/sitemap.xml` - 120+ priority URLs
+
+### Branding
+- `client/public/logo.png` - Yellow banner logo (112px)
+- `client/src/components/Header.tsx` - Header with responsive logo
+- `client/src/components/Hero.tsx` - Hero section with optimized padding
