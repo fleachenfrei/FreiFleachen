@@ -148,7 +148,12 @@ Preferred communication style: Simple, everyday language.
 - **Colors:** Yellow primary (#F5C518), professional dark theme
 
 ### Recent Changes (Latest Session)
-- **Date:** November 14, 2025
+- **Date:** November 16, 2025
+- **Critical Fix:** Added `nixpacks.toml` to fix Railway deployment failure
+  - Railway was using Node.js 18.20.5 (default)
+  - Code requires Node.js 20.11+ for `import.meta.dirname` support
+  - `nixpacks.toml` forces Railway to use Node.js 20+
+  - Error: `TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined`
 - **IndexNow Workflow:** Implemented strict success criteria - workflow only succeeds when URLs are actually submitted
 - **Status Reporting:** Added environment variables and detailed status messages
 - **Error Handling:** Distinguishes between temporary API failures and configuration errors
@@ -159,6 +164,7 @@ Preferred communication style: Simple, everyday language.
 
 ### Configuration
 - `railway.json` - Railway deployment configuration
+- `nixpacks.toml` - **CRITICAL:** Node.js 20+ specification (fixes import.meta.dirname error)
 - `package.json` - Build scripts and dependencies
 - `.github/workflows/deploy-indexnow.yml` - Automatic deployment workflow
 - `.github/workflows/health-check.yml` - Daily monitoring

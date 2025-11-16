@@ -28,6 +28,18 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie folgendes haben:
 - ✓ Zugriff auf die Domain flaechenfrei.at (für DNS-Konfiguration)
 - ✓ Dieses Projekt (Source Code)
 
+### 📦 Wichtige Projekt-Dateien für Railway
+
+Ihr Projekt enthält bereits alle notwendigen Konfigurationsdateien:
+
+- ✅ **`railway.json`** - Build und Deployment-Konfiguration
+- ✅ **`nixpacks.toml`** - **KRITISCH:** Spezifiziert Node.js 20+ (erforderlich!)
+- ✅ **`package.json`** - Build-Scripts für Production
+- ✅ **`server/indexnow.ts`** - IndexNow Integration
+- ✅ **`client/public/sitemap.xml`** - 120+ SEO-optimierte URLs
+
+**⚠️ WICHTIG:** Die `nixpacks.toml` Datei ist **zwingend erforderlich**, da der Code `import.meta.dirname` verwendet, welches erst ab Node.js 20.11+ verfügbar ist. Railway verwendet standardmäßig Node.js 18, was zu Fehlern führt. Die `nixpacks.toml` überschreibt dies und erzwingt Node.js 20+.
+
 ---
 
 ## 🚀 Railway Account Setup

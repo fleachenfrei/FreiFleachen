@@ -137,6 +137,7 @@ Note: Website deployed successfully - only IndexNow submission failed
 
 ### Railway Konfiguration
 - ✅ `railway.json` - Build & Deploy Konfiguration
+- ✅ `nixpacks.toml` - **KRITISCH:** Node.js 20+ Spezifikation (behebt `import.meta.dirname` Fehler)
 - ✅ `package.json` - Build Scripts
 
 ### IndexNow Dateien
