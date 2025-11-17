@@ -10,6 +10,7 @@ import Services from '@/components/Services';
 import TrustStats from '@/components/TrustStats';
 import WhyUs from '@/components/WhyUs';
 import Testimonials from '@/components/Testimonials';
+import SEOContent from '@/components/SEOContent';
 import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
@@ -61,6 +62,7 @@ export default function Home() {
         <Services />
         <TrustStats />
         <WhyUs />
+        <SEOContent />
         <Testimonials />
         <FAQ />
         <CTA />
