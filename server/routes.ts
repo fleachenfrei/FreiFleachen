@@ -9,7 +9,10 @@ import { submitUrlToIndexNow, submitUrlsToIndexNow, submitSitemapToIndexNow, log
 export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/", (req, res) => {
     const acceptLanguage = req.headers['accept-language'] || '';
-    const preferredLang = acceptLanguage.toLowerCase().includes('en') ? 'en' : 'de';
+    // Default to German (de), only use English if German is not present
+    // Priority: de > en > default to de
+    const preferredLang = acceptLanguage.toLowerCase().includes('de') ? 'de' : 
+                          acceptLanguage.toLowerCase().includes('en') ? 'en' : 'de';
     res.redirect(302, `/${preferredLang}`);
   });
 
