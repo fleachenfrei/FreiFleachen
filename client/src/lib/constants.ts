@@ -1,6 +1,6 @@
 export const CONTACT_INFO = {
-  phone: '+43 660 39 57 587',
-  phoneLink: '+4366039575587',
+  phone: '+43 660 3957587',
+  phoneLink: '+436603957587',
   email: 'info@flaechenfrei.at',
   emailLink: 'mailto:info@flaechenfrei.at',
   address: {
