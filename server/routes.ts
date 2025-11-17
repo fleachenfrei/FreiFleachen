@@ -7,6 +7,17 @@ import { contactFormSchema } from "@shared/schema";
 import { submitUrlToIndexNow, submitUrlsToIndexNow, submitSitemapToIndexNow, logIndexNowResponse } from "./indexnow";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // WWW redirect - redirect www.flaechenfrei.at to flaechenfrei.at (SEO best practice)
+  app.use((req, res, next) => {
+    const host = req.headers.host || '';
+    if (host.startsWith('www.')) {
+      const newHost = host.replace('www.', '');
+      const protocol = req.headers['x-forwarded-proto'] || 'https';
+      return res.redirect(301, `${protocol}://${newHost}${req.originalUrl}`);
+    }
+    next();
+  });
+
   app.get("/", (req, res) => {
     const acceptLanguage = req.headers['accept-language'] || '';
     // Default to German (de), only use English if German is not present
