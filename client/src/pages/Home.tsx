@@ -10,6 +10,7 @@ import Services from '@/components/Services';
 import TrustStats from '@/components/TrustStats';
 import WhyUs from '@/components/WhyUs';
 import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
 import CTA from '@/components/CTA';
 import Footer from '@/components/Footer';
 import FloatingActions from '@/components/FloatingActions';
@@ -61,6 +62,7 @@ export default function Home() {
         <TrustStats />
         <WhyUs />
         <Testimonials />
+        <FAQ />
         <CTA />
       </main>
       <Footer />

@@ -100,6 +100,44 @@ export const translations = {
       title: 'Was unsere Kunden sagen',
       subtitle: 'Vertrauen Sie den Experten: Räumung & Räumung in Wien!',
     },
+    faq: {
+      title: 'Häufig gestellte Fragen',
+      subtitle: 'Alles, was Sie über unsere Räumungsdienstleistungen wissen müssen',
+      questions: [
+        {
+          question: 'Was kostet eine Räumung in Wien?',
+          answer: 'Die Kosten variieren je nach Größe und Zustand der Räumlichkeiten. Nach einer kostenlosen Besichtigung erhalten Sie ein transparentes Festpreisangebot ohne versteckte Kosten. Generell beginnen die Preise für eine Wohnungsräumung bei ca. 500€.'
+        },
+        {
+          question: 'Wie schnell können Sie mit der Räumung beginnen?',
+          answer: 'Wir bieten kurzfristige Termine an und können in der Regel innerhalb von 1-3 Werktagen mit der Räumung beginnen. Bei Notfällen können wir auch am selben oder nächsten Tag vor Ort sein.'
+        },
+        {
+          question: 'Räumen Sie auch Keller und Dachböden?',
+          answer: 'Ja, wir räumen alle Arten von Räumlichkeiten - Wohnungen, Häuser, Keller, Dachböden, Garagen, Lager und Geschäftsräume. Unser erfahrenes Team ist für jede Herausforderung gerüstet.'
+        },
+        {
+          question: 'Ist die Besichtigung wirklich kostenlos?',
+          answer: 'Ja, die Besichtigung vor Ort ist völlig kostenlos und unverbindlich. Dabei nehmen wir die Räumlichkeiten in Augenschein und erstellen Ihnen ein faires Festpreisangebot.'
+        },
+        {
+          question: 'Was passiert mit meinen Möbeln und Gegenständen?',
+          answer: 'Wir entsorgen alle Gegenstände fachgerecht und umweltfreundlich. Wertvolle Gegenstände können wir auf Wunsch auch ankaufen. Recyclebare Materialien werden entsprechend getrennt und verwertet.'
+        },
+        {
+          question: 'In welchen Gebieten sind Sie tätig?',
+          answer: 'Wir sind in ganz Wien und Umgebung sowie in allen österreichischen Bundesländern tätig. Egal ob Niederösterreich, Burgenland, Steiermark oder darüber hinaus - wir sind für Sie da.'
+        },
+        {
+          question: 'Muss ich bei der Räumung anwesend sein?',
+          answer: 'Nein, Ihre Anwesenheit ist nicht erforderlich. Nach der Besichtigung und Auftragserteilung können wir die Räumung auch selbstständig durchführen. Sie erhalten dann einen Abschlussbericht mit Vorher-Nachher-Fotos.'
+        },
+        {
+          question: 'Bieten Sie auch Entrümpelungen bei Messie-Wohnungen an?',
+          answer: 'Ja, wir haben Erfahrung mit Messie-Räumungen und gehen dabei diskret und respektvoll vor. Unser geschultes Team weiß, wie sensibel solche Situationen sind und arbeitet professionell und einfühlsam.'
+        }
+      ]
+    },
     gallery: {
       title: 'Unsere Arbeit in Bildern',
       subtitle: 'Ein Blick sagt mehr als tausend Worte - sehen Sie selbst, wie wir Platz schaffen!',
@@ -476,6 +514,44 @@ export const translations = {
     testimonials: {
       title: 'What Our Customers Say',
       subtitle: 'Trust the experts: Clearing & Removal in Vienna!',
+    },
+    faq: {
+      title: 'Frequently Asked Questions',
+      subtitle: 'Everything you need to know about our clearing services',
+      questions: [
+        {
+          question: 'How much does a clearing cost in Vienna?',
+          answer: 'The costs vary depending on the size and condition of the premises. After a free inspection, you will receive a transparent fixed-price offer without hidden costs. Generally, prices for apartment clearance start at around €500.'
+        },
+        {
+          question: 'How quickly can you start the clearing?',
+          answer: 'We offer short-notice appointments and can usually begin the clearing within 1-3 working days. In emergencies, we can also be on-site the same or next day.'
+        },
+        {
+          question: 'Do you also clear basements and attics?',
+          answer: 'Yes, we clear all types of premises - apartments, houses, basements, attics, garages, warehouses, and commercial spaces. Our experienced team is equipped for any challenge.'
+        },
+        {
+          question: 'Is the inspection really free?',
+          answer: 'Yes, the on-site inspection is completely free and non-binding. We inspect the premises and provide you with a fair fixed-price offer.'
+        },
+        {
+          question: 'What happens to my furniture and belongings?',
+          answer: 'We dispose of all items professionally and in an environmentally friendly manner. We can also purchase valuable items upon request. Recyclable materials are separated and recycled accordingly.'
+        },
+        {
+          question: 'In which areas do you operate?',
+          answer: 'We operate throughout Vienna and the surrounding areas as well as in all Austrian federal states. Whether Lower Austria, Burgenland, Styria, or beyond - we are there for you.'
+        },
+        {
+          question: 'Do I need to be present during the clearing?',
+          answer: 'No, your presence is not required. After the inspection and order placement, we can carry out the clearing independently. You will then receive a final report with before-and-after photos.'
+        },
+        {
+          question: 'Do you also offer clearing for hoarding situations?',
+          answer: 'Yes, we have experience with hoarding clearances and proceed discreetly and respectfully. Our trained team knows how sensitive such situations are and works professionally and empathetically.'
+        }
+      ]
     },
     gallery: {
       title: 'Our Work in Pictures',
