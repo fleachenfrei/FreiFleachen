@@ -32,13 +32,14 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie folgendes haben:
 
 Ihr Projekt enthält bereits alle notwendigen Konfigurationsdateien:
 
+- ✅ **`Dockerfile`** - **KRITISCH:** Erzwingt Node.js 20+ (erforderlich!)
+- ✅ **`.dockerignore`** - Optimiert Docker Build-Geschwindigkeit
 - ✅ **`railway.json`** - Build und Deployment-Konfiguration
-- ✅ **`nixpacks.toml`** - **KRITISCH:** Spezifiziert Node.js 20+ (erforderlich!)
 - ✅ **`package.json`** - Build-Scripts für Production
 - ✅ **`server/indexnow.ts`** - IndexNow Integration
 - ✅ **`client/public/sitemap.xml`** - 120+ SEO-optimierte URLs
 
-**⚠️ WICHTIG:** Die `nixpacks.toml` Datei ist **zwingend erforderlich**, da der Code `import.meta.dirname` verwendet, welches erst ab Node.js 20.11+ verfügbar ist. Railway verwendet standardmäßig Node.js 18, was zu Fehlern führt. Die `nixpacks.toml` überschreibt dies und erzwingt Node.js 20+.
+**⚠️ WICHTIG:** Das `Dockerfile` ist **zwingend erforderlich**, da der Code `import.meta.dirname` verwendet, welches erst ab Node.js 20.11+ verfügbar ist. Railway's Nixpacks erkennt die Version manchmal nicht korrekt. Das Dockerfile garantiert Node.js 20+ und volle Kontrolle über den Build-Prozess.
 
 ---
 
