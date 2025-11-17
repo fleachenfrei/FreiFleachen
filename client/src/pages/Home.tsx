@@ -24,11 +24,11 @@ export default function Home() {
 
   useEffect(() => {
     const title = language === 'de'
-      ? `Räumung Wien & Österreich | Flächen Frei ☎ ${CONTACT_INFO.phone}`
-      : `Clearing Vienna & Austria | Flächen Frei ☎ ${CONTACT_INFO.phone}`;
+      ? 'Räumung Wien & Österreich - Flächen Frei seit 1998'
+      : 'Clearing Vienna & Austria - Flächen Frei since 1998';
 
     const description = language === 'de'
-      ? 'Professionelle Räumungsfirma in Wien & ganz Österreich ⭐ 26+ Jahre Erfahrung ⚡ Faire Festpreise ohne Überraschungen ✓ Kostenlose Besichtigung & Beratung vor Ort ✓ Schnelle Terminvergabe innerhalb 24h ✓ Besenreine Übergabe garantiert. Jetzt kostenlos Angebot einholen!'
+      ? 'Professionelle Räumung in Wien & Österreich seit 1998. Faire Festpreise, 24h-Service, kostenlose Besichtigung. ☎ +43 660 3957587'
       : 'Professional clearing company in Vienna & throughout Austria ⭐ 26+ years experience ⚡ Fair fixed prices with no surprises ✓ Free on-site consultation ✓ Fast appointments within 24h ✓ Guaranteed broom-clean handover. Get your free quote now!';
 
     const keywords = language === 'de'
