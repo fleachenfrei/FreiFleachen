@@ -1,0 +1,68 @@
+2025-11-17T10:13:45.506223714Z [inf]  
+2025-11-17T10:13:47.316757548Z [inf]  [35m[Region: us-west1][0m
+2025-11-17T10:13:47.322586288Z [inf]  [35m=========================
+2025-11-17T10:13:47.322631947Z [inf]  Using Detected Dockerfile
+2025-11-17T10:13:47.322636191Z [inf]  =========================
+2025-11-17T10:13:47.322639294Z [inf]  [0m
+2025-11-17T10:13:47.322652925Z [inf]  context: 8b0k-edxo
+2025-11-17T10:13:47.484010773Z [inf]  [internal] load build definition from Dockerfile
+2025-11-17T10:13:47.484067636Z [inf]  [internal] load build definition from Dockerfile
+2025-11-17T10:13:47.484084984Z [inf]  [internal] load build definition from Dockerfile
+2025-11-17T10:13:47.496098111Z [inf]  [internal] load build definition from Dockerfile
+2025-11-17T10:13:47.498350326Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2025-11-17T10:13:47.629140533Z [inf]  [internal] load metadata for docker.io/library/node:20-alpine
+2025-11-17T10:13:47.629428517Z [inf]  [internal] load .dockerignore
+2025-11-17T10:13:47.629501692Z [inf]  [internal] load .dockerignore
+2025-11-17T10:13:47.629713793Z [inf]  [internal] load .dockerignore
+2025-11-17T10:13:47.640932076Z [inf]  [internal] load .dockerignore
+2025-11-17T10:13:47.645240812Z [inf]  [internal] load build context
+2025-11-17T10:13:47.645345714Z [inf]  [internal] load build context
+2025-11-17T10:13:48.059556711Z [inf]  [internal] load build context
+2025-11-17T10:13:48.061162255Z [inf]  [builder 2/7] WORKDIR /app
+2025-11-17T10:13:48.061233592Z [inf]  [3/6] COPY package*.json ./
+2025-11-17T10:13:48.151196450Z [inf]  [3/6] COPY package*.json ./
+2025-11-17T10:13:48.153228229Z [inf]  [4/6] RUN npm ci --only=production
+2025-11-17T10:13:48.346188262Z [inf]  npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
+
+2025-11-17T10:13:54.190393494Z [inf]  
+added 382 packages, and audited 383 packages in 6s
+
+
+2025-11-17T10:13:54.190416777Z [inf]  53 packages are looking for funding
+  run `npm fund` for details
+
+2025-11-17T10:13:54.192744326Z [inf]  
+3 low severity vulnerabilities
+
+To address all issues, run:
+  npm audit fix
+
+Run `npm audit` for details.
+
+2025-11-17T10:13:54.193857725Z [inf]  npm notice
+npm notice New major version of npm available! 10.8.2 -> 11.6.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+npm notice To update run: npm install -g npm@11.6.2
+npm notice
+
+2025-11-17T10:13:54.499279207Z [inf]  [4/6] RUN npm ci --only=production
+2025-11-17T10:13:54.500094399Z [inf]  [5/6] COPY . .
+2025-11-17T10:13:54.740469591Z [inf]  [5/6] COPY . .
+2025-11-17T10:13:54.742117034Z [inf]  [6/6] RUN npm run build
+2025-11-17T10:13:54.951759065Z [inf]  
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+
+2025-11-17T10:13:54.955477936Z [inf]  sh: vite: not found
+
+2025-11-17T10:13:55.006381127Z [err]  [6/6] RUN npm run build
+2025-11-17T10:13:55.027233097Z [err]  Dockerfile:17
+2025-11-17T10:13:55.027268610Z [err]  -------------------
+2025-11-17T10:13:55.027279696Z [err]  15 |
+2025-11-17T10:13:55.027286124Z [err]  16 |     # Build the application (TypeScript → JavaScript)
+2025-11-17T10:13:55.027292767Z [err]  17 | >>> RUN npm run build
+2025-11-17T10:13:55.027297251Z [err]  18 |
+2025-11-17T10:13:55.027302152Z [err]  19 |     # Expose port 5000
+2025-11-17T10:13:55.027307200Z [err]  -------------------
+2025-11-17T10:13:55.027312774Z [err]  ERROR: failed to build: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127

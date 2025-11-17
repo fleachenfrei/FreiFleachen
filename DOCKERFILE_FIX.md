@@ -103,9 +103,10 @@ Nach dem Push:
 FROM node:20-alpine          # Node.js 20 LTS (Alpine = klein & schnell)
 WORKDIR /app                 # Arbeitsverzeichnis
 COPY package*.json ./        # Dependencies kopieren
-RUN npm ci --only=production # Production Install
+RUN npm ci                   # ALLE Dependencies (inkl. vite, esbuild für Build)
 COPY . .                     # Code kopieren
 RUN npm run build            # TypeScript → JavaScript
+RUN npm prune --production   # Dev Dependencies entfernen (Image klein halten)
 EXPOSE 5000                  # Port freigeben
 CMD ["npm", "start"]         # Server starten
 ```
