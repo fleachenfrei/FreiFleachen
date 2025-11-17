@@ -1,7 +1,13 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'wouter';
 
 export default function SEOContent() {
   const { language } = useLanguage();
+  
+  const servicesPath = language === 'de' ? '/de/leistungen' : '/en/services';
+  const districtsPath = language === 'de' ? '/de/bezirke' : '/en/districts';
+  const statesPath = language === 'de' ? '/de/bundeslaender' : '/en/federal-states';
+  const contactPath = language === 'de' ? '/de/kontakt' : '/en/contact';
 
   return (
     <section className="py-16 md:py-24 bg-background">
@@ -15,8 +21,11 @@ export default function SEOContent() {
               
               <div className="text-muted-foreground space-y-4 leading-relaxed">
                 <p>
-                  <strong>Flächen Frei</strong> ist Ihr zuverlässiger Partner für professionelle Räumungen in Wien und ganz Österreich. 
-                  Mit über 26 Jahren Erfahrung im Bereich Wohnungsräumung, Haushaltsauflösung und Entrümpelung haben wir uns als 
+                  <strong>Flächen Frei</strong> ist Ihr zuverlässiger Partner für professionelle{' '}
+                  <Link href={servicesPath} className="text-primary hover:underline font-semibold">
+                    Räumungen in Wien und ganz Österreich
+                  </Link>
+                  . Mit über 26 Jahren Erfahrung im Bereich Wohnungsräumung, Haushaltsauflösung und Entrümpelung haben wir uns als 
                   führende Räumungsfirma in Österreich etabliert. Unser erfahrenes Team steht Ihnen mit Rat und Tat zur Seite, wenn 
                   es darum geht, Ihre Immobilie schnell, sauber und professionell zu räumen.
                 </p>
@@ -26,8 +35,23 @@ export default function SEOContent() {
                 </h3>
                 
                 <p>
-                  Ob Wohnungsräumung in Wien, Kellerräumung in Niederösterreich oder Geschäftsräumung in Graz – wir bieten maßgeschneiderte 
-                  Lösungen für jeden Räumungsbedarf. Unsere Leistungen umfassen die komplette Entrümpelung von Wohnungen, Häusern, Kellern, 
+                  Ob{' '}
+                  <Link href={`${districtsPath}/innere-stadt`} className="text-primary hover:underline">
+                    Wohnungsräumung in Wien
+                  </Link>
+                  , Kellerräumung in{' '}
+                  <Link href={`${statesPath}/niederoesterreich`} className="text-primary hover:underline">
+                    Niederösterreich
+                  </Link>
+                  {' '}oder Geschäftsräumung in{' '}
+                  <Link href={`${statesPath}/steiermark/graz`} className="text-primary hover:underline">
+                    Graz
+                  </Link>
+                  {' '}– wir bieten maßgeschneiderte Lösungen für jeden Räumungsbedarf. Unsere{' '}
+                  <Link href={servicesPath} className="text-primary hover:underline font-semibold">
+                    Leistungen
+                  </Link>
+                  {' '}umfassen die komplette Entrümpelung von Wohnungen, Häusern, Kellern, 
                   Dachböden, Garagen und Geschäftsräumen. Dabei legen wir großen Wert auf eine fachgerechte und umweltfreundliche Entsorgung 
                   aller Gegenstände. Wertvolle Möbel und Antiquitäten können wir auf Wunsch auch ankaufen.
                 </p>
@@ -72,9 +96,18 @@ export default function SEOContent() {
                 </p>
 
                 <p>
-                  Kontaktieren Sie uns noch heute für eine kostenlose Beratung und Besichtigung. Unser freundliches Team ist 24/7 für Sie 
-                  erreichbar und beantwortet gerne all Ihre Fragen rund um das Thema Räumung, Entrümpelung und Transport in Wien und ganz 
-                  Österreich.
+                  <Link href={contactPath} className="text-primary hover:underline font-semibold">
+                    Kontaktieren Sie uns
+                  </Link>
+                  {' '}noch heute für eine kostenlose Beratung und Besichtigung. Unser freundliches Team ist 24/7 für Sie 
+                  erreichbar und beantwortet gerne all Ihre Fragen rund um das Thema Räumung, Entrümpelung und Transport in{' '}
+                  <Link href={districtsPath} className="text-primary hover:underline">
+                    Wien
+                  </Link>
+                  {' '}und ganz{' '}
+                  <Link href={statesPath} className="text-primary hover:underline">
+                    Österreich
+                  </Link>.
                 </p>
               </div>
             </>
