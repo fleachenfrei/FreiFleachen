@@ -65,7 +65,21 @@ This ensures import.meta.dirname works (requires Node.js 20.11+)"
 git push origin main
 ```
 
-### 2. Railway deployt automatisch
+### 2. Railway Konfiguration
+
+Die **`railway.json`** ist bereits konfiguriert:
+
+```json
+{
+  "build": {
+    "builder": "DOCKERFILE"
+  }
+}
+```
+
+**Wichtig**: Dies sagt Railway explizit, dass das **Dockerfile** verwendet werden soll!
+
+### 3. Railway deployt automatisch
 
 Nach dem Push:
 1. ✅ Railway erkennt Dockerfile
