@@ -24,7 +24,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Flächen Frei</h3>
+            <Link href={language === 'de' ? '/de' : '/en'} className="hover:opacity-80 transition-opacity">
+              <h3 className="text-xl font-bold mb-4" data-testid="link-footer-home">Flächen Frei</h3>
+            </Link>
             <p className="text-sm text-primary-foreground/80 mb-4">
               {t.footer.companyDescription}
             </p>

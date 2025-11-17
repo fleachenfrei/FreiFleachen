@@ -23,12 +23,12 @@ export default function Home() {
 
   useEffect(() => {
     const title = language === 'de'
-      ? `Räumung Wien & Österreich | Flächen Frei - Schnell & Professionell ☎ ${CONTACT_INFO.phone}`
-      : `Clearing Services Vienna & Austria | Flächen Frei - Fast & Professional ☎ ${CONTACT_INFO.phone}`;
+      ? `Räumung Wien & Österreich | Flächen Frei ☎ ${CONTACT_INFO.phone}`
+      : `Clearing Vienna & Austria | Flächen Frei ☎ ${CONTACT_INFO.phone}`;
 
     const description = language === 'de'
-      ? 'Professionelle Räumung in Wien und ganz Österreich ✓ 26+ Jahre Erfahrung ✓ Faire Festpreise ✓ Kostenlose Besichtigung ✓ Schnelle Termine ✓ Besenreine Übergabe. Jetzt anrufen!'
-      : 'Professional clearing services in Vienna and throughout Austria ✓ 26+ years experience ✓ Fair fixed prices ✓ Free consultation ✓ Fast appointments ✓ Broom-clean handover. Call now!';
+      ? 'Professionelle Räumungsfirma in Wien & ganz Österreich ⭐ 26+ Jahre Erfahrung ⚡ Faire Festpreise ohne Überraschungen ✓ Kostenlose Besichtigung & Beratung vor Ort ✓ Schnelle Terminvergabe innerhalb 24h ✓ Besenreine Übergabe garantiert. Jetzt kostenlos Angebot einholen!'
+      : 'Professional clearing company in Vienna & throughout Austria ⭐ 26+ years experience ⚡ Fair fixed prices with no surprises ✓ Free on-site consultation ✓ Fast appointments within 24h ✓ Guaranteed broom-clean handover. Get your free quote now!';
 
     const keywords = language === 'de'
       ? 'Räumung Wien, Wohnungsräumung, Haushaltsauflösung, Kellerräumung, Räumung Österreich, Räumung Wien, Messie-Räumung, Verlassenschaftsräumung, Geschäftsräumung, Räumungsfirma Wien'
