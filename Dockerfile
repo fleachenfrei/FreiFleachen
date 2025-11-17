@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install ALL dependencies (including dev dependencies needed for build)
+# Install ALL dependencies
 RUN npm ci
 
 # Copy application code
@@ -16,8 +16,9 @@ COPY . .
 # Build the application (TypeScript → JavaScript)
 RUN npm run build
 
-# Remove dev dependencies after build (keeps image small)
-RUN npm prune --production
+# NOTE: We keep dev dependencies because esbuild bundles with --packages=external
+# and server/vite.ts has top-level imports of 'vite' package
+# This is needed even in production due to how the code is structured
 
 # Expose port 5000
 EXPOSE 5000
