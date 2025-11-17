@@ -8,15 +8,15 @@ interface RouteConfig {
 }
 
 export const routeMapping: Record<string, RouteConfig> = {
-  home: { de: '/', en: '/en' },
-  services: { de: '/leistungen', en: '/en/services' },
-  districts: { de: '/bezirke', en: '/en/districts' },
-  bundeslaender: { de: '/bundeslaender', en: '/en/federal-states' },
-  contact: { de: '/kontakt', en: '/en/contact' },
-  datenschutz: { de: '/datenschutz', en: '/en/privacy-policy' },
-  impressum: { de: '/impressum', en: '/en/imprint' },
-  agb: { de: '/agb', en: '/en/terms' },
-  faq: { de: '/faq', en: '/en/faq' },
+  home: { de: '/de', en: '/en' },
+  services: { de: '/de/leistungen', en: '/en/services' },
+  districts: { de: '/de/bezirke', en: '/en/districts' },
+  bundeslaender: { de: '/de/bundeslaender', en: '/en/federal-states' },
+  contact: { de: '/de/kontakt', en: '/en/contact' },
+  datenschutz: { de: '/de/datenschutz', en: '/en/privacy-policy' },
+  impressum: { de: '/de/impressum', en: '/en/imprint' },
+  agb: { de: '/de/agb', en: '/en/terms' },
+  faq: { de: '/de/faq', en: '/en/faq' },
 };
 
 const serviceSlugMap: Record<string, string> = {
@@ -57,7 +57,7 @@ const regionTypeToGerman: Record<string, string> = {
 
 export function getLocalizedPath(basePath: string, language: Language): string {
   if (basePath === '/' || basePath === '/de' || basePath === '/en') {
-    return language === 'de' ? '/' : '/en';
+    return language === 'de' ? '/de' : '/en';
   }
 
   const pathWithoutLang = basePath.replace(/^\/(de|en)/, '');

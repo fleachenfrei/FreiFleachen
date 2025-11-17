@@ -27,6 +27,22 @@ function Router() {
       <ScrollToTop />
       <Switch>
         <Route path="/" component={Home} />
+        
+        <Route path="/de" component={Home} />
+        <Route path="/de/bezirke" component={Districts} />
+        <Route path="/de/bezirke/:slug" component={DistrictPage} />
+        <Route path="/de/bundeslaender" component={Bundeslaender} />
+        <Route path="/de/bundeslaender/:bundesland/:city" component={CityPage} />
+        <Route path="/de/bundeslaender/:slug" component={BundeslandPage} />
+        <Route path="/de/leistungen" component={Services} />
+        <Route path="/de/leistungen/:serviceSlug/:regionType/:regionSlug" component={ServiceRegionPage} />
+        <Route path="/de/leistungen/:slug" component={ServicePage} />
+        <Route path="/de/kontakt" component={Contact} />
+        <Route path="/de/datenschutz" component={Datenschutz} />
+        <Route path="/de/impressum" component={Impressum} />
+        <Route path="/de/agb" component={AGB} />
+        <Route path="/de/faq" component={FAQ} />
+        
         <Route path="/bezirke" component={Districts} />
         <Route path="/bezirke/:slug" component={DistrictPage} />
         <Route path="/bundeslaender" component={Bundeslaender} />
