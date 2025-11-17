@@ -5,6 +5,9 @@ import { setupVite, serveStatic, log } from "./vite";
 
 const app = express();
 
+// Remove X-Powered-By header for security and performance
+app.disable('x-powered-by');
+
 // Enable gzip/brotli compression for all responses (HIGH PRIORITY - before all middleware)
 // This reduces HTML payload by 25-40% and saves 60-90ms transfer time
 app.use(compression({
