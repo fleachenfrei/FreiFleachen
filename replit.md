@@ -147,8 +147,21 @@ Preferred communication style: Simple, everyday language.
 - **Hero:** Reduced mobile padding (py-8) to compensate for larger header
 - **Colors:** Yellow primary (#F5C518), professional dark theme
 
-### Recent Changes (Latest Session)
-- **Date:** November 16, 2025
+### Recent Changes
+
+#### Session: November 19, 2025 - Complete Terminology Cleanup
+- **CRITICAL Business Requirement:** Remove all "Entsorgung" (disposal) terminology - company does NOT offer disposal services
+- **Service Renamed:** SPERRMULLENTSORGUNG → SPERRMULLABHOLUNG (bulky waste disposal → bulky waste collection)
+- **German Replacements:** "Entsorgung" → "Verwertung"/"Räumung"/"Abholung" (recycling/clearing/collection)
+- **English Replacements:** "disposal"/"dispose" → "recycling"/"collection"/"processing"
+- **URLs Updated:** 
+  - DE: `/leistungen/sperrmullentsorgung` → `/leistungen/sperrmullabholung`
+  - EN: `/services/bulky-waste-disposal` → `/services/bulky-waste-collection`
+- **Files Changed:** 10+ files including services.ts, states.ts, districts.ts, AGB.tsx, FAQ.tsx, index.html, i18n.ts, SEOContent.tsx, sitemap.xml, indexnow.ts
+- **Verification:** grep count = 0 for forbidden terms (excluding image filenames), E2E tests confirm all user-visible content cleaned
+- **SEO Preserved:** 1175 words static content, 8 H2 tags, optimized meta tags all intact
+
+#### Session: November 16, 2025 - Railway Deployment Fix
 - **Critical Fix:** Added `nixpacks.toml` to fix Railway deployment failure
   - Railway was using Node.js 18.20.5 (default)
   - Code requires Node.js 20.11+ for `import.meta.dirname` support
