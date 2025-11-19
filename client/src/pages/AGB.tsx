@@ -188,14 +188,14 @@ export default function AGB() {
           </p>
           <ul className="list-disc list-inside mb-4 space-y-1">
             <li>Disassembly of furniture and fixtures (if agreed)</li>
-            <li>Removal of all items to be disposed of</li>
-            <li>Professional disposal in accordance with applicable regulations</li>
+            <li>Removal of all items to be processed</li>
+            <li>Professional recycling in accordance with applicable regulations</li>
             <li>Broom-clean handover of the premises</li>
           </ul>
 
           <h3 className="text-xl font-semibold mb-3">3.2 Valuables and Special Services</h3>
           <p className="mb-4">
-            Recyclable items can be deducted from the order value by agreement. Special services such as specific disposals or additional cleaning work are charged separately.
+            Recyclable items can be deducted from the order value by agreement. Special services such as specific processing or additional cleaning work are charged separately.
           </p>
         </section>
 

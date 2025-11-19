@@ -170,7 +170,7 @@ export default function Impressum() {
 
         <section>
           <h2 className="text-2xl font-semibold mb-4">Business Purpose</h2>
-          <p className="mb-2">Clearing and disposal services, transport</p>
+          <p className="mb-2">Clearing and removal services, transport</p>
         </section>
 
         <section>

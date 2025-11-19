@@ -168,7 +168,7 @@ export async function submitSitemapToIndexNow(): Promise<IndexNowResponse> {
     `${baseUrl}/en/services/attic-clearing`,
     `${baseUrl}/en/services/office-clearing`,
     `${baseUrl}/en/services/hoarding-clearing`,
-    `${baseUrl}/en/services/bulky-waste-disposal`,
+    `${baseUrl}/en/services/bulky-waste-collection`,
     `${baseUrl}/en/services/moving-service`,
     `${baseUrl}/en/services/garage-clearing`,
     `${baseUrl}/en/services/office-dissolution`,

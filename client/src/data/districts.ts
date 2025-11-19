@@ -472,7 +472,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       },
       {
         question: 'What happens to the cleared items?',
-        answer: 'We dispose of items professionally and donate usable items to social institutions.',
+        answer: 'We recycle items professionally and donate usable items to social institutions.',
       },
     ],
   },
@@ -561,8 +561,8 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Yes, we offer flexible working hours to meet your needs.',
       },
       {
-        question: 'How do you dispose in the city?',
-        answer: 'We have direct access to disposal facilities and work efficiently.',
+        question: 'How do you process in the city?',
+        answer: 'We have direct access to recycling facilities and work efficiently.',
       },
     ],
   },
@@ -805,7 +805,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Fast processing',
       'Experience with medical facilities',
       'Flexible appointments',
-      'Professional disposal',
+      'Professional recycling',
     ],
     faq: [
       {
@@ -828,7 +828,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       },
       {
         question: 'Can you also clear medical practices?',
-        answer: 'Yes, we have experience with medical facilities and dispose of items professionally.',
+        answer: 'Yes, we have experience with medical facilities and process items professionally.',
       },
       {
         question: 'How quickly can you come?',
@@ -936,7 +936,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     metaDescription: 'Räumung 1110 Wien Simmering ✓ Simmeringer Hauptstraße ✓ Schnell & zuverlässig. Kostenlose Beratung ☎ +43660 39 57 587',
     metaDescriptionEn: 'Clearing 1110 Vienna Simmering ✓ Simmeringer Hauptstraße ✓ Fast & Reliable. Free Consultation ☎ +43660 39 57 587',
     shortSummary: 'Gewerbeobjekt-Räumung im 11. Bezirk. Lagerhallen, Industrie mit Erfahrung und großer Verwertungskapazität.',
-    shortSummaryEn: 'Commercial property clearing in the 11th district. Warehouses, industry with experience and large disposal capacity.',
+    shortSummaryEn: 'Commercial property clearing in the 11th district. Warehouses, industry with experience and large recycling capacity.',
     landmarks: ['Simmeringer Hauptstraße', 'Zentralfriedhof', 'Gasometer', 'Haidepark'],
     landmarksEn: ['Simmeringer Hauptstraße', 'Central Cemetery', 'Gasometer', 'Haidepark'],
     neighborhoods: ['Simmering', 'Kaiserebersdorf', 'Albern', 'Schwechat'],
@@ -982,7 +982,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     ],
     whyChooseUsEn: [
       'Experience with commercial properties',
-      'Large disposal capacity',
+      'Large recycling capacity',
       'Flexible working hours',
       'Professional processing',
       'Fair prices for large properties',
@@ -1011,8 +1011,8 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'For commercial properties, we can offer flexible working hours, including nights.',
       },
       {
-        question: 'How do you dispose of large quantities?',
-        answer: 'We have direct partnerships with disposal companies for large volumes.',
+        question: 'How do you process large quantities?',
+        answer: 'We have direct partnerships with recycling companies for large volumes.',
       },
     ],
   },
@@ -1255,7 +1255,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Experience with gardens and outdoor spaces',
       'Flexible access',
       'Fair prices',
-      'Environmentally conscious disposal',
+      'Environmentally conscious recycling',
     ],
     faq: [
       {
@@ -1281,8 +1281,8 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
         answer: 'Yes, we cover the entire 14th district, including outlying areas.',
       },
       {
-        question: 'How do you dispose of garden waste?',
-        answer: 'We dispose of garden waste professionally through specialized disposal companies.',
+        question: 'How do you process garden waste?',
+        answer: 'We recycle garden waste professionally through specialized recycling companies.',
       },
     ],
   },
@@ -1524,7 +1524,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Knowledge of hillside locations',
       'Experience with gardens',
       'Reliable access',
-      'Environmentally conscious disposal',
+      'Environmentally conscious recycling',
       'Fair prices',
     ],
     faq: [
@@ -1552,7 +1552,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       },
       {
         question: 'How do you handle garden equipment?',
-        answer: 'We dispose of items professionally or can treat usable equipment separately upon request.',
+        answer: 'We recycle items professionally or can treat usable equipment separately upon request.',
       },
     ],
   },

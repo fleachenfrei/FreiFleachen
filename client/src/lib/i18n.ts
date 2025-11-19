@@ -537,7 +537,7 @@ export const translations = {
         },
         {
           question: 'What happens to my furniture and belongings?',
-          answer: 'We dispose of all items professionally and in an environmentally friendly manner. We can also purchase valuable items upon request. Recyclable materials are separated and recycled accordingly.'
+          answer: 'We process all items professionally and in an environmentally friendly manner. We can also purchase valuable items upon request. Recyclable materials are separated and recycled accordingly.'
         },
         {
           question: 'In which areas do you operate?',

@@ -157,7 +157,7 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'Basement clearing',
           'Decluttering',
           'Furniture transport',
-          'Disposal',
+          'Recycling',
           'Estate clearing',
           'Commercial clearing'
         ],
@@ -259,7 +259,7 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
             'name': language === 'de' ? 'Haushaltsauflösung' : 'Household Dissolution',
             'description': language === 'de'
               ? 'Komplette Auflösung von Haushalten mit Transport und Verwertung'
-              : 'Complete dissolution of households with transport and disposal',
+              : 'Complete dissolution of households with transport and recycling',
           },
         },
         {

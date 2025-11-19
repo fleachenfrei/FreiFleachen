@@ -118,7 +118,7 @@ export const servicesData: ServiceEntry[] = [
           'Complete clearing from basement to attic',
           'Heritage buildings without elevator up to 5th floor',
           'Guaranteed broom-clean handover',
-          'Professional disposal and recycling',
+          'Professional recycling and recycling',
           'Discreet execution in Vienna and throughout Austria',
           'Fixed price after free inspection',
         ],
@@ -141,14 +141,14 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 4,
             title: 'Broom-Clean Handover',
-            description: 'We hand over your apartment broom-clean and dispose of everything professionally through certified partners.',
+            description: 'We hand over your apartment broom-clean and recycle of everything professionally through certified partners.',
           },
         ],
         pricing: {
           info: 'The cost of apartment clearing depends on several factors. After a free inspection, we provide a transparent fixed price.',
           factors: [
             'Apartment size (m² and number of rooms)',
-            'Quantity and type of items to be disposed',
+            'Quantity and type of items to be processed',
             'Floor level and availability of elevator',
             'Building access options',
             'Special requirements (e.g., hoarding situations, bulky waste)',
@@ -169,7 +169,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'What happens to my furniture and belongings?',
-            answer: 'Usable furniture and items are donated to social organizations. Damaged furniture is professionally recycled. Hazardous waste is disposed of through certified specialists. You receive disposal certificates upon request.',
+            answer: 'Usable furniture and items are donated to social organizations. Damaged furniture is professionally recycled. Hazardous waste is recycled through certified specialists. You receive recycling certificates upon request.',
           },
         ],
       },
@@ -276,7 +276,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 4,
             title: 'Professional Utilization',
-            description: 'Usable items are donated to social organizations. The rest is disposed of in an environmentally friendly manner.',
+            description: 'Usable items are donated to social organizations. The rest is recycled in an environmentally friendly manner.',
           },
         ],
         pricing: {
@@ -286,7 +286,7 @@ export const servicesData: ServiceEntry[] = [
             'Presence of usable items',
             'Time required for sorting',
             'Floor level and elevator availability',
-            'Disposal effort required',
+            'Processing effort required',
           ],
         },
         faq: [
@@ -381,12 +381,12 @@ export const servicesData: ServiceEntry[] = [
       },
       en: {
         name: 'Basement Clearing',
-        shortDescription: 'Professional basement clearing in Vienna and surroundings - we completely clear your basement and dispose of everything properly.',
+        shortDescription: 'Professional basement clearing in Vienna and surroundings - we completely clear your basement and recycle of everything properly.',
         description: 'Is your basement full and you want to create space again? We completely clear your basement - from old furniture to clutter and bulky waste. Even under difficult conditions like narrow stairs or no elevator, we work professionally and reliably throughout Austria.',
-        metaDescription: 'Basement Clearing Vienna & Austria ✓ Even Narrow Stairs ✓ Complete Disposal ✓ Fixed Price ✓ Professional Service ☎ +43660 39 57 587',
+        metaDescription: 'Basement Clearing Vienna & Austria ✓ Even Narrow Stairs ✓ Complete Clearing ✓ Fixed Price ✓ Professional Service ☎ +43660 39 57 587',
         benefits: [
           'Complete clearing even of heavily cluttered basements',
-          'Disposal of bulky waste and clutter',
+          'Collection of bulky waste and clutter',
           'Works with narrow stairs and no elevator',
           'Broom-clean handover',
           'Short-notice appointments available',
@@ -410,18 +410,18 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Professional Disposal',
-            description: 'We dispose of everything properly and hand over your basement broom-clean.',
+            title: 'Professional Recycling',
+            description: 'We recycle everything properly and hand over your basement broom-clean.',
           },
         ],
         pricing: {
           info: 'The cost of basement clearing depends on scope. After free inspection, you receive a transparent fixed price.',
           factors: [
             'Size and fill level of basement',
-            'Type of items to be disposed',
+            'Type of items to be processed',
             'Accessibility (stairs, corridors)',
             'Distance to transport vehicle',
-            'Special disposal requirements',
+            'Special recycling requirements',
           ],
         },
         faq: [
@@ -439,7 +439,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'What happens to old chemicals in the basement?',
-            answer: 'Old paints, varnishes, and chemicals are disposed of as hazardous waste through certified specialists. This disposal is billed separately and carried out fully according to regulations.',
+            answer: 'Old paints, varnishes, and chemicals are recycled as hazardous waste through certified specialists. This recycling is billed separately and carried out fully according to regulations.',
           },
         ],
       },
@@ -522,7 +522,7 @@ export const servicesData: ServiceEntry[] = [
         benefits: [
           'Clearing even with difficult attic access',
           'Safe transport over steep stairs',
-          'Disposal of clutter and bulky waste',
+          'Collection of clutter and bulky waste',
           'Broom-clean handover',
           'Experience with heritage building attics',
           'Fixed price after inspection',
@@ -545,8 +545,8 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Professional Disposal',
-            description: 'We dispose of everything properly and leave a broom-clean attic.',
+            title: 'Professional Recycling',
+            description: 'We recycle everything properly and leave a broom-clean attic.',
           },
         ],
         pricing: {
@@ -574,7 +574,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'What happens to old wooden beams and building materials?',
-            answer: 'Old wood is properly disposed of or recycled. Building materials are separately disposed of. If we suspect hazardous materials (e.g., asbestos), we inform you immediately.',
+            answer: 'Old wood is properly recycled or recycled. Building materials are separately recycled. If we suspect hazardous materials (e.g., asbestos), we inform you immediately.',
           },
         ],
       },
@@ -658,7 +658,7 @@ export const servicesData: ServiceEntry[] = [
           'Clearing of all business types and commercial spaces',
           'On-schedule execution (including weekends)',
           'Discreet handling',
-          'Disposal of store fixtures and inventory',
+          'Collection of store fixtures and inventory',
           'Broom-clean handover',
           'Fixed price after inspection',
         ],
@@ -690,7 +690,7 @@ export const servicesData: ServiceEntry[] = [
             'Size of business space',
             'Type and quantity of fixtures',
             'Time window and urgency',
-            'Disposal effort',
+            'Processing effort',
             'Special requirements (dismantling, etc.)',
           ],
         },
@@ -705,7 +705,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'What happens to store fixtures?',
-            answer: 'We try to sell usable store fixtures - this reduces your costs. Non-usable parts are professionally disposed of or recycled.',
+            answer: 'We try to sell usable store fixtures - this reduces your costs. Non-usable parts are professionally recycled or recycled.',
           },
           {
             question: 'How discreet is commercial clearing?',
@@ -852,7 +852,7 @@ export const servicesData: ServiceEntry[] = [
   },
   {
     id: ServiceId.SPERRMULLABHOLUNG,
-    slugs: { de: 'sperrmullabholung', en: 'bulky-waste-disposal' },
+    slugs: { de: 'sperrmullabholung', en: 'bulky-waste-collection' },
     relatedServices: [ServiceId.CONTAINERSERVICE, ServiceId.WOHNUNGSRAEUMUNG, ServiceId.KELLERRAEUMUNG],
     content: {
       de: {
@@ -920,13 +920,13 @@ export const servicesData: ServiceEntry[] = [
         ],
       },
       en: {
-        name: 'Bulky Waste Disposal',
-        shortDescription: 'Professional bulky waste disposal in Vienna and throughout Austria - fast, reliable, and environmentally friendly.',
-        description: 'Need to dispose of bulky waste? We collect your bulky waste and dispose of it properly. From individual furniture pieces to larger quantities - fast, reliable, and environmentally conscious throughout Austria.',
-        metaDescription: 'Bulky Waste Disposal Vienna & Austria ✓ Fast Collection ✓ Environmentally Friendly ✓ Fair Prices ✓ Same-Day Service ☎ +43660 39 57 587',
+        name: 'Bulky Waste Collection',
+        shortDescription: 'Professional bulky waste collection in Vienna and throughout Austria - fast, reliable, and environmentally friendly.',
+        description: 'Need bulky waste collected? We collect your bulky waste and recycle it properly. From individual furniture pieces to larger quantities - fast, reliable, and environmentally conscious throughout Austria.',
+        metaDescription: 'Bulky Waste Collection Vienna & Austria ✓ Fast Collection ✓ Environmentally Friendly ✓ Fair Prices ✓ Same-Day Service ☎ +43660 39 57 587',
         benefits: [
           'Fast collection often the next day',
-          'Disposal of furniture and electrical appliances',
+          'Collection of furniture and electrical appliances',
           'Environmentally friendly recycling',
           'Large quantities no problem',
           'Fixed price after inspection',
@@ -941,7 +941,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 2,
             title: 'Price Quote',
-            description: 'We create a transparent fixed-price offer for collection and disposal.',
+            description: 'We create a transparent fixed-price offer for collection and recycling.',
           },
           {
             step: 3,
@@ -950,8 +950,8 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Professional Disposal',
-            description: 'We dispose of everything environmentally and recycle usable parts.',
+            title: 'Professional Recycling',
+            description: 'We recycle everything environmentally and recycle usable parts.',
           },
         ],
         pricing: {
@@ -960,13 +960,13 @@ export const servicesData: ServiceEntry[] = [
             'Type and quantity of bulky waste',
             'Floor level and elevator availability',
             'Number of helpers needed',
-            'Disposal costs',
+            'Collection costs',
             'Distance',
           ],
         },
         faq: [
           {
-            question: 'How much does bulky waste disposal cost?',
+            question: 'How much does bulky waste collection cost?',
             answer: 'A sofa or wardrobe costs from €80, a complete bedroom set from €200. Price depends on size, weight, and floor level. After description, you receive an exact fixed price.',
           },
           {
@@ -1193,10 +1193,10 @@ export const servicesData: ServiceEntry[] = [
         name: 'Garage Clearing',
         shortDescription: 'Professional clearing of garages, carports, and parking spaces in Vienna and throughout Austria.',
         description: 'Is your garage cluttered and you need space for your car again? We completely clear garages, carports, and parking spaces - from old car tires and tools to years of accumulated clutter throughout Austria.',
-        metaDescription: 'Garage Clearing Vienna & Austria ✓ Carports & Parking Spaces ✓ Fast Service ✓ Fixed Price ✓ Professional Disposal ☎ +43660 39 57 587',
+        metaDescription: 'Garage Clearing Vienna & Austria ✓ Carports & Parking Spaces ✓ Fast Service ✓ Fixed Price ✓ Professional Recycling ☎ +43660 39 57 587',
         benefits: [
           'Complete clearing of garages and carports',
-          'Disposal of car tires and waste oil',
+          'Collection of car tires and waste oil',
           'Large quantities no problem',
           'Fast service',
           'Broom-clean handover',
@@ -1216,7 +1216,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 3,
             title: 'Professional Clearing',
-            description: 'We completely clear your garage - including proper disposal of hazardous waste.',
+            description: 'We completely clear your garage - including proper recycling of hazardous waste.',
           },
           {
             step: 4,
@@ -1231,7 +1231,7 @@ export const servicesData: ServiceEntry[] = [
             'Fill level and type of items',
             'Hazardous waste (tires, oil, chemicals)',
             'Accessibility',
-            'Disposal effort',
+            'Processing effort',
           ],
         },
         faq: [
@@ -1241,7 +1241,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'How do you handle car tires and waste oil?',
-            answer: 'We properly dispose of car tires and waste oil through certified specialists. Disposal costs are included in the fixed price.',
+            answer: 'We properly recycle of car tires and waste oil through certified specialists. Collection costs are included in the fixed price.',
           },
           {
             question: 'Can you also transport tools and machinery?',
@@ -1327,11 +1327,11 @@ export const servicesData: ServiceEntry[] = [
       en: {
         name: 'Office Dissolution',
         shortDescription: 'Professional dissolution of offices and practices in Vienna and throughout Austria - discreet and on schedule.',
-        description: 'Dissolving your office or practice? We handle the complete office dissolution - from furniture disassembly to proper IT equipment disposal. Discreet, professional, and on schedule throughout Austria.',
-        metaDescription: 'Office Dissolution Vienna & Austria ✓ IT Disposal ✓ Discreet ✓ On Schedule ✓ Fixed Price ✓ Data Protection ☎ +43660 39 57 587',
+        description: 'Dissolving your office or practice? We handle the complete office dissolution - from furniture disassembly to proper IT equipment recycling. Discreet, professional, and on schedule throughout Austria.',
+        metaDescription: 'Office Dissolution Vienna & Austria ✓ IT Recycling ✓ Discreet ✓ On Schedule ✓ Fixed Price ✓ Data Protection ☎ +43660 39 57 587',
         benefits: [
           'Complete office dissolution A to Z',
-          'Professional IT and data carrier disposal',
+          'Professional IT and data carrier recycling',
           'Office furniture disassembly',
           'Discreet handling',
           'On-schedule execution',
@@ -1351,7 +1351,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 3,
             title: 'Professional Dissolution',
-            description: 'We disassemble, clear, and properly dispose of everything - including IT equipment.',
+            description: 'We disassemble, clear, and properly recycle of everything - including IT equipment.',
           },
           {
             step: 4,
@@ -1366,7 +1366,7 @@ export const servicesData: ServiceEntry[] = [
             'Number and type of office furniture',
             'Amount of IT equipment',
             'Time window and urgency',
-            'Special disposal requirements',
+            'Special recycling requirements',
           ],
         },
         faq: [
@@ -1375,8 +1375,8 @@ export const servicesData: ServiceEntry[] = [
             answer: 'A small office (30m²) costs from €1,000, larger office spaces from €2,500. The exact price depends on furniture and IT equipment. After inspection, you receive a detailed quote.',
           },
           {
-            question: 'How are data carriers disposed of?',
-            answer: 'Hard drives and data carriers are destroyed according to data protection regulations. Upon request, you receive disposal certificates for proper destruction.',
+            question: 'How are data carriers recycled?',
+            answer: 'Hard drives and data carriers are destroyed according to data protection regulations. Upon request, you receive recycling certificates for proper destruction.',
           },
           {
             question: 'Can you work on weekends?',
@@ -1384,7 +1384,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'What happens to office furniture?',
-            answer: 'We try to sell high-quality office furniture - this reduces your costs. Non-usable furniture is professionally disposed of or recycled.',
+            answer: 'We try to sell high-quality office furniture - this reduces your costs. Non-usable furniture is professionally recycled or recycled.',
           },
         ],
       },
@@ -1501,7 +1501,7 @@ export const servicesData: ServiceEntry[] = [
             'Scope of estate',
             'Presence of usable items',
             'Time required for sorting',
-            'Disposal effort',
+            'Processing effort',
           ],
         },
         faq: [
@@ -1597,13 +1597,13 @@ export const servicesData: ServiceEntry[] = [
       en: {
         name: 'Container Service',
         shortDescription: 'Professional container service in Vienna and throughout Austria - from 3m³ to 10m³ for all waste types.',
-        description: 'Need a container for your renovation or construction site? We deliver containers in various sizes (3-10m³) for construction debris, wood, or mixed waste. With collection, disposal, and optional permit service throughout Austria.',
-        metaDescription: 'Container Service Vienna & Austria ✓ 3-10m³ Containers ✓ Construction & Mixed Waste ✓ Incl. Disposal ✓ Fast Delivery ☎ +43660 39 57 587',
+        description: 'Need a container for your renovation or construction site? We deliver containers in various sizes (3-10m³) for construction debris, wood, or mixed waste. With collection, recycling, and optional permit service throughout Austria.',
+        metaDescription: 'Container Service Vienna & Austria ✓ 3-10m³ Containers ✓ Construction & Mixed Waste ✓ Incl. Recycling ✓ Fast Delivery ☎ +43660 39 57 587',
         benefits: [
           'Containers in various sizes (3-10m³)',
           'For all waste types (construction debris, wood, mixed waste)',
           'Fast delivery and collection',
-          'Including professional disposal',
+          'Including professional recycling',
           'Help with street permits',
           'Transparent fixed prices',
         ],
@@ -1625,8 +1625,8 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Collection & Disposal',
-            description: 'After your notification, we collect the container and dispose of contents properly.',
+            title: 'Collection & Recycling',
+            description: 'After your notification, we collect the container and recycle contents properly.',
           },
         ],
         pricing: {
@@ -1642,7 +1642,7 @@ export const servicesData: ServiceEntry[] = [
         faq: [
           {
             question: 'How much does a container cost?',
-            answer: 'A 3m³ container for construction debris costs from €180 (incl. delivery, collection, disposal, 7 days rental). A 7m³ container from €350. Mixed waste is more expensive than sorted construction debris. Fixed price in quote.',
+            answer: 'A 3m³ container for construction debris costs from €180 (incl. delivery, collection, recycling, 7 days rental). A 7m³ container from €350. Mixed waste is more expensive than sorted construction debris. Fixed price in quote.',
           },
           {
             question: 'What container size do I need?',

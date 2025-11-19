@@ -75,7 +75,7 @@ export default function FAQ() {
   const faqsEN: FAQItem[] = [
     {
       question: 'How much does a clearing service cost?',
-      answer: 'The cost of clearing depends on various factors: size of the area to be cleared, amount of inventory, floor without elevator, disposal effort, and potential value of items. We offer a free on-site inspection and then provide you with a transparent fixed-price quote. This gives you full cost control with no hidden fees.'
+      answer: 'The cost of clearing depends on various factors: size of the area to be cleared, amount of inventory, floor without elevator, processing effort, and potential value of items. We offer a free on-site inspection and then provide you with a transparent fixed-price quote. This gives you full cost control with no hidden fees.'
     },
     {
       question: 'How quickly can you start the clearing?',
@@ -87,14 +87,14 @@ export default function FAQ() {
     },
     {
       question: 'What happens to the cleared items?',
-      answer: 'We dispose of all items professionally and environmentally consciously in accordance with Austrian regulations. Recyclable materials are recycled. Valuable or still usable items can be deducted from the order value by agreement. Special waste and hazardous materials are properly disposed of at the responsible facilities.'
+      answer: 'We process all items professionally and environmentally consciously in accordance with Austrian regulations. Recyclable materials are recycled. Valuable or still usable items can be deducted from the order value by agreement. Special waste and hazardous materials are properly processed at the appropriate facilities.'
     },
     {
       question: 'Do you also offer clearance of basements and attics?',
       answer: 'Yes, we clear basements, attics, garages, and all other spaces. Even winding or hard-to-reach areas are no problem for our experienced team. We have the necessary equipment and experience to work professionally even in narrow stairwells or difficult access conditions.'
     },
     {
-      question: 'Can you also dismantle and dispose of furniture?',
+      question: 'Can you also dismantle and remove furniture?',
       answer: 'Of course! Dismantling furniture, fitted kitchens, built-in wardrobes, and other permanently installed items is part of our service. We bring the necessary tools and carry out the dismantling professionally so that no damage occurs to the building structure.'
     },
     {

@@ -132,14 +132,14 @@ export default function SEOContent() {
                 <p>
                   Whether apartment clearing in Vienna, basement clearing in Lower Austria, or commercial clearing in Graz – we offer customized 
                   solutions for every clearing need. Our services include complete clearing of apartments, houses, basements, attics, garages, 
-                  and commercial spaces. We place great emphasis on proper and environmentally friendly disposal of all items. Valuable furniture 
+                  and commercial spaces. We place great emphasis on proper and environmentally friendly recycling of all items. Valuable furniture 
                   and antiques can also be purchased upon request.
                 </p>
 
                 <p>
                   We approach estate clearings with the utmost sensitivity and discretion. We understand how emotionally challenging the dissolution 
                   of a household after a death can be and support you compassionately through this difficult process. Our team works respectfully 
-                  with your memorabilia and ensures that everything is properly sorted and disposed of.
+                  with your memorabilia and ensures that everything is properly sorted and processed.
                 </p>
 
                 <h3 className="text-2xl font-semibold text-foreground mt-8 mb-4">

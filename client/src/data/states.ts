@@ -34,12 +34,12 @@ export const states: State[] = [
     detailedIntro: 'Wien, die Bundeshauptstadt Österreichs, stellt besondere Anforderungen an Räumungs- und Räumungsdienste. Mit über 1,9 Millionen Einwohnern und einer Vielzahl von Altbauwohnungen, modernen Gebäuden und historischen Immobilien benötigen Sie einen Partner, der sowohl Erfahrung als auch lokales Know-how mitbringt. Flächen Frei ist seit vielen Jahren in allen 23 Wiener Bezirken tätig und kennt die spezifischen Herausforderungen der Bundeshauptstadt. Ob enge Stiegenhäuser in Gründerzeithäusern, Parkplatzmangel in dicht bebauten Innenbezirken oder zeitkritische Räumungen - unser erfahrenes Team meistert jede Situation professionell und effizient.',
     detailedIntroEn: 'Vienna, Austria\'s federal capital, presents unique challenges for clearing and removal services. With over 1.9 million inhabitants and numerous historic buildings, modern structures, and period properties, you need a partner with both experience and local expertise. Flächen Frei has been operating in all 23 Vienna districts for many years and understands the specific challenges of the capital. Whether narrow stairwells in historic buildings, parking shortages in densely built inner districts, or time-critical clearances - our experienced team handles every situation professionally and efficiently.',
     metaDescription: 'Räumung Wien - Schnelle & professionelle Räumung in allen 23 Bezirken. Kostenlose Besichtigung ✓ Faire Preise ✓ Räumung inklusive.',
-    metaDescriptionEn: 'Clearing Services Vienna - Fast & professional removal in all 23 districts. Free consultation ✓ Fair prices ✓ Disposal included.',
+    metaDescriptionEn: 'Clearing Services Vienna - Fast & professional removal in all 23 districts. Free consultation ✓ Fair prices ✓ Clearing included.',
     features: [
       'Alle 23 Wiener Bezirke',
       'Same-Day Service verfügbar',
       'Lokales Team mit Wiener Expertise',
-      'Räumung, Transport Räumung, Transport Transport Transport & Entsorgung Verwertung Verwertung Verwertung',
+      'Räumung, Transport & Verwertung',
       'Erfahrung mit Altbauwohnungen',
       'Flexible Parklösungen',
     ],
@@ -47,7 +47,7 @@ export const states: State[] = [
       'All 23 Vienna districts',
       'Same-day service available',
       'Local team with Vienna expertise',
-      'Clearing, transport & disposal',
+      'Clearing, transport & recycling',
       'Experience with historic buildings',
       'Flexible parking solutions',
     ],
@@ -203,10 +203,10 @@ export const states: State[] = [
       'Short travel times from Vienna',
       'Experience with rural and urban properties',
       'Specialization in farm clearances and agricultural buildings',
-      'Knowledge of regional disposal facilities',
+      'Knowledge of regional recycling facilities',
       'Flexible scheduling including weekends',
       'Fair mileage rates without surcharges',
-      'Cooperation with local disposal companies',
+      'Cooperation with local recycling companies',
     ],
     faqs: [
       {
@@ -260,7 +260,7 @@ export const states: State[] = [
     description: 'Professionelle Räumung und Räumung in Oberösterreich. Linz, Wels, Steyr und Umgebung - schneller Service in der gesamten Region.',
     descriptionEn: 'Professional clearing and removal in Upper Austria. Linz, Wels, Steyr and surroundings - fast service throughout the region.',
     detailedIntro: 'Oberösterreich ist das wirtschaftliche Herzstück Österreichs mit einer Mischung aus Industriestandorten, historischen Städten und ländlichen Regionen. Von der Landeshauptstadt Linz über die Industriestadt Steyr bis zu den malerischen Gemeinden im Salzkammergut - Flächen Frei bietet professionelle Räumungsdienste in ganz Oberösterreich an. Unser erfahrenes Team kennt die spezifischen Anforderungen der Region, sei es die Räumung von Produktionshallen in Industriegebieten, die Räumung von Einfamilienhäusern in Wels oder die behutsame Auflösung von Wohnungen in historischen Gebäuden in Steyr. Wir arbeiten eng mit lokalen Verwertungsbetrieben zusammen und sorgen für eine umweltgerechte Verwertung aller Materialien.',
-    detailedIntroEn: 'Upper Austria is Austria\'s economic heartland with a mix of industrial sites, historic cities, and rural regions. From the capital Linz via the industrial city Steyr to picturesque municipalities in the Salzkammergut - Flächen Frei offers professional clearing services throughout Upper Austria. Our experienced team knows the region\'s specific requirements, whether clearing production halls in industrial areas, clearing single-family homes in Wels, or carefully dissolving apartments in historic buildings in Steyr. We work closely with local disposal companies and ensure environmentally sound recycling of all materials.',
+    detailedIntroEn: 'Upper Austria is Austria\'s economic heartland with a mix of industrial sites, historic cities, and rural regions. From the capital Linz via the industrial city Steyr to picturesque municipalities in the Salzkammergut - Flächen Frei offers professional clearing services throughout Upper Austria. Our experienced team knows the region\'s specific requirements, whether clearing production halls in industrial areas, clearing single-family homes in Wels, or carefully dissolving apartments in historic buildings in Steyr. We work closely with local recycling companies and ensure environmentally sound recycling of all materials.',
     metaDescription: 'Räumung Oberösterreich - Räumung in Linz, Wels, Steyr ✓ Kostenlose Besichtigung ✓ Faire Preise ✓ Professionelles Team.',
     metaDescriptionEn: 'Clearing Upper Austria - Removal in Linz, Wels, Steyr ✓ Free consultation ✓ Fair prices ✓ Professional team.',
     features: [
@@ -275,7 +275,7 @@ export const states: State[] = [
       'Linz, Wels, Steyr and surroundings',
       'Industrial and residential properties',
       'Experienced clearing team',
-      'Complete service with disposal',
+      'Complete service with recycling',
       'Commercial clearances',
       'Production halls',
     ],
@@ -321,7 +321,7 @@ export const states: State[] = [
       'Comprehensive experience throughout Upper Austria',
       'Specialization in commercial and industrial properties',
       'Quick processing of large projects',
-      'Cooperation with local disposal companies',
+      'Cooperation with local recycling companies',
       'Experience with listed buildings',
       'Flexible working hours including nights and weekends',
       'Professional project planning for large orders',
@@ -363,8 +363,8 @@ export const states: State[] = [
         answer: 'Of course! We cover all of Upper Austria, including the entire Salzkammergut region.'
       },
       {
-        question: 'What happens to the disposed materials?',
-        answer: 'We work with certified disposal companies and ensure environmentally sound recycling and disposal.'
+        question: 'What happens to the processed materials?',
+        answer: 'We work with certified recycling companies and ensure environmentally sound recycling and utilization.'
       },
       {
         question: 'Can you also work at night?',
@@ -439,7 +439,7 @@ export const states: State[] = [
       'Flexible scheduling in the low season',
       'Quick processing between guest changes',
       'Cooperation with local authorities and property managements',
-      'Environmentally sound disposal according to Salzburg standards',
+      'Environmentally sound recycling according to Salzburg standards',
       'Discreet and respectful approach',
     ],
     faqs: [
@@ -557,7 +557,7 @@ export const states: State[] = [
       'Flexible scheduling in low and high season',
       'Cooperation with cable cars and alpine hut operators',
       'Knowledge of local conditions and challenges',
-      'Environmentally sound disposal according to alpine standards',
+      'Environmentally sound recycling according to alpine standards',
     ],
     faqs: [
       {
@@ -674,7 +674,7 @@ export const states: State[] = [
       'Experience with commercial properties and industrial operations',
       'Specialization in Lake Constance properties',
       'Flexible appointments even at short notice',
-      'Cooperation with local disposal companies',
+      'Cooperation with local recycling companies',
       'Knowledge of Vorarlberg construction and peculiarities',
       'Discreet and professional service',
     ],
@@ -789,7 +789,7 @@ export const states: State[] = [
       'Knowledge of lake regions and their peculiarities',
       'Flexible appointments between high and low season',
       'Discreet service for exclusive lakeside properties',
-      'Cooperation with local disposal companies',
+      'Cooperation with local recycling companies',
       'Experience with historic villas and modern hotels',
       'Fast response times throughout the state',
     ],
@@ -845,7 +845,7 @@ export const states: State[] = [
     description: 'Räumung und Räumung in der Steiermark. Graz und Umgebung - professioneller Service in der grünen Mark.',
     descriptionEn: 'Clearing and removal in Styria. Graz and surroundings - professional service in the green state.',
     detailedIntro: 'Die Steiermark, auch "Grüne Mark" genannt, ist das zweitgrößte Bundesland Österreichs und vereint urbanes Leben in Graz mit ländlichen Regionen, Weinbaugebieten und alpinen Landschaften. Von der Landeshauptstadt Graz über die Industrieregionen Mur-Mürz-Furche bis zu den Tourismusregionen Dachstein, Schladming oder Bad Aussee - Flächen Frei bietet professionelle Räumungsdienste in der gesamten Steiermark an. Unser Team kennt die vielfältigen Anforderungen der Region: Von historischen Stadtpalais in Graz über moderne Gewerbeparks bis zu Almhütten in den Bergen. Wir arbeiten mit lokalen Verwertungsbetrieben zusammen und garantieren umweltgerechte Verwertung aller Materialien.',
-    detailedIntroEn: 'Styria, also called "Green Mark", is Austria\'s second-largest state and combines urban life in Graz with rural regions, wine-growing areas, and alpine landscapes. From the capital Graz via the industrial regions Mur-Mürz-Furche to tourism regions Dachstein, Schladming, or Bad Aussee - Flächen Frei offers professional clearing services throughout Styria. Our team knows the region\'s diverse requirements: From historic city palaces in Graz via modern business parks to alpine huts in the mountains. We work with local disposal companies and guarantee environmentally sound recycling of all materials.',
+    detailedIntroEn: 'Styria, also called "Green Mark", is Austria\'s second-largest state and combines urban life in Graz with rural regions, wine-growing areas, and alpine landscapes. From the capital Graz via the industrial regions Mur-Mürz-Furche to tourism regions Dachstein, Schladming, or Bad Aussee - Flächen Frei offers professional clearing services throughout Styria. Our team knows the region\'s diverse requirements: From historic city palaces in Graz via modern business parks to alpine huts in the mountains. We work with local recycling companies and guarantee environmentally sound recycling of all materials.',
     metaDescription: 'Räumung Steiermark - Graz & Umgebung ✓ Professionelle Räumung ✓ Kostenlose Besichtigung ✓ Erfahrenes Team.',
     metaDescriptionEn: 'Clearing Styria - Graz & surroundings ✓ Professional removal ✓ Free consultation ✓ Experienced team.',
     features: [
@@ -908,8 +908,8 @@ export const states: State[] = [
       'Knowledge of diverse regional conditions',
       'Experience with industrial and commercial properties',
       'Flexible scheduling also in rural regions',
-      'Cooperation with Styrian disposal companies',
-      'Environmentally sound disposal and recycling',
+      'Cooperation with Styrian recycling companies',
+      'Environmentally sound recycling and recycling',
       'Fair prices for city and countryside',
     ],
     faqs: [
@@ -1023,7 +1023,7 @@ export const states: State[] = [
       'Specialization in wine region and Lake Neusiedl',
       'Experience with wine cellars and wineries',
       'Flexible appointments also during harvest',
-      'Cooperation with local disposal companies',
+      'Cooperation with local recycling companies',
       'Discreet service for lake properties',
       'Fair prices without travel surcharges',
     ],
