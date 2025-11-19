@@ -52,7 +52,7 @@ export default function SEOContent() {
                     Leistungen
                   </Link>
                   {' '}umfassen die komplette Entrümpelung von Wohnungen, Häusern, Kellern, 
-                  Dachböden, Garagen und Geschäftsräumen. Dabei legen wir großen Wert auf eine fachgerechte und umweltfreundliche Entsorgung 
+                  Dachböden, Garagen und Geschäftsräumen. Dabei legen wir großen Wert auf eine fachgerechte und umweltfreundliche Verwertung 
                   aller Gegenstände. Wertvolle Möbel und Antiquitäten können wir auf Wunsch auch ankaufen.
                 </p>
 

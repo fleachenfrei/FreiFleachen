@@ -5,7 +5,7 @@ export enum ServiceId {
   DACHBODENRAEUMUNG = 'dachbodenraeumung',
   GESCHAEFTSRAEUMUNG = 'geschaeftsraeumung',
   MESSIERAEUMUNG = 'messieraeumung',
-  SPERRMULLENTSORGUNG = 'sperrmullentsorgung',
+  SPERRMULLABHOLUNG = 'sperrmullabholung',
   UMZUGSSERVICE = 'umzugsservice',
   GARAGERAEUMUNG = 'garageraeumung',
   BUROAUFLOESUNG = 'buroaufloesung',
@@ -54,7 +54,7 @@ export const servicesData: ServiceEntry[] = [
           'Komplette Räumung vom Keller bis zum Dachboden',
           'Auch Altbauwohnungen ohne Lift bis 5. Stock',
           'Besenreine Übergabe garantiert',
-          'Fachgerechte Entsorgung und Recycling',
+          'Fachgerechte Verwertung und Recycling',
           'Diskrete Abwicklung in Wien und ganz Österreich',
           'Fixpreis nach kostenloser Besichtigung',
         ],
@@ -77,14 +77,14 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 4,
             title: 'Besenreine Übergabe',
-            description: 'Wir übergeben Ihre Wohnung besenrein und entsorgen alles fachgerecht über zertifizierte Partner.',
+            description: 'Wir übergeben Ihre Wohnung besenrein und verwerten alles fachgerecht über zertifizierte Partner.',
           },
         ],
         pricing: {
           info: 'Die Kosten für eine Wohnungsräumung hängen von mehreren Faktoren ab. Nach einer kostenlosen Besichtigung erhalten Sie von uns einen transparenten Festpreis.',
           factors: [
             'Wohnungsgröße (m² und Anzahl der Zimmer)',
-            'Menge und Art der zu entsorgenden Gegenstände',
+            'Menge und Art der zu verwertenden Gegenstände',
             'Stockwerk und Vorhandensein eines Lifts',
             'Zufahrtsmöglichkeiten zum Gebäude',
             'Besondere Anforderungen (z.B. Messie-Wohnung, Sperrmüll)',
@@ -105,7 +105,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'Was passiert mit meinen Möbeln und Gegenständen?',
-            answer: 'Brauchbare Möbel und Gegenstände führen wir sozialen Einrichtungen zu. Defekte Möbel werden fachgerecht recycelt. Sondermüll entsorgen wir über zertifizierte Fachbetriebe. Sie erhalten auf Wunsch Entsorgungsnachweise.',
+            answer: 'Brauchbare Möbel und Gegenstände führen wir sozialen Einrichtungen zu. Defekte Möbel werden fachgerecht recycelt. Sondermüll verwerten wir über zertifizierte Fachbetriebe. Sie erhalten auf Wunsch Verwertungsnachweise.',
           },
         ],
       },
@@ -178,7 +178,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.HAUSHALTSAUFLOESUNG,
     slugs: { de: 'haushaltsaufloesung', en: 'household-dissolution' },
-    relatedServices: [ServiceId.WOHNUNGSRAEUMUNG, ServiceId.VERLASSENSCHAFTSRAEUMUNG, ServiceId.SPERRMULLENTSORGUNG],
+    relatedServices: [ServiceId.WOHNUNGSRAEUMUNG, ServiceId.VERLASSENSCHAFTSRAEUMUNG, ServiceId.SPERRMULLABHOLUNG],
     content: {
       de: {
         name: 'Haushaltsauflösung',
@@ -212,7 +212,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 4,
             title: 'Fachgerechte Verwertung',
-            description: 'Brauchbare Gegenstände spenden wir an soziale Einrichtungen. Rest wird umweltgerecht entsorgt.',
+            description: 'Brauchbare Gegenstände spenden wir an soziale Einrichtungen. Rest wird umweltgerecht verwertet.',
           },
         ],
         pricing: {
@@ -222,7 +222,7 @@ export const servicesData: ServiceEntry[] = [
             'Vorhandensein verwertbarer Gegenstände',
             'Zeitaufwand für Sortierung',
             'Stockwerk und Liftvorhandensein',
-            'Entsorgungsaufwand',
+            'Abwicklungsaufwand',
           ],
         },
         faq: [
@@ -313,16 +313,16 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.KELLERRAEUMUNG,
     slugs: { de: 'kellerraeumung', en: 'basement-clearing' },
-    relatedServices: [ServiceId.DACHBODENRAEUMUNG, ServiceId.GARAGERAEUMUNG, ServiceId.SPERRMULLENTSORGUNG],
+    relatedServices: [ServiceId.DACHBODENRAEUMUNG, ServiceId.GARAGERAEUMUNG, ServiceId.SPERRMULLABHOLUNG],
     content: {
       de: {
         name: 'Kellerräumung',
-        shortDescription: 'Professionelle Kellerräumung in Wien und Umgebung - wir räumen Ihren Keller komplett aus und entsorgen alles fachgerecht.',
+        shortDescription: 'Professionelle Kellerräumung in Wien und Umgebung - wir räumen Ihren Keller komplett aus und verwerten alles fachgerecht.',
         description: 'Ihr Keller ist voll und Sie möchten wieder Platz schaffen? Wir räumen Ihren Keller komplett - von alten Möbeln über Gerümpel bis zu Sperrmüll. Auch bei schwierigen Bedingungen wie engen Treppen oder fehlendem Lift arbeiten wir professionell und zuverlässig in ganz Österreich.',
-        metaDescription: 'Kellerräumung Wien und Umgebung ✓ Ganz Österreich ✓ Auch bei engen Treppen ✓ Komplette Entsorgung ✓ Festpreis ☎ +43660 39 57 587',
+        metaDescription: 'Kellerräumung Wien und Umgebung ✓ Ganz Österreich ✓ Auch bei engen Treppen ✓ Komplette Räumung ✓ Festpreis ☎ +43660 39 57 587',
         benefits: [
           'Komplette Räumung auch vollgestellter Keller',
-          'Entsorgung von Sperrmüll und Gerümpel',
+          'Abholung von Sperrmüll und Gerümpel',
           'Auch bei engen Treppen und ohne Lift',
           'Besenreine Übergabe',
           'Kurzfristige Termine möglich',
@@ -346,18 +346,18 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Fachgerechte Entsorgung',
-            description: 'Wir entsorgen alles fachgerecht und übergeben Ihren Keller besenrein.',
+            title: 'Fachgerechte Verwertung',
+            description: 'Wir verwerten alles fachgerecht und übergeben Ihren Keller besenrein.',
           },
         ],
         pricing: {
           info: 'Die Kosten für eine Kellerräumung hängen vom Umfang ab. Nach kostenloser Besichtigung erhalten Sie einen transparenten Festpreis.',
           factors: [
             'Größe und Füllstand des Kellers',
-            'Art der zu entsorgenden Gegenstände',
+            'Art der zu verwertenden Gegenstände',
             'Zugänglichkeit (Treppen, Gänge)',
             'Entfernung zum Transportfahrzeug',
-            'Besondere Entsorgungsanforderungen',
+            'Besondere Abwicklungsanforderungen',
           ],
         },
         faq: [
@@ -375,7 +375,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'Was passiert mit alten Chemikalien im Keller?',
-            answer: 'Alte Farben, Lacke und Chemikalien entsorgen wir als Sondermüll über zertifizierte Fachbetriebe. Diese Entsorgung wird separat berechnet und erfolgt vollständig nach Vorschrift.',
+            answer: 'Alte Farben, Lacke und Chemikalien verwerten wir als Sondermüll über zertifizierte Fachbetriebe. Diese Verwertung wird separat berechnet und erfolgt vollständig nach Vorschrift.',
           },
         ],
       },
@@ -448,7 +448,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.DACHBODENRAEUMUNG,
     slugs: { de: 'dachbodenraeumung', en: 'attic-clearing' },
-    relatedServices: [ServiceId.KELLERRAEUMUNG, ServiceId.SPERRMULLENTSORGUNG, ServiceId.HAUSHALTSAUFLOESUNG],
+    relatedServices: [ServiceId.KELLERRAEUMUNG, ServiceId.SPERRMULLABHOLUNG, ServiceId.HAUSHALTSAUFLOESUNG],
     content: {
       de: {
         name: 'Dachbodenräumung',
@@ -458,7 +458,7 @@ export const servicesData: ServiceEntry[] = [
         benefits: [
           'Räumung auch bei schwierigem Dachbodenzugang',
           'Sicherer Transport über steile Treppen',
-          'Entsorgung von Gerümpel und Sperrmüll',
+          'Abholung von Gerümpel und Sperrmüll',
           'Besenreine Übergabe',
           'Erfahrung mit Altbau-Dachböden',
           'Festpreis nach Besichtigung',
@@ -481,8 +481,8 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Fachgerechte Entsorgung',
-            description: 'Wir entsorgen alles fachgerecht und hinterlassen einen besenreinen Dachboden.',
+            title: 'Fachgerechte Verwertung',
+            description: 'Wir verwerten alles fachgerecht und hinterlassen einen besenreinen Dachboden.',
           },
         ],
         pricing: {
@@ -510,7 +510,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'Was passiert mit alten Holzbalken und Baumaterial?',
-            answer: 'Altes Holz wird fachgerecht entsorgt oder recycelt. Baumaterialien werden getrennt entsorgt. Bei Verdacht auf Schadstoffe (z.B. Asbest) informieren wir Sie sofort.',
+            answer: 'Altes Holz wird fachgerecht verwertet oder recycelt. Baumaterialien werden getrennt verwertet. Bei Verdacht auf Schadstoffe (z.B. Asbest) informieren wir Sie sofort.',
           },
         ],
       },
@@ -583,7 +583,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.GESCHAEFTSRAEUMUNG,
     slugs: { de: 'geschaeftsraeumung', en: 'commercial-clearing' },
-    relatedServices: [ServiceId.BUROAUFLOESUNG, ServiceId.SPERRMULLENTSORGUNG, ServiceId.CONTAINERSERVICE],
+    relatedServices: [ServiceId.BUROAUFLOESUNG, ServiceId.SPERRMULLABHOLUNG, ServiceId.CONTAINERSERVICE],
     content: {
       de: {
         name: 'Geschäftsräumung',
@@ -594,7 +594,7 @@ export const servicesData: ServiceEntry[] = [
           'Räumung aller Geschäftsarten und Gewerbeflächen',
           'Termingerechte Ausführung (auch Wochenende)',
           'Diskrete Abwicklung',
-          'Entsorgung von Ladeneinrichtung und Inventar',
+          'Abholung von Ladeneinrichtung und Inventar',
           'Besenreine Übergabe',
           'Festpreis nach Besichtigung',
         ],
@@ -626,7 +626,7 @@ export const servicesData: ServiceEntry[] = [
             'Größe der Geschäftsfläche',
             'Art und Menge der Einrichtung',
             'Zeitfenster und Dringlichkeit',
-            'Entsorgungsaufwand',
+            'Abwicklungsaufwand',
             'Besondere Anforderungen (Demontage, etc.)',
           ],
         },
@@ -641,7 +641,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'Was passiert mit der Ladeneinrichtung?',
-            answer: 'Brauchbare Ladeneinrichtung versuchen wir zu verkaufen - das reduziert Ihre Kosten. Nicht verwertbare Teile werden fachgerecht entsorgt oder recycelt.',
+            answer: 'Brauchbare Ladeneinrichtung versuchen wir zu verkaufen - das reduziert Ihre Kosten. Nicht verwertbare Teile werden fachgerecht verwertet oder recycelt.',
           },
           {
             question: 'Wie diskret läuft eine Geschäftsräumung ab?',
@@ -718,7 +718,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.MESSIERAEUMUNG,
     slugs: { de: 'messie-raeumung', en: 'hoarding-clearing' },
-    relatedServices: [ServiceId.WOHNUNGSRAEUMUNG, ServiceId.HAUSHALTSAUFLOESUNG, ServiceId.SPERRMULLENTSORGUNG],
+    relatedServices: [ServiceId.WOHNUNGSRAEUMUNG, ServiceId.HAUSHALTSAUFLOESUNG, ServiceId.SPERRMULLABHOLUNG],
     content: {
       de: {
         name: 'Messie-Räumung',
@@ -851,18 +851,18 @@ export const servicesData: ServiceEntry[] = [
     },
   },
   {
-    id: ServiceId.SPERRMULLENTSORGUNG,
-    slugs: { de: 'sperrmullentsorgung', en: 'bulky-waste-disposal' },
+    id: ServiceId.SPERRMULLABHOLUNG,
+    slugs: { de: 'sperrmullabholung', en: 'bulky-waste-disposal' },
     relatedServices: [ServiceId.CONTAINERSERVICE, ServiceId.WOHNUNGSRAEUMUNG, ServiceId.KELLERRAEUMUNG],
     content: {
       de: {
-        name: 'Sperrmüllentsorgung',
-        shortDescription: 'Professionelle Sperrmüllentsorgung in Wien und ganz Österreich - schnell, zuverlässig und umweltgerecht.',
-        description: 'Sie müssen Sperrmüll entsorgen? Wir holen Ihren Sperrmüll ab und entsorgen ihn fachgerecht. Von einzelnen Möbelstücken bis zu größeren Mengen - schnell, zuverlässig und umweltbewusst in ganz Österreich.',
-        metaDescription: 'Sperrmüllentsorgung Wien ✓ Ganz Österreich ✓ Schnelle Abholung ✓ Umweltgerecht ✓ Faire Preise ☎ +43660 39 57 587',
+        name: 'Sperrmüllabholung',
+        shortDescription: 'Professionelle Sperrmüllabholung in Wien und ganz Österreich - schnell, zuverlässig und umweltgerecht.',
+        description: 'Sie müssen Sperrmüll verwerten? Wir holen Ihren Sperrmüll ab und verwerten ihn fachgerecht. Von einzelnen Möbelstücken bis zu größeren Mengen - schnell, zuverlässig und umweltbewusst in ganz Österreich.',
+        metaDescription: 'Sperrmüllabholung Wien ✓ Ganz Österreich ✓ Schnelle Abholung ✓ Umweltgerecht ✓ Faire Preise ☎ +43660 39 57 587',
         benefits: [
           'Schnelle Abholung oft schon am nächsten Tag',
-          'Entsorgung von Möbeln und Elektrogeräten',
+          'Abholung von Möbeln und Elektrogeräten',
           'Umweltgerechte Verwertung und Recycling',
           'Auch größere Mengen kein Problem',
           'Festpreis nach Besichtigung',
@@ -877,7 +877,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 2,
             title: 'Preisangebot',
-            description: 'Wir erstellen ein transparentes Festpreisangebot für Abholung und Entsorgung.',
+            description: 'Wir erstellen ein transparentes Festpreisangebot für Abholung und Verwertung.',
           },
           {
             step: 3,
@@ -886,8 +886,8 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Fachgerechte Entsorgung',
-            description: 'Wir entsorgen alles umweltgerecht und führen verwertbare Teile dem Recycling zu.',
+            title: 'Fachgerechte Verwertung',
+            description: 'Wir verwerten alles umweltgerecht und führen verwertbare Teile dem Recycling zu.',
           },
         ],
         pricing: {
@@ -896,13 +896,13 @@ export const servicesData: ServiceEntry[] = [
             'Art und Menge des Sperrmülls',
             'Stockwerk und Liftvorhandensein',
             'Anzahl der benötigten Helfer',
-            'Entsorgungskosten',
+            'Abwicklungskosten',
             'Entfernung',
           ],
         },
         faq: [
           {
-            question: 'Was kostet Sperrmüllentsorgung?',
+            question: 'Was kostet Sperrmüllabholung?',
             answer: 'Ein Sofa oder Schrank kostet ab 80€, ein komplettes Schlafzimmer ab 200€. Der Preis hängt von Größe, Gewicht und Stockwerk ab. Nach Beschreibung erhalten Sie einen genauen Festpreis.',
           },
           {
@@ -988,7 +988,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.UMZUGSSERVICE,
     slugs: { de: 'umzugsservice', en: 'moving-service' },
-    relatedServices: [ServiceId.WOHNUNGSRAEUMUNG, ServiceId.SPERRMULLENTSORGUNG, ServiceId.HAUSHALTSAUFLOESUNG],
+    relatedServices: [ServiceId.WOHNUNGSRAEUMUNG, ServiceId.SPERRMULLABHOLUNG, ServiceId.HAUSHALTSAUFLOESUNG],
     content: {
       de: {
         name: 'Umzugsservice',
@@ -1123,7 +1123,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.GARAGERAEUMUNG,
     slugs: { de: 'garageraeumung', en: 'garage-clearing' },
-    relatedServices: [ServiceId.KELLERRAEUMUNG, ServiceId.CONTAINERSERVICE, ServiceId.SPERRMULLENTSORGUNG],
+    relatedServices: [ServiceId.KELLERRAEUMUNG, ServiceId.CONTAINERSERVICE, ServiceId.SPERRMULLABHOLUNG],
     content: {
       de: {
         name: 'Garageräumung',
@@ -1132,7 +1132,7 @@ export const servicesData: ServiceEntry[] = [
         metaDescription: 'Garageräumung Wien ✓ Ganz Österreich ✓ Carports & Stellplätze ✓ Schnelle Abwicklung ✓ Festpreis ☎ +43660 39 57 587',
         benefits: [
           'Komplette Räumung von Garagen und Carports',
-          'Entsorgung von Autoreifen und Altöl',
+          'Abholung von Autoreifen und Altöl',
           'Auch größere Mengen kein Problem',
           'Schnelle Abwicklung',
           'Besenreine Übergabe',
@@ -1152,7 +1152,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 3,
             title: 'Professionelle Räumung',
-            description: 'Wir räumen Ihre Garage komplett - inkl. fachgerechter Entsorgung von Sondermüll.',
+            description: 'Wir räumen Ihre Garage komplett - inkl. fachgerechter Abholung von Sondermüll.',
           },
           {
             step: 4,
@@ -1167,7 +1167,7 @@ export const servicesData: ServiceEntry[] = [
             'Füllstand und Art der Gegenstände',
             'Sondermüll (Reifen, Öl, Chemikalien)',
             'Zugänglichkeit',
-            'Entsorgungsaufwand',
+            'Abwicklungsaufwand',
           ],
         },
         faq: [
@@ -1177,7 +1177,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'Wie gehen Sie mit Autoreifen und Altöl um?',
-            answer: 'Autoreifen und Altöl entsorgen wir fachgerecht über zertifizierte Fachbetriebe. Die Entsorgungskosten sind im Festpreis enthalten.',
+            answer: 'Autoreifen und Altöl verwerten wir fachgerecht über zertifizierte Fachbetriebe. Die Abwicklungskosten sind im Festpreis enthalten.',
           },
           {
             question: 'Können Sie auch Werkzeug und Maschinen abtransportieren?',
@@ -1258,16 +1258,16 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.BUROAUFLOESUNG,
     slugs: { de: 'bueroaufloesung', en: 'office-dissolution' },
-    relatedServices: [ServiceId.GESCHAEFTSRAEUMUNG, ServiceId.SPERRMULLENTSORGUNG, ServiceId.CONTAINERSERVICE],
+    relatedServices: [ServiceId.GESCHAEFTSRAEUMUNG, ServiceId.SPERRMULLABHOLUNG, ServiceId.CONTAINERSERVICE],
     content: {
       de: {
         name: 'Büroauflösung',
         shortDescription: 'Professionelle Auflösung von Büros und Praxen in Wien und ganz Österreich - diskret und termingerecht.',
-        description: 'Sie lösen Ihr Büro oder Ihre Praxis auf? Wir übernehmen die komplette Büroauflösung - von der Demontage der Möbel bis zur fachgerechten Entsorgung von IT-Equipment. Diskret, professionell und termingerecht in ganz Österreich.',
-        metaDescription: 'Büroauflösung Wien ✓ Ganz Österreich ✓ IT-Entsorgung ✓ Diskret ✓ Termingerecht ✓ Festpreis ☎ +43660 39 57 587',
+        description: 'Sie lösen Ihr Büro oder Ihre Praxis auf? Wir übernehmen die komplette Büroauflösung - von der Demontage der Möbel bis zur fachgerechten Abholung von IT-Equipment. Diskret, professionell und termingerecht in ganz Österreich.',
+        metaDescription: 'Büroauflösung Wien ✓ Ganz Österreich ✓ IT-Verwertung ✓ Diskret ✓ Termingerecht ✓ Festpreis ☎ +43660 39 57 587',
         benefits: [
           'Komplette Büroauflösung von A-Z',
-          'Fachgerechte IT- und Datenträger-Entsorgung',
+          'Fachgerechte IT- und Datenträger-Verwertung',
           'Demontage von Büromöbeln',
           'Diskrete Abwicklung',
           'Termingerechte Ausführung',
@@ -1287,7 +1287,7 @@ export const servicesData: ServiceEntry[] = [
           {
             step: 3,
             title: 'Professionelle Auflösung',
-            description: 'Wir demontieren, räumen und entsorgen alles fachgerecht - inkl. IT-Equipment.',
+            description: 'Wir demontieren, räumen und verwerten alles fachgerecht - inkl. IT-Equipment.',
           },
           {
             step: 4,
@@ -1302,7 +1302,7 @@ export const servicesData: ServiceEntry[] = [
             'Anzahl und Art der Büromöbel',
             'Menge an IT-Equipment',
             'Zeitfenster und Dringlichkeit',
-            'Besondere Entsorgungsanforderungen',
+            'Besondere Abwicklungsanforderungen',
           ],
         },
         faq: [
@@ -1311,8 +1311,8 @@ export const servicesData: ServiceEntry[] = [
             answer: 'Ein kleines Büro (30m²) kostet ab 1.000€, größere Büroflächen ab 2.500€. Der genaue Preis hängt von Möbeln und IT-Equipment ab. Nach Besichtigung erhalten Sie ein detailliertes Angebot.',
           },
           {
-            question: 'Wie werden Datenträger entsorgt?',
-            answer: 'Festplatten und Datenträger werden nach Datenschutzrichtlinien vernichtet. Auf Wunsch erhalten Sie Entsorgungsnachweise und Zertifikate über die fachgerechte Vernichtung.',
+            question: 'Wie werden Datenträger verwertet?',
+            answer: 'Festplatten und Datenträger werden nach Datenschutzrichtlinien vernichtet. Auf Wunsch erhalten Sie Verwertungsnachweise und Zertifikate über die fachgerechte Vernichtung.',
           },
           {
             question: 'Können Sie auch am Wochenende arbeiten?',
@@ -1320,7 +1320,7 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             question: 'Was passiert mit den Büromöbeln?',
-            answer: 'Hochwertige Büromöbel versuchen wir zu verkaufen - das reduziert Ihre Kosten. Nicht verwertbare Möbel werden fachgerecht entsorgt oder recycelt.',
+            answer: 'Hochwertige Büromöbel versuchen wir zu verkaufen - das reduziert Ihre Kosten. Nicht verwertbare Möbel werden fachgerecht verwertet oder recycelt.',
           },
         ],
       },
@@ -1393,7 +1393,7 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.VERLASSENSCHAFTSRAEUMUNG,
     slugs: { de: 'verlassenschaftsraeumung', en: 'estate-clearing' },
-    relatedServices: [ServiceId.HAUSHALTSAUFLOESUNG, ServiceId.WOHNUNGSRAEUMUNG, ServiceId.SPERRMULLENTSORGUNG],
+    relatedServices: [ServiceId.HAUSHALTSAUFLOESUNG, ServiceId.WOHNUNGSRAEUMUNG, ServiceId.SPERRMULLABHOLUNG],
     content: {
       de: {
         name: 'Verlassenschaftsräumung',
@@ -1437,7 +1437,7 @@ export const servicesData: ServiceEntry[] = [
             'Umfang der Verlassenschaft',
             'Vorhandensein verwertbarer Gegenstände',
             'Zeitaufwand für Sortierung',
-            'Entsorgungsaufwand',
+            'Abwicklungsaufwand',
           ],
         },
         faq: [
@@ -1528,18 +1528,18 @@ export const servicesData: ServiceEntry[] = [
   {
     id: ServiceId.CONTAINERSERVICE,
     slugs: { de: 'container-service', en: 'container-service' },
-    relatedServices: [ServiceId.SPERRMULLENTSORGUNG, ServiceId.GESCHAEFTSRAEUMUNG, ServiceId.GARAGERAEUMUNG],
+    relatedServices: [ServiceId.SPERRMULLABHOLUNG, ServiceId.GESCHAEFTSRAEUMUNG, ServiceId.GARAGERAEUMUNG],
     content: {
       de: {
         name: 'Container-Service',
         shortDescription: 'Professioneller Container-Service in Wien und ganz Österreich - von 3m³ bis 10m³ für alle Abfallarten.',
-        description: 'Sie benötigen einen Container für Ihre Renovierung oder Baustelle? Wir liefern Container in verschiedenen Größen (3-10m³) für Bauschutt, Holz oder Mischabfall. Mit Abholung, Entsorgung und auf Wunsch Genehmigungsservice in ganz Österreich.',
-        metaDescription: 'Container-Service Wien ✓ Ganz Österreich ✓ 3-10m³ Container ✓ Bauschutt & Mischabfall ✓ Inkl. Entsorgung ☎ +43660 39 57 587',
+        description: 'Sie benötigen einen Container für Ihre Renovierung oder Baustelle? Wir liefern Container in verschiedenen Größen (3-10m³) für Bauschutt, Holz oder Mischabfall. Mit Abholung, Verwertung und auf Wunsch Genehmigungsservice in ganz Österreich.',
+        metaDescription: 'Container-Service Wien ✓ Ganz Österreich ✓ 3-10m³ Container ✓ Bauschutt & Mischabfall ✓ Inkl. Verwertung ☎ +43660 39 57 587',
         benefits: [
           'Container in verschiedenen Größen (3-10m³)',
           'Für alle Abfallarten (Bauschutt, Holz, Mischabfall)',
           'Schnelle Lieferung und Abholung',
-          'Inklusive fachgerechter Entsorgung',
+          'Inklusive fachgerechter Abwicklung',
           'Hilfe bei Straßen-Genehmigung',
           'Transparente Festpreise',
         ],
@@ -1561,8 +1561,8 @@ export const servicesData: ServiceEntry[] = [
           },
           {
             step: 4,
-            title: 'Abholung & Entsorgung',
-            description: 'Nach Ihrer Meldung holen wir den Container ab und entsorgen den Inhalt fachgerecht.',
+            title: 'Abholung & Verwertung',
+            description: 'Nach Ihrer Meldung holen wir den Container ab und verwerten den Inhalt fachgerecht.',
           },
         ],
         pricing: {
@@ -1578,7 +1578,7 @@ export const servicesData: ServiceEntry[] = [
         faq: [
           {
             question: 'Was kostet ein Container?',
-            answer: 'Ein 3m³ Container für Bauschutt kostet ab 180€ (inkl. Lieferung, Abholung, Entsorgung, 7 Tage Miete). Ein 7m³ Container ab 350€. Mischabfall ist teurer als sortenreiner Bauschutt. Festpreis im Angebot.',
+            answer: 'Ein 3m³ Container für Bauschutt kostet ab 180€ (inkl. Lieferung, Abholung, Verwertung, 7 Tage Miete). Ein 7m³ Container ab 350€. Mischabfall ist teurer als sortenreiner Bauschutt. Festpreis im Angebot.',
           },
           {
             question: 'Welche Containergröße brauche ich?',

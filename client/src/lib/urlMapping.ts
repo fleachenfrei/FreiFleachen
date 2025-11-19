@@ -26,7 +26,7 @@ const serviceSlugMap: Record<string, string> = {
   'dachbodenraeumung': 'attic-clearing',
   'geschaeftsraeumung': 'commercial-clearing',
   'messie-raeumung': 'hoarding-clearing',
-  'sperrmullentsorgung': 'bulky-waste-disposal',
+  'sperrmullabholung': 'bulky-waste-collection',
   'umzugsservice': 'moving-service',
   'garageraeumung': 'garage-clearing',
   'bueroaufloesung': 'office-dissolution',

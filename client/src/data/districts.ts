@@ -548,7 +548,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       },
       {
         question: 'Wie entsorgen Sie in der Stadt?',
-        answer: 'Wir haben direkte Zufahrten zu Entsorgungsstellen und arbeiten effizient.',
+        answer: 'Wir haben direkte Zufahrten zu Verwertungsstellen und arbeiten effizient.',
       },
     ],
     faqEn: [
@@ -798,7 +798,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Schnelle Abwicklung',
       'Erfahrung mit medizinischen Einrichtungen',
       'Flexible Termine',
-      'Professionelle Entsorgung',
+      'Professionelle Verwertung',
     ],
     whyChooseUsEn: [
       'Affordable prices for students',
@@ -935,7 +935,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     descriptionEn: 'Simmering is a large district in southeast Vienna with industry, residential areas, and abundant green space. The district combines working and living in emerging neighborhoods.',
     metaDescription: 'Räumung 1110 Wien Simmering ✓ Simmeringer Hauptstraße ✓ Schnell & zuverlässig. Kostenlose Beratung ☎ +43660 39 57 587',
     metaDescriptionEn: 'Clearing 1110 Vienna Simmering ✓ Simmeringer Hauptstraße ✓ Fast & Reliable. Free Consultation ☎ +43660 39 57 587',
-    shortSummary: 'Gewerbeobjekt-Räumung im 11. Bezirk. Lagerhallen, Industrie mit Erfahrung und großer Entsorgungskapazität.',
+    shortSummary: 'Gewerbeobjekt-Räumung im 11. Bezirk. Lagerhallen, Industrie mit Erfahrung und großer Verwertungskapazität.',
     shortSummaryEn: 'Commercial property clearing in the 11th district. Warehouses, industry with experience and large disposal capacity.',
     landmarks: ['Simmeringer Hauptstraße', 'Zentralfriedhof', 'Gasometer', 'Haidepark'],
     landmarksEn: ['Simmeringer Hauptstraße', 'Central Cemetery', 'Gasometer', 'Haidepark'],
@@ -975,7 +975,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
     ],
     whyChooseUs: [
       'Erfahrung mit Gewerbeobjekten',
-      'Große Entsorgungskapazität',
+      'Große Verwertungskapazität',
       'Flexible Arbeitszeiten',
       'Professionelle Abwicklung',
       'Faire Preise für große Objekte',
@@ -998,7 +998,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       },
       {
         question: 'Wie entsorgen Sie große Mengen?',
-        answer: 'Wir haben direkte Partnerschaften mit Entsorgungsbetrieben für große Volumina.',
+        answer: 'Wir haben direkte Partnerschaften mit Verwertungsbetrieben für große Volumina.',
       },
     ],
     faqEn: [
@@ -1248,7 +1248,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Erfahrung mit Gärten und Außenflächen',
       'Flexible Anfahrt',
       'Faire Preise',
-      'Umweltbewusste Entsorgung',
+      'Umweltbewusste Verwertung',
     ],
     whyChooseUsEn: [
       'Knowledge of spacious areas',
@@ -1268,7 +1268,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       },
       {
         question: 'Wie entsorgen Sie Gartenabfälle?',
-        answer: 'Wir entsorgen Gartenabfälle fachgerecht über spezialisierte Entsorgungsbetriebe.',
+        answer: 'Wir verwerten Gartenabfälle fachgerecht über spezialisierte Verwertungsbetriebe.',
       },
     ],
     faqEn: [
@@ -1517,7 +1517,7 @@ export const viennaDistricts: Record<string, DistrictInfo> = {
       'Kenntnis der Hanglagen',
       'Erfahrung mit Gärten',
       'Zuverlässige Anfahrt',
-      'Umweltbewusste Entsorgung',
+      'Umweltbewusste Verwertung',
       'Faire Preise',
     ],
     whyChooseUsEn: [

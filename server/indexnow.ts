@@ -150,7 +150,7 @@ export async function submitSitemapToIndexNow(): Promise<IndexNowResponse> {
     `${baseUrl}/leistungen/dachbodenraeumungen`,
     `${baseUrl}/leistungen/geschaeftsraeumungen`,
     `${baseUrl}/leistungen/messieraeumungen`,
-    `${baseUrl}/leistungen/sperrmullentsorgung`,
+    `${baseUrl}/leistungen/sperrmullabholung`,
     `${baseUrl}/leistungen/umzugsservice`,
     `${baseUrl}/leistungen/garageraeumungen`,
     `${baseUrl}/leistungen/buroaufloesungen`,

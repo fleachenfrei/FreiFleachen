@@ -65,7 +65,7 @@ export default function Impressum() {
 
         <section>
           <h2 className="text-2xl font-semibold mb-4">Unternehmensgegenstand</h2>
-          <p className="mb-2">Räumungs- und Entsorgungsdienstleistungen, Transport</p>
+          <p className="mb-2">Räumungs- und Entrümpelungsdienstleistungen, Transport</p>
         </section>
 
         <section>

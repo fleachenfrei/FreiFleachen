@@ -37,7 +37,7 @@ const serviceImages: Record<ServiceId, string> = {
   [ServiceId.DACHBODENRAEUMUNG]: atticImage,
   [ServiceId.GESCHAEFTSRAEUMUNG]: officeImage,
   [ServiceId.MESSIERAEUMUNG]: messieImage,
-  [ServiceId.SPERRMULLENTSORGUNG]: bulkyWasteImage,
+  [ServiceId.SPERRMULLABHOLUNG]: bulkyWasteImage,
   [ServiceId.UMZUGSSERVICE]: movingImage,
   [ServiceId.GARAGERAEUMUNG]: garageImage,
   [ServiceId.BUROAUFLOESUNG]: officeDissolutionImage,

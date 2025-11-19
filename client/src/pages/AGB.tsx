@@ -67,13 +67,13 @@ export default function AGB() {
           <ul className="list-disc list-inside mb-4 space-y-1">
             <li>Demontage von Möbeln und Einrichtungsgegenständen (sofern vereinbart)</li>
             <li>Abtransport aller zu entsorgenden Gegenstände</li>
-            <li>Fachgerechte Entsorgung gemäß den geltenden Vorschriften</li>
+            <li>Fachgerechte Verwertung gemäß den geltenden Vorschriften</li>
             <li>Besenreine Übergabe der Räumlichkeiten</li>
           </ul>
 
           <h3 className="text-xl font-semibold mb-3">3.2 Wertgegenständeund Sonderleistungen</h3>
           <p className="mb-4">
-            Verwertbare Gegenstände können nach Absprache vom Auftragswert in Abzug gebracht werden. Sonderleistungen wie spezielle Entsorgungen oder zusätzliche Reinigungsarbeiten werden gesondert berechnet.
+            Verwertbare Gegenstände können nach Absprache vom Auftragswert in Abzug gebracht werden. Sonderleistungen wie spezielle Abwicklungen oder zusätzliche Reinigungsarbeiten werden gesondert berechnet.
           </p>
         </section>
 

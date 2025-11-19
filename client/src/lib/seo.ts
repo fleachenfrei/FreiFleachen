@@ -147,7 +147,7 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
           'Kellerräumung',
           'Entrümpelung',
           'Möbeltransport',
-          'Entsorgung',
+          'Entrümpelung',
           'Nachlassräumung',
           'Gewerbliche Räumung'
         ]
@@ -258,7 +258,7 @@ export function getLocalBusinessSchema(language: 'de' | 'en' = 'de') {
             '@type': 'Service',
             'name': language === 'de' ? 'Haushaltsauflösung' : 'Household Dissolution',
             'description': language === 'de'
-              ? 'Komplette Auflösung von Haushalten mit Transport und Entsorgung'
+              ? 'Komplette Auflösung von Haushalten mit Transport und Verwertung'
               : 'Complete dissolution of households with transport and disposal',
           },
         },

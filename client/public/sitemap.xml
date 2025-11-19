@@ -164,10 +164,10 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Sperrmüllentsorgung / Bulky Waste Disposal -->
+  <!-- Sperrmüllabholung / Bulky Waste Disposal -->
   <url>
-    <loc>https://flaechenfrei.at/leistungen/sperrmullentsorgung</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/sperrmullentsorgung" />
+    <loc>https://flaechenfrei.at/leistungen/sperrmullabholung</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/sperrmullabholung" />
     <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/bulky-waste-disposal" />
     <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -176,7 +176,7 @@
 
   <url>
     <loc>https://flaechenfrei.at/en/services/bulky-waste-disposal</loc>
-    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/sperrmullentsorgung" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://flaechenfrei.at/leistungen/sperrmullabholung" />
     <xhtml:link rel="alternate" hreflang="en" href="https://flaechenfrei.at/en/services/bulky-waste-disposal" />
     <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>

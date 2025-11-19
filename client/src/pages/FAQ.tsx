@@ -24,7 +24,7 @@ export default function FAQ() {
   const faqsDE: FAQItem[] = [
     {
       question: 'Wie viel kostet eine Räumung?',
-      answer: 'Die Kosten für eine Räumung hängen von verschiedenen Faktoren ab: Größe der zu räumenden Fläche, Menge des Inventars, Stockwerk ohne Aufzug, Entsorgungsaufwand und eventuelle Verwertung von Gegenständen. Wir bieten eine kostenlose Besichtigung vor Ort an und erstellen Ihnen anschließend ein transparentes Festpreisangebot. So haben Sie volle Kostenkontrolle ohne versteckte Gebühren.'
+      answer: 'Die Kosten für eine Räumung hängen von verschiedenen Faktoren ab: Größe der zu räumenden Fläche, Menge des Inventars, Stockwerk ohne Aufzug, Abwicklungsaufwand und eventuelle Verwertung von Gegenständen. Wir bieten eine kostenlose Besichtigung vor Ort an und erstellen Ihnen anschließend ein transparentes Festpreisangebot. So haben Sie volle Kostenkontrolle ohne versteckte Gebühren.'
     },
     {
       question: 'Wie schnell können Sie mit der Räumung beginnen?',
