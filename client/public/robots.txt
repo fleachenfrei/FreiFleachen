@@ -1,0 +1,98 @@
+# robots.txt – Transraum (Golden Trend Armaturen GmbH)
+# https://transraum.com
+# Last updated: 2025
+
+# ============================================
+# Google (Standard + Gemini AI Training)
+# ============================================
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ============================================
+# Microsoft Bing – KRITISCH für ChatGPT!
+# ChatGPT nutzt Bings Index als primäre Datenquelle
+# ============================================
+User-agent: Bingbot
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
+User-agent: MSNBot
+Allow: /
+
+# ============================================
+# OpenAI (ChatGPT Search + Training)
+# ============================================
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ============================================
+# Anthropic (Claude AI)
+# ============================================
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# ============================================
+# Perplexity AI
+# ============================================
+User-agent: PerplexityBot
+Allow: /
+
+# ============================================
+# Other Search Engines & AI Crawlers
+# ============================================
+User-agent: Yandex
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# ============================================
+# All other crawlers – allow everything
+# ============================================
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# ============================================
+# Sitemap (dynamic – always includes latest blog posts)
+# ============================================
+Sitemap: https://transraum.com/sitemap.xml
+
+# ============================================
+# AI Indexing (llms.txt)
+# ============================================
+# llms.txt: https://transraum.com/llms.txt
+
+# ============================================
+# IndexNow Key Verification
+# ============================================
+# https://transraum.com/436053f3c8c7406799a1cea417ed8a4a.txt

@@ -1,0 +1,5 @@
+# Railway Nixpacks Configuration
+# Specifies Node.js version for deployment
+
+[variables]
+NODE_VERSION = "20"
